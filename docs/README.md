@@ -259,7 +259,14 @@ graph TD
 # Trouble Shooting
 
 1. How could eQTL help to connect genetic data and metabolic data
+
 2. How would smr work
+
+   + App smr requires a PLINK format LD-reference file **NOT SOLVED** 
+
+     > 1000G might be optimal but not recommended by the author of smr
+
+   + 
 
 
 

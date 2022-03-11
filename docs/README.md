@@ -267,7 +267,7 @@ graph LR
 	D[Phenotype] --->E
 ```
 
-## Stage 5 plan: Introduce metabolites to GNN, increase ? accuracy[**](https://ieeexplore.ieee.org/abstract/document/9046288)
+## Stage 5 plan: Introduce metabolites to GNN, increase ? accuracy[**](https://www.biorxiv.org/content/10.1101/2021.05.28.446066v1.full)
 
 ``` mermaid
 graph LR

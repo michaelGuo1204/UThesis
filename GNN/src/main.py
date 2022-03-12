@@ -3,9 +3,9 @@ import time
 import tensorflow as tf
 from spektral.data import DisjointLoader
 from spektral.transforms.normalize_adj import NormalizeAdj
-from tensorflow.keras.losses import CategoricalCrossentropy
-from tensorflow.keras.metrics import categorical_accuracy
-from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.losses import SparseCategoricalCrossentropy,BinaryCrossentropy
+from tensorflow.keras.metrics import sparse_categorical_accuracy,binary_accuracy
+from tensorflow.keras.optimizers import Adam,SGD
 
 from Net import *
 from Utili import *
@@ -13,16 +13,16 @@ from Utili import *
 ################################################################################
 # Config
 ################################################################################
-learning_rate = 1e-3  # Learning rate
+learning_rate = 1e-6  # Learning rate
 epochs = 400  # Number of training epochs
-es_patience = 10  # Patience for early stopping
-batch_size = 8  # Batch size
+es_patience = 1000  # Patience for early stopping
+batch_size = 64  # Batch size
 
 ################################################################################
 # Load data
 ################################################################################
 
-data = TestDataset(load=True, n_traits=1444, transforms=NormalizeAdj())
+data = TestDataset(load=True, n_traits=99, transforms=NormalizeAdj())
 
 # Train/valid/test split
 idxs = np.random.permutation(len(data))
@@ -41,9 +41,9 @@ loader_te = DisjointLoader(data_te, batch_size=batch_size)
 # Build model
 ################################################################################
 
-model = Net(data.n_labels)
-optimizer = Adam(lr=learning_rate)
-loss_fn = CategoricalCrossentropy()
+model = Net(1)
+optimizer = Adam(learning_rate=learning_rate,decay=0.05)
+loss_fn = SparseCategoricalCrossentropy()
 logWriter = tf.summary.create_file_writer("./logs/{}".format(time.time()))
 logWriter.set_as_default()
 logWriter.init()
@@ -58,9 +58,9 @@ def train_step(inputs, target):
     with tf.GradientTape() as tape:
         predictions = model(inputs, training=True)
         loss = loss_fn(target, predictions) + sum(model.losses)
+        acc = tf.reduce_mean(sparse_categorical_accuracy(target, predictions))
     gradients = tape.gradient(loss, model.trainable_variables)
     optimizer.apply_gradients(zip(gradients, model.trainable_variables))
-    acc = tf.reduce_mean(categorical_accuracy(target, predictions))
     return loss, acc
 
 
@@ -73,7 +73,7 @@ def evaluate(loader):
         pred = model(inputs, training=False)
         outs = (
             loss_fn(target, pred),
-            tf.reduce_mean(categorical_accuracy(target, pred)),
+            tf.reduce_mean(sparse_categorical_accuracy(target, pred)),
             len(target),  # Keep track of batch size
         )
         output.append(outs)

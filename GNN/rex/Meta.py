@@ -1,9 +1,8 @@
 import numpy as np
-from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
-from sklearn.preprocessing import normalize
-from supervised.automl import AutoML
 import pandas as pd
+# from tensorflow.keras.utils import to_categorical
+from supervised.automl import AutoML
+
 onehot2seq = {0: 0, 1: 'A', 2: 'G', 3: 'C', 4: 'T'}
 
 
@@ -47,7 +46,7 @@ file=file.iloc[:,1:]
 X=np.array(file)
 np.savez("../Data/Meta.npz", X, Y)
 '''
-data = pd.read_csv('../Data/beDataset.csv')
+data = pd.read_csv('../Data/fs.csv')
 '''for colum in data.columns:
     if colum == 'Cases' or colum=='Labels':continue
     str=data[colum].str
@@ -58,18 +57,46 @@ data = pd.read_csv('../Data/beDataset.csv')
     data[colum]=data[colum].str.replace(r'(0)\w','0',regex=True)
 data.to_csv('../Data/bnDataset.csv',index=False)
 '''
-data=data.to_numpy()
-X = data[:,1:-1]
-#X_onehot=seq_to_one_hot(X)
-Y = data[:,-1]
+data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
+data = data.values
+X = data[:, 1:-1]
+# X_onehot=seq_to_one_hot(X)
+# X[X==2]=1
+Y = data[:, -1]
 # np.savez('XY.npz', X_onehot, Y)
 # X_r=one_hot_to_seq(X)
-#np.savez("../Data/EY.npz", X, Y)
+# np.savez("../Data/EY.npz", X, Y)
 # X = np.squeeze(X)
 # Y = np.squeeze(Y)
-#X=normalize(X)
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2,stratify=Y)
-automl = AutoML(mode="Explain", eval_metric='accuracy',mix_encoding=True)
-automl.fit(X_train, y_train)
-automl.predict(X_test)
+# X=normalize(X)
+'''
+lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
+model = SelectFromModel(lsvc, prefit=True)
+X_new = model.transform(X)
+
+X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2,random_state=1)
+print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+clf = ak.StructuredDataClassifier()  # It tries 3 different models.
+# Feed the structured data classifier with training data.
+clf.fit(X_train, y_train,validation_data=(X_test,y_test),shuffle=True,batch_size=64,verbose=1)#,validation_data=(X_test,y_test))
+
+# Evaluate the best model with testing data.
+print(clf.evaluate(X_test,y_test))
+model=clf.export_model()
+try:
+    model.save("model_autokeras", save_format="tf")
+except Exception:
+    model.save("model_autokeras.h5")
+'''
+'''
+selector = SelectKBest(chi2, k =10)
+X_new=selector.fit_transform(X, Y)
+lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
+model = SelectFromModel(lsvc, prefit=True)
+X_new = model.transform(X)
+'''
+automl = AutoML(mode='Explain',
+                eval_metric='auc')  # ,algorithms=['Neural Network'],total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
+automl.fit(X, Y)
+# automl.predict(X_test)
 automl.report()

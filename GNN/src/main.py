@@ -1,11 +1,8 @@
-import time
-
-import tensorflow as tf
 from spektral.data import DisjointLoader
 from spektral.transforms.normalize_adj import NormalizeAdj
-from tensorflow.keras.losses import SparseCategoricalCrossentropy,BinaryCrossentropy
-from tensorflow.keras.metrics import sparse_categorical_accuracy,binary_accuracy
-from tensorflow.keras.optimizers import Adam,SGD
+from tensorflow.keras.losses import BinaryCrossentropy
+from tensorflow.keras.metrics import binary_accuracy
+from tensorflow.keras.optimizers import Adam
 
 from Net import *
 from Utili import *
@@ -13,16 +10,16 @@ from Utili import *
 ################################################################################
 # Config
 ################################################################################
-learning_rate = 1e-6  # Learning rate
-epochs = 400  # Number of training epochs
-es_patience = 1000  # Patience for early stopping
+learning_rate = 1e-2  # Learning rate
+epochs = 3  # Number of training epochs
+es_patience = 10  # Patience for early stopping
 batch_size = 64  # Batch size
 
 ################################################################################
 # Load data
 ################################################################################
 
-data = TestDataset(load=True, n_traits=99, transforms=NormalizeAdj())
+data = TestDataset(load=True, n_traits=81, transforms=NormalizeAdj())
 
 # Train/valid/test split
 idxs = np.random.permutation(len(data))
@@ -41,24 +38,27 @@ loader_te = DisjointLoader(data_te, batch_size=batch_size)
 # Build model
 ################################################################################
 
-model = Net(1)
-optimizer = Adam(learning_rate=learning_rate,decay=0.05)
-loss_fn = SparseCategoricalCrossentropy()
-logWriter = tf.summary.create_file_writer("./logs/{}".format(time.time()))
-logWriter.set_as_default()
-logWriter.init()
+# model = ECCModel(data.n_node_features,data.n_edge_features,data.n_labels)
+# model=GeneralGNN(data.n_labels,activation='softmax')
+model = Net(0)
+optimizer = Adam(learning_rate=learning_rate, decay=0.05)
+loss_fn = BinaryCrossentropy()
+# logWriter = tf.summary.create_file_writer("./logs/{}".format(time.time()))
+# logWriter.set_as_default()
+# logWriter.init()
 logstep = 0
 
 
 ################################################################################
 # Fit model
 ################################################################################
-@tf.function(input_signature=loader_tr.tf_signature(), experimental_relax_shapes=True)
+# @tf.function(input_signature=loader_tr.tf_signature(), experimental_relax_shapes=True)
 def train_step(inputs, target):
     with tf.GradientTape() as tape:
         predictions = model(inputs, training=True)
         loss = loss_fn(target, predictions) + sum(model.losses)
-        acc = tf.reduce_mean(sparse_categorical_accuracy(target, predictions))
+        predictions = tf.cast(predictions, dtype='float64')
+        acc = tf.reduce_mean(binary_accuracy(target, predictions))
     gradients = tape.gradient(loss, model.trainable_variables)
     optimizer.apply_gradients(zip(gradients, model.trainable_variables))
     return loss, acc
@@ -71,9 +71,10 @@ def evaluate(loader):
         step += 1
         inputs, target = loader.__next__()
         pred = model(inputs, training=False)
+        pred = tf.cast(pred, dtype='float64')
         outs = (
             loss_fn(target, pred),
-            tf.reduce_mean(sparse_categorical_accuracy(target, pred)),
+            tf.reduce_mean(binary_accuracy(target, pred)),
             len(target),  # Keep track of batch size
         )
         output.append(outs)
@@ -82,7 +83,7 @@ def evaluate(loader):
             return np.average(output[:, :-1], 0, weights=output[:, -1])
 
 
-epoch = step = logstep = 0
+epoch = step = logstep = loss = 0
 best_val_loss = np.inf
 best_weights = None
 patience = es_patience
@@ -91,8 +92,8 @@ for batch in loader_tr:
     step += 1
     logstep += 1
     loss, acc = train_step(*batch)
-    tf.summary.scalar(name='Train_loss', data=loss, step=logstep)
-    tf.summary.scalar(name='Train_Acc', data=acc, step=logstep)
+    # tf.summary.scalar(name='Train_loss', data=loss, step=logstep)
+    # tf.summary.scalar(name='Train_Acc', data=acc, step=logstep)
     results.append((loss, acc))
     if step == loader_tr.steps_per_epoch:
         step = 0
@@ -105,7 +106,6 @@ for batch in loader_tr:
                 epoch, *np.mean(results, 0), val_loss, val_acc
             )
         )
-
         # Check if loss improved for early stopping
         if val_loss < best_val_loss:
             best_val_loss = val_loss
@@ -118,11 +118,31 @@ for batch in loader_tr:
                 print("Early stopping (best val_loss: {})".format(best_val_loss))
                 break
         results = []
-logWriter.flush()
-logWriter.close()
+
+# logWriter.flush()
+# logWriter.close()
 ################################################################################
 # Evaluate model
 ################################################################################
+
 model.set_weights(best_weights)  # Load best model
 test_loss, test_acc = evaluate(loader_te)
 print("Done. Test loss: {:.4f}. Test acc: {:.2f}".format(test_loss, test_acc))
+
+################################################################################
+# Explain model
+################################################################################
+while True:
+    (x, a, i), y = next(loader_te)
+
+cut_idx = (i == 0).sum()
+x_exp = x[:cut_idx]
+a_exp = tf.sparse.slice(a, start=[0, 0], size=[cut_idx, cut_idx])
+explainer = GNNExplainer(model, graph_level=True, a_size_coef=100)
+
+# Explain prediction for one graph
+adj_mask, feat_mask = explainer.explain_node(x=x_exp, a=a_exp)
+
+# Plot the result
+G = explainer.plot_subgraph(adj_mask, feat_mask)
+plt.show()

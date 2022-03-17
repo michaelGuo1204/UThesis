@@ -226,6 +226,12 @@ After screening the following articles and integrating Guo's advice. A new setup
 > [Low Data Drug Discovery with One-Shot Learning | ACS Central Science](https://pubs.acs.org/doi/10.1021/acscentsci.6b00367)
 >
 > [A Comprehensive Survey on Graph Neural Networks | IEEE Journals & Magazine | IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/9046288)
+>
+> https://www.nature.com/articles/s41588-018-0327-1
+>
+> https://www.nature.com/articles/s41588-018-0079-y
+>
+> https://www.nature.com/articles/s41598-019-46649-z
 
 ## Stage 1 plan: Simple GNN Network
 

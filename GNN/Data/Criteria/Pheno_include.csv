@@ -1,0 +1,72 @@
+ICD,condition
+M150,Primary generalised (osteo)arthrosis
+M151   ,Heberden's nodes (with arthropathy)
+M152,Bouchard's nodes (with arthropathy)
+M1599,"Polyosteoarthritis, unspecified"
+M16,Coxarthrosis [arthrosis of hip]
+M160,"Primary coxarthrosis, bilateral"
+M161,Other primary coxarthrosis
+M169,"Coxarthrosis, unspecified"
+M17,Gonarthrosis [arthrosis of knee]
+M170,"Primary gonarthrosis, bilateral"
+M171,Other primary gonarthrosis
+M179,"Gonarthrosis, unspecified"
+M18,Arthrosis of first carpometacarpal joint
+M180,"Primary arthrosis of first carpometacarpal joints, bilateral"
+M181,Other primary arthrosis of first carpometacarpal joint
+M189,"Arthrosis of first carpometacarpal joint, unspecified"
+M19,Other arthrosis
+M190,Primary arthrosis of other joints
+M1900,Primary arthrosis of other joints (Multiple sites)
+M1901,Primary arthrosis of other joints (Shoulder region)
+M1902,Primary arthrosis of other joints (Upper arm)
+M1903,Primary arthrosis of other joints (Forearm)
+M1904,Primary arthrosis of other joints (Hand)
+M1905,Primary arthrosis of other joints (Pelvic region and thigh)
+M1906,Primary arthrosis of other joints-Lower leg
+M1907 ,Primary arthrosis of other joints (Ankle and foot)
+M1908,Primary arthrosis of other joints (Other)
+M1909,Primary arthrosis of other joints (Site unspecified)
+M199,"Arthrosis, unspecified"
+M1990,"Arthrosis, unspecified (Multiple sites)"
+M1991,"Arthrosis, unspecified (Shoulder region)"
+M1992,"Arthrosis, unspecified (Upper arm)"
+M1993,"Arthrosis, unspecified (Forearm)"
+M1994,"Arthrosis, unspecified (Hand)"
+M1995,"Arthrosis, unspecified (Pelvic region and thigh)"
+M1996,"Arthrosis, unspecified-Lower leg"
+M1997,"Arthrosis, unspecified (Ankle and foot)"
+M1998,"Arthrosis, unspecified (Other)"
+M1999,"Arthrosis, unspecified (Site unspecified)"
+M472,Other spondylosis with radiculopathy
+M4720,Other spondylosis with radiculopathy (Multiple sites in spine)
+M4721,Other spondylosis with radiculopathy (Occipito-atlanto-axial region)
+M4722,Other spondylosis with radiculopathy (Cervical region)
+M4723,Other spondylosis with radiculopathy (Cervicothoracic region)
+M4724,Other spondylosis with radiculopathy (Thoracic region)
+M4725,Other spondylosis with radiculopathy (Thoracolumbar region)
+M4726,Other spondylosis with radiculopathy (Lumbar region)
+M4727,Other spondylosis with radiculopathy (Lumbosacral region)
+M4728,Other spondylosis with radiculopathy (Sacral and sacrococcygeal region)
+M4729,Other spondylosis with radiculopathy (Site unspecified)
+M478,Other spondylosis
+M4780,Other spondylosis (Multiple sites in spine)
+M4781,Other spondylosis (Occipito-atlanto-axial region)
+M4782,Other spondylosis (Cervical region)
+M4783,Other spondylosis (Cervicothoracic region)
+M4784,Other spondylosis (Thoracic region)
+M4785 ,Other spondylosis (Thoracolumbar region)
+M4786,Other spondylosis (Lumbar region)
+M4787,Other spondylosis (Lumbosacral region)
+M4788,Other spondylosis (Sacral and sacrococcygeal region)
+M4789,Other spondylosis (Site unspecified)
+M479,"Spondylosis, unspecified"
+M4790,"Spondylosis, unspecified (Multiple sites in spine)"
+M4791,"Spondylosis, unspecified (Occipito-atlanto-axial region)"
+M4792,"Spondylosis, unspecified (Cervical region)"
+M4793,"Spondylosis, unspecified (Cervicothoracic region)"
+M4794,"Spondylosis, unspecified (Thoracic region)"
+M4795,"Spondylosis, unspecified (Thoracolumbar region)"
+M4796,"Spondylosis, unspecified (Lumbar region)"
+M4797,"Spondylosis, unspecified (Lumbosacral region)"
+M4798,"Spondylosis, unspecified (Sacral and sacrococcygeal region)"

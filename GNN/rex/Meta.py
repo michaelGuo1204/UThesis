@@ -1,5 +1,7 @@
 import numpy as np
 import pandas as pd
+from sklearn.feature_selection import SelectFromModel
+from sklearn.svm import LinearSVC
 # from tensorflow.keras.utils import to_categorical
 from supervised.automl import AutoML
 
@@ -46,7 +48,7 @@ file=file.iloc[:,1:]
 X=np.array(file)
 np.savez("../Data/Meta.npz", X, Y)
 '''
-data = pd.read_csv('../Data/fs.csv')
+data = pd.read_csv('../Data/beDataset_b.csv')
 '''for colum in data.columns:
     if colum == 'Cases' or colum=='Labels':continue
     str=data[colum].str
@@ -61,7 +63,7 @@ data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 data = data.values
 X = data[:, 1:-1]
 # X_onehot=seq_to_one_hot(X)
-# X[X==2]=1
+X[X == 2] = 1
 Y = data[:, -1]
 # np.savez('XY.npz', X_onehot, Y)
 # X_r=one_hot_to_seq(X)
@@ -89,14 +91,15 @@ except Exception:
     model.save("model_autokeras.h5")
 '''
 '''
-selector = SelectKBest(chi2, k =10)
+selector = SelectKBest(chi2, k =100)
 X_new=selector.fit_transform(X, Y)
+'''
 lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
 model = SelectFromModel(lsvc, prefit=True)
 X_new = model.transform(X)
-'''
+
 automl = AutoML(mode='Explain',
                 eval_metric='auc')  # ,algorithms=['Neural Network'],total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
-automl.fit(X, Y)
+automl.fit(X_new[:6000, :], Y[:6000])
 # automl.predict(X_test)
 automl.report()

@@ -1,0 +1,8 @@
+name,model_type,metric_type,metric_value,train_time
+1_Baseline,Baseline,auc,0.5,0.96
+2_DecisionTree,Decision Tree,auc,0.5037660256410256,7.1
+3_Linear,Linear,auc,0.523886217948718,2.66
+4_Default_Xgboost,Xgboost,auc,0.5042147435897436,57.43
+5_Default_NeuralNetwork,Neural Network,auc,0.4950560897435898,2.48
+6_Default_RandomForest,Random Forest,auc,0.5545592948717949,6.29
+Ensemble,Ensemble,auc,0.559286858974359,0.48

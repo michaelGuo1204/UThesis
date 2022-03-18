@@ -1,0 +1,3478 @@
+{
+  "fit_level": "finished",
+  "time_controller": {
+    "total_time_limit": 3600,
+    "model_time_limit": null,
+    "steps": [
+      "simple_algorithms",
+      "default_algorithms",
+      "ensemble"
+    ],
+    "algorithms": [
+      "Baseline",
+      "Linear",
+      "Decision Tree",
+      "Random Forest",
+      "Xgboost",
+      "Neural Network"
+    ],
+    "spend": [
+      {
+        "model_name": "prepare_data",
+        "model_type": "prepare_data",
+        "fit_level": "prepare_data",
+        "train_time": 0.9035389423370361
+      },
+      {
+        "model_name": "1_Baseline",
+        "model_type": "Baseline",
+        "fit_level": "simple_algorithms",
+        "train_time": 0.45228075981140137
+      },
+      {
+        "model_name": "2_DecisionTree",
+        "model_type": "Decision Tree",
+        "fit_level": "simple_algorithms",
+        "train_time": 8.648109912872314
+      },
+      {
+        "model_name": "3_Linear",
+        "model_type": "Linear",
+        "fit_level": "simple_algorithms",
+        "train_time": 14.235730648040771
+      },
+      {
+        "model_name": "4_Default_Xgboost",
+        "model_type": "Xgboost",
+        "fit_level": "default_algorithms",
+        "train_time": 286.54885935783386
+      },
+      {
+        "model_name": "5_Default_NeuralNetwork",
+        "model_type": "Neural Network",
+        "fit_level": "default_algorithms",
+        "train_time": 9.101935863494873
+      },
+      {
+        "model_name": "6_Default_RandomForest",
+        "model_type": "Random Forest",
+        "fit_level": "default_algorithms",
+        "train_time": 23.967679023742676
+      },
+      {
+        "model_name": "Ensemble",
+        "model_type": "Ensemble",
+        "fit_level": "ensemble",
+        "train_time": 0.5520021915435791
+      }
+    ],
+    "is_hill_climbing": false,
+    "is_stacking": false
+  },
+  "all_params": {
+    "simple_algorithms": [
+      {
+        "additional": {
+          "max_steps": 1,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {
+            "feature_226": [
+              "remove_column"
+            ],
+            "feature_324": [
+              "remove_column"
+            ],
+            "feature_444": [
+              "remove_column"
+            ],
+            "feature_563": [
+              "remove_column"
+            ]
+          },
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_2/X.data",
+          "y_path": "AutoML_2/y.data",
+          "results_path": "AutoML_2"
+        },
+        "learner": {
+          "model_type": "Baseline",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "seed": 1235,
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "1_Baseline",
+        "status": "trained",
+        "final_loss": -0.5,
+        "train_time": 1.1654508113861084,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      },
+      {
+        "additional": {
+          "trees_in_step": 1,
+          "train_cant_improve_limit": 0,
+          "max_steps": 1,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {
+            "feature_226": [
+              "remove_column"
+            ],
+            "feature_324": [
+              "remove_column"
+            ],
+            "feature_444": [
+              "remove_column"
+            ],
+            "feature_563": [
+              "remove_column"
+            ]
+          },
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_2/X.data",
+          "y_path": "AutoML_2/y.data",
+          "results_path": "AutoML_2"
+        },
+        "learner": {
+          "model_type": "Decision Tree",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "seed": 1235,
+          "criterion": "gini",
+          "max_depth": 3,
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "2_DecisionTree",
+        "status": "trained",
+        "final_loss": -0.739429061836578,
+        "train_time": 9.495131015777588,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      },
+      {
+        "additional": {
+          "max_steps": 1,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {
+            "feature_1": [
+              "scale_normal"
+            ],
+            "feature_2": [
+              "scale_normal"
+            ],
+            "feature_3": [
+              "scale_normal"
+            ],
+            "feature_5": [
+              "scale_normal"
+            ],
+            "feature_7": [
+              "scale_normal"
+            ],
+            "feature_9": [
+              "scale_normal"
+            ],
+            "feature_11": [
+              "scale_normal"
+            ],
+            "feature_13": [
+              "scale_normal"
+            ],
+            "feature_14": [
+              "scale_normal"
+            ],
+            "feature_15": [
+              "scale_normal"
+            ],
+            "feature_16": [
+              "scale_normal"
+            ],
+            "feature_17": [
+              "scale_normal"
+            ],
+            "feature_18": [
+              "scale_normal"
+            ],
+            "feature_19": [
+              "scale_normal"
+            ],
+            "feature_20": [
+              "scale_normal"
+            ],
+            "feature_22": [
+              "scale_normal"
+            ],
+            "feature_24": [
+              "scale_normal"
+            ],
+            "feature_25": [
+              "scale_normal"
+            ],
+            "feature_26": [
+              "scale_normal"
+            ],
+            "feature_27": [
+              "scale_normal"
+            ],
+            "feature_28": [
+              "scale_normal"
+            ],
+            "feature_29": [
+              "scale_normal"
+            ],
+            "feature_30": [
+              "scale_normal"
+            ],
+            "feature_31": [
+              "scale_normal"
+            ],
+            "feature_32": [
+              "scale_normal"
+            ],
+            "feature_33": [
+              "scale_normal"
+            ],
+            "feature_34": [
+              "scale_normal"
+            ],
+            "feature_35": [
+              "scale_normal"
+            ],
+            "feature_36": [
+              "scale_normal"
+            ],
+            "feature_37": [
+              "scale_normal"
+            ],
+            "feature_38": [
+              "scale_normal"
+            ],
+            "feature_39": [
+              "scale_normal"
+            ],
+            "feature_40": [
+              "scale_normal"
+            ],
+            "feature_41": [
+              "scale_normal"
+            ],
+            "feature_43": [
+              "scale_normal"
+            ],
+            "feature_44": [
+              "scale_normal"
+            ],
+            "feature_46": [
+              "scale_normal"
+            ],
+            "feature_48": [
+              "scale_normal"
+            ],
+            "feature_49": [
+              "scale_normal"
+            ],
+            "feature_50": [
+              "scale_normal"
+            ],
+            "feature_51": [
+              "scale_normal"
+            ],
+            "feature_52": [
+              "scale_normal"
+            ],
+            "feature_53": [
+              "scale_normal"
+            ],
+            "feature_55": [
+              "scale_normal"
+            ],
+            "feature_56": [
+              "scale_normal"
+            ],
+            "feature_57": [
+              "scale_normal"
+            ],
+            "feature_58": [
+              "scale_normal"
+            ],
+            "feature_59": [
+              "scale_normal"
+            ],
+            "feature_61": [
+              "scale_normal"
+            ],
+            "feature_62": [
+              "scale_normal"
+            ],
+            "feature_63": [
+              "scale_normal"
+            ],
+            "feature_66": [
+              "scale_normal"
+            ],
+            "feature_68": [
+              "scale_normal"
+            ],
+            "feature_69": [
+              "scale_normal"
+            ],
+            "feature_70": [
+              "scale_normal"
+            ],
+            "feature_71": [
+              "scale_normal"
+            ],
+            "feature_73": [
+              "scale_normal"
+            ],
+            "feature_74": [
+              "scale_normal"
+            ],
+            "feature_75": [
+              "scale_normal"
+            ],
+            "feature_76": [
+              "scale_normal"
+            ],
+            "feature_77": [
+              "scale_normal"
+            ],
+            "feature_78": [
+              "scale_normal"
+            ],
+            "feature_81": [
+              "scale_normal"
+            ],
+            "feature_82": [
+              "scale_normal"
+            ],
+            "feature_83": [
+              "scale_normal"
+            ],
+            "feature_84": [
+              "scale_normal"
+            ],
+            "feature_85": [
+              "scale_normal"
+            ],
+            "feature_86": [
+              "scale_normal"
+            ],
+            "feature_87": [
+              "scale_normal"
+            ],
+            "feature_88": [
+              "scale_normal"
+            ],
+            "feature_89": [
+              "scale_normal"
+            ],
+            "feature_90": [
+              "scale_normal"
+            ],
+            "feature_91": [
+              "scale_normal"
+            ],
+            "feature_92": [
+              "scale_normal"
+            ],
+            "feature_94": [
+              "scale_normal"
+            ],
+            "feature_95": [
+              "scale_normal"
+            ],
+            "feature_96": [
+              "scale_normal"
+            ],
+            "feature_97": [
+              "scale_normal"
+            ],
+            "feature_98": [
+              "scale_normal"
+            ],
+            "feature_99": [
+              "scale_normal"
+            ],
+            "feature_100": [
+              "scale_normal"
+            ],
+            "feature_101": [
+              "scale_normal"
+            ],
+            "feature_102": [
+              "scale_normal"
+            ],
+            "feature_103": [
+              "scale_normal"
+            ],
+            "feature_105": [
+              "scale_normal"
+            ],
+            "feature_106": [
+              "scale_normal"
+            ],
+            "feature_107": [
+              "scale_normal"
+            ],
+            "feature_108": [
+              "scale_normal"
+            ],
+            "feature_109": [
+              "scale_normal"
+            ],
+            "feature_110": [
+              "scale_normal"
+            ],
+            "feature_111": [
+              "scale_normal"
+            ],
+            "feature_112": [
+              "scale_normal"
+            ],
+            "feature_113": [
+              "scale_normal"
+            ],
+            "feature_114": [
+              "scale_normal"
+            ],
+            "feature_115": [
+              "scale_normal"
+            ],
+            "feature_116": [
+              "scale_normal"
+            ],
+            "feature_117": [
+              "scale_normal"
+            ],
+            "feature_118": [
+              "scale_normal"
+            ],
+            "feature_119": [
+              "scale_normal"
+            ],
+            "feature_120": [
+              "scale_normal"
+            ],
+            "feature_121": [
+              "scale_normal"
+            ],
+            "feature_122": [
+              "scale_normal"
+            ],
+            "feature_123": [
+              "scale_normal"
+            ],
+            "feature_124": [
+              "scale_normal"
+            ],
+            "feature_126": [
+              "scale_normal"
+            ],
+            "feature_127": [
+              "scale_normal"
+            ],
+            "feature_128": [
+              "scale_normal"
+            ],
+            "feature_129": [
+              "scale_normal"
+            ],
+            "feature_130": [
+              "scale_normal"
+            ],
+            "feature_132": [
+              "scale_normal"
+            ],
+            "feature_133": [
+              "scale_normal"
+            ],
+            "feature_134": [
+              "scale_normal"
+            ],
+            "feature_135": [
+              "scale_normal"
+            ],
+            "feature_136": [
+              "scale_normal"
+            ],
+            "feature_137": [
+              "scale_normal"
+            ],
+            "feature_138": [
+              "scale_normal"
+            ],
+            "feature_139": [
+              "scale_normal"
+            ],
+            "feature_140": [
+              "scale_normal"
+            ],
+            "feature_141": [
+              "scale_normal"
+            ],
+            "feature_142": [
+              "scale_normal"
+            ],
+            "feature_144": [
+              "scale_normal"
+            ],
+            "feature_145": [
+              "scale_normal"
+            ],
+            "feature_146": [
+              "scale_normal"
+            ],
+            "feature_147": [
+              "scale_normal"
+            ],
+            "feature_148": [
+              "scale_normal"
+            ],
+            "feature_149": [
+              "scale_normal"
+            ],
+            "feature_150": [
+              "scale_normal"
+            ],
+            "feature_151": [
+              "scale_normal"
+            ],
+            "feature_152": [
+              "scale_normal"
+            ],
+            "feature_153": [
+              "scale_normal"
+            ],
+            "feature_154": [
+              "scale_normal"
+            ],
+            "feature_155": [
+              "scale_normal"
+            ],
+            "feature_156": [
+              "scale_normal"
+            ],
+            "feature_157": [
+              "scale_normal"
+            ],
+            "feature_158": [
+              "scale_normal"
+            ],
+            "feature_159": [
+              "scale_normal"
+            ],
+            "feature_160": [
+              "scale_normal"
+            ],
+            "feature_161": [
+              "scale_normal"
+            ],
+            "feature_162": [
+              "scale_normal"
+            ],
+            "feature_165": [
+              "scale_normal"
+            ],
+            "feature_166": [
+              "scale_normal"
+            ],
+            "feature_167": [
+              "scale_normal"
+            ],
+            "feature_168": [
+              "scale_normal"
+            ],
+            "feature_169": [
+              "scale_normal"
+            ],
+            "feature_170": [
+              "scale_normal"
+            ],
+            "feature_171": [
+              "scale_normal"
+            ],
+            "feature_172": [
+              "scale_normal"
+            ],
+            "feature_173": [
+              "scale_normal"
+            ],
+            "feature_174": [
+              "scale_normal"
+            ],
+            "feature_175": [
+              "scale_normal"
+            ],
+            "feature_176": [
+              "scale_normal"
+            ],
+            "feature_177": [
+              "scale_normal"
+            ],
+            "feature_178": [
+              "scale_normal"
+            ],
+            "feature_179": [
+              "scale_normal"
+            ],
+            "feature_180": [
+              "scale_normal"
+            ],
+            "feature_181": [
+              "scale_normal"
+            ],
+            "feature_182": [
+              "scale_normal"
+            ],
+            "feature_183": [
+              "scale_normal"
+            ],
+            "feature_184": [
+              "scale_normal"
+            ],
+            "feature_185": [
+              "scale_normal"
+            ],
+            "feature_186": [
+              "scale_normal"
+            ],
+            "feature_188": [
+              "scale_normal"
+            ],
+            "feature_189": [
+              "scale_normal"
+            ],
+            "feature_190": [
+              "scale_normal"
+            ],
+            "feature_191": [
+              "scale_normal"
+            ],
+            "feature_192": [
+              "scale_normal"
+            ],
+            "feature_193": [
+              "scale_normal"
+            ],
+            "feature_194": [
+              "scale_normal"
+            ],
+            "feature_195": [
+              "scale_normal"
+            ],
+            "feature_196": [
+              "scale_normal"
+            ],
+            "feature_197": [
+              "scale_normal"
+            ],
+            "feature_198": [
+              "scale_normal"
+            ],
+            "feature_199": [
+              "scale_normal"
+            ],
+            "feature_200": [
+              "scale_normal"
+            ],
+            "feature_201": [
+              "scale_normal"
+            ],
+            "feature_202": [
+              "scale_normal"
+            ],
+            "feature_203": [
+              "scale_normal"
+            ],
+            "feature_204": [
+              "scale_normal"
+            ],
+            "feature_205": [
+              "scale_normal"
+            ],
+            "feature_206": [
+              "scale_normal"
+            ],
+            "feature_208": [
+              "scale_normal"
+            ],
+            "feature_209": [
+              "scale_normal"
+            ],
+            "feature_210": [
+              "scale_normal"
+            ],
+            "feature_211": [
+              "scale_normal"
+            ],
+            "feature_213": [
+              "scale_normal"
+            ],
+            "feature_214": [
+              "scale_normal"
+            ],
+            "feature_216": [
+              "scale_normal"
+            ],
+            "feature_217": [
+              "scale_normal"
+            ],
+            "feature_220": [
+              "scale_normal"
+            ],
+            "feature_222": [
+              "scale_normal"
+            ],
+            "feature_223": [
+              "scale_normal"
+            ],
+            "feature_224": [
+              "scale_normal"
+            ],
+            "feature_225": [
+              "scale_normal"
+            ],
+            "feature_226": [
+              "remove_column"
+            ],
+            "feature_227": [
+              "scale_normal"
+            ],
+            "feature_228": [
+              "scale_normal"
+            ],
+            "feature_229": [
+              "scale_normal"
+            ],
+            "feature_230": [
+              "scale_normal"
+            ],
+            "feature_231": [
+              "scale_normal"
+            ],
+            "feature_232": [
+              "scale_normal"
+            ],
+            "feature_233": [
+              "scale_normal"
+            ],
+            "feature_234": [
+              "scale_normal"
+            ],
+            "feature_236": [
+              "scale_normal"
+            ],
+            "feature_237": [
+              "scale_normal"
+            ],
+            "feature_238": [
+              "scale_normal"
+            ],
+            "feature_239": [
+              "scale_normal"
+            ],
+            "feature_240": [
+              "scale_normal"
+            ],
+            "feature_241": [
+              "scale_normal"
+            ],
+            "feature_242": [
+              "scale_normal"
+            ],
+            "feature_243": [
+              "scale_normal"
+            ],
+            "feature_244": [
+              "scale_normal"
+            ],
+            "feature_245": [
+              "scale_normal"
+            ],
+            "feature_246": [
+              "scale_normal"
+            ],
+            "feature_247": [
+              "scale_normal"
+            ],
+            "feature_249": [
+              "scale_normal"
+            ],
+            "feature_251": [
+              "scale_normal"
+            ],
+            "feature_252": [
+              "scale_normal"
+            ],
+            "feature_253": [
+              "scale_normal"
+            ],
+            "feature_254": [
+              "scale_normal"
+            ],
+            "feature_255": [
+              "scale_normal"
+            ],
+            "feature_256": [
+              "scale_normal"
+            ],
+            "feature_258": [
+              "scale_normal"
+            ],
+            "feature_259": [
+              "scale_normal"
+            ],
+            "feature_260": [
+              "scale_normal"
+            ],
+            "feature_261": [
+              "scale_normal"
+            ],
+            "feature_263": [
+              "scale_normal"
+            ],
+            "feature_264": [
+              "scale_normal"
+            ],
+            "feature_265": [
+              "scale_normal"
+            ],
+            "feature_266": [
+              "scale_normal"
+            ],
+            "feature_267": [
+              "scale_normal"
+            ],
+            "feature_268": [
+              "scale_normal"
+            ],
+            "feature_269": [
+              "scale_normal"
+            ],
+            "feature_270": [
+              "scale_normal"
+            ],
+            "feature_271": [
+              "scale_normal"
+            ],
+            "feature_272": [
+              "scale_normal"
+            ],
+            "feature_274": [
+              "scale_normal"
+            ],
+            "feature_275": [
+              "scale_normal"
+            ],
+            "feature_276": [
+              "scale_normal"
+            ],
+            "feature_277": [
+              "scale_normal"
+            ],
+            "feature_278": [
+              "scale_normal"
+            ],
+            "feature_279": [
+              "scale_normal"
+            ],
+            "feature_280": [
+              "scale_normal"
+            ],
+            "feature_281": [
+              "scale_normal"
+            ],
+            "feature_282": [
+              "scale_normal"
+            ],
+            "feature_284": [
+              "scale_normal"
+            ],
+            "feature_285": [
+              "scale_normal"
+            ],
+            "feature_286": [
+              "scale_normal"
+            ],
+            "feature_288": [
+              "scale_normal"
+            ],
+            "feature_289": [
+              "scale_normal"
+            ],
+            "feature_290": [
+              "scale_normal"
+            ],
+            "feature_291": [
+              "scale_normal"
+            ],
+            "feature_292": [
+              "scale_normal"
+            ],
+            "feature_294": [
+              "scale_normal"
+            ],
+            "feature_296": [
+              "scale_normal"
+            ],
+            "feature_300": [
+              "scale_normal"
+            ],
+            "feature_301": [
+              "scale_normal"
+            ],
+            "feature_302": [
+              "scale_normal"
+            ],
+            "feature_303": [
+              "scale_normal"
+            ],
+            "feature_304": [
+              "scale_normal"
+            ],
+            "feature_305": [
+              "scale_normal"
+            ],
+            "feature_306": [
+              "scale_normal"
+            ],
+            "feature_307": [
+              "scale_normal"
+            ],
+            "feature_308": [
+              "scale_normal"
+            ],
+            "feature_309": [
+              "scale_normal"
+            ],
+            "feature_310": [
+              "scale_normal"
+            ],
+            "feature_311": [
+              "scale_normal"
+            ],
+            "feature_312": [
+              "scale_normal"
+            ],
+            "feature_313": [
+              "scale_normal"
+            ],
+            "feature_314": [
+              "scale_normal"
+            ],
+            "feature_315": [
+              "scale_normal"
+            ],
+            "feature_316": [
+              "scale_normal"
+            ],
+            "feature_317": [
+              "scale_normal"
+            ],
+            "feature_318": [
+              "scale_normal"
+            ],
+            "feature_319": [
+              "scale_normal"
+            ],
+            "feature_320": [
+              "scale_normal"
+            ],
+            "feature_321": [
+              "scale_normal"
+            ],
+            "feature_322": [
+              "scale_normal"
+            ],
+            "feature_323": [
+              "scale_normal"
+            ],
+            "feature_324": [
+              "remove_column"
+            ],
+            "feature_325": [
+              "scale_normal"
+            ],
+            "feature_326": [
+              "scale_normal"
+            ],
+            "feature_328": [
+              "scale_normal"
+            ],
+            "feature_330": [
+              "scale_normal"
+            ],
+            "feature_331": [
+              "scale_normal"
+            ],
+            "feature_333": [
+              "scale_normal"
+            ],
+            "feature_334": [
+              "scale_normal"
+            ],
+            "feature_335": [
+              "scale_normal"
+            ],
+            "feature_336": [
+              "scale_normal"
+            ],
+            "feature_337": [
+              "scale_normal"
+            ],
+            "feature_338": [
+              "scale_normal"
+            ],
+            "feature_339": [
+              "scale_normal"
+            ],
+            "feature_340": [
+              "scale_normal"
+            ],
+            "feature_341": [
+              "scale_normal"
+            ],
+            "feature_342": [
+              "scale_normal"
+            ],
+            "feature_343": [
+              "scale_normal"
+            ],
+            "feature_346": [
+              "scale_normal"
+            ],
+            "feature_348": [
+              "scale_normal"
+            ],
+            "feature_349": [
+              "scale_normal"
+            ],
+            "feature_350": [
+              "scale_normal"
+            ],
+            "feature_351": [
+              "scale_normal"
+            ],
+            "feature_352": [
+              "scale_normal"
+            ],
+            "feature_353": [
+              "scale_normal"
+            ],
+            "feature_354": [
+              "scale_normal"
+            ],
+            "feature_356": [
+              "scale_normal"
+            ],
+            "feature_357": [
+              "scale_normal"
+            ],
+            "feature_358": [
+              "scale_normal"
+            ],
+            "feature_360": [
+              "scale_normal"
+            ],
+            "feature_361": [
+              "scale_normal"
+            ],
+            "feature_362": [
+              "scale_normal"
+            ],
+            "feature_363": [
+              "scale_normal"
+            ],
+            "feature_364": [
+              "scale_normal"
+            ],
+            "feature_365": [
+              "scale_normal"
+            ],
+            "feature_368": [
+              "scale_normal"
+            ],
+            "feature_369": [
+              "scale_normal"
+            ],
+            "feature_371": [
+              "scale_normal"
+            ],
+            "feature_372": [
+              "scale_normal"
+            ],
+            "feature_373": [
+              "scale_normal"
+            ],
+            "feature_374": [
+              "scale_normal"
+            ],
+            "feature_375": [
+              "scale_normal"
+            ],
+            "feature_376": [
+              "scale_normal"
+            ],
+            "feature_377": [
+              "scale_normal"
+            ],
+            "feature_378": [
+              "scale_normal"
+            ],
+            "feature_379": [
+              "scale_normal"
+            ],
+            "feature_381": [
+              "scale_normal"
+            ],
+            "feature_382": [
+              "scale_normal"
+            ],
+            "feature_383": [
+              "scale_normal"
+            ],
+            "feature_384": [
+              "scale_normal"
+            ],
+            "feature_385": [
+              "scale_normal"
+            ],
+            "feature_387": [
+              "scale_normal"
+            ],
+            "feature_388": [
+              "scale_normal"
+            ],
+            "feature_389": [
+              "scale_normal"
+            ],
+            "feature_390": [
+              "scale_normal"
+            ],
+            "feature_392": [
+              "scale_normal"
+            ],
+            "feature_393": [
+              "scale_normal"
+            ],
+            "feature_394": [
+              "scale_normal"
+            ],
+            "feature_395": [
+              "scale_normal"
+            ],
+            "feature_396": [
+              "scale_normal"
+            ],
+            "feature_397": [
+              "scale_normal"
+            ],
+            "feature_399": [
+              "scale_normal"
+            ],
+            "feature_400": [
+              "scale_normal"
+            ],
+            "feature_401": [
+              "scale_normal"
+            ],
+            "feature_403": [
+              "scale_normal"
+            ],
+            "feature_404": [
+              "scale_normal"
+            ],
+            "feature_406": [
+              "scale_normal"
+            ],
+            "feature_408": [
+              "scale_normal"
+            ],
+            "feature_409": [
+              "scale_normal"
+            ],
+            "feature_411": [
+              "scale_normal"
+            ],
+            "feature_412": [
+              "scale_normal"
+            ],
+            "feature_413": [
+              "scale_normal"
+            ],
+            "feature_414": [
+              "scale_normal"
+            ],
+            "feature_415": [
+              "scale_normal"
+            ],
+            "feature_416": [
+              "scale_normal"
+            ],
+            "feature_417": [
+              "scale_normal"
+            ],
+            "feature_418": [
+              "scale_normal"
+            ],
+            "feature_419": [
+              "scale_normal"
+            ],
+            "feature_420": [
+              "scale_normal"
+            ],
+            "feature_421": [
+              "scale_normal"
+            ],
+            "feature_422": [
+              "scale_normal"
+            ],
+            "feature_423": [
+              "scale_normal"
+            ],
+            "feature_424": [
+              "scale_normal"
+            ],
+            "feature_425": [
+              "scale_normal"
+            ],
+            "feature_426": [
+              "scale_normal"
+            ],
+            "feature_427": [
+              "scale_normal"
+            ],
+            "feature_429": [
+              "scale_normal"
+            ],
+            "feature_430": [
+              "scale_normal"
+            ],
+            "feature_432": [
+              "scale_normal"
+            ],
+            "feature_433": [
+              "scale_normal"
+            ],
+            "feature_434": [
+              "scale_normal"
+            ],
+            "feature_435": [
+              "scale_normal"
+            ],
+            "feature_436": [
+              "scale_normal"
+            ],
+            "feature_437": [
+              "scale_normal"
+            ],
+            "feature_438": [
+              "scale_normal"
+            ],
+            "feature_439": [
+              "scale_normal"
+            ],
+            "feature_440": [
+              "scale_normal"
+            ],
+            "feature_441": [
+              "scale_normal"
+            ],
+            "feature_442": [
+              "scale_normal"
+            ],
+            "feature_443": [
+              "scale_normal"
+            ],
+            "feature_444": [
+              "remove_column"
+            ],
+            "feature_445": [
+              "scale_normal"
+            ],
+            "feature_446": [
+              "scale_normal"
+            ],
+            "feature_447": [
+              "scale_normal"
+            ],
+            "feature_448": [
+              "scale_normal"
+            ],
+            "feature_449": [
+              "scale_normal"
+            ],
+            "feature_450": [
+              "scale_normal"
+            ],
+            "feature_452": [
+              "scale_normal"
+            ],
+            "feature_453": [
+              "scale_normal"
+            ],
+            "feature_454": [
+              "scale_normal"
+            ],
+            "feature_455": [
+              "scale_normal"
+            ],
+            "feature_457": [
+              "scale_normal"
+            ],
+            "feature_458": [
+              "scale_normal"
+            ],
+            "feature_460": [
+              "scale_normal"
+            ],
+            "feature_461": [
+              "scale_normal"
+            ],
+            "feature_463": [
+              "scale_normal"
+            ],
+            "feature_464": [
+              "scale_normal"
+            ],
+            "feature_466": [
+              "scale_normal"
+            ],
+            "feature_467": [
+              "scale_normal"
+            ],
+            "feature_468": [
+              "scale_normal"
+            ],
+            "feature_469": [
+              "scale_normal"
+            ],
+            "feature_470": [
+              "scale_normal"
+            ],
+            "feature_471": [
+              "scale_normal"
+            ],
+            "feature_472": [
+              "scale_normal"
+            ],
+            "feature_473": [
+              "scale_normal"
+            ],
+            "feature_474": [
+              "scale_normal"
+            ],
+            "feature_475": [
+              "scale_normal"
+            ],
+            "feature_476": [
+              "scale_normal"
+            ],
+            "feature_477": [
+              "scale_normal"
+            ],
+            "feature_480": [
+              "scale_normal"
+            ],
+            "feature_481": [
+              "scale_normal"
+            ],
+            "feature_482": [
+              "scale_normal"
+            ],
+            "feature_483": [
+              "scale_normal"
+            ],
+            "feature_484": [
+              "scale_normal"
+            ],
+            "feature_485": [
+              "scale_normal"
+            ],
+            "feature_486": [
+              "scale_normal"
+            ],
+            "feature_488": [
+              "scale_normal"
+            ],
+            "feature_489": [
+              "scale_normal"
+            ],
+            "feature_490": [
+              "scale_normal"
+            ],
+            "feature_491": [
+              "scale_normal"
+            ],
+            "feature_492": [
+              "scale_normal"
+            ],
+            "feature_493": [
+              "scale_normal"
+            ],
+            "feature_494": [
+              "scale_normal"
+            ],
+            "feature_495": [
+              "scale_normal"
+            ],
+            "feature_496": [
+              "scale_normal"
+            ],
+            "feature_499": [
+              "scale_normal"
+            ],
+            "feature_500": [
+              "scale_normal"
+            ],
+            "feature_502": [
+              "scale_normal"
+            ],
+            "feature_503": [
+              "scale_normal"
+            ],
+            "feature_504": [
+              "scale_normal"
+            ],
+            "feature_505": [
+              "scale_normal"
+            ],
+            "feature_506": [
+              "scale_normal"
+            ],
+            "feature_508": [
+              "scale_normal"
+            ],
+            "feature_510": [
+              "scale_normal"
+            ],
+            "feature_511": [
+              "scale_normal"
+            ],
+            "feature_512": [
+              "scale_normal"
+            ],
+            "feature_513": [
+              "scale_normal"
+            ],
+            "feature_514": [
+              "scale_normal"
+            ],
+            "feature_515": [
+              "scale_normal"
+            ],
+            "feature_516": [
+              "scale_normal"
+            ],
+            "feature_517": [
+              "scale_normal"
+            ],
+            "feature_519": [
+              "scale_normal"
+            ],
+            "feature_520": [
+              "scale_normal"
+            ],
+            "feature_522": [
+              "scale_normal"
+            ],
+            "feature_524": [
+              "scale_normal"
+            ],
+            "feature_525": [
+              "scale_normal"
+            ],
+            "feature_526": [
+              "scale_normal"
+            ],
+            "feature_527": [
+              "scale_normal"
+            ],
+            "feature_528": [
+              "scale_normal"
+            ],
+            "feature_529": [
+              "scale_normal"
+            ],
+            "feature_531": [
+              "scale_normal"
+            ],
+            "feature_532": [
+              "scale_normal"
+            ],
+            "feature_533": [
+              "scale_normal"
+            ],
+            "feature_534": [
+              "scale_normal"
+            ],
+            "feature_535": [
+              "scale_normal"
+            ],
+            "feature_536": [
+              "scale_normal"
+            ],
+            "feature_537": [
+              "scale_normal"
+            ],
+            "feature_538": [
+              "scale_normal"
+            ],
+            "feature_539": [
+              "scale_normal"
+            ],
+            "feature_540": [
+              "scale_normal"
+            ],
+            "feature_541": [
+              "scale_normal"
+            ],
+            "feature_542": [
+              "scale_normal"
+            ],
+            "feature_543": [
+              "scale_normal"
+            ],
+            "feature_544": [
+              "scale_normal"
+            ],
+            "feature_545": [
+              "scale_normal"
+            ],
+            "feature_546": [
+              "scale_normal"
+            ],
+            "feature_547": [
+              "scale_normal"
+            ],
+            "feature_548": [
+              "scale_normal"
+            ],
+            "feature_549": [
+              "scale_normal"
+            ],
+            "feature_550": [
+              "scale_normal"
+            ],
+            "feature_551": [
+              "scale_normal"
+            ],
+            "feature_552": [
+              "scale_normal"
+            ],
+            "feature_553": [
+              "scale_normal"
+            ],
+            "feature_555": [
+              "scale_normal"
+            ],
+            "feature_556": [
+              "scale_normal"
+            ],
+            "feature_557": [
+              "scale_normal"
+            ],
+            "feature_558": [
+              "scale_normal"
+            ],
+            "feature_560": [
+              "scale_normal"
+            ],
+            "feature_561": [
+              "scale_normal"
+            ],
+            "feature_562": [
+              "scale_normal"
+            ],
+            "feature_563": [
+              "remove_column"
+            ],
+            "feature_564": [
+              "scale_normal"
+            ],
+            "feature_565": [
+              "scale_normal"
+            ],
+            "feature_566": [
+              "scale_normal"
+            ],
+            "feature_567": [
+              "scale_normal"
+            ],
+            "feature_568": [
+              "scale_normal"
+            ],
+            "feature_569": [
+              "scale_normal"
+            ],
+            "feature_571": [
+              "scale_normal"
+            ],
+            "feature_572": [
+              "scale_normal"
+            ],
+            "feature_574": [
+              "scale_normal"
+            ],
+            "feature_575": [
+              "scale_normal"
+            ],
+            "feature_576": [
+              "scale_normal"
+            ],
+            "feature_577": [
+              "scale_normal"
+            ],
+            "feature_578": [
+              "scale_normal"
+            ],
+            "feature_579": [
+              "scale_normal"
+            ],
+            "feature_580": [
+              "scale_normal"
+            ],
+            "feature_581": [
+              "scale_normal"
+            ],
+            "feature_582": [
+              "scale_normal"
+            ],
+            "feature_583": [
+              "scale_normal"
+            ],
+            "feature_584": [
+              "scale_normal"
+            ],
+            "feature_585": [
+              "scale_normal"
+            ],
+            "feature_586": [
+              "scale_normal"
+            ],
+            "feature_587": [
+              "scale_normal"
+            ],
+            "feature_588": [
+              "scale_normal"
+            ],
+            "feature_589": [
+              "scale_normal"
+            ],
+            "feature_590": [
+              "scale_normal"
+            ],
+            "feature_591": [
+              "scale_normal"
+            ],
+            "feature_592": [
+              "scale_normal"
+            ],
+            "feature_593": [
+              "scale_normal"
+            ],
+            "feature_594": [
+              "scale_normal"
+            ],
+            "feature_595": [
+              "scale_normal"
+            ],
+            "feature_596": [
+              "scale_normal"
+            ],
+            "feature_597": [
+              "scale_normal"
+            ],
+            "feature_599": [
+              "scale_normal"
+            ],
+            "feature_600": [
+              "scale_normal"
+            ],
+            "feature_601": [
+              "scale_normal"
+            ]
+          },
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_2/X.data",
+          "y_path": "AutoML_2/y.data",
+          "results_path": "AutoML_2"
+        },
+        "learner": {
+          "model_type": "Linear",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "seed": 1235,
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Linear",
+        "status": "trained",
+        "final_loss": -0.8643895388228918,
+        "train_time": 15.093207120895386,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      }
+    ],
+    "default_algorithms": [
+      {
+        "additional": {
+          "max_rounds": 10000,
+          "early_stopping_rounds": 50,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {
+            "feature_226": [
+              "remove_column"
+            ],
+            "feature_324": [
+              "remove_column"
+            ],
+            "feature_444": [
+              "remove_column"
+            ],
+            "feature_563": [
+              "remove_column"
+            ]
+          },
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_2/X.data",
+          "y_path": "AutoML_2/y.data",
+          "results_path": "AutoML_2"
+        },
+        "learner": {
+          "model_type": "Xgboost",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "objective": "binary:logistic",
+          "eta": 0.075,
+          "max_depth": 6,
+          "min_child_weight": 1,
+          "subsample": 1.0,
+          "colsample_bytree": 1.0,
+          "seed": 4,
+          "eval_metric": "auc",
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "4_Default_Xgboost",
+        "status": "trained",
+        "final_loss": -0.8674610416007951,
+        "train_time": 287.43739199638367,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      },
+      {
+        "additional": {
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {
+            "feature_1": [
+              "scale_normal"
+            ],
+            "feature_2": [
+              "scale_normal"
+            ],
+            "feature_3": [
+              "scale_normal"
+            ],
+            "feature_5": [
+              "scale_normal"
+            ],
+            "feature_7": [
+              "scale_normal"
+            ],
+            "feature_9": [
+              "scale_normal"
+            ],
+            "feature_11": [
+              "scale_normal"
+            ],
+            "feature_13": [
+              "scale_normal"
+            ],
+            "feature_14": [
+              "scale_normal"
+            ],
+            "feature_15": [
+              "scale_normal"
+            ],
+            "feature_16": [
+              "scale_normal"
+            ],
+            "feature_17": [
+              "scale_normal"
+            ],
+            "feature_18": [
+              "scale_normal"
+            ],
+            "feature_19": [
+              "scale_normal"
+            ],
+            "feature_20": [
+              "scale_normal"
+            ],
+            "feature_22": [
+              "scale_normal"
+            ],
+            "feature_24": [
+              "scale_normal"
+            ],
+            "feature_25": [
+              "scale_normal"
+            ],
+            "feature_26": [
+              "scale_normal"
+            ],
+            "feature_27": [
+              "scale_normal"
+            ],
+            "feature_28": [
+              "scale_normal"
+            ],
+            "feature_29": [
+              "scale_normal"
+            ],
+            "feature_30": [
+              "scale_normal"
+            ],
+            "feature_31": [
+              "scale_normal"
+            ],
+            "feature_32": [
+              "scale_normal"
+            ],
+            "feature_33": [
+              "scale_normal"
+            ],
+            "feature_34": [
+              "scale_normal"
+            ],
+            "feature_35": [
+              "scale_normal"
+            ],
+            "feature_36": [
+              "scale_normal"
+            ],
+            "feature_37": [
+              "scale_normal"
+            ],
+            "feature_38": [
+              "scale_normal"
+            ],
+            "feature_39": [
+              "scale_normal"
+            ],
+            "feature_40": [
+              "scale_normal"
+            ],
+            "feature_41": [
+              "scale_normal"
+            ],
+            "feature_43": [
+              "scale_normal"
+            ],
+            "feature_44": [
+              "scale_normal"
+            ],
+            "feature_46": [
+              "scale_normal"
+            ],
+            "feature_48": [
+              "scale_normal"
+            ],
+            "feature_49": [
+              "scale_normal"
+            ],
+            "feature_50": [
+              "scale_normal"
+            ],
+            "feature_51": [
+              "scale_normal"
+            ],
+            "feature_52": [
+              "scale_normal"
+            ],
+            "feature_53": [
+              "scale_normal"
+            ],
+            "feature_55": [
+              "scale_normal"
+            ],
+            "feature_56": [
+              "scale_normal"
+            ],
+            "feature_57": [
+              "scale_normal"
+            ],
+            "feature_58": [
+              "scale_normal"
+            ],
+            "feature_59": [
+              "scale_normal"
+            ],
+            "feature_61": [
+              "scale_normal"
+            ],
+            "feature_62": [
+              "scale_normal"
+            ],
+            "feature_63": [
+              "scale_normal"
+            ],
+            "feature_66": [
+              "scale_normal"
+            ],
+            "feature_68": [
+              "scale_normal"
+            ],
+            "feature_69": [
+              "scale_normal"
+            ],
+            "feature_70": [
+              "scale_normal"
+            ],
+            "feature_71": [
+              "scale_normal"
+            ],
+            "feature_73": [
+              "scale_normal"
+            ],
+            "feature_74": [
+              "scale_normal"
+            ],
+            "feature_75": [
+              "scale_normal"
+            ],
+            "feature_76": [
+              "scale_normal"
+            ],
+            "feature_77": [
+              "scale_normal"
+            ],
+            "feature_78": [
+              "scale_normal"
+            ],
+            "feature_81": [
+              "scale_normal"
+            ],
+            "feature_82": [
+              "scale_normal"
+            ],
+            "feature_83": [
+              "scale_normal"
+            ],
+            "feature_84": [
+              "scale_normal"
+            ],
+            "feature_85": [
+              "scale_normal"
+            ],
+            "feature_86": [
+              "scale_normal"
+            ],
+            "feature_87": [
+              "scale_normal"
+            ],
+            "feature_88": [
+              "scale_normal"
+            ],
+            "feature_89": [
+              "scale_normal"
+            ],
+            "feature_90": [
+              "scale_normal"
+            ],
+            "feature_91": [
+              "scale_normal"
+            ],
+            "feature_92": [
+              "scale_normal"
+            ],
+            "feature_94": [
+              "scale_normal"
+            ],
+            "feature_95": [
+              "scale_normal"
+            ],
+            "feature_96": [
+              "scale_normal"
+            ],
+            "feature_97": [
+              "scale_normal"
+            ],
+            "feature_98": [
+              "scale_normal"
+            ],
+            "feature_99": [
+              "scale_normal"
+            ],
+            "feature_100": [
+              "scale_normal"
+            ],
+            "feature_101": [
+              "scale_normal"
+            ],
+            "feature_102": [
+              "scale_normal"
+            ],
+            "feature_103": [
+              "scale_normal"
+            ],
+            "feature_105": [
+              "scale_normal"
+            ],
+            "feature_106": [
+              "scale_normal"
+            ],
+            "feature_107": [
+              "scale_normal"
+            ],
+            "feature_108": [
+              "scale_normal"
+            ],
+            "feature_109": [
+              "scale_normal"
+            ],
+            "feature_110": [
+              "scale_normal"
+            ],
+            "feature_111": [
+              "scale_normal"
+            ],
+            "feature_112": [
+              "scale_normal"
+            ],
+            "feature_113": [
+              "scale_normal"
+            ],
+            "feature_114": [
+              "scale_normal"
+            ],
+            "feature_115": [
+              "scale_normal"
+            ],
+            "feature_116": [
+              "scale_normal"
+            ],
+            "feature_117": [
+              "scale_normal"
+            ],
+            "feature_118": [
+              "scale_normal"
+            ],
+            "feature_119": [
+              "scale_normal"
+            ],
+            "feature_120": [
+              "scale_normal"
+            ],
+            "feature_121": [
+              "scale_normal"
+            ],
+            "feature_122": [
+              "scale_normal"
+            ],
+            "feature_123": [
+              "scale_normal"
+            ],
+            "feature_124": [
+              "scale_normal"
+            ],
+            "feature_126": [
+              "scale_normal"
+            ],
+            "feature_127": [
+              "scale_normal"
+            ],
+            "feature_128": [
+              "scale_normal"
+            ],
+            "feature_129": [
+              "scale_normal"
+            ],
+            "feature_130": [
+              "scale_normal"
+            ],
+            "feature_132": [
+              "scale_normal"
+            ],
+            "feature_133": [
+              "scale_normal"
+            ],
+            "feature_134": [
+              "scale_normal"
+            ],
+            "feature_135": [
+              "scale_normal"
+            ],
+            "feature_136": [
+              "scale_normal"
+            ],
+            "feature_137": [
+              "scale_normal"
+            ],
+            "feature_138": [
+              "scale_normal"
+            ],
+            "feature_139": [
+              "scale_normal"
+            ],
+            "feature_140": [
+              "scale_normal"
+            ],
+            "feature_141": [
+              "scale_normal"
+            ],
+            "feature_142": [
+              "scale_normal"
+            ],
+            "feature_144": [
+              "scale_normal"
+            ],
+            "feature_145": [
+              "scale_normal"
+            ],
+            "feature_146": [
+              "scale_normal"
+            ],
+            "feature_147": [
+              "scale_normal"
+            ],
+            "feature_148": [
+              "scale_normal"
+            ],
+            "feature_149": [
+              "scale_normal"
+            ],
+            "feature_150": [
+              "scale_normal"
+            ],
+            "feature_151": [
+              "scale_normal"
+            ],
+            "feature_152": [
+              "scale_normal"
+            ],
+            "feature_153": [
+              "scale_normal"
+            ],
+            "feature_154": [
+              "scale_normal"
+            ],
+            "feature_155": [
+              "scale_normal"
+            ],
+            "feature_156": [
+              "scale_normal"
+            ],
+            "feature_157": [
+              "scale_normal"
+            ],
+            "feature_158": [
+              "scale_normal"
+            ],
+            "feature_159": [
+              "scale_normal"
+            ],
+            "feature_160": [
+              "scale_normal"
+            ],
+            "feature_161": [
+              "scale_normal"
+            ],
+            "feature_162": [
+              "scale_normal"
+            ],
+            "feature_165": [
+              "scale_normal"
+            ],
+            "feature_166": [
+              "scale_normal"
+            ],
+            "feature_167": [
+              "scale_normal"
+            ],
+            "feature_168": [
+              "scale_normal"
+            ],
+            "feature_169": [
+              "scale_normal"
+            ],
+            "feature_170": [
+              "scale_normal"
+            ],
+            "feature_171": [
+              "scale_normal"
+            ],
+            "feature_172": [
+              "scale_normal"
+            ],
+            "feature_173": [
+              "scale_normal"
+            ],
+            "feature_174": [
+              "scale_normal"
+            ],
+            "feature_175": [
+              "scale_normal"
+            ],
+            "feature_176": [
+              "scale_normal"
+            ],
+            "feature_177": [
+              "scale_normal"
+            ],
+            "feature_178": [
+              "scale_normal"
+            ],
+            "feature_179": [
+              "scale_normal"
+            ],
+            "feature_180": [
+              "scale_normal"
+            ],
+            "feature_181": [
+              "scale_normal"
+            ],
+            "feature_182": [
+              "scale_normal"
+            ],
+            "feature_183": [
+              "scale_normal"
+            ],
+            "feature_184": [
+              "scale_normal"
+            ],
+            "feature_185": [
+              "scale_normal"
+            ],
+            "feature_186": [
+              "scale_normal"
+            ],
+            "feature_188": [
+              "scale_normal"
+            ],
+            "feature_189": [
+              "scale_normal"
+            ],
+            "feature_190": [
+              "scale_normal"
+            ],
+            "feature_191": [
+              "scale_normal"
+            ],
+            "feature_192": [
+              "scale_normal"
+            ],
+            "feature_193": [
+              "scale_normal"
+            ],
+            "feature_194": [
+              "scale_normal"
+            ],
+            "feature_195": [
+              "scale_normal"
+            ],
+            "feature_196": [
+              "scale_normal"
+            ],
+            "feature_197": [
+              "scale_normal"
+            ],
+            "feature_198": [
+              "scale_normal"
+            ],
+            "feature_199": [
+              "scale_normal"
+            ],
+            "feature_200": [
+              "scale_normal"
+            ],
+            "feature_201": [
+              "scale_normal"
+            ],
+            "feature_202": [
+              "scale_normal"
+            ],
+            "feature_203": [
+              "scale_normal"
+            ],
+            "feature_204": [
+              "scale_normal"
+            ],
+            "feature_205": [
+              "scale_normal"
+            ],
+            "feature_206": [
+              "scale_normal"
+            ],
+            "feature_208": [
+              "scale_normal"
+            ],
+            "feature_209": [
+              "scale_normal"
+            ],
+            "feature_210": [
+              "scale_normal"
+            ],
+            "feature_211": [
+              "scale_normal"
+            ],
+            "feature_213": [
+              "scale_normal"
+            ],
+            "feature_214": [
+              "scale_normal"
+            ],
+            "feature_216": [
+              "scale_normal"
+            ],
+            "feature_217": [
+              "scale_normal"
+            ],
+            "feature_220": [
+              "scale_normal"
+            ],
+            "feature_222": [
+              "scale_normal"
+            ],
+            "feature_223": [
+              "scale_normal"
+            ],
+            "feature_224": [
+              "scale_normal"
+            ],
+            "feature_225": [
+              "scale_normal"
+            ],
+            "feature_226": [
+              "remove_column"
+            ],
+            "feature_227": [
+              "scale_normal"
+            ],
+            "feature_228": [
+              "scale_normal"
+            ],
+            "feature_229": [
+              "scale_normal"
+            ],
+            "feature_230": [
+              "scale_normal"
+            ],
+            "feature_231": [
+              "scale_normal"
+            ],
+            "feature_232": [
+              "scale_normal"
+            ],
+            "feature_233": [
+              "scale_normal"
+            ],
+            "feature_234": [
+              "scale_normal"
+            ],
+            "feature_236": [
+              "scale_normal"
+            ],
+            "feature_237": [
+              "scale_normal"
+            ],
+            "feature_238": [
+              "scale_normal"
+            ],
+            "feature_239": [
+              "scale_normal"
+            ],
+            "feature_240": [
+              "scale_normal"
+            ],
+            "feature_241": [
+              "scale_normal"
+            ],
+            "feature_242": [
+              "scale_normal"
+            ],
+            "feature_243": [
+              "scale_normal"
+            ],
+            "feature_244": [
+              "scale_normal"
+            ],
+            "feature_245": [
+              "scale_normal"
+            ],
+            "feature_246": [
+              "scale_normal"
+            ],
+            "feature_247": [
+              "scale_normal"
+            ],
+            "feature_249": [
+              "scale_normal"
+            ],
+            "feature_251": [
+              "scale_normal"
+            ],
+            "feature_252": [
+              "scale_normal"
+            ],
+            "feature_253": [
+              "scale_normal"
+            ],
+            "feature_254": [
+              "scale_normal"
+            ],
+            "feature_255": [
+              "scale_normal"
+            ],
+            "feature_256": [
+              "scale_normal"
+            ],
+            "feature_258": [
+              "scale_normal"
+            ],
+            "feature_259": [
+              "scale_normal"
+            ],
+            "feature_260": [
+              "scale_normal"
+            ],
+            "feature_261": [
+              "scale_normal"
+            ],
+            "feature_263": [
+              "scale_normal"
+            ],
+            "feature_264": [
+              "scale_normal"
+            ],
+            "feature_265": [
+              "scale_normal"
+            ],
+            "feature_266": [
+              "scale_normal"
+            ],
+            "feature_267": [
+              "scale_normal"
+            ],
+            "feature_268": [
+              "scale_normal"
+            ],
+            "feature_269": [
+              "scale_normal"
+            ],
+            "feature_270": [
+              "scale_normal"
+            ],
+            "feature_271": [
+              "scale_normal"
+            ],
+            "feature_272": [
+              "scale_normal"
+            ],
+            "feature_274": [
+              "scale_normal"
+            ],
+            "feature_275": [
+              "scale_normal"
+            ],
+            "feature_276": [
+              "scale_normal"
+            ],
+            "feature_277": [
+              "scale_normal"
+            ],
+            "feature_278": [
+              "scale_normal"
+            ],
+            "feature_279": [
+              "scale_normal"
+            ],
+            "feature_280": [
+              "scale_normal"
+            ],
+            "feature_281": [
+              "scale_normal"
+            ],
+            "feature_282": [
+              "scale_normal"
+            ],
+            "feature_284": [
+              "scale_normal"
+            ],
+            "feature_285": [
+              "scale_normal"
+            ],
+            "feature_286": [
+              "scale_normal"
+            ],
+            "feature_288": [
+              "scale_normal"
+            ],
+            "feature_289": [
+              "scale_normal"
+            ],
+            "feature_290": [
+              "scale_normal"
+            ],
+            "feature_291": [
+              "scale_normal"
+            ],
+            "feature_292": [
+              "scale_normal"
+            ],
+            "feature_294": [
+              "scale_normal"
+            ],
+            "feature_296": [
+              "scale_normal"
+            ],
+            "feature_300": [
+              "scale_normal"
+            ],
+            "feature_301": [
+              "scale_normal"
+            ],
+            "feature_302": [
+              "scale_normal"
+            ],
+            "feature_303": [
+              "scale_normal"
+            ],
+            "feature_304": [
+              "scale_normal"
+            ],
+            "feature_305": [
+              "scale_normal"
+            ],
+            "feature_306": [
+              "scale_normal"
+            ],
+            "feature_307": [
+              "scale_normal"
+            ],
+            "feature_308": [
+              "scale_normal"
+            ],
+            "feature_309": [
+              "scale_normal"
+            ],
+            "feature_310": [
+              "scale_normal"
+            ],
+            "feature_311": [
+              "scale_normal"
+            ],
+            "feature_312": [
+              "scale_normal"
+            ],
+            "feature_313": [
+              "scale_normal"
+            ],
+            "feature_314": [
+              "scale_normal"
+            ],
+            "feature_315": [
+              "scale_normal"
+            ],
+            "feature_316": [
+              "scale_normal"
+            ],
+            "feature_317": [
+              "scale_normal"
+            ],
+            "feature_318": [
+              "scale_normal"
+            ],
+            "feature_319": [
+              "scale_normal"
+            ],
+            "feature_320": [
+              "scale_normal"
+            ],
+            "feature_321": [
+              "scale_normal"
+            ],
+            "feature_322": [
+              "scale_normal"
+            ],
+            "feature_323": [
+              "scale_normal"
+            ],
+            "feature_324": [
+              "remove_column"
+            ],
+            "feature_325": [
+              "scale_normal"
+            ],
+            "feature_326": [
+              "scale_normal"
+            ],
+            "feature_328": [
+              "scale_normal"
+            ],
+            "feature_330": [
+              "scale_normal"
+            ],
+            "feature_331": [
+              "scale_normal"
+            ],
+            "feature_333": [
+              "scale_normal"
+            ],
+            "feature_334": [
+              "scale_normal"
+            ],
+            "feature_335": [
+              "scale_normal"
+            ],
+            "feature_336": [
+              "scale_normal"
+            ],
+            "feature_337": [
+              "scale_normal"
+            ],
+            "feature_338": [
+              "scale_normal"
+            ],
+            "feature_339": [
+              "scale_normal"
+            ],
+            "feature_340": [
+              "scale_normal"
+            ],
+            "feature_341": [
+              "scale_normal"
+            ],
+            "feature_342": [
+              "scale_normal"
+            ],
+            "feature_343": [
+              "scale_normal"
+            ],
+            "feature_346": [
+              "scale_normal"
+            ],
+            "feature_348": [
+              "scale_normal"
+            ],
+            "feature_349": [
+              "scale_normal"
+            ],
+            "feature_350": [
+              "scale_normal"
+            ],
+            "feature_351": [
+              "scale_normal"
+            ],
+            "feature_352": [
+              "scale_normal"
+            ],
+            "feature_353": [
+              "scale_normal"
+            ],
+            "feature_354": [
+              "scale_normal"
+            ],
+            "feature_356": [
+              "scale_normal"
+            ],
+            "feature_357": [
+              "scale_normal"
+            ],
+            "feature_358": [
+              "scale_normal"
+            ],
+            "feature_360": [
+              "scale_normal"
+            ],
+            "feature_361": [
+              "scale_normal"
+            ],
+            "feature_362": [
+              "scale_normal"
+            ],
+            "feature_363": [
+              "scale_normal"
+            ],
+            "feature_364": [
+              "scale_normal"
+            ],
+            "feature_365": [
+              "scale_normal"
+            ],
+            "feature_368": [
+              "scale_normal"
+            ],
+            "feature_369": [
+              "scale_normal"
+            ],
+            "feature_371": [
+              "scale_normal"
+            ],
+            "feature_372": [
+              "scale_normal"
+            ],
+            "feature_373": [
+              "scale_normal"
+            ],
+            "feature_374": [
+              "scale_normal"
+            ],
+            "feature_375": [
+              "scale_normal"
+            ],
+            "feature_376": [
+              "scale_normal"
+            ],
+            "feature_377": [
+              "scale_normal"
+            ],
+            "feature_378": [
+              "scale_normal"
+            ],
+            "feature_379": [
+              "scale_normal"
+            ],
+            "feature_381": [
+              "scale_normal"
+            ],
+            "feature_382": [
+              "scale_normal"
+            ],
+            "feature_383": [
+              "scale_normal"
+            ],
+            "feature_384": [
+              "scale_normal"
+            ],
+            "feature_385": [
+              "scale_normal"
+            ],
+            "feature_387": [
+              "scale_normal"
+            ],
+            "feature_388": [
+              "scale_normal"
+            ],
+            "feature_389": [
+              "scale_normal"
+            ],
+            "feature_390": [
+              "scale_normal"
+            ],
+            "feature_392": [
+              "scale_normal"
+            ],
+            "feature_393": [
+              "scale_normal"
+            ],
+            "feature_394": [
+              "scale_normal"
+            ],
+            "feature_395": [
+              "scale_normal"
+            ],
+            "feature_396": [
+              "scale_normal"
+            ],
+            "feature_397": [
+              "scale_normal"
+            ],
+            "feature_399": [
+              "scale_normal"
+            ],
+            "feature_400": [
+              "scale_normal"
+            ],
+            "feature_401": [
+              "scale_normal"
+            ],
+            "feature_403": [
+              "scale_normal"
+            ],
+            "feature_404": [
+              "scale_normal"
+            ],
+            "feature_406": [
+              "scale_normal"
+            ],
+            "feature_408": [
+              "scale_normal"
+            ],
+            "feature_409": [
+              "scale_normal"
+            ],
+            "feature_411": [
+              "scale_normal"
+            ],
+            "feature_412": [
+              "scale_normal"
+            ],
+            "feature_413": [
+              "scale_normal"
+            ],
+            "feature_414": [
+              "scale_normal"
+            ],
+            "feature_415": [
+              "scale_normal"
+            ],
+            "feature_416": [
+              "scale_normal"
+            ],
+            "feature_417": [
+              "scale_normal"
+            ],
+            "feature_418": [
+              "scale_normal"
+            ],
+            "feature_419": [
+              "scale_normal"
+            ],
+            "feature_420": [
+              "scale_normal"
+            ],
+            "feature_421": [
+              "scale_normal"
+            ],
+            "feature_422": [
+              "scale_normal"
+            ],
+            "feature_423": [
+              "scale_normal"
+            ],
+            "feature_424": [
+              "scale_normal"
+            ],
+            "feature_425": [
+              "scale_normal"
+            ],
+            "feature_426": [
+              "scale_normal"
+            ],
+            "feature_427": [
+              "scale_normal"
+            ],
+            "feature_429": [
+              "scale_normal"
+            ],
+            "feature_430": [
+              "scale_normal"
+            ],
+            "feature_432": [
+              "scale_normal"
+            ],
+            "feature_433": [
+              "scale_normal"
+            ],
+            "feature_434": [
+              "scale_normal"
+            ],
+            "feature_435": [
+              "scale_normal"
+            ],
+            "feature_436": [
+              "scale_normal"
+            ],
+            "feature_437": [
+              "scale_normal"
+            ],
+            "feature_438": [
+              "scale_normal"
+            ],
+            "feature_439": [
+              "scale_normal"
+            ],
+            "feature_440": [
+              "scale_normal"
+            ],
+            "feature_441": [
+              "scale_normal"
+            ],
+            "feature_442": [
+              "scale_normal"
+            ],
+            "feature_443": [
+              "scale_normal"
+            ],
+            "feature_444": [
+              "remove_column"
+            ],
+            "feature_445": [
+              "scale_normal"
+            ],
+            "feature_446": [
+              "scale_normal"
+            ],
+            "feature_447": [
+              "scale_normal"
+            ],
+            "feature_448": [
+              "scale_normal"
+            ],
+            "feature_449": [
+              "scale_normal"
+            ],
+            "feature_450": [
+              "scale_normal"
+            ],
+            "feature_452": [
+              "scale_normal"
+            ],
+            "feature_453": [
+              "scale_normal"
+            ],
+            "feature_454": [
+              "scale_normal"
+            ],
+            "feature_455": [
+              "scale_normal"
+            ],
+            "feature_457": [
+              "scale_normal"
+            ],
+            "feature_458": [
+              "scale_normal"
+            ],
+            "feature_460": [
+              "scale_normal"
+            ],
+            "feature_461": [
+              "scale_normal"
+            ],
+            "feature_463": [
+              "scale_normal"
+            ],
+            "feature_464": [
+              "scale_normal"
+            ],
+            "feature_466": [
+              "scale_normal"
+            ],
+            "feature_467": [
+              "scale_normal"
+            ],
+            "feature_468": [
+              "scale_normal"
+            ],
+            "feature_469": [
+              "scale_normal"
+            ],
+            "feature_470": [
+              "scale_normal"
+            ],
+            "feature_471": [
+              "scale_normal"
+            ],
+            "feature_472": [
+              "scale_normal"
+            ],
+            "feature_473": [
+              "scale_normal"
+            ],
+            "feature_474": [
+              "scale_normal"
+            ],
+            "feature_475": [
+              "scale_normal"
+            ],
+            "feature_476": [
+              "scale_normal"
+            ],
+            "feature_477": [
+              "scale_normal"
+            ],
+            "feature_480": [
+              "scale_normal"
+            ],
+            "feature_481": [
+              "scale_normal"
+            ],
+            "feature_482": [
+              "scale_normal"
+            ],
+            "feature_483": [
+              "scale_normal"
+            ],
+            "feature_484": [
+              "scale_normal"
+            ],
+            "feature_485": [
+              "scale_normal"
+            ],
+            "feature_486": [
+              "scale_normal"
+            ],
+            "feature_488": [
+              "scale_normal"
+            ],
+            "feature_489": [
+              "scale_normal"
+            ],
+            "feature_490": [
+              "scale_normal"
+            ],
+            "feature_491": [
+              "scale_normal"
+            ],
+            "feature_492": [
+              "scale_normal"
+            ],
+            "feature_493": [
+              "scale_normal"
+            ],
+            "feature_494": [
+              "scale_normal"
+            ],
+            "feature_495": [
+              "scale_normal"
+            ],
+            "feature_496": [
+              "scale_normal"
+            ],
+            "feature_499": [
+              "scale_normal"
+            ],
+            "feature_500": [
+              "scale_normal"
+            ],
+            "feature_502": [
+              "scale_normal"
+            ],
+            "feature_503": [
+              "scale_normal"
+            ],
+            "feature_504": [
+              "scale_normal"
+            ],
+            "feature_505": [
+              "scale_normal"
+            ],
+            "feature_506": [
+              "scale_normal"
+            ],
+            "feature_508": [
+              "scale_normal"
+            ],
+            "feature_510": [
+              "scale_normal"
+            ],
+            "feature_511": [
+              "scale_normal"
+            ],
+            "feature_512": [
+              "scale_normal"
+            ],
+            "feature_513": [
+              "scale_normal"
+            ],
+            "feature_514": [
+              "scale_normal"
+            ],
+            "feature_515": [
+              "scale_normal"
+            ],
+            "feature_516": [
+              "scale_normal"
+            ],
+            "feature_517": [
+              "scale_normal"
+            ],
+            "feature_519": [
+              "scale_normal"
+            ],
+            "feature_520": [
+              "scale_normal"
+            ],
+            "feature_522": [
+              "scale_normal"
+            ],
+            "feature_524": [
+              "scale_normal"
+            ],
+            "feature_525": [
+              "scale_normal"
+            ],
+            "feature_526": [
+              "scale_normal"
+            ],
+            "feature_527": [
+              "scale_normal"
+            ],
+            "feature_528": [
+              "scale_normal"
+            ],
+            "feature_529": [
+              "scale_normal"
+            ],
+            "feature_531": [
+              "scale_normal"
+            ],
+            "feature_532": [
+              "scale_normal"
+            ],
+            "feature_533": [
+              "scale_normal"
+            ],
+            "feature_534": [
+              "scale_normal"
+            ],
+            "feature_535": [
+              "scale_normal"
+            ],
+            "feature_536": [
+              "scale_normal"
+            ],
+            "feature_537": [
+              "scale_normal"
+            ],
+            "feature_538": [
+              "scale_normal"
+            ],
+            "feature_539": [
+              "scale_normal"
+            ],
+            "feature_540": [
+              "scale_normal"
+            ],
+            "feature_541": [
+              "scale_normal"
+            ],
+            "feature_542": [
+              "scale_normal"
+            ],
+            "feature_543": [
+              "scale_normal"
+            ],
+            "feature_544": [
+              "scale_normal"
+            ],
+            "feature_545": [
+              "scale_normal"
+            ],
+            "feature_546": [
+              "scale_normal"
+            ],
+            "feature_547": [
+              "scale_normal"
+            ],
+            "feature_548": [
+              "scale_normal"
+            ],
+            "feature_549": [
+              "scale_normal"
+            ],
+            "feature_550": [
+              "scale_normal"
+            ],
+            "feature_551": [
+              "scale_normal"
+            ],
+            "feature_552": [
+              "scale_normal"
+            ],
+            "feature_553": [
+              "scale_normal"
+            ],
+            "feature_555": [
+              "scale_normal"
+            ],
+            "feature_556": [
+              "scale_normal"
+            ],
+            "feature_557": [
+              "scale_normal"
+            ],
+            "feature_558": [
+              "scale_normal"
+            ],
+            "feature_560": [
+              "scale_normal"
+            ],
+            "feature_561": [
+              "scale_normal"
+            ],
+            "feature_562": [
+              "scale_normal"
+            ],
+            "feature_563": [
+              "remove_column"
+            ],
+            "feature_564": [
+              "scale_normal"
+            ],
+            "feature_565": [
+              "scale_normal"
+            ],
+            "feature_566": [
+              "scale_normal"
+            ],
+            "feature_567": [
+              "scale_normal"
+            ],
+            "feature_568": [
+              "scale_normal"
+            ],
+            "feature_569": [
+              "scale_normal"
+            ],
+            "feature_571": [
+              "scale_normal"
+            ],
+            "feature_572": [
+              "scale_normal"
+            ],
+            "feature_574": [
+              "scale_normal"
+            ],
+            "feature_575": [
+              "scale_normal"
+            ],
+            "feature_576": [
+              "scale_normal"
+            ],
+            "feature_577": [
+              "scale_normal"
+            ],
+            "feature_578": [
+              "scale_normal"
+            ],
+            "feature_579": [
+              "scale_normal"
+            ],
+            "feature_580": [
+              "scale_normal"
+            ],
+            "feature_581": [
+              "scale_normal"
+            ],
+            "feature_582": [
+              "scale_normal"
+            ],
+            "feature_583": [
+              "scale_normal"
+            ],
+            "feature_584": [
+              "scale_normal"
+            ],
+            "feature_585": [
+              "scale_normal"
+            ],
+            "feature_586": [
+              "scale_normal"
+            ],
+            "feature_587": [
+              "scale_normal"
+            ],
+            "feature_588": [
+              "scale_normal"
+            ],
+            "feature_589": [
+              "scale_normal"
+            ],
+            "feature_590": [
+              "scale_normal"
+            ],
+            "feature_591": [
+              "scale_normal"
+            ],
+            "feature_592": [
+              "scale_normal"
+            ],
+            "feature_593": [
+              "scale_normal"
+            ],
+            "feature_594": [
+              "scale_normal"
+            ],
+            "feature_595": [
+              "scale_normal"
+            ],
+            "feature_596": [
+              "scale_normal"
+            ],
+            "feature_597": [
+              "scale_normal"
+            ],
+            "feature_599": [
+              "scale_normal"
+            ],
+            "feature_600": [
+              "scale_normal"
+            ],
+            "feature_601": [
+              "scale_normal"
+            ]
+          },
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_2/X.data",
+          "y_path": "AutoML_2/y.data",
+          "results_path": "AutoML_2"
+        },
+        "learner": {
+          "model_type": "Neural Network",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "dense_1_size": 32,
+          "dense_2_size": 16,
+          "learning_rate": 0.05,
+          "seed": 5,
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "5_Default_NeuralNetwork",
+        "status": "trained",
+        "final_loss": -0.8695713446858484,
+        "train_time": 9.989542961120605,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      },
+      {
+        "additional": {
+          "trees_in_step": 100,
+          "train_cant_improve_limit": 1,
+          "min_steps": 1,
+          "max_steps": 50,
+          "early_stopping_rounds": 50,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {
+            "feature_226": [
+              "remove_column"
+            ],
+            "feature_324": [
+              "remove_column"
+            ],
+            "feature_444": [
+              "remove_column"
+            ],
+            "feature_563": [
+              "remove_column"
+            ]
+          },
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_2/X.data",
+          "y_path": "AutoML_2/y.data",
+          "results_path": "AutoML_2"
+        },
+        "learner": {
+          "model_type": "Random Forest",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "criterion": "gini",
+          "max_features": 0.9,
+          "min_samples_split": 30,
+          "max_depth": 4,
+          "seed": 6,
+          "eval_metric_name": "auc",
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "6_Default_RandomForest",
+        "status": "trained",
+        "final_loss": -0.7943628890193775,
+        "train_time": 24.855239868164062,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      }
+    ],
+    "ensemble": [
+      {
+        "model_type": "ensemble",
+        "is_stacked": false,
+        "name": "Ensemble",
+        "status": "trained",
+        "final_loss": -0.8847499887077104,
+        "train_time": 0.5520021915435791
+      }
+    ]
+  },
+  "adjust_validation": false
+}

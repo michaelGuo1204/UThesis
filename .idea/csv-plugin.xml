@@ -17,6 +17,27 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/GNN/Data/GWAS/MAF-selected.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/GNN/Data/GWAS/P-selected.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/GNN/Data/GWAS/task.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/GNN/Data/beDataset.csv">
           <value>
             <Attribute>

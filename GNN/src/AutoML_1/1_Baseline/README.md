@@ -2,8 +2,8 @@
 
 [<< Go back](../README.md)
 
-## Baseline Classifier (Baseline)
 
+## Baseline Classifier (Baseline)
 - **n_jobs**: -1
 - **explain_level**: 2
 
@@ -20,43 +20,41 @@ auc
 
 ## Training time
 
-0.3 seconds
+0.6 seconds
 
 ## Metric details
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.692927 |  nan        |
-| auc       | 0.5      |  nan        |
-| f1        | 0.657266 |    0.440414 |
-| accuracy  | 0.489498 |    0.440414 |
-| precision | 0.489498 |    0.440414 |
-| recall    | 1        |    0.440414 |
-| mcc       | 0        |    0.440414 |
+| logloss   | 0.69302  |    nan      |
+| auc       | 0.5      |    nan      |
+| f1        | 0.659517 |      0.4424 |
+| accuracy  | 0.492    |      0.4424 |
+| precision | 0.492    |      0.4424 |
+| recall    | 1        |      0.4424 |
+| mcc       | 0        |      0.4424 |
 
 ## Metric details with threshold from accuracy metric
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.692927 |  nan        |
-| auc       | 0.5      |  nan        |
-| f1        | 0.657266 |    0.440414 |
-| accuracy  | 0.489498 |    0.440414 |
-| precision | 0.489498 |    0.440414 |
-| recall    | 1        |    0.440414 |
-| mcc       | 0        |    0.440414 |
+| logloss   | 0.69302  |    nan      |
+| auc       | 0.5      |    nan      |
+| f1        | 0.659517 |      0.4424 |
+| accuracy  | 0.492    |      0.4424 |
+| precision | 0.492    |      0.4424 |
+| recall    | 1        |      0.4424 |
+| mcc       | 0        |      0.4424 |
 
-## Confusion matrix (at threshold=0.440414)
+## Confusion matrix (at threshold=0.4424)
 
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
-| Labeled as 0 |                0 |             1750 |
-| Labeled as 1 |                0 |             1678 |
+| Labeled as 0 |                0 |              762 |
+| Labeled as 1 |                0 |              738 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)

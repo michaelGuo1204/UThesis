@@ -24,7 +24,7 @@ def df_to_dataset(dataframe, shuffle=True, batch_size=32):
     return ds
 
 
-data = pd.read_csv('../Data/beDataset_b.csv')
+data = pd.read_csv('../Data/beDataset_br.csv')
 data = data.drop("Cases", axis=1)  # Clean the Case colum
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 header = data.columns[:-1]

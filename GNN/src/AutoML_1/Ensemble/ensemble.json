@@ -4,18 +4,26 @@
   "optimize_metric": "auc",
   "selected_models": [
     {
-      "model": "4_Default_NeuralNetwork",
-      "repeat": 4.0
+      "model": "2_DecisionTree",
+      "repeat": 1.0
     },
     {
-      "model": "5_Default_RandomForest",
+      "model": "3_Linear",
+      "repeat": 2.0
+    },
+    {
+      "model": "4_Default_Xgboost",
       "repeat": 1.0
+    },
+    {
+      "model": "6_Default_RandomForest",
+      "repeat": 2.0
     }
   ],
   "predictions_fname": "Ensemble/predictions_ensemble.csv",
   "metric_name": "auc",
-  "final_loss": -0.5505257960156649,
-  "train_time": 0.6464295387268066,
+  "final_loss": -0.5701993043552482,
+  "train_time": 0.9993367195129395,
   "is_stacked": false,
-  "threshold": 0.5113105785419308
+  "threshold": 0.5425417274541434
 }

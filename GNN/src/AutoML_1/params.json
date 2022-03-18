@@ -6,6 +6,7 @@
   "model_time_limit": null,
   "algorithms": [
     "Baseline",
+    "Linear",
     "Decision Tree",
     "Random Forest",
     "Xgboost",
@@ -39,16 +40,19 @@
   "saved": [
     "1_Baseline",
     "2_DecisionTree",
-    "3_Default_Xgboost",
-    "4_Default_NeuralNetwork",
-    "5_Default_RandomForest",
+    "3_Linear",
+    "4_Default_Xgboost",
+    "5_Default_NeuralNetwork",
+    "6_Default_RandomForest",
     "Ensemble"
   ],
   "fit_level": "finished",
   "best_model": "Ensemble",
   "load_on_predict": [
-    "4_Default_NeuralNetwork",
-    "5_Default_RandomForest",
+    "2_DecisionTree",
+    "3_Linear",
+    "4_Default_Xgboost",
+    "6_Default_RandomForest",
     "Ensemble"
   ]
 }

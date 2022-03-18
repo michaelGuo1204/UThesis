@@ -4,46 +4,46 @@
 
 ## Ensemble structure
 
-| Model                   |   Weight |
-|:------------------------|---------:|
-| 4_Default_NeuralNetwork |        4 |
-| 5_Default_RandomForest  |        1 |
+| Model                  |   Weight |
+|:-----------------------|---------:|
+| 2_DecisionTree         |        1 |
+| 3_Linear               |        2 |
+| 4_Default_Xgboost      |        1 |
+| 6_Default_RandomForest |        2 |
 
 ## Metric details
 
-|           |     score |   threshold |
-|:----------|----------:|------------:|
-| logloss   | 0.690941  |  nan        |
-| auc       | 0.550526  |  nan        |
-| f1        | 0.657266  |    0.205179 |
-| accuracy  | 0.537048  |    0.511311 |
-| precision | 0.585165  |    0.520053 |
-| recall    | 1         |    0.205179 |
-| mcc       | 0.0795333 |    0.501198 |
+|           |    score |   threshold |
+|:----------|---------:|------------:|
+| logloss   | 0.685886 |  nan        |
+| auc       | 0.570199 |  nan        |
+| f1        | 0.659517 |    0.239359 |
+| accuracy  | 0.564667 |    0.542542 |
+| precision | 0.63522  |    0.605214 |
+| recall    | 1        |    0.239359 |
+| mcc       | 0.134723 |    0.542542 |
 
 ## Metric details with threshold from accuracy metric
 
-|           |     score |   threshold |
-|:----------|----------:|------------:|
-| logloss   | 0.690941  |  nan        |
-| auc       | 0.550526  |  nan        |
-| f1        | 0.537453  |    0.511311 |
-| accuracy  | 0.537048  |    0.511311 |
-| precision | 0.525956  |    0.511311 |
-| recall    | 0.549464  |    0.511311 |
-| mcc       | 0.0746094 |    0.511311 |
+|           |    score |   threshold |
+|:----------|---------:|------------:|
+| logloss   | 0.685886 |  nan        |
+| auc       | 0.570199 |  nan        |
+| f1        | 0.446141 |    0.542542 |
+| accuracy  | 0.564667 |    0.542542 |
+| precision | 0.596372 |    0.542542 |
+| recall    | 0.356369 |    0.542542 |
+| mcc       | 0.134723 |    0.542542 |
 
-## Confusion matrix (at threshold=0.511311)
+## Confusion matrix (at threshold=0.542542)
 
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
-| Labeled as 0 |              919 |              831 |
-| Labeled as 1 |              756 |              922 |
+| Labeled as 0 |              584 |              178 |
+| Labeled as 1 |              475 |              263 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)

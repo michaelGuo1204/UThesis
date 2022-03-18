@@ -1,9 +1,10 @@
 import numpy as np
-from sklearn.model_selection import train_test_split
-from tensorflow.keras.utils import to_categorical
-from sklearn.preprocessing import normalize
-from supervised.automl import AutoML
 import pandas as pd
+from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.model_selection import train_test_split
+from supervised.automl import AutoML
+from tensorflow.keras.utils import to_categorical
+
 onehot2seq = {0: 0, 1: 'A', 2: 'G', 3: 'C', 4: 'T'}
 
 
@@ -47,7 +48,7 @@ file=file.iloc[:,1:]
 X=np.array(file)
 np.savez("../Data/Meta.npz", X, Y)
 '''
-data = pd.read_csv('../Data/beDataset.csv')
+data = pd.read_csv('../Data/beDataset_n.csv')
 '''for colum in data.columns:
     if colum == 'Cases' or colum=='Labels':continue
     str=data[colum].str
@@ -58,18 +59,20 @@ data = pd.read_csv('../Data/beDataset.csv')
     data[colum]=data[colum].str.replace(r'(0)\w','0',regex=True)
 data.to_csv('../Data/bnDataset.csv',index=False)
 '''
-data=data.to_numpy()
-X = data[:,1:-1]
-#X_onehot=seq_to_one_hot(X)
-Y = data[:,-1]
+data = data.to_numpy()
+X = data[:, 1:-1]
+# X_onehot=seq_to_one_hot(X)
+Y = data[:, -1]
 # np.savez('XY.npz', X_onehot, Y)
 # X_r=one_hot_to_seq(X)
-#np.savez("../Data/EY.npz", X, Y)
+# np.savez("../Data/EY.npz", X, Y)
 # X = np.squeeze(X)
 # Y = np.squeeze(Y)
-#X=normalize(X)
-X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2,stratify=Y)
-automl = AutoML(mode="Explain", eval_metric='accuracy',mix_encoding=True)
+
+selector = SelectKBest(chi2, k=90)
+X_new = selector.fit_transform(X, Y)
+X_train, X_test, y_train, y_test = train_test_split(X_new, Y, test_size=0.2, stratify=Y)
+automl = AutoML(mode="Explain", eval_metric='auc')
 automl.fit(X_train, y_train)
 automl.predict(X_test)
 automl.report()

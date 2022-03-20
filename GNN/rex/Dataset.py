@@ -25,13 +25,13 @@ def phenoSelect():
     label = pandas.DataFrame(hit)
     label.to_csv("../Data/Labels.csv", index=False)
 
-
 def convertToBE():
     print('Load')
     SNPcollect = pandas.read_csv("../Data/MAP/SNPManual.csv")
 
     Labels = pandas.read_csv("../Data/Labels.csv")
     # includeFlag = pandas.DataFrame(data.Cases.isin(Labels['Cases']).astype(int))
+
     snplist = SNPcollect['SNV']
 
     prb1 = progressbar.ProgressBar(50)
@@ -65,15 +65,14 @@ def convertToBE():
     number = data['Label'].value_counts()
     pdata = data.loc[data['Label'] == 1]
     zdata = data.loc[data['Label'] == 0]
-    # Whole.to_csv("../Data/Label.csv",index=False)
-    dealed = zdata.sample(n=7000)
+    dealed = zdata.sample(7000)
     New = pandas.concat([dealed, pdata])
     New.sample(frac=1)
-    New.to_csv("../Data/beDataset.csv", index=False)
+    New.to_csv("../Data/beDataset_b.csv", index=False)
 
 
 def mergeIds():
-    data = pandas.read_csv('../Data/GWAS/MAF-selected.csv')
+    data = pandas.read_csv('../Data/GWAS/MAF-selected_8000.csv')
     ids = data['MarkerName'].apply(lambda x: x.split('_')[0])
     EA = data['Allele1']
     data = pandas.concat([ids, EA], axis=1)
@@ -99,7 +98,7 @@ def GWASSelction():
     pdata.to_csv('../Data/GWAS/P-selected.csv', index_label=False)
     mafdata = pdata.loc[data['MinFreq'] > 0.01]
     mafdata.to_csv('../Data/GWAS/MAF-selected.csv', index_label=False)
-    data = pandas.read_csv('../Data/GWAS/MAF-selected.csv')
+    data = pandas.read_csv('../Data/GWAS/MAF-selected_8000.csv')
     cidx = data['MarkerName'].apply(lambda x: x.split('_')[0].split(":")[0])
     pidx = data['MarkerName'].apply(lambda x: x.split('_')[0].split(":")[1])
     call = pd.Series(range(997))
@@ -112,7 +111,7 @@ def GWASSelction():
 
 
 def featureSelection():
-    data = pd.read_csv('../Data/beDataset_b.csv')
+    data = pd.read_csv('../Data/beDataset_br.csv')
     # data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
     header = data.columns[1:-1]
     datav = data.values
@@ -143,7 +142,7 @@ def csvToNP():
 
 # phenoSelect()
 # mergeIds()
-# convertToBE()
+convertToBE()
 # GWASSelction()
 # featureSelection()
-csvToNP()
+# csvToNP()

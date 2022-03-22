@@ -146,10 +146,25 @@ def csvToNP():
     Y = file[:, -1]
     np.savez("../Data/fs.npz", X, Y)
 
+def makeManual():
+    alldata = pandas.read_csv('../Data/GWAS/MAF-selected_8000.csv')
+    ids = alldata['MarkerName'].apply(lambda x: x.split('_')[0])
+    EA = alldata['Allele1']
+    EAF = alldata['Freq1']
+    effect = alldata['Effect']
+    p = alldata['P-value']
+    data = pandas.concat([ids, EA, EAF, effect, p], axis=1)
+    idlist = pandas.read_csv('../Data/MAP/SNPManual.csv')
+    content = pandas.merge(data, idlist, on=['MarkerName'], how='outer')
+    content = content[content['SNV'].notna()]
+    content.to_csv('../Data/Criteria/SNPManual.csv', index=False)
+    pass
+
 
 # phenoSelect()
 # mergeIds()
 # convertToBE()
 # GWASSelction()
 # featureSelection()
-csvToNP()
+# csvToNP()
+makeManual()

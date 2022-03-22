@@ -1,8 +1,16 @@
+import matplotlib.pyplot as plt
 import numpy as np
+import pandas
 import pandas as pd
+import scikitplot as skplt
 from sklearn.feature_selection import SelectFromModel, SelectKBest, chi2
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import roc_auc_score, r2_score
+from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
-from supervised.automl import AutoML
+
+
+# from supervised.automl import AutoML
 
 
 def mlClassification(X, Y, selector):
@@ -21,6 +29,7 @@ def mlClassification(X, Y, selector):
     automl.report()
 
 
+'''
 def dlClassification(X, Y, selector):
     lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
     model = SelectFromModel(lsvc, prefit=True)
@@ -40,12 +49,37 @@ def dlClassification(X, Y, selector):
         model.save("model_autokeras", save_format="tf")
     except Exception:
         model.save("model_autokeras.h5")
+'''
 
 
-data = pd.read_csv('../Data/fs.csv')
+def prsAnalysis(X, Y, header):
+    manual = pandas.read_csv('../Data/Criteria/SNPManual.csv')
+    manual = manual.drop_duplicates(subset='SNV')
+    manual = manual.set_index('SNV')
+    manual = manual.reindex(header, axis=0)
+    effect = manual['Effect'].values
+    result = []
+    for row in X:
+        result_row = np.asscalar(np.dot(row.reshape(1, -1), effect.reshape(-1, 1)))
+        result.append(result_row)
+    X_train, X_test, Y_train, Y_test = train_test_split(np.array(result).reshape(-1, 1), Y, test_size=0.2)
+    lrc = LogisticRegression().fit(X_train, Y_train)
+    Y_pre = lrc.predict(X_test)
+    auc = roc_auc_score(Y_test, Y_pre)
+    score = lrc.score(X_test, Y_test)
+    proba = lrc.predict_proba(X_test)
+    skplt.metrics.plot_roc_curve(Y_test, proba)
+    rr = r2_score(Y_test, Y_pre)
+    plt.show()
+    print('AUC: %.3f' % auc)
+
+
+data = pd.read_csv('/home/bili/Lernen/Data/beDataset_b.csv')
 
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
+header = data.columns[1:-1]
 data = data.values
 X = data[:, 1:-1]
 Y = data[:, -1]
-mlClassification(X, Y, False)
+# mlClassification(X, Y, False)
+prsAnalysis(X, Y, header)

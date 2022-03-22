@@ -6,7 +6,7 @@ import scipy.sparse as sp
 from spektral.data import Dataset, Graph
 
 
-class TestDataset(Dataset):
+class WDataset(Dataset):
 
     def __init__(self, n_traits, load=False, p=1e-2, **kwargs):
         self.n_traits = n_traits
@@ -26,7 +26,7 @@ class TestDataset(Dataset):
         for (sample, label) in zip(self.samples, self.labels):
             nodes = self.n_traits
             x = np.zeros((self.n_traits, 2))
-            for index in range(0, 81):
+            for index in range(0, nodes):
                 if sample[index] == 2:
                     x[index] = [1, 1]
                 elif sample[index] == 1:
@@ -45,8 +45,9 @@ class TestDataset(Dataset):
     def read(self):
         output = []
         print('Reading')
-        prb=progressbar.ProgressBar()
-        for i in prb(range(13708)):
+        prb = progressbar.ProgressBar()
+        prb.start()
+        for i in prb(range(13709)):
             data = np.load(os.path.join(self.path, f'graph_{i}.npz'), allow_pickle=True)
             _x = data['x']
             _a = data['a']

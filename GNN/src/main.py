@@ -10,8 +10,8 @@ from Utili import *
 ################################################################################
 # Config
 ################################################################################
-learning_rate = 1e-2  # Learning rate
-epochs = 3  # Number of training epochs
+learning_rate = 1e-3  # Learning rate
+epochs = 300  # Number of training epochs
 es_patience = 10  # Patience for early stopping
 batch_size = 64  # Batch size
 
@@ -19,7 +19,7 @@ batch_size = 64  # Batch size
 # Load data
 ################################################################################
 
-data = TestDataset(load=True, n_traits=81, transforms=NormalizeAdj())
+data = WDataset(load=True, n_traits=100, transforms=NormalizeAdj())
 
 # Train/valid/test split
 idxs = np.random.permutation(len(data))
@@ -39,13 +39,14 @@ loader_te = DisjointLoader(data_te, batch_size=batch_size)
 ################################################################################
 
 # model = ECCModel(data.n_node_features,data.n_edge_features,data.n_labels)
-# model=GeneralGNN(data.n_labels,activation='softmax')
-model = Net(0)
+model = GeneralGNN(data.n_labels, activation='softmax')
+# model = Net(0)
 optimizer = Adam(learning_rate=learning_rate, decay=0.05)
 loss_fn = BinaryCrossentropy()
-# logWriter = tf.summary.create_file_writer("./logs/{}".format(time.time()))
-# logWriter.set_as_default()
-# logWriter.init()
+logdir = "./logs/{}".format(time.time())
+logWriter = tf.summary.create_file_writer(logdir)
+logWriter.set_as_default()
+logWriter.init()
 logstep = 0
 
 
@@ -90,15 +91,12 @@ patience = es_patience
 results = []
 for batch in loader_tr:
     step += 1
-    logstep += 1
     loss, acc = train_step(*batch)
-    # tf.summary.scalar(name='Train_loss', data=loss, step=logstep)
-    # tf.summary.scalar(name='Train_Acc', data=acc, step=logstep)
     results.append((loss, acc))
     if step == loader_tr.steps_per_epoch:
         step = 0
         epoch += 1
-
+        loss, acc = np.mean(results, 0)
         # Compute validation loss and accuracy
         val_loss, val_acc = evaluate(loader_va)
         print(
@@ -106,6 +104,8 @@ for batch in loader_tr:
                 epoch, *np.mean(results, 0), val_loss, val_acc
             )
         )
+        tf.summary.scalar(name='Train_loss', data=loss, step=epoch)
+        tf.summary.scalar(name='Train_Acc', data=acc, step=epoch)
         # Check if loss improved for early stopping
         if val_loss < best_val_loss:
             best_val_loss = val_loss
@@ -119,30 +119,13 @@ for batch in loader_tr:
                 break
         results = []
 
-# logWriter.flush()
-# logWriter.close()
+logWriter.flush()
+logWriter.close()
 ################################################################################
 # Evaluate model
 ################################################################################
 
 model.set_weights(best_weights)  # Load best model
 test_loss, test_acc = evaluate(loader_te)
+model.save(logdir, save_format="tf")
 print("Done. Test loss: {:.4f}. Test acc: {:.2f}".format(test_loss, test_acc))
-
-################################################################################
-# Explain model
-################################################################################
-while True:
-    (x, a, i), y = next(loader_te)
-
-cut_idx = (i == 0).sum()
-x_exp = x[:cut_idx]
-a_exp = tf.sparse.slice(a, start=[0, 0], size=[cut_idx, cut_idx])
-explainer = GNNExplainer(model, graph_level=True, a_size_coef=100)
-
-# Explain prediction for one graph
-adj_mask, feat_mask = explainer.explain_node(x=x_exp, a=a_exp)
-
-# Plot the result
-G = explainer.plot_subgraph(adj_mask, feat_mask)
-plt.show()

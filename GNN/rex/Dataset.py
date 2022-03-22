@@ -2,7 +2,7 @@ import numpy as np
 import pandas
 import pandas as pd
 import progressbar
-from sklearn.feature_selection import chi2
+from sklearn.feature_selection import chi2, SelectKBest
 
 
 def phenoSelect():
@@ -111,7 +111,7 @@ def GWASSelction():
 
 
 def featureSelection():
-    data = pd.read_csv('../Data/beDataset_br.csv')
+    data = pd.read_csv('../Data/beDataset.csv')
     # data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
     header = data.columns[1:-1]
     datav = data.values
@@ -120,11 +120,18 @@ def featureSelection():
     # X_onehot=seq_to_one_hot(X)
     # X[X == 2] = 1
     Y = datav[:, -1]
-    select = chi2(X, Y)
-    header = header[select[1] < 0.01]
-    dealed = datav[:, 1:-1][:, select[1] < 0.01]
-    dealeddf = pd.DataFrame(dealed)
-    dealeddf.columns = header
+    # lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
+    # model = SelectFromModel(lsvc, prefit=True)
+    # header_new = model.transform(header.values.reshape(1, -1))
+    # X_new = model.transform(X)
+
+    model = SelectKBest(chi2, k=100)
+    # header = header[select[1] < 0.00000000000000001]
+    # dealed = datav[:, 1:-1][:, select[1] < 0.00000000000000001]
+    X_new = model.fit_transform(X, Y)
+    header_new = model.get_feature_names_out(header.values)
+    dealeddf = pd.DataFrame(X_new)
+    dealeddf.columns = header_new
     Result = pandas.concat([data['Cases'], dealeddf, data['Label']], axis=1)
     Result.to_csv("../Data/fs.csv", index=False)
     pass
@@ -142,7 +149,7 @@ def csvToNP():
 
 # phenoSelect()
 # mergeIds()
-convertToBE()
+# convertToBE()
 # GWASSelction()
 # featureSelection()
-# csvToNP()
+csvToNP()

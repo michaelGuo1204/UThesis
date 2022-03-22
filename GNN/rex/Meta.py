@@ -16,7 +16,7 @@ def mlClassification(X, Y, selector):
 
     automl = AutoML(mode='Explain',
                     eval_metric='auc')  # ,algorithms=['Neural Network'],total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
-    automl.fit(X_new, Y)
+    automl.fit(X, Y)
     # automl.predict(X_test)
     automl.report()
 
@@ -42,10 +42,10 @@ def dlClassification(X, Y, selector):
         model.save("model_autokeras.h5")
 
 
-data = pd.read_csv('../Data/beDataset.csv')
+data = pd.read_csv('../Data/fs.csv')
 
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 data = data.values
 X = data[:, 1:-1]
 Y = data[:, -1]
-mlClassification(X, Y, True)
+mlClassification(X, Y, False)

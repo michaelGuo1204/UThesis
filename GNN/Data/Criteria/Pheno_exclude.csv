@@ -1,0 +1,531 @@
+ICD,condition
+M111,Familial chondrocalcinosis
+M1110,Familial chondrocalcinosis (Multiple sites)
+M1111,Familial chondrocalcinosis (Shoulder region)
+M1112,Familial chondrocalcinosis (Upper arm)
+M1113,Familial chondrocalcinosis (Forearm)
+M1114,Familial chondrocalcinosis (Hand)
+M1115,Familial chondrocalcinosis (Pelvic region and thigh)
+M1116,Familial chondrocalcinosis (Lower leg)
+M1117,Familial chondrocalcinosis (Ankle and foot)
+M1118,Familial chondrocalcinosis (Other)
+M1119,Familial chondrocalcinosis (Site unspecified)
+M112,Other chondrocalcinosis
+M1120,Other chondrocalcinosis (Multiple sites)
+M1121,Other chondrocalcinosis (Shoulder region)
+M1122,Other chondrocalcinosis (Upper arm)
+M1123,Other chondrocalcinosis (Forearm)
+M1124,Other chondrocalcinosis (Hand)
+M1125,Other chondrocalcinosis (Pelvic region and thigh)
+M1126,Other chondrocalcinosis (Lower leg)
+M1127,Other chondrocalcinosis (Ankle and foot)
+M1128,Other chondrocalcinosis (Other)
+M1129,Other chondrocalcinosis (Site unspecified)
+M118,Other specified crystal arthropathies
+M1180,Other specified crystal arthropathies (Multiple sites)
+M1181,Other specified crystal arthropathies (Shoulder region)
+M1182,Other specified crystal arthropathies (Upper arm)
+M1183,Other specified crystal arthropathies (Forearm)
+M1184,Other specified crystal arthropathies (Hand)
+M1185,Other specified crystal arthropathies (Pelvic region and thigh)
+M1186,Other specified crystal arthropathies (Lower leg)
+M1187,Other specified crystal arthropathies (Ankle and foot)
+M1188,Other specified crystal arthropathies (Other)
+M1189,Other specified crystal arthropathies (Site unspecified)
+M119,"Crystal arthropathy, unspecified"
+M1190,"Crystal arthropathy, unspecified (Multiple sites)"
+M1191,"Crystal arthropathy, unspecified (Shoulder region)"
+M1192,"Crystal arthropathy, unspecified (Upper arm)"
+M1193,"Crystal arthropathy, unspecified (Forearm)"
+M1194,"Crystal arthropathy, unspecified (Hand)"
+M1195,"Crystal arthropathy, unspecified (Pelvic region and thigh)"
+M1196,"Crystal arthropathy, unspecified (Lower leg)"
+M1197,"Crystal arthropathy, unspecified (Ankle and foot)"
+M1198,"Crystal arthropathy, unspecified (Other)"
+M1199,"Crystal arthropathy, unspecified (Site unspecified)"
+M13,Other arthritis
+M130,"Polyarthritis, unspecified"
+M1300,"Polyarthritis, unspecified (Multiple sites)"
+M1305,"Polyarthritis, unspecified (Pelvic region and thigh)"
+M1306,"Polyarthritis, unspecified (Lower leg)"
+M1309,"Polyarthritis, unspecified (Site unspecified)"
+M131,"Monoarthritis, not elsewhere classified"
+M1310,"Monoarthritis, not elsewhere classified (Multiple sites)"
+M1314,"Monoarthritis, not elsewhere classified (Hand)"
+M1315,"Monoarthritis, not elsewhere classified (Pelvic region and thigh)"
+M1316,"Monoarthritis, not elsewhere classified (Lower leg)"
+M1319,"Monoarthritis, not elsewhere classified (Site unspecified)"
+M138,Other specified arthritis
+M1380,Other specified arthritis (Multiple sites)
+M1384,Other specified arthritis (Hand)
+M1385,Other specified arthritis (Pelvic region and thigh)
+M1386,Other specified arthritis (Lower leg)
+M1389,Other specified arthritis (Site unspecified)
+M139,"Arthritis, unspecified"
+M1390,"Arthritis, unspecified (Multiple sites)"
+M1394,"Arthritis, unspecified (Hand)"
+M1395,"Arthritis, unspecified (Pelvic region and thigh)"
+M1396,"Arthritis, unspecified (Lower leg)"
+M1399,"Arthritis, unspecified (Site unspecified)"
+M15,Polyarthrosis
+M150,Primary generalised (osteo)arthrosis
+M151,Heberden's nodes (with arthropathy)
+M152,Bouchard's nodes (with arthropathy)
+M153,Secondary multiple arthrosis
+M154,Erosive (osteo)arthrosis
+M158,Other polyarthrosis
+M159,"Polyarthrosis, unspecified"
+M1599,"Polyosteoarthritis, unspecified"
+M16,Coxarthrosis [arthrosis of hip]
+M160,"Primary coxarthrosis, bilateral"
+M161,Other primary coxarthrosis
+M162,"Coxarthrosis resulting from dysplasia, bilateral"
+M163,Other dysplastic coxarthrosis
+M164,"Posttraumatic coxarthrosis, bilateral"
+M165,Other posttraumatic coxarthrosis
+M166,"Other secondary coxarthrosis, bilateral"
+M167,Other secondary coxarthrosis
+M169,"Coxarthrosis, unspecified"
+M17,Gonarthrosis [arthrosis of knee]
+M170,"Primary gonarthrosis, bilateral"
+M171,Other primary gonarthrosis
+M172,"Posttraumatic gonarthrosis, bilateral"
+M173,Other posttraumatic gonarthrosis
+M174,"Other secondary gonarthrosis, bilateral"
+M175,Other secondary gonarthrosis
+M179,"Gonarthrosis, unspecified"
+M18,Arthrosis of first carpometacarpal joint
+M180,"Primary arthrosis of first carpometacarpal joints, bilateral"
+M181,Other primary arthrosis of first carpometacarpal joint
+M182,"Posttraumatic arthrosis of first carpometacarpal joints, bilateral"
+M183,Other posttraumatic arthrosis of first carpometacarpal joint
+M184,"Other secondary arthrosis of first carpometacarpal joints, bilateral"
+M185,Other secondary arthrosis of first carpometacarpal joint
+M189,"Arthrosis of first carpometacarpal joint, unspecified"
+M19,Other arthrosis
+M190,Primary arthrosis of other joints
+M1900,Primary arthrosis of other joints (Multiple sites)
+M1901,Primary arthrosis of other joints (Shoulder region)
+M1902,Primary arthrosis of other joints (Upper arm)
+M1903,Primary arthrosis of other joints (Forearm)
+M1904,Primary arthrosis of other joints (Hand)
+M1905,Primary arthrosis of other joints (Pelvic region and thigh)
+M1906,Primary arthrosis of other joints-Lower leg
+M1907,Primary arthrosis of other joints (Ankle and foot)
+M1908,Primary arthrosis of other joints (Other)
+M1909,Primary arthrosis of other joints (Site unspecified)
+M191,Posttraumatic arthrosis of other joints
+M1910,Post-traumatic arthrosis of other joints (Multiple sites)
+M1911,Post-traumatic arthrosis of other joints (Shoulder region)
+M1912,Post-traumatic arthrosis of other joints (Upper arm)
+M1913,Post-traumatic arthrosis of other joints (Forearm)
+M1914,Post-traumatic arthrosis of other joints (Hand)
+M1915,Post-traumatic arthrosis of other joints (Pelvic region and thigh)
+M1916,Post-traumatic arthrosis of other joints-Lower leg
+M1917,Post-traumatic arthrosis of other joints (Ankle and foot)
+M1918,Post-traumatic arthrosis of other joints (Other)
+M1919,Post-traumatic arthrosis of other joints (Site unspecified)
+M192,Other secondary arthrosis
+M1920,Other secondary arthrosis (Multiple sites)
+M1921,Other secondary arthrosis (Shoulder region)
+M1922,Other secondary arthrosis (Upper arm)
+M1923,Other secondary arthrosis (Forearm)
+M1924,Other secondary arthrosis (Hand)
+M1925,Other secondary arthrosis (Pelvic region and thigh)
+M1926,Other secondary arthrosis of other joints-Lower leg
+M1927,Other secondary arthrosis (Ankle and foot)
+M1928,Other secondary arthrosis (Other)
+M1929,Other secondary arthrosis (Site unspecified)
+M198,Other specified arthrosis
+M1980,Other specified arthrosis (Multiple sites)
+M1981,Other specified arthrosis (Shoulder region)
+M1982,Other specified arthrosis (Upper arm)
+M1983,Other specified arthrosis (Forearm)
+M1984,Other specified arthrosis (Hand)
+M1985,Other specified arthrosis (Pelvic region and thigh)
+M1986,Other specified arthrosis (Lower leg)
+M1987,Other specified arthrosis (Ankle and foot)
+M1988,Other specified arthrosis (Other)
+M1989,Other specified arthrosis (Site unspecified)
+M199,"Arthrosis, unspecified"
+M1990,"Arthrosis, unspecified (Multiple sites)"
+M1991,"Arthrosis, unspecified (Shoulder region)"
+M1992,"Arthrosis, unspecified (Upper arm)"
+M1993,"Arthrosis, unspecified (Forearm)"
+M1994,"Arthrosis, unspecified (Hand)"
+M1995 ,"Arthrosis, unspecified (Pelvic region and thigh)"
+M1996,"Arthrosis, unspecified-Lower leg"
+M1997,"Arthrosis, unspecified (Ankle and foot)"
+M1998,"Arthrosis, unspecified (Other)"
+M1999,"Arthrosis, unspecified (Site unspecified)"
+M20,Acquired deformities of fingers and toes
+M200,Deformity of finger(s)
+M21,Other acquired deformities of limbs
+M210,"Valgus deformity, not elsewhere classified"
+M2100,"Valgus deformity, not elsewhere classified (Multiple sites)"
+M2105,"Valgus deformity, not elsewhere classified (Pelvic region and thigh)"
+M2106,"Valgus deformity, not elsewhere classified (Lower leg)"
+M2109,"Valgus deformity, not elsewhere classified (Site unspecified)"
+M211,"Varus deformity, not elsewhere classified"
+M2110,"Varus deformity, not elsewhere classified (Multiple sites)"
+M2115,"Varus deformity, not elsewhere classified (Pelvic region and thigh)"
+M2116,"Varus deformity, not elsewhere classified (Lower leg)"
+M2119,"Varus deformity, not elsewhere classified (Site unspecified)"
+M212,Flexion deformity
+M2120,Flexion deformity (Multiple sites)
+M2124,Flexion deformity (Hand)
+M2125,Flexion deformity (Pelvic region and thigh)
+M2126,Flexion deformity (Lower leg)
+M2129,Flexion deformity (Site unspecified)
+M22,Disorders of patella
+M220,Recurrent dislocation of patella
+M221   ,Recurrent subluxation of patella
+M222,Patellofemoral disorders
+M223,Other derangements of patella
+M224,Chondromalacia patellae
+M228,Other disorders of patella
+M229,"Disorder of patella, unspecified"
+M23,Internal derangement of knee
+M230,Cystic meniscus
+M2300,Cystic meniscus (Multiple sites)
+M2301,Cystic meniscus (Anterior cruciate ligament or Anterior horn of medial meniscus)
+M2302,Cystic meniscus (Posterior cruciate ligament or Posterior horn of medial meniscus)
+M2303,Cystic meniscus (Medial collateral ligament or Other and unspecified medial meniscus)
+M2304,Cystic meniscus (Lateral collateral ligament or Anterior horn of lateral meniscus)
+M2305,Cystic meniscus (Posterior horn of lateral meniscus)
+M2306,Cystic meniscus (Other and unspecified lateral meniscus)
+M2307,Cystic meniscus-Capsular lig
+M2309,Cystic meniscus (Unspecified ligament or Unspecified meniscus)
+M231,Discoid meniscus (congenital)
+M2310,Discoid meniscus (congenital) (Multiple sites)
+M2311,Discoid meniscus (congenital) (Anterior cruciate ligament or Anterior horn of medial meniscus)
+M2312,Discoid meniscus (congenital) (Posterior cruciate ligament or Posterior horn of medial meniscus)
+M2313,Discoid meniscus (congenital) (Medial collateral ligament or Other and unspecified medial meniscus)
+M2314,Discoid meniscus (congenital) (Lateral collateral ligament or Anterior horn of lateral meniscus)
+M2315,Discoid meniscus (congenital) (Posterior horn of lateral meniscus)
+M2316,Discoid meniscus (congenital) (Other and unspecified lateral meniscus)
+M2317,Discoid meniscus (congenital)-Capsular lig
+M2319,Discoid meniscus (congenital) (Unspecified ligament or Unspecified meniscus)
+M232,Derangement of meniscus due to old tear or injury
+M2320,Derangement of meniscus due to old tear or injury (Multiple sites)
+M2321,Derangement of meniscus due to old tear or injury (Anterior cruciate ligament or Anterior horn of medial meniscus)
+M2322,Derangement of meniscus due to old tear or injury (Posterior cruciate ligament or Posterior horn of medial meniscus)
+M2323,Derangement of meniscus due to old tear or injury (Medial collateral ligament or Other and unspecified medial meniscus)
+M2324,Derangement of meniscus due to old tear or injury (Lateral collateral ligament or Anterior horn of lateral meniscus)
+M2325,Derangement of meniscus due to old tear or injury (Posterior horn of lateral meniscus)
+M2326,Derangement of meniscus due to old tear or injury (Other and unspecified lateral meniscus)
+M2327,Derangement of meniscus due to old tear or injury-Capsular
+M2329,Derangement of meniscus due to old tear or injury (Unspecified ligament or Unspecified meniscus)
+M233,Other meniscus derangements
+M2330,Other meniscus derangements (Multiple sites)
+M2331,Other meniscus derangements (Anterior cruciate ligament or Anterior horn of medial meniscus)
+M2332,Other meniscus derangements (Posterior cruciate ligament or Posterior horn of medial meniscus)
+M2333,Other meniscus derangements (Medial collateral ligament or Other and unspecified medial meniscus)
+M2334,Other meniscus derangements (Lateral collateral ligament or Anterior horn of lateral meniscus)
+M2335,Other meniscus derangements (Posterior horn of lateral meniscus)
+M2336,Other meniscus derangements (Other and unspecified lateral meniscus)
+M2337,Other meniscus derangements-Capsular lig
+M2339,Other meniscus derangements (Unspecified ligament or Unspecified meniscus)
+M234,Loose body in knee
+M2340,Loose body in knee-Mult sites
+M2341,Loose body in knee-Ant lig/hrn men
+M2342,Loose body in knee-Pst lig/hrn men
+M2343,Loose body in knee-Med lig/oth men
+M2344,Loose body in knee-Lat lig/ant men
+M2345,Loose body in knee-Pst hrn lat men
+M2346,Loose body in knee-O/unsp lat men
+M2347,Loose body in knee-Capsular lig
+M2349,Loose body in knee-Unspec lig/men
+M235,Chronic instability of knee
+M2350,Chronic instability of knee (Multiple sites)
+M2351,Chronic instability of knee (Anterior cruciate ligament or Anterior horn of medial meniscus)
+M2352,Chronic instability of knee (Posterior cruciate ligament or Posterior horn of medial meniscus)
+M2353,Chronic instability of knee (Medial collateral ligament or Other and unspecified medial meniscus)
+M2354,Chronic instability of knee (Lateral collateral ligament or Anterior horn of lateral meniscus)
+M2355,Chronic instability of knee (Posterior horn of lateral meniscus)
+M2356,Chronic instability of knee (Other and unspecified lateral meniscus)
+M2357,Chronic instability of knee (Capsular ligament)
+M2359,Chronic instability of knee (Unspecified ligament or Unspecified meniscus)
+M236,Other spontaneous disruption of ligament(s) of knee
+M2360,Other spontaneous disruption of ligament(s) of knee (Multiple sites)
+M2361,Other spontaneous disruption of ligament(s) of knee (Anterior cruciate ligament or Anterior horn of medial meniscus)
+M2362,Other spontaneous disruption of ligament(s) of knee (Posterior cruciate ligament or Posterior horn of medial meniscus)
+M2363,Other spontaneous disruption of ligament(s) of knee (Medial collateral ligament or Other and unspecified medial meniscus)
+M2364,Other spontaneous disruption of ligament(s) of knee (Lateral collateral ligament or Anterior horn of lateral meniscus)
+M2365,Other spontaneous disruption of ligament(s) of knee-Pst hrn
+M2366,Other spontaneous disruption of ligament(s) of knee-O/unsp
+M2367,Other spontaneous disruption of ligament(s) of knee (Capsular ligament)
+M2369,Other spontaneous disruption of ligament(s) of knee (Unspecified ligament or Unspecified meniscus)
+M238,Other internal derangements of knee
+M2380,Other internal derangements of knee (Multiple sites)
+M2381,Other internal derangements of knee (Anterior cruciate ligament or Anterior horn of medial meniscus)
+M2382,Other internal derangements of knee (Posterior cruciate ligament or Posterior horn of medial meniscus)
+M2383,Other internal derangements of knee (Medial collateral ligament or Other and unspecified medial meniscus)
+M2384,Other internal derangements of knee (Lateral collateral ligament or Anterior horn of lateral meniscus)
+M2385,Other internal derangements of knee (Posterior horn of lateral meniscus)
+M2386,Other internal derangements of knee (Other and unspecified lateral meniscus)
+M2387,Other internal derangements of knee (Capsular ligament)
+M2389,Other internal derangements of knee (Unspecified ligament or Unspecified meniscus)
+M239,"Internal derangement of knee, unspecified"
+M2390,"Internal derangement of knee, unspecified (Multiple sites)"
+M2391,"Internal derangement of knee, unspecified (Anterior cruciate ligament or Anterior horn of medial meniscus)"
+M2392,"Internal derangement of knee, unspecified (Posterior cruciate ligament or Posterior horn of medial meniscus)"
+M2393,"Internal derangement of knee, unspecified (Medial collateral ligament or Other and unspecified medial meniscus)"
+M2394,"Internal derangement of knee, unspecified (Lateral collateral ligament or Anterior horn of lateral meniscus)"
+M2395,"Internal derangement of knee, unspecified (Posterior horn of lateral meniscus)"
+M2396,"Internal derangement of knee, unspecified (Other and unspecified lateral meniscus)"
+M2397,"Internal derangement of knee, unspecified (Capsular ligament)"
+M2399 ,"Internal derangement of knee, unspecified (Unspecified ligament or Unspecified meniscus)"
+M24,Other specific joint derangements
+M240,Loose body in joint
+M2400,Loose body in joint (Multiple sites)
+M2401,Loose body in joint (Shoulder region)
+M2402,Loose body in joint (Upper arm)
+M2403,Loose body in joint (Forearm)
+M2404,Loose body in joint (Hand)
+M2405,Loose body in joint (Pelvic region and thigh)
+M2406,Loose body in joint-Lower leg
+M2407 ,Loose body in joint (Ankle and foot)
+M2408,Loose body in joint (Other)
+M2409,Loose body in joint (Site unspecified)
+M241,Other articular cartilage disorders
+M2410,Other articular cartilage disorders (Multiple sites)
+M2411,Other articular cartilage disorders (Shoulder region)
+M2412,Other articular cartilage disorders (Upper arm)
+M2413,Other articular cartilage disorders (Forearm)
+M2414,Other articular cartilage disorders (Hand)
+M2415,Other articular cartilage disorders (Pelvic region and thigh)
+M2416,Other articular cartilage disorders (Lower leg)
+M2417,Other articular cartilage disorders (Ankle and foot)
+M2418,Other articular cartilage disorders (Other)
+M2419,Other articular cartilage disorders (Site unspecified)
+M242,Disorder of ligament
+M2420,Disorder of ligament (Multiple sites)
+M2421,Disorder of ligament (Shoulder region)
+M2422,Disorder of ligament (Upper arm)
+M2423,Disorder of ligament (Forearm)
+M2424,Disorder of ligament (Hand)
+M2425,Disorder of ligament (Pelvic region and thigh)
+M2426,Disorder of ligament (Lower leg)
+M2427,Disorder of ligament (Ankle and foot)
+M2428,Disorder of ligament (Other)
+M2429,Disorder of ligament (Site unspecified)
+M243,"Pathological dislocation and subluxation of joint, not elsewhere classified"
+M2430,"Pathological dislocation and subluxation of joint, not elsewhere classified (Multiple sites)"
+M2434,"Pathological dislocation and subluxation of joint, not elsewhere classified (Hand)"
+M2435,"Pathological dislocation and subluxation of joint, not elsewhere classified (Pelvic region and thigh)"
+M2436,"Pathological dislocation and subluxation of joint, not elsewhere classified (Lower leg)"
+M2439,"Pathological dislocation and subluxation of joint, not elsewhere classified (Site unspecified)"
+M244,Recurrent dislocation and subluxation of joint
+M2440,Recurrent dislocation and subluxation of joint (Multiple sites)
+M2444,Recurrent dislocation and subluxation of joint (Hand)
+M2445,Recurrent dislocation and subluxation of joint (Pelvic region and thigh)
+M2446,Recurrent dislocation and subluxation of joint (Lower leg)
+M2449,Recurrent dislocation and subluxation of joint (Site unspecified)
+M245,Contracture of joint
+M2450,Contracture of joint (Multiple sites)
+M2454,Contracture of joint (Hand)
+M2455,Contracture of joint (Pelvic region and thigh)
+M2456,Contracture of joint (Lower leg)
+M2459,Contracture of joint (Site unspecified)
+M246,Ankylosis of joint
+M2460,Ankylosis of joint (Multiple sites)
+M2464 ,Ankylosis of joint (Hand)
+M2465,Ankylosis of joint (Pelvic region and thigh)
+M2466,Ankylosis of joint (Lower leg)
+M2469,Ankylosis of joint (Site unspecified)
+M247,Protrusio acetabuli
+M2470,Protrusio acetabuli-Mult sites
+M2471,Protrusio acetabuli-Shldr region
+M2472,Protrusio acetabuli-Upper arm
+M2473,Protrusio acetabuli-Forearm
+M2474,Protrusio acetabuli-Hand
+M2475,Protrusio acetabuli-Pelvic/thigh
+M2476,Protrusio acetabuli-Lower leg
+M2477,Protrusio acetabuli-Ankle/foot
+M2478,Protrusio acetabuli-Other
+M2479,Protrusio acetabuli-Site unspec
+M248,"Other specific joint derangements, not elsewhere classified"
+M2480,"Other specific joint derangements, not elsewhere classified (Multiple sites)"
+M2484,"Other specific joint derangements, not elsewhere classified (Hand)"
+M2485,"Other specific joint derangements, not elsewhere classified (Pelvic region and thigh)"
+M2486,"Other specific joint derangements, not elsewhere classified (Lower leg)"
+M2489,"Other specific joint derangements, not elsewhere classified (Site unspecified)"
+M249,"Joint derangement, unspecified"
+M2490,"Joint derangement, unspecified (Multiple sites)"
+M2494,"Joint derangement, unspecified (Hand)"
+M2495,"Joint derangement, unspecified (Pelvic region and thigh)"
+M2496,"Joint derangement, unspecified (Lower leg)"
+M2499,"Joint derangement, unspecified (Site unspecified)"
+M25,"Other joint disorders, not elsewhere classified"
+M255,Pain in joint
+M2550,Pain in joint (Multiple sites)
+M2551,Pain in joint (Shoulder region)
+M2552,Pain in joint (Upper arm)
+M2553,Pain in joint (Forearm)
+M2554,Pain in joint (Hand)
+M2555,Pain in joint (Pelvic region and thigh)
+M2556,Pain in joint (Lower leg)
+M2557,Pain in joint (Ankle and foot)
+M2558,Pain in joint (Other)
+M2559,Pain in joint (Site unspecified)
+M256,"Stiffness of joint, not elsewhere classified"
+M2560,"Stiffness of joint, not elsewhere classified (Multiple sites)"
+M2561,"Stiffness of joint, not elsewhere classified (Shoulder region)"
+M2562,"Stiffness of joint, not elsewhere classified (Upper arm)"
+M2563,"Stiffness of joint, not elsewhere classified (Forearm)"
+M2564,"Stiffness of joint, not elsewhere classified (Hand)"
+M2565,"Stiffness of joint, not elsewhere classified (Pelvic region and thigh)"
+M2566,"Stiffness of joint, not elsewhere classified (Lower leg)"
+M2567,"Stiffness of joint, not elsewhere classified (Ankle and foot)"
+M2568,"Stiffness of joint, not elsewhere classified (Other)"
+M2569,"Stiffness of joint, not elsewhere classified (Site unspecified)"
+M257,Osteophyte
+M2570,Osteophyte (Multiple sites)
+M2571,Osteophyte (Shoulder region)
+M2572,Osteophyte (Upper arm)
+M2573,Osteophyte (Forearm)
+M2574,Osteophyte (Hand)
+M2575,Osteophyte (Pelvic region and thigh)
+M2576,Osteophyte (Lower leg)
+M2577,Osteophyte (Ankle and foot)
+M2578,Osteophyte (Other)
+M2579,Osteophyte (Site unspecified)
+M258,Other specified joint disorders
+M2580,Other specified joint disorders (Multiple sites)
+M2581,Other specified joint disorders (Shoulder region)
+M2582,Other specified joint disorders (Upper arm)
+M2583,Other specified joint disorders (Forearm)
+M2584,Other specified joint disorders (Hand)
+M2585,Other specified joint disorders (Pelvic region and thigh)
+M2586,Other specified joint disorders (Lower leg)
+M2587,Other specified joint disorders (Ankle and foot)
+M2588,Other specified joint disorders (Other)
+M2589,Other specified joint disorders (Site unspecified)
+M259,"Joint disorder, unspecified"
+M2590,"Joint disorder, unspecified (Multiple sites)"
+M2591 ,"Joint disorder, unspecified (Shoulder region)"
+M2592,"Joint disorder, unspecified (Upper arm)"
+M2593,"Joint disorder, unspecified (Forearm)"
+M2594,"Joint disorder, unspecified (Hand)"
+M2595,"Joint disorder, unspecified (Pelvic region and thigh)"
+M2596,"Joint disorder, unspecified (Lower leg)"
+M2597,"Joint disorder, unspecified (Ankle and foot)"
+M2598,"Joint disorder, unspecified (Other)"
+M2599,"Joint disorder, unspecified (Site unspecified)"
+M42,Spinal osteochondrosis
+M420,Juvenile osteochondrosis of spine
+M4200,Juvenile osteochondrosis of spine (Multiple sites in spine)
+M4201,Juvenile osteochondrosis of spine (Occipito-atlanto-axial region)
+M4202,Juvenile osteochondrosis of spine (Cervical region)
+M4203,Juvenile osteochondrosis of spine (Cervicothoracic region)
+M4204,Juvenile osteochondrosis of spine (Thoracic region)
+M4205,Juvenile osteochondrosis of spine (Thoracolumbar region)
+M4206,Juvenile osteochondrosis of spine (Lumbar region)
+M4207,Juvenile osteochondrosis of spine (Lumbosacral region)
+M4208,Juvenile osteochondrosis of spine (Sacral and sacrococcygeal region)
+M4209,Juvenile osteochondrosis of spine (Site unspecified)
+M421,Adult osteochondrosis of spine
+M4210,Adult osteochondrosis of spine (Multiple sites in spine)
+M4211,Adult osteochondrosis of spine (Occipito-atlanto-axial region)
+M4212,Adult osteochondrosis of spine (Cervical region)
+M4213,Adult osteochondrosis of spine (Cervicothoracic region)
+M4214,Adult osteochondrosis of spine (Thoracic region)
+M4215,Adult osteochondrosis of spine (Thoracolumbar region)
+M4216,Adult osteochondrosis of spine (Lumbar region)
+M4217,Adult osteochondrosis of spine (Lumbosacral region)
+M4218,Adult osteochondrosis of spine (Sacral and sacrococcygeal region)
+M4219,Adult osteochondrosis of spine (Site unspecified)
+M429,"Spinal osteochondrosis, unspecified"
+M4290,"Spinal osteochondrosis, unspecified (Multiple sites in spine)"
+M4291,"Spinal osteochondrosis, unspecified (Occipito-atlanto-axial region)"
+M4292,"Spinal osteochondrosis, unspecified (Cervical region)"
+M4293,"Spinal osteochondrosis, unspecified (Cervicothoracic region)"
+M4294,"Spinal osteochondrosis, unspecified (Thoracic region)"
+M4295,"Spinal osteochondrosis, unspecified (Thoracolumbar region)"
+M4296,"Spinal osteochondrosis, unspecified (Lumbar region)"
+M4297,"Spinal osteochondrosis, unspecified (Lumbosacral region)"
+M4298,"Spinal osteochondrosis, unspecified (Sacral and sacrococcygeal region)"
+M4299,"Spinal osteochondrosis, unspecified (Site unspecified)"
+M472,Other spondylosis with radiculopathy
+M4720,Other spondylosis with radiculopathy (Multiple sites in spine)
+M4721,Other spondylosis with radiculopathy (Occipito-atlanto-axial region)
+M4722,Other spondylosis with radiculopathy (Cervical region)
+M4723,Other spondylosis with radiculopathy (Cervicothoracic region)
+M4724,Other spondylosis with radiculopathy (Thoracic region)
+M4725,Other spondylosis with radiculopathy (Thoracolumbar region)
+M4726,Other spondylosis with radiculopathy (Lumbar region)
+M4727,Other spondylosis with radiculopathy (Lumbosacral region)
+M4728,Other spondylosis with radiculopathy (Sacral and sacrococcygeal region)
+M4729,Other spondylosis with radiculopathy (Site unspecified)
+M478,Other spondylosis
+M4780,Other spondylosis (Multiple sites in spine)
+M4781,Other spondylosis (Occipito-atlanto-axial region)
+M4782,Other spondylosis (Cervical region)
+M4783,Other spondylosis (Cervicothoracic region)
+M4784,Other spondylosis (Thoracic region)
+M4785,Other spondylosis (Thoracolumbar region)
+M4786,Other spondylosis (Lumbar region)
+M4787,Other spondylosis (Lumbosacral region)
+M4788,Other spondylosis (Sacral and sacrococcygeal region)
+M4789,Other spondylosis (Site unspecified)
+M479,"Spondylosis, unspecified"
+M4790,"Spondylosis, unspecified (Multiple sites in spine"
+M4791,"Spondylosis, unspecified (Occipito-atlanto-axial region)"
+M4792,"Spondylosis, unspecified (Cervical region)"
+M4793,"Spondylosis, unspecified (Cervicothoracic region)"
+M4794,"Spondylosis, unspecified (Thoracic region)"
+M4795,"Spondylosis, unspecified (Thoracolumbar region)"
+M4796,"Spondylosis, unspecified (Lumbar region)"
+M4797,"Spondylosis, unspecified (Lumbosacral region)"
+M4798,"Spondylosis, unspecified (Sacral and sacrococcygeal region)"
+M4952,Collapsed vertebra in diseases classified elsewhere (Cervical region)
+M4953,Collapsed vertebra in diseases classified elsewhere (Cervicothoracic region)
+M4954,Collapsed vertebra in diseases classified elsewhere (Thoracic region)
+M4955,Collapsed vertebra in diseases classified elsewhere (Thoracolumbar region)
+M4956,Collapsed vertebra in diseases classified elsewhere (Lumbar region)
+M4957,Collapsed vertebra in diseases classified elsewhere (Lumbosacral region)
+M4958,Collapsed vertebra in diseases classified elsewhere (Sacral and sacrococcygeal region)
+M4959,Collapsed vertebra in diseases classified elsewhere (Site unspecified)
+M498,Spondylopathy in other diseases classified elsewhere
+M4980,Spondylopathy in other diseases classified elsewhere (Multiple sites in spine)
+M4981,Spondylopathy in other diseases classified elsewhere (Occipito-atlanto-axial region)
+M4982,Spondylopathy in other diseases classified elsewhere (Cervical region)
+M4983,Spondylopathy in other diseases classified elsewhere (Cervicothoracic region)
+M4984,Spondylopathy in other diseases classified elsewhere (Thoracic region)
+M4985,Spondylopathy in other diseases classified elsewhere (Thoracolumbar region)
+M4986,Spondylopathy in other diseases classified elsewhere (Lumbar region)
+M4987,Spondylopathy in other diseases classified elsewhere (Lumbosacral region)
+M4988,Spondylopathy in other diseases classified elsewhere (Sacral and sacrococcygeal region)
+M4989,Spondylopathy in other diseases classified elsewhere (Site unspecified)
+M50,Cervical disk disorders
+M501,Cervical disk disorder with radiculopathy
+M502,Other cervical disk displacement
+M503,Other cervical disk degeneration
+M508,Other cervical disk disorders
+M509,"Cervical disk disorder, unspecified"
+M51,Other intervertebral disk disorders
+M949,"Disorder of cartilage, unspecified"
+M9490,"Disorder of cartilage, unspecified (Multiple sites)"
+M9491,"Disorder of cartilage, unspecified (Shoulder region)"
+M9492,"Disorder of cartilage, unspecified (Upper arm)"
+M9493,"Disorder of cartilage, unspecified (Forearm)"
+M9494,"Disorder of cartilage, unspecified (Hand)"
+M9495,"Disorder of cartilage, unspecified (Pelvic region and thigh)"
+M9496,"Disorder of cartilage, unspecified (Lower leg)"
+M9497,"Disorder of cartilage, unspecified (Ankle and foot)"
+M9498,"Disorder of cartilage, unspecified (Other)"
+M9499,"Disorder of cartilage, unspecified (Site unspecified)"
+Q65,Congenital deformities of hip
+Q650,"Congenital dislocation of hip, unilateral"
+Q651,"Congenital dislocation of hip, bilateral"
+Q652,"Congenital dislocation of hip, unspecified"
+Q653,"Congenital subluxation of hip, unilateral"
+Q654,"Congenital subluxation of hip, bilateral"
+Q655,"Congenital subluxation of hip, unspecified"
+Q656,Unstable hip
+Q658,Other congenital deformities of hip
+Q659,"Congenital deformity of hip, unspecified"
+V134    ,Personal history of arthritis
+V135,Personal history of other musculoskeletal disorders
+V136,Personal history of congenital malformations

@@ -311,3 +311,87 @@ reletively low. Thus I might take the data from UKB's osteoarthritis genotype to
 
 
 <img src="./media/GNN/Train_loss.svg" alt="Loss" style="zoom:10%;" />
+
+## Awkward
+
+However, when i first selected the 100 SNP loci derived from Nature article, forming a dataset with 17000 samples and
+100 features, i failed to construct a reasonable classification model. I tried it on kNN, randomForest and Xgboost, the
+AUC was unacceptable (0.52).
+
+According to the supplementary data of that article, these snps does not exhibit well classification potential (AUC0.5
+by PRS). So i change another snp sources based on research upon UKB data. (UKB data branch in GITHUB)
+
+Shit always happens, new data set (SNP=77) has little increase on AUC(0.52-0.54). So I still need to refer to article
+for solutions. One research reveals that increasing the input features will improve the performance. So i make another
+dataset with p<1e-5 and MAF >0.01 (SNP=8800).
+
+BUT BUT BUT, the result is still schlecht (AUC0.6 by XGboost). HOW could it happen?! Article tells me that the coding
+pattern might matter. So i change from ATCG one-hot encoding to **Effect Allele** numbers observed in SNP loci. AUC
+improved a little. Then i realize that i cannot just provide that too much features to its samples(8000:6000). So i
+conduct a feature selection procedure based on both Chi-square and linear SVC fs methods. Finally, AUC of simple model (
+Decision Tree) goes better.
+
+## Basic model
+
+| model_type     | metric_type   |   metric_value |
+|:---------------|:--------------|---------------:|
+| Baseline       | auc           |       0.5      |
+| Decision Tree  | auc           |       0.644074 |
+| Xgboost        | auc           |       0.714733 |
+| Neural Network | auc           |       0.649612 |
+| Random Forest  | auc           |       0.681943 |
+| **PRS** | auc           |  0.63 |
+
+The baseline of the total research is the **PRS** result, getting AUC of 0.63
+
+![myplot](./media/GNN/myplot.png)
+
+## GNN Model
+
+For the convenience of the project i select spectral as the GNN package, building the model as
+
++ Input
++ 16 - Channels GNN
++ 16 - Channels GNN
++ Pooling layer
++ Dense
++ Dense
+
+The training result goes as
+
+![trainACC](./media/GNN/General GNN Train ACC.svg)
+
+![trainLOSS](./media/GNN/General GNN Train LOSS.svg)
+
+The optimal model goes as follows
+
+<img src="./media/GNN/OPTIMAL.svg" alt="optimalACC" style="zoom:33%;" />
+
+<img src="./media/GNN/OPTIMAL LOSS.svg" alt="optimalLOSS" style="zoom:33%;" />
+
+# GNN explainer
+
+According to the [GNN explainer](https://arxiv.org/abs/1903.03894), i can retrieve the essential data contributing to
+the prediction task. Taking different threshold on the sub graph, i can find some thing interesting.
+
+For instance, for Case 4496347 in UKB, i got subgraph as
+![springSub35](../GNN/result/10k GNN explainer/springSub0.35.png)
+
+The SNP has the feature as
+
+| RSID        | FREQ   | Effect  | P         |
+| ----------- | ------ | ------- | --------- |
+| rs10912775  | 0.2448 | -0.0325 | 4.041E-07 |
+| rs332797    | 0.2496 | -0.0313 | 8.768E-07 |
+| rs12065527  | 0.2475 | -0.0328 | 5.929E-07 |
+| rs4652425   | 0.2452 | -0.0327 | 3.37E-07  |
+| rs112519723 | 0.2474 | -0.031  | 1.217E-06 |
+| rs2568096   | 0.2498 | -0.0309 | 1.228E-06 |
+| rs10912776  | 0.2448 | -0.0325 | 4.051E-07 |
+| rs12084948  | 0.2464 | -0.0327 | 3.115E-07 |
+
+Relaxing the threshold, we can get
+![springSub345](../GNN/result/10k GNN explainer/springSub0.345.png)
+
+There will be more SNPs found contributing to the prediction. Nevertheless, the detailed meaning of this graph remains
+unknown and awaits later interception.

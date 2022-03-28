@@ -1,78 +1,85 @@
+import matplotlib.pyplot as plt
 import numpy as np
+import pandas
 import pandas as pd
-from sklearn.feature_selection import SelectKBest, chi2
+import scikitplot as skplt
+from sklearn.feature_selection import SelectFromModel, SelectKBest, chi2
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import roc_auc_score, r2_score
 from sklearn.model_selection import train_test_split
-from supervised.automl import AutoML
-from tensorflow.keras.utils import to_categorical
-
-onehot2seq = {0: 0, 1: 'A', 2: 'G', 3: 'C', 4: 'T'}
+from sklearn.svm import LinearSVC
 
 
-def one_hot_to_seq(X_onehot):  # input size should be (m, Tx)
-    num_classes = 5  # the 5th number is left for N in the paper, namely a random nucleotide
-    X = []  # a list of (Tx,5) arrays
-
-    for x in X_onehot:
-        r = []
-        for row in x:
-            x_r = [i for i in range(len(row)) if row[i] == 1]
-            r.append(x_r)
-        X.append(r)
-    return np.array(X)
+# from supervised.automl import AutoML
 
 
-seq2one_hot = {'0': 0, 'A': 1, 'G': 2, 'C': 3, 'T': 4}
+def mlClassification(X, Y, selector):
+    if selector:
+        selector = SelectKBest(chi2, k=100)
+        X_new = selector.fit_transform(X, Y)
+    else:
+        lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
+        model = SelectFromModel(lsvc, prefit=True)
+        X_new = model.transform(X)
 
-
-def seq_to_one_hot(X):  # input size should be (m, Tx)
-    num_classes = 5  # the 5th number is left for N in the paper, namely a random nucleotide
-    X_onehot = []  # a list of (Tx,5) arrays
-    for x in X:
-        x = [seq2one_hot[i] for i in x]
-        x_onehot = np.zeros((len(x), num_classes))
-        for idx in range(len(x)):
-            x_onehot[idx, :] = to_categorical(x[idx], num_classes=num_classes)
-
-        X_onehot.append(x_onehot)
-
-    return np.array(X_onehot)
+    automl = AutoML(mode='Explain',
+                    eval_metric='auc')  # ,algorithms=['Neural Network'],total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
+    automl.fit(X, Y)
+    # automl.predict(X_test)
+    automl.report()
 
 
 '''
-file=pandas.read_excel('../Data/DVT-metabolomics.xlsx')
-file=file.iloc[:,1:]
-file=file.replace('DVT',1)
-file=file.replace('non-DVT',0)
-Y=np.array(file['Label'])
-file=file.iloc[:,1:]
-X=np.array(file)
-np.savez("../Data/Meta.npz", X, Y)
+def dlClassification(X, Y, selector):
+    lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
+    model = SelectFromModel(lsvc, prefit=True)
+    X_new = model.transform(X)
+
+    X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.2, random_state=1)
+    print(X_train.shape, X_test.shape, y_train.shape, y_test.shape)
+    clf = ak.StructuredDataClassifier()  # It tries 3 different models.
+    # Feed the structured data classifier with training data.
+    clf.fit(X_train, y_train, validation_data=(X_test, y_test), shuffle=True, batch_size=64,
+            verbose=1)  # ,validation_data=(X_test,y_test))
+
+    # Evaluate the best model with testing data.
+    print(clf.evaluate(X_test, y_test))
+    model = clf.export_model()
+    try:
+        model.save("model_autokeras", save_format="tf")
+    except Exception:
+        model.save("model_autokeras.h5")
 '''
-data = pd.read_csv('../Data/beDataset_n.csv')
-'''for colum in data.columns:
-    if colum == 'Cases' or colum=='Labels':continue
-    str=data[colum].str
-    data[colum]=data[colum].str.replace(r'(G)\w','4',regex=True)
-    data[colum]=data[colum].str.replace(r'(C)\w','3',regex=True)
-    data[colum]=data[colum].str.replace(r'(T)\w','2',regex=True)
-    data[colum]=data[colum].str.replace(r'(A)\w','1',regex=True)
-    data[colum]=data[colum].str.replace(r'(0)\w','0',regex=True)
-data.to_csv('../Data/bnDataset.csv',index=False)
-'''
-data = data.to_numpy()
+
+
+def prsAnalysis(X, Y, header):
+    manual = pandas.read_csv('../Data/Criteria/SNPManual.csv')
+    manual = manual.drop_duplicates(subset='SNV')
+    manual = manual.set_index('SNV')
+    manual = manual.reindex(header, axis=0)
+    effect = manual['Effect'].values
+    result = []
+    for row in X:
+        result_row = np.asscalar(np.dot(row.reshape(1, -1), effect.reshape(-1, 1)))
+        result.append(result_row)
+    X_train, X_test, Y_train, Y_test = train_test_split(np.array(result).reshape(-1, 1), Y, test_size=0.2)
+    lrc = LogisticRegression().fit(X_train, Y_train)
+    Y_pre = lrc.predict(X_test)
+    auc = roc_auc_score(Y_test, Y_pre)
+    score = lrc.score(X_test, Y_test)
+    proba = lrc.predict_proba(X_test)
+    skplt.metrics.plot_roc_curve(Y_test, proba)
+    rr = r2_score(Y_test, Y_pre)
+    plt.show()
+    print('AUC: %.3f' % auc)
+
+
+data = pd.read_csv('/home/bili/Lernen/Data/beDataset_b.csv')
+
+data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
+header = data.columns[1:-1]
+data = data.values
 X = data[:, 1:-1]
-# X_onehot=seq_to_one_hot(X)
 Y = data[:, -1]
-# np.savez('XY.npz', X_onehot, Y)
-# X_r=one_hot_to_seq(X)
-# np.savez("../Data/EY.npz", X, Y)
-# X = np.squeeze(X)
-# Y = np.squeeze(Y)
-
-selector = SelectKBest(chi2, k=90)
-X_new = selector.fit_transform(X, Y)
-X_train, X_test, y_train, y_test = train_test_split(X_new, Y, test_size=0.2, stratify=Y)
-automl = AutoML(mode="Explain", eval_metric='auc')
-automl.fit(X_train, y_train)
-automl.predict(X_test)
-automl.report()
+# mlClassification(X, Y, False)
+prsAnalysis(X, Y, header)

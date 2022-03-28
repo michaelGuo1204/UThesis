@@ -1,0 +1,230 @@
+<svg viewBox="0 0 330 200" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <line x1="60" y1="178" x2="55" y2="178" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="155.75" x2="55" y2="155.75" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="133.5" x2="55" y2="133.5" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="111.25" x2="55" y2="111.25" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="89" x2="55" y2="89" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="66.75" x2="55" y2="66.75" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="44.5" x2="55" y2="44.5" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="22.25" x2="55" y2="22.25" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60" y1="0" x2="55" y2="0" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                    </g>
+                    <g transform="translate(50, 0)">
+                        <text x="0" y="178" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: hidden; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.71
+                        </text>
+                        <text x="0" y="155.75" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.711
+                        </text>
+                        <text x="0" y="133.5" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: hidden; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.712
+                        </text>
+                        <text x="0" y="111.25" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.713
+                        </text>
+                        <text x="0" y="89" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: hidden; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.714
+                        </text>
+                        <text x="0" y="66.75" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.715
+                        </text>
+                        <text x="0" y="44.5" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: hidden; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.716
+                        </text>
+                        <text x="0" y="22.25" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.717
+                        </text>
+                        <text x="0" y="0" dx="0em" dy="0.3em"
+                              style="text-anchor: end; visibility: hidden; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.718
+                        </text>
+                    </g>
+                    <line x1="60" y1="0" x2="60" y2="178" fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)"
+                          stroke-width="1px"></line>
+                </g>
+            </g>
+            <g transform="translate(60, 0)" clip-path="url(#clip_0)">
+                <clipPath id="clip_0">
+                    <rect width="270" height="178"></rect>
+                </clipPath>
+                <g>
+                    <g>
+                        <g>
+                            <line x1="0" y1="0" x2="0" y2="178" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="30.000000000000004" y1="0" x2="30.000000000000004" y2="178" fill="rgb(0, 0, 0)"
+                                  stroke="rgb(60, 60, 60)" stroke-width="1px" opacity="0.25"></line>
+                            <line x1="60.00000000000001" y1="0" x2="60.00000000000001" y2="178" fill="rgb(0, 0, 0)"
+                                  stroke="rgb(60, 60, 60)" stroke-width="1px" opacity="0.25"></line>
+                            <line x1="90" y1="0" x2="90" y2="178" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="120.00000000000001" y1="0" x2="120.00000000000001" y2="178" fill="rgb(0, 0, 0)"
+                                  stroke="rgb(60, 60, 60)" stroke-width="1px" opacity="0.25"></line>
+                            <line x1="150" y1="0" x2="150" y2="178" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="180.00000000000003" y1="0" x2="180.00000000000003" y2="178" fill="rgb(0, 0, 0)"
+                                  stroke="rgb(60, 60, 60)" stroke-width="1px" opacity="0.25"></line>
+                            <line x1="209.99999999999997" y1="0" x2="209.99999999999997" y2="178" fill="rgb(0, 0, 0)"
+                                  stroke="rgb(60, 60, 60)" stroke-width="1px" opacity="0.25"></line>
+                            <line x1="240.00000000000003" y1="0" x2="240.00000000000003" y2="178" fill="rgb(0, 0, 0)"
+                                  stroke="rgb(60, 60, 60)" stroke-width="1px" opacity="0.25"></line>
+                            <line x1="270" y1="0" x2="270" y2="178" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                        </g>
+                        <g>
+                            <line x1="0" y1="178" x2="270" y2="178" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="155.75" x2="270" y2="155.75" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="133.5" x2="270" y2="133.5" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="111.25" x2="270" y2="111.25" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="89" x2="270" y2="89" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="66.75" x2="270" y2="66.75" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="44.5" x2="270" y2="44.5" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="22.25" x2="270" y2="22.25" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                            <line x1="0" y1="0" x2="270" y2="0" fill="rgb(0, 0, 0)" stroke="rgb(60, 60, 60)"
+                                  stroke-width="1px" opacity="0.25"></line>
+                        </g>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <line x1="0" y1="15975.499999999985" x2="270" y2="15975.499999999985" fill="rgb(0, 0, 0)"
+                              stroke="rgb(153, 153, 153)" stroke-width="1.5px"></line>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <line x1="30.000000000000004" y1="0" x2="30.000000000000004" y2="178" fill="rgb(0, 0, 0)"
+                              stroke="rgb(153, 153, 153)" stroke-width="1.5px"></line>
+                    </g>
+                </g>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <g>
+                                    <path stroke="rgb(187, 187, 187)" stroke-width="2px"
+                                          d="M30.000000000000004,138.24620592594073L52.535000000000004,53.2120372345596L74.72916666666666,40.98279412577159L96.77833333333334,37.07450898820653L119.02166666666668,43.85218975887733L141.26,38.70066011554849L164.755,56.596242788069574L188.16583333333335,32.911142641910544L211.65583333333333,52.21542706093348L235.25666666666666,33.82475781848376L258.87416666666667,29.334725652865473"
+                                          style="fill: none;" fill="none"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <g opacity="0.2">
+                        <g>
+                            <g>
+                                <g>
+                                    <path stroke="rgb(187, 187, 187)" stroke-width="2px"
+                                          d="M30.000000000000004,138.24620592594073L52.535000000000004,38.501126050948415L74.72916666666666,38.501126050948415L96.77833333333334,36.26116859912804L119.02166666666668,45.26874172687462L141.26,37.6231794357293L164.755,60.33971655368735L188.16583333333335,27.95648324489528L211.65583333333333,56.25368404388358L235.25666666666666,29.977617144584002L258.87416666666667,28.39545655250484"
+                                          style="fill: none;" fill="none"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+            <g transform="translate(60, 178)" clip-path="url(#clip_1)">
+                <clipPath id="clip_1">
+                    <rect width="270" height="22"></rect>
+                </clipPath>
+                <g>
+                    <g>
+                        <line x1="0" y1="0" x2="0" y2="5" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="30.000000000000004" y1="0" x2="30.000000000000004" y2="5" style="visibility: inherit;"
+                              fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="60.00000000000001" y1="0" x2="60.00000000000001" y2="5" style="visibility: inherit;"
+                              fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="90" y1="0" x2="90" y2="5" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="120.00000000000001" y1="0" x2="120.00000000000001" y2="5" style="visibility: inherit;"
+                              fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="150" y1="0" x2="150" y2="5" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="180.00000000000003" y1="0" x2="180.00000000000003" y2="5" style="visibility: inherit;"
+                              fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="209.99999999999997" y1="0" x2="209.99999999999997" y2="5" style="visibility: inherit;"
+                              fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="240.00000000000003" y1="0" x2="240.00000000000003" y2="5" style="visibility: inherit;"
+                              fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                        <line x1="270" y1="0" x2="270" y2="5" style="visibility: inherit;" fill="rgb(0, 0, 0)"
+                              stroke="rgb(204, 204, 204)" stroke-width="1px"></line>
+                    </g>
+                    <g transform="translate(0, 8)">
+                        <text x="0" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: hidden; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">-0.01
+                        </text>
+                        <text x="30.000000000000004" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0
+                        </text>
+                        <text x="60.00000000000001" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.01
+                        </text>
+                        <text x="90" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.02
+                        </text>
+                        <text x="120.00000000000001" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.03
+                        </text>
+                        <text x="150" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.04
+                        </text>
+                        <text x="180.00000000000003" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.05
+                        </text>
+                        <text x="209.99999999999997" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.06
+                        </text>
+                        <text x="240.00000000000003" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: inherit; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.07
+                        </text>
+                        <text x="270" y="0" dx="0em" dy="0.95em"
+                              style="text-anchor: middle; visibility: hidden; font-family: &quot;Helvetica Neue&quot;, sans-serif; font-size: 12px; font-weight: 200;"
+                              fill="rgb(50, 49, 63)" stroke="none" stroke-width="1px">0.08
+                        </text>
+                    </g>
+                    <line x1="0" y1="0" x2="270" y2="0" fill="rgb(0, 0, 0)" stroke="rgb(204, 204, 204)"
+                          stroke-width="1px"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

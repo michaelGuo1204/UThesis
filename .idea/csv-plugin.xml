@@ -3,28 +3,35 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
-        <entry key="/GNN/Data/Geno.csv">
+        <entry key="/GNN/Data/Criteria/SNPManual.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/GNN/Data/Support/SNPManual.csv">
+        <entry key="/GNN/Data/Criteria/SNPManual_ex.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/GNN/Data/Support/positive.csv">
+        <entry key="/GNN/Data/GWAS/MAF-selected.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
-        <entry key="/GNN/Data/bDataset.csv">
+        <entry key="/GNN/Data/GWAS/P-selected.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/GNN/Data/GWAS/task.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -38,7 +45,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="/GNN/Data/beDataset_n.csv">
+        <entry key="/GNN/Data/fs.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

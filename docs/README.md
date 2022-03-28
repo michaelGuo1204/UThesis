@@ -344,7 +344,7 @@ Decision Tree) goes better.
 
 The baseline of the total research is the **PRS** result, getting AUC of 0.63
 
-![myplot](./media/GNN/myplot.png)
+![myplot](/media/GNN/myplot.png)
 
 ## GNN Model
 
@@ -359,9 +359,9 @@ For the convenience of the project i select spectral as the GNN package, buildin
 
 The training result goes as
 
-![trainACC](./media/GNN/General GNN Train ACC.svg)
+![trainACC](/media/GNN/General GNN Train ACC.svg)
 
-![trainLOSS](./media/GNN/General GNN Train LOSS.svg)
+![trainLOSS](/media/GNN/General GNN Train LOSS.svg)
 
 The optimal model goes as follows
 
@@ -375,7 +375,7 @@ According to the [GNN explainer](https://arxiv.org/abs/1903.03894), i can retrie
 the prediction task. Taking different threshold on the sub graph, i can find some thing interesting.
 
 For instance, for Case 4496347 in UKB, i got subgraph as
-![springSub35](../GNN/result/10k GNN explainer/springSub0.35.png)
+![springSub35](/media/GNNEx/springSub0.35.png)
 
 The SNP has the feature as
 
@@ -391,7 +391,7 @@ The SNP has the feature as
 | rs12084948  | 0.2464 | -0.0327 | 3.115E-07 |
 
 Relaxing the threshold, we can get
-![springSub345](../GNN/result/10k GNN explainer/springSub0.345.png)
+![springSub345](/media/GNNEx/springSub0.345.png)
 
 There will be more SNPs found contributing to the prediction. Nevertheless, the detailed meaning of this graph remains
 unknown and awaits later interception.

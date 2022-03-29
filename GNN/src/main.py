@@ -1,3 +1,5 @@
+import time
+
 from spektral.data import DisjointLoader
 from spektral.transforms.normalize_adj import NormalizeAdj
 from tensorflow.keras.losses import BinaryCrossentropy
@@ -19,7 +21,7 @@ batch_size = 64  # Batch size
 # Load data
 ################################################################################
 
-data = WDataset(load=True, n_traits=100, transforms=NormalizeAdj())
+data = WHDataset(load=True, n_traits=100, transforms=NormalizeAdj())
 
 # Train/valid/test split
 idxs = np.random.permutation(len(data))
@@ -39,7 +41,7 @@ loader_te = DisjointLoader(data_te, batch_size=batch_size)
 ################################################################################
 
 # model = ECCModel(data.n_node_features,data.n_edge_features,data.n_labels)
-model = GeneralGNN(data.n_labels, activation='softmax')
+model = GeneralGNN(data.n_labels, activation='sigmoid')
 # model = Net(0)
 optimizer = Adam(learning_rate=learning_rate, decay=0.05)
 loss_fn = BinaryCrossentropy()
@@ -106,6 +108,8 @@ for batch in loader_tr:
         )
         tf.summary.scalar(name='Train_loss', data=loss, step=epoch)
         tf.summary.scalar(name='Train_Acc', data=acc, step=epoch)
+        tf.summary.scalar(name='Valid_loss', data=val_loss, step=epoch)
+        tf.summary.scalar(name='Valid_Acc', data=val_acc, step=epoch)
         # Check if loss improved for early stopping
         if val_loss < best_val_loss:
             best_val_loss = val_loss

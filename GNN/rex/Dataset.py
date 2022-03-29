@@ -2,7 +2,8 @@ import numpy as np
 import pandas
 import pandas as pd
 import progressbar
-from sklearn.feature_selection import chi2, SelectKBest
+from sklearn.feature_selection import SelectFromModel
+from sklearn.svm import LinearSVC
 
 
 def phenoSelect():
@@ -111,7 +112,7 @@ def GWASSelction():
 
 
 def featureSelection():
-    data = pd.read_csv('../Data/beDataset.csv')
+    data = pd.read_csv('/home/bili/Lernen/Data/beDataset_b80.csv')
     # data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
     header = data.columns[1:-1]
     datav = data.values
@@ -120,31 +121,31 @@ def featureSelection():
     # X_onehot=seq_to_one_hot(X)
     # X[X == 2] = 1
     Y = datav[:, -1]
-    # lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
-    # model = SelectFromModel(lsvc, prefit=True)
-    # header_new = model.transform(header.values.reshape(1, -1))
-    # X_new = model.transform(X)
+    lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
+    model = SelectFromModel(lsvc, prefit=True)
+    header_new = model.transform(header.values.reshape(1, -1))
+    X_new = model.transform(X)
 
-    model = SelectKBest(chi2, k=100)
+    # model = SelectKBest(chi2, k=100)
     # header = header[select[1] < 0.00000000000000001]
     # dealed = datav[:, 1:-1][:, select[1] < 0.00000000000000001]
-    X_new = model.fit_transform(X, Y)
-    header_new = model.get_feature_names_out(header.values)
+    # X_new = model.fit_transform(X, Y)
+    # header_new = model.get_feature_names_out(header.values)
     dealeddf = pd.DataFrame(X_new)
-    dealeddf.columns = header_new
+    dealeddf.columns = header_new[0, :]
     Result = pandas.concat([data['Cases'], dealeddf, data['Label']], axis=1)
     Result.to_csv("../Data/fs.csv", index=False)
     pass
 
 
 def csvToNP():
-    file = pandas.read_csv('../Data/fs.csv')
+    file = pandas.read_csv('../Data/fs100.csv')
     file = file.to_numpy()
     X = file[:, 1:-1]
     # X_onehot=seq_to_one_hot(X)
     # X[X == 2] = 1
     Y = file[:, -1]
-    np.savez("../Data/fs.npz", X, Y)
+    np.savez("../Data/fs100.npz", X, Y)
 
 def makeManual():
     alldata = pandas.read_csv('../Data/GWAS/MAF-selected_8000.csv')
@@ -166,5 +167,5 @@ def makeManual():
 # convertToBE()
 # GWASSelction()
 # featureSelection()
-# csvToNP()
-makeManual()
+csvToNP()
+# makeManual()

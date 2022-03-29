@@ -17,7 +17,7 @@ class Net(Model):
 
         self.dense2 = Dense(16, activation='relu', kernel_regularizer=l2(5e-4))
 
-        self.dense3 = Dense(2, activation="sigmoid", kernel_regularizer=l2(5e-4))
+        self.dense3 = Dense(1, activation="sigmoid", kernel_regularizer=l2(5e-4))
 
     def call(self, inputs):
         x, a, i = inputs

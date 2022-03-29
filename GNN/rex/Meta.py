@@ -8,23 +8,26 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
+from supervised.automl import AutoML
 
 
-# from supervised.automl import AutoML
-
-
-def mlClassification(X, Y, selector):
+def mlClassification(X, Y, data, header, selector):
     if selector:
         selector = SelectKBest(chi2, k=100)
         X_new = selector.fit_transform(X, Y)
     else:
         lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
-        model = SelectFromModel(lsvc, prefit=True)
+        model = SelectFromModel(lsvc, max_features=100, prefit=True)
         X_new = model.transform(X)
+        # header_new = model.transform(header.values.reshape(1, -1))
+        # dealeddf = pd.DataFrame(X_new)
+        # dealeddf.columns = header_new[0, :]
+        # Result = pandas.concat([data['Cases'], dealeddf, data['Label']], axis=1)
+        # Result.to_csv("../Data/fs100.csv", index=False)
 
     automl = AutoML(mode='Explain',
                     eval_metric='auc')  # ,algorithms=['Neural Network'],total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
-    automl.fit(X, Y)
+    automl.fit(X_new, Y)
     # automl.predict(X_test)
     automl.report()
 
@@ -74,12 +77,12 @@ def prsAnalysis(X, Y, header):
     print('AUC: %.3f' % auc)
 
 
-data = pd.read_csv('/home/bili/Lernen/Data/beDataset_b.csv')
+data = pd.read_csv('/home/bili/Lernen/Data/beDataset_b80.csv')
 
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 header = data.columns[1:-1]
-data = data.values
-X = data[:, 1:-1]
-Y = data[:, -1]
-# mlClassification(X, Y, False)
-prsAnalysis(X, Y, header)
+datav = data.values
+X = datav[:, 1:-1]
+Y = datav[:, -1]
+mlClassification(X, Y, data, header, False)
+#prsAnalysis(X, Y, header)

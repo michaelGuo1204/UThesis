@@ -1,10 +1,8 @@
-from spektral.data import DisjointLoader
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import networkx as nx
 import pandas
 from spektral.data import DisjointLoader
-from spektral.models import GeneralGNN, GNNExplainer
 from spektral.transforms.normalize_adj import NormalizeAdj
 
 from Net import *
@@ -20,9 +18,9 @@ epochs = 300
 ################################################################################
 # Load data
 ################################################################################
-file = pandas.read_csv('../Data/fs.csv')
+file = pandas.read_csv('../Data/fs100.csv')
 header = file.columns[1:-1]
-data = WDataset(load=True, n_traits=100, transforms=NormalizeAdj())[10000, 10001]
+data = WHDataset(load=True, n_traits=100, transforms=NormalizeAdj())[10000, 10001]
 # Data loaders
 loader = DisjointLoader(data, batch_size=batch_size, epochs=epochs)
 
@@ -30,12 +28,12 @@ loader = DisjointLoader(data, batch_size=batch_size, epochs=epochs)
 # Load Model
 ################################################################################
 
-model = GeneralGNN(data.n_labels, activation='softmax')
+model = GeneralGNN(data.n_labels, hidden=64, activation='softmax')
 model.built = True
-model.load_weights('./logs/1647925223.765264/variables/variables')
+model.load_weights('./logs/64 Hidden 0.65/variables/variables')
 while True:
     (x, a, i), y = next(loader)
-    if (y[0, :] == [0, 1]).all(): break
+    if y == 1: break
 cut_idx = (i == 0).sum()
 x_exp = x[:cut_idx]
 a_exp = tf.sparse.slice(a, start=[0, 0], size=[cut_idx, cut_idx])
@@ -80,4 +78,5 @@ for layout in layouts:
             G, pos=pos, labels=labels, font_color="black", font_size=10, verticalalignment="bottom"
         )
         name = str(layout).split(' ')[1].split('_')[0]
-        plt.savefig('../result/10k GNN explainer/{}Sub{}.png'.format(name, a_threshold))
+        plt.show()
+        # plt.savefig('../result/10k GNN explainer/{}Sub{}.png'.format(name, a_threshold))

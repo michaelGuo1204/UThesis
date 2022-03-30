@@ -351,9 +351,9 @@ The baseline of the total research is the **PRS** result, getting AUC of 0.63
 For the convenience of the project i select spectral as the GNN package, building the model as
 
 + Input
-+ 16 - Channels GNN
-+ 16 - Channels GNN
-+ Pooling layer
++ 64 - Channels GNN
++ 64 - Channels GNN
++ Readout Layer
 + Dense
 + Dense
 

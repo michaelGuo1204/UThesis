@@ -1,7 +1,10 @@
+import matplotlib.pyplot as plt
+import networkx as nx
 import numpy as np
 import pandas
 import pandas as pd
 import progressbar
+import seaborn as sns
 from sklearn.feature_selection import SelectFromModel
 from sklearn.svm import LinearSVC
 
@@ -162,10 +165,30 @@ def makeManual():
     pass
 
 
+def corrCalculation():
+    data = pandas.read_csv('../Data/fs100.csv')
+    data = data.drop(['Cases', 'Label'], axis=1)
+    corr = data.corr()
+    sns.heatmap(corr)
+    plt.show()
+    # Transform it in a links data frame (3 columns only):
+    links = corr.stack().reset_index()
+    links.columns = ['var1', 'var2', 'value']
+    # Keep only correlation over a threshold and remove self correlation (cor(A,A)=1)
+    links_filtered = links.loc[(links['value'] > 0) & (links['var1'] != links['var2'])]
+    # Build your graph
+    G = nx.from_pandas_edgelist(links_filtered, 'var1', 'var2')
+    # Plot the network:
+    nx.draw(G, with_labels=True, node_color='orange', node_size=40, edge_color='black', linewidths=1, font_size=15)
+    plt.show()
+    am = nx.adjacency_matrix(G).A
+    np.savez("../Data/fsaj.npz", am)
+    pass
 # phenoSelect()
 # mergeIds()
 # convertToBE()
 # GWASSelction()
 # featureSelection()
-csvToNP()
+# csvToNP()
 # makeManual()
+corrCalculation()

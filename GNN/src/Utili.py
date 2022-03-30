@@ -15,6 +15,7 @@ class WHDataset(Dataset):
             data = np.load("../Data/fs100.npz", allow_pickle=True)
             self.samples = data['arr_0']
             self.labels = data['arr_1']
+            self.ad = np.load("../Data/fsaj.npz", allow_pickle=True)['arr_0']
         super().__init__(**kwargs)
 
     def download(self):
@@ -32,11 +33,11 @@ class WHDataset(Dataset):
                 elif sample[index] == 1:
                     x[index] = [0, 1]
             # a = np.random.rand(nodes, nodes) <= self.p
-            a = np.ones((nodes, nodes))  # * self.p
+            a = self.ad  # * self.p
             # a = np.maximum(a, a.T).astype(int)
             filename = os.path.join(self.path, f'graph_{i}')
             np.savez(filename, x=x, a=a, y=label)
-            prb.update()
+            prb.update(1)
             i = i + 1
 
     def read(self):
@@ -44,7 +45,7 @@ class WHDataset(Dataset):
         print('Reading')
         prb = progressbar.ProgressBar()
         prb.start()
-        for i in prb(range(15000)):
+        for i in prb(range(15517)):
             data = np.load(os.path.join(self.path, f'graph_{i}.npz'), allow_pickle=True)
             _x = data['x']
             _a = data['a']

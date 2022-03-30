@@ -41,8 +41,8 @@ loader_te = DisjointLoader(data_te, batch_size=batch_size)
 ################################################################################
 
 # model = ECCModel(data.n_node_features,data.n_edge_features,data.n_labels)
-model = GeneralGNN(data.n_labels, activation='sigmoid')
-# model = Net(0)
+# model = GeneralGNN(data.n_labels, activation='sigmoid')
+model = Net(0)
 optimizer = Adam(learning_rate=learning_rate, decay=0.05)
 loss_fn = BinaryCrossentropy()
 logdir = "./logs/{}".format(time.time())

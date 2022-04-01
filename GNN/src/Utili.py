@@ -6,7 +6,7 @@ import scipy.sparse as sp
 from spektral.data import Dataset, Graph
 
 
-class WHDataset(Dataset):
+class WkDataset(Dataset):
 
     def __init__(self, n_traits, load=False, p=1e-2, **kwargs):
         self.n_traits = n_traits
@@ -21,10 +21,11 @@ class WHDataset(Dataset):
     def download(self):
         print('Generating datasets')
         os.mkdir(self.path)
-        i = 0
         prb = progressbar.ProgressBar()
         prb.start()
-        for (sample, label) in zip(self.samples, self.labels):
+        for i in prb(range(13709)):
+            sample = self.samples[i]
+            label = self.labels[i]
             nodes = self.n_traits
             x = np.zeros((self.n_traits, 2))
             for index in range(0, nodes):
@@ -37,7 +38,6 @@ class WHDataset(Dataset):
             # a = np.maximum(a, a.T).astype(int)
             filename = os.path.join(self.path, f'graph_{i}')
             np.savez(filename, x=x, a=a, y=label)
-            prb.update(1)
             i = i + 1
 
     def read(self):
@@ -45,7 +45,7 @@ class WHDataset(Dataset):
         print('Reading')
         prb = progressbar.ProgressBar()
         prb.start()
-        for i in prb(range(15517)):
+        for i in prb(range(13709)):
             data = np.load(os.path.join(self.path, f'graph_{i}.npz'), allow_pickle=True)
             _x = data['x']
             _a = data['a']

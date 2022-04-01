@@ -20,7 +20,7 @@ epochs = 300
 ################################################################################
 file = pandas.read_csv('../Data/fs100.csv')
 header = file.columns[1:-1]
-data = WHDataset(load=True, n_traits=100, transforms=NormalizeAdj())[10000, 10001]
+data = WkDataset(load=True, n_traits=100, transforms=NormalizeAdj())[10000, 10001]
 # Data loaders
 loader = DisjointLoader(data, batch_size=batch_size, epochs=epochs)
 
@@ -28,9 +28,9 @@ loader = DisjointLoader(data, batch_size=batch_size, epochs=epochs)
 # Load Model
 ################################################################################
 
-model = GeneralGNN(data.n_labels, hidden=64, activation='softmax')
+model = GeneralGNN(0)
 model.built = True
-model.load_weights('./logs/64 Hidden 0.65/variables/variables')
+model.load_weights('./logs/64 GNN2 0.69 2/variables')
 while True:
     (x, a, i), y = next(loader)
     if y == 1: break

@@ -29,7 +29,7 @@ ID,Pheno,Accept
 2443,Diabetes diagnosed by doctor,1
 2453,Cancer diagnosed by doctor,
 2463,Fractured/broken bones in last 5 years,1
-2644,"Light smokers, at least 100 smokes in lifetime",1
+2644,"Light smokers, at least 100 smokes in lifetime",
 2744,Birth weight of first child,
 2976,Age diabetes diagnosed,
 2986,Started insulin within one year diagnosis of diabetes,
@@ -38,7 +38,7 @@ ID,Pheno,Accept
 3063,Forced expiratory volume in 1-second (FEV1),
 3084,"Heel bone mineral density (BMD), manual entry",
 3148,Heel bone mineral density (BMD),
-3160,"Weight, manual entry",1
+3160,"Weight, manual entry",
 3506,Smoking compared to 10 years previous,
 3581,Age at menopause (last menstrual period),
 3786,Age asthma diagnosed,
@@ -78,8 +78,8 @@ ID,Pheno,Accept
 10007,Vitamin and mineral supplements (pilot),
 10844,Gestational diabetes only (pilot),
 10895,"Light smokers, at least 100 smokes in lifetime (pilot)",
-12143,Weight (pre-imaging),1
-12144,Height,1
+12143,Weight (pre-imaging),
+12144,Height,
 20001,"Cancer code, self-reported",
 20002,"Non-cancer illness code, self-reported",
 20006,Interpolated Year when cancer first diagnosed,
@@ -87,7 +87,7 @@ ID,Pheno,Accept
 20008,Interpolated Year when non-cancer illness first diagnosed,
 20009,Interpolated Age of participant when non-cancer illness first diagnosed,
 20016,Fluid intelligence score,
-20022,Birth weight,1
+20022,Birth weight,
 20082,Duration of questionnaire,
 20107,Illnesses of father,
 20110,Illnesses of mother,
@@ -255,8 +255,8 @@ ID,Pheno,Accept
 23232,Pelvis BMD (bone mineral density),
 23233,Ribs BMD (bone mineral density),
 23234,Spine BMD (bone mineral density),
-23235,Total BMC (bone mineral content),1
-23236,Total BMD (bone mineral density),1
+23235,Total BMC (bone mineral content),
+23236,Total BMD (bone mineral density),
 23237,Total BMD (bone mineral density) (left),
 23238,Total BMD (bone mineral density) (right),
 23239,Total BMD (bone mineral density) T-score,
@@ -269,34 +269,34 @@ ID,Pheno,Accept
 23248,Android total mass,
 23249,Arm fat mass (left),
 23250,Arm lean mass (left),
-23251,Arm tissue fat percentage (left),1
+23251,Arm tissue fat percentage (left),
 23252,Arm total mass (left),
 23253,Arm fat mass (right),
 23254,Arm lean mass (right),
-23255,Arm tissue fat percentage (right),1
+23255,Arm tissue fat percentage (right),
 23256,Arm total mass (right),
 23257,Arms fat mass,
 23258,Arms lean mass,
-23259,Arms tissue fat percentage,1
+23259,Arms tissue fat percentage,
 23260,Arms total mass,
 23264,Gynoid tissue fat percentage,
 23265,Gynoid total mass,
 23266,Leg fat mass (left),
 23267,Leg lean mass (left),
-23268,Leg tissue fat percentage (left),1
+23268,Leg tissue fat percentage (left),
 23269,Leg total mass (left),
 23270,Leg fat mass (right),
 23271,Leg lean mass (right),
-23272,Leg tissue fat percentage (right),1
+23272,Leg tissue fat percentage (right),
 23273,Leg total mass (right),
 23274,Legs fat mass,
 23275,Legs lean mass,
-23276,Legs tissue fat percentage,1
+23276,Legs tissue fat percentage,
 23277,Legs total mass,
 23278,Total fat mass,
 23279,Total fat-free mass,
 23280,Total lean mass,
-23281,Total tissue fat percentage,1
+23281,Total tissue fat percentage,
 23282,Total tissue mass,
 23283,Total mass,
 23284,Trunk fat mass,

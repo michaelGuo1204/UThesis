@@ -3,9 +3,10 @@ import networkx as nx
 import numpy as np
 import pandas
 import pandas as pd
+import paramiko
 import progressbar
 import seaborn as sns
-from sklearn.feature_selection import SelectFromModel
+from sklearn.feature_selection import SelectFromModel, SelectKBest, chi2
 from sklearn.svm import LinearSVC
 
 
@@ -119,21 +120,19 @@ def featureSelection():
     # data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
     header = data.columns[1:-1]
     datav = data.values
-
+    chiSelect = False
     X = datav[:, 1:-1]
-    # X_onehot=seq_to_one_hot(X)
-    # X[X == 2] = 1
     Y = datav[:, -1]
     lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
     model = SelectFromModel(lsvc, prefit=True)
     header_new = model.transform(header.values.reshape(1, -1))
     X_new = model.transform(X)
-
-    # model = SelectKBest(chi2, k=100)
-    # header = header[select[1] < 0.00000000000000001]
-    # dealed = datav[:, 1:-1][:, select[1] < 0.00000000000000001]
-    # X_new = model.fit_transform(X, Y)
-    # header_new = model.get_feature_names_out(header.values)
+    if chiSelect:
+        model = SelectKBest(chi2, k=100)
+        header = header[model[1] < 0.00000000000000001]
+        dealed = datav[:, 1:-1][:, model[1] < 0.00000000000000001]
+        X_new = model.fit_transform(X, Y)
+    header_new = model.get_feature_names_out(header.values)
     dealeddf = pd.DataFrame(X_new)
     dealeddf.columns = header_new[0, :]
     Result = pandas.concat([data['Cases'], dealeddf, data['Label']], axis=1)
@@ -184,6 +183,36 @@ def corrCalculation():
     am = nx.adjacency_matrix(G).A
     np.savez("../Data/fsaj.npz", am)
     pass
+
+
+def supplemtPhenoExtract():
+    phenolist = pandas.read_csv("../Data/Criteria/32883.csv")
+    phenolist = phenolist.loc[phenolist['Accept'] == 1]
+    caselist = pandas.read_csv('../Data/fs100.csv').iloc[:, [0, 101]]
+    caselist.columns = ['eid', 'label']
+    whole = caselist
+    # Open a transport
+    host, port = "58.206.100.246", 22222
+    transport = paramiko.Transport((host, port))
+
+    # Auth
+    username, password = "GQR", "guoqirui"
+    transport.connect(None, username, password)
+
+    # Go!
+    sftp = paramiko.SFTPClient.from_transport(transport)
+
+    for index in phenolist['ID']:
+        data = sftp.file('/home/WJH/data/phenotype/zl/test/ukb32833/{}.csv'.format(index))
+        data = pandas.read_csv(data).iloc[:, 0:2]
+        print(index)
+        whole = pandas.merge(whole, data, on=['eid'], how='inner')
+
+    whole.to_csv('../Data/Phenos.csv', index=False)
+
+    pass
+
+
 # phenoSelect()
 # mergeIds()
 # convertToBE()
@@ -191,4 +220,6 @@ def corrCalculation():
 # featureSelection()
 # csvToNP()
 # makeManual()
-corrCalculation()
+# corrCalculation()
+# safsd()
+supplemtPhenoExtract()

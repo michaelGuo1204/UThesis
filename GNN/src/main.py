@@ -21,7 +21,7 @@ batch_size = 64  # Batch size
 # Load data
 ################################################################################
 
-data = WHDataset(load=True, n_traits=100, transforms=NormalizeAdj())
+data = WkDataset(load=True, n_traits=100, transforms=NormalizeAdj())
 
 # Train/valid/test split
 idxs = np.random.permutation(len(data))
@@ -52,6 +52,19 @@ logWriter.init()
 logstep = 0
 
 
+# Get model summary as a string
+def get_summary_str(model):
+    lines = []
+    model.summary(print_fn=lines.append)
+    # Add initial spaces to avoid markdown formatting in TensorBoard
+    return '    ' + '\n    '.join(lines)
+
+
+def write_string_summary(writer, s):
+    with writer.as_default():
+        tf.summary.text('Model configuration', s, step=0)
+
+
 ################################################################################
 # Fit model
 ################################################################################
@@ -70,11 +83,13 @@ def train_step(inputs, target):
 def evaluate(loader):
     output = []
     step = 0
+    m = tf.keras.metrics.AUC(num_thresholds=200)
     while step < loader.steps_per_epoch:
         step += 1
         inputs, target = loader.__next__()
         pred = model(inputs, training=False)
         pred = tf.cast(pred, dtype='float64')
+        m.update_state(target, pred)
         outs = (
             loss_fn(target, pred),
             tf.reduce_mean(binary_accuracy(target, pred)),
@@ -83,7 +98,8 @@ def evaluate(loader):
         output.append(outs)
         if step == loader.steps_per_epoch:
             output = np.array(output)
-            return np.average(output[:, :-1], 0, weights=output[:, -1])
+            loss, acc = np.average(output[:, :-1], 0, weights=output[:, -1])
+            return loss, acc, m.result().numpy()
 
 
 epoch = step = logstep = loss = 0
@@ -100,16 +116,17 @@ for batch in loader_tr:
         epoch += 1
         loss, acc = np.mean(results, 0)
         # Compute validation loss and accuracy
-        val_loss, val_acc = evaluate(loader_va)
+        val_loss, val_acc, val_auc = evaluate(loader_va)
         print(
-            "Ep. {} - Loss: {:.3f} - Acc: {:.3f} - Val loss: {:.3f} - Val acc: {:.3f}".format(
-                epoch, *np.mean(results, 0), val_loss, val_acc
+            "Ep. {} - Loss: {:.3f} - Acc: {:.3f} - Val loss: {:.3f} - Val acc: {:.3f} - Val auc: {:.3f}".format(
+                epoch, *np.mean(results, 0), val_loss, val_acc, val_auc
             )
         )
         tf.summary.scalar(name='Train_loss', data=loss, step=epoch)
         tf.summary.scalar(name='Train_Acc', data=acc, step=epoch)
         tf.summary.scalar(name='Valid_loss', data=val_loss, step=epoch)
         tf.summary.scalar(name='Valid_Acc', data=val_acc, step=epoch)
+        tf.summary.scalar(name='AUC', data=val_auc, step=epoch)
         # Check if loss improved for early stopping
         if val_loss < best_val_loss:
             best_val_loss = val_loss
@@ -123,13 +140,17 @@ for batch in loader_tr:
                 break
         results = []
 
-logWriter.flush()
-logWriter.close()
 ################################################################################
 # Evaluate model
 ################################################################################
 
 model.set_weights(best_weights)  # Load best model
-test_loss, test_acc = evaluate(loader_te)
+test_loss, test_acc, test_auc = evaluate(loader_te)
 model.save(logdir, save_format="tf")
-print("Done. Test loss: {:.4f}. Test acc: {:.2f}".format(test_loss, test_acc))
+write_string_summary(logWriter, get_summary_str(model))
+logWriter.flush()
+logWriter.close()
+print("Done. Test loss: {:.4f}. Test acc: {:.2f}. Test auc:{:.2f}".format(test_loss, test_acc, test_auc))
+inputs, target = loader_te.__next__()
+x = model.output(inputs)
+pass

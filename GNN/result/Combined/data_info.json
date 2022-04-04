@@ -1,0 +1,127 @@
+{
+  "columns": [
+    "feature_1",
+    "feature_2",
+    "feature_3",
+    "feature_4",
+    "feature_5",
+    "feature_6",
+    "feature_7",
+    "feature_8",
+    "feature_9",
+    "feature_10",
+    "feature_11",
+    "feature_12",
+    "feature_13",
+    "feature_14",
+    "feature_15",
+    "feature_16",
+    "feature_17",
+    "feature_18",
+    "feature_19",
+    "feature_20",
+    "feature_21",
+    "feature_22",
+    "feature_23",
+    "feature_24",
+    "feature_25",
+    "feature_26",
+    "feature_27",
+    "feature_28",
+    "feature_29",
+    "feature_30",
+    "feature_31",
+    "feature_32",
+    "feature_33",
+    "feature_34",
+    "feature_35",
+    "feature_36",
+    "feature_37",
+    "feature_38",
+    "feature_39",
+    "feature_40"
+  ],
+  "rows": 13709,
+  "cols": 40,
+  "target_is_numeric": true,
+  "columns_info": {
+    "feature_1": [],
+    "feature_2": [
+      "missing_values",
+      "scale"
+    ],
+    "feature_3": [
+      "missing_values",
+      "scale"
+    ],
+    "feature_4": [],
+    "feature_5": [],
+    "feature_6": [
+      "missing_values",
+      "scale"
+    ],
+    "feature_7": [
+      "missing_values",
+      "scale"
+    ],
+    "feature_8": [
+      "scale"
+    ],
+    "feature_9": [
+      "constant_column"
+    ],
+    "feature_10": [],
+    "feature_11": [
+      "constant_column"
+    ],
+    "feature_12": [],
+    "feature_13": [],
+    "feature_14": [
+      "constant_column"
+    ],
+    "feature_15": [],
+    "feature_16": [
+      "constant_column"
+    ],
+    "feature_17": [],
+    "feature_18": [
+      "constant_column"
+    ],
+    "feature_19": [
+      "constant_column"
+    ],
+    "feature_20": [
+      "constant_column"
+    ],
+    "feature_21": [],
+    "feature_22": [],
+    "feature_23": [],
+    "feature_24": [],
+    "feature_25": [],
+    "feature_26": [],
+    "feature_27": [],
+    "feature_28": [
+      "scale"
+    ],
+    "feature_29": [],
+    "feature_30": [],
+    "feature_31": [],
+    "feature_32": [],
+    "feature_33": [],
+    "feature_34": [],
+    "feature_35": [],
+    "feature_36": [
+      "constant_column"
+    ],
+    "feature_37": [],
+    "feature_38": [],
+    "feature_39": [
+      "constant_column"
+    ],
+    "feature_40": []
+  },
+  "target_info": [],
+  "n_features": 40,
+  "is_sample_weighted": false,
+  "n_classes": 2
+}

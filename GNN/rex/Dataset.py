@@ -178,6 +178,7 @@ def corrCalculation():
     # Build your graph
     G = nx.from_pandas_edgelist(links_filtered, 'var1', 'var2')
     # Plot the network:
+    dia = nx.diameter(G, e=None, usebounds=False)
     nx.draw(G, with_labels=True, node_color='orange', node_size=40, edge_color='black', linewidths=1, font_size=15)
     plt.show()
     am = nx.adjacency_matrix(G).A
@@ -220,6 +221,6 @@ def supplemtPhenoExtract():
 # featureSelection()
 # csvToNP()
 # makeManual()
-# corrCalculation()
+corrCalculation()
 # safsd()
-supplemtPhenoExtract()
+# supplemtPhenoExtract()

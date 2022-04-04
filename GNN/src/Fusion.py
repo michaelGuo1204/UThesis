@@ -1,26 +1,23 @@
-import networkx as nx
-import networkx as nx
 import pandas
-from spektral.data import BatchLoader
-from spektral.transforms.normalize_adj import NormalizeAdj
+from spektral.data import DisjointLoader
+from spektral.transforms import LayerPreprocess
 
-from Net import Net
+from Net import Net, ChebConv
+from Utils import WkDataset
 
 ################################################################################
 # Hyper Params
 ################################################################################
-a_threshold_list = [0.35, 0.345, 0.34, 0.335, 0.33, 0.325, 0.32, 0.31]  # HIGHEST FIRST!!!
-layouts = [nx.layout.spring_layout, nx.layout.circular_layout]
-batch_size = 1
-epochs = 300
+batch_size = 128
+
 ################################################################################
 # Load data
 ################################################################################
 file = pandas.read_csv('../Data/fs100.csv')
 header = file.columns[1:-1]
-data = WKDataset(load=True, n_traits=100, transforms=NormalizeAdj())
+data = WkDataset(load=True, n_traits=100, transforms=[LayerPreprocess(ChebConv)])
 # Data loaders
-loader = BatchLoader(data, batch_size=128, shuffle=False)
+loader = DisjointLoader(data, batch_size=batch_size, shuffle=False)
 
 ################################################################################
 # Load Model
@@ -28,7 +25,7 @@ loader = BatchLoader(data, batch_size=128, shuffle=False)
 
 model = Net(0)
 model.built = True
-model.load_weights('./logs/64 GNN2 0.69 3/variables/variables')
+model.load_weights('./logs/Cheb/Cheb/variables/variables')
 
 data = pandas.DataFrame()
 step = 0

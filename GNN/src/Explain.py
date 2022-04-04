@@ -6,7 +6,7 @@ from spektral.data import DisjointLoader
 from spektral.transforms.normalize_adj import NormalizeAdj
 
 from Net import *
-from Utili import *
+from Utils import *
 
 ################################################################################
 # Hyper Params

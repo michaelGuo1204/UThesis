@@ -27,7 +27,10 @@ def mlClassification(X, Y, data, header, selector):
             X = selector.fit_transform(X, Y)
 
     automl = AutoML(mode='Explain',
-                    eval_metric='auc')  # ,algorithms=['Neural Network'],total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
+                    eval_metric='auc',
+                    algorithms=['Random Forest', 'Xgboost', 'Decision Tree', 'Baseline', 'LightGBM', 'Extra Trees',
+                                'CatBoost', 'Linear', 'Neural Network',
+                                'Nearest Neighbors'])  # ,total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
     automl.fit(X, Y)
     # automl.predict(X_test)
     automl.report()
@@ -82,11 +85,12 @@ datap = pd.read_csv('../Data/Phenos.csv').iloc[:, :-1]
 datap = datap.dropna()
 datap = datap.reset_index(drop=True)
 datag = pd.read_csv('../Data/fs100.csv')
-data = pandas.merge(datap, datag, on=['Cases'], how='inner')
+# data = pandas.merge(datap, datag, on=['Cases'], how='inner')
+data = pd.read_csv('../Data/Combined.csv')
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 header = data.columns[1:-1]
 datav = data.values
 X = datav[:, 1:-1]
 Y = datav[:, -1]
 mlClassification(X, Y, data, header, False)
-# prsAnalysis(X, Y, header)
+#prsAnalysis(X, Y, header)

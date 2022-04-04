@@ -1,29 +1,31 @@
 import time
 
 from spektral.data import DisjointLoader
-from spektral.transforms.normalize_adj import NormalizeAdj
+from spektral.transforms import LayerPreprocess
 from tensorflow.keras.losses import BinaryCrossentropy
 from tensorflow.keras.metrics import binary_accuracy
 from tensorflow.keras.optimizers import Adam
 
 from Net import *
-from Utili import *
+from Utils import *
 
 ################################################################################
 # Config
 ################################################################################
 learning_rate = 1e-3  # Learning rate
-epochs = 300  # Number of training epochs
+epochs = 30  # Number of training epochs
 es_patience = 10  # Patience for early stopping
 batch_size = 64  # Batch size
 
 ################################################################################
 # Load data
 ################################################################################
-
-data = WkDataset(load=True, n_traits=100, transforms=NormalizeAdj())
-
+# CHANGE TRANSFORMS WHEN MODIFYING THE MODEL
+data = WkDataset(load=True, n_traits=100, transforms=[LayerPreprocess(ChebConv)])
 # Train/valid/test split
+# data.a = sp.csr_matrix(np.load("../Data/fsaj.npz", allow_pickle=True)['arr_0'])
+# data.a = GCNConv.preprocess(data.a)
+# data.a = sp_matrix_to_sp_tensor(data.a)
 idxs = np.random.permutation(len(data))
 split_va, split_te = int(0.8 * len(data)), int(0.9 * len(data))
 idx_tr, idx_va, idx_te = np.split(idxs, [split_va, split_te])
@@ -45,7 +47,7 @@ loader_te = DisjointLoader(data_te, batch_size=batch_size)
 model = Net(0)
 optimizer = Adam(learning_rate=learning_rate, decay=0.05)
 loss_fn = BinaryCrossentropy()
-logdir = "./logs/{}".format(time.time())
+logdir = "./logs/Cheb/{}".format(time.time())
 logWriter = tf.summary.create_file_writer(logdir)
 logWriter.set_as_default()
 logWriter.init()

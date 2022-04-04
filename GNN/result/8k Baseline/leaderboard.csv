@@ -1,0 +1,4 @@
+name,model_type,metric_type,metric_value,train_time
+1_Baseline,Baseline,auc,0.5,4.76
+2_DecisionTree,Decision Tree,auc,0.5038006129746296,204.1
+3_Default_LightGBM,LightGBM,auc,0.5220841137408478,233.5

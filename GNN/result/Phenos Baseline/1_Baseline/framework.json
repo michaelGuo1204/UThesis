@@ -1,5 +1,5 @@
 {
-  "uid": "7a167e1d-4079-488f-b42a-666ba74299b7",
+  "uid": "a4a3c75c-2e61-4a44-8f33-5664db3ae01a",
   "name": "1_Baseline",
   "preprocessing": [
     {
@@ -18,7 +18,7 @@
       "library_version": "1.0.2",
       "algorithm_name": "Baseline Classifier",
       "algorithm_short_name": "Baseline",
-      "uid": "634f32c7-4a1a-45db-9ace-13f0c589b5ea",
+      "uid": "edf0f704-5f0c-42a9-980d-537c6c8f3ff2",
       "params": {
         "model_type": "Baseline",
         "ml_task": "binary_classification",
@@ -74,7 +74,7 @@
   "predictions_fname": "1_Baseline/predictions_validation.csv",
   "metric_name": "auc",
   "final_loss": -0.5,
-  "train_time": 0.22959589958190918,
+  "train_time": 0.21802091598510742,
   "is_stacked": false,
-  "threshold": 0.4399785114280133
+  "threshold": 0.4404143565800992
 }

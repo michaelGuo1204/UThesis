@@ -15,7 +15,7 @@ def mlClassification(X, Y, data, header, selector):
     Chi = False
     if selector:
         lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
-        model = SelectFromModel(lsvc, max_features=100, prefit=True)
+        model = SelectFromModel(lsvc, max_features=200, prefit=True)
         X = model.transform(X)
         header_new = model.transform(header.values.reshape(1, -1))
         dealeddf = pd.DataFrame(X)
@@ -27,16 +27,13 @@ def mlClassification(X, Y, data, header, selector):
             X = selector.fit_transform(X, Y)
 
     automl = AutoML(mode='Explain',
-                    eval_metric='auc',
-                    algorithms=['Random Forest', 'Xgboost', 'Decision Tree', 'Baseline', 'LightGBM', 'Extra Trees',
-                                'CatBoost', 'Linear', 'Neural Network',
-                                'Nearest Neighbors'])  # ,total_time_limit=10,stack_models=False,train_ensemble=False,ml_task='binary_classification')
+                    eval_metric='auc')  # ,total_time_limit=1000,stack_models=False,train_ensemble=False,ml_task='binary_classification')
     automl.fit(X, Y)
     # automl.predict(X_test)
     automl.report()
 
 
-'''
+
 def dlClassification(X, Y, selector):
     lsvc = LinearSVC(C=0.01, penalty="l1", dual=False).fit(X, Y)
     model = SelectFromModel(lsvc, prefit=True)
@@ -56,7 +53,7 @@ def dlClassification(X, Y, selector):
         model.save("model_autokeras", save_format="tf")
     except Exception:
         model.save("model_autokeras.h5")
-'''
+
 
 
 def prsAnalysis(X, Y, header):
@@ -81,12 +78,12 @@ def prsAnalysis(X, Y, header):
     print('AUC: %.3f' % auc)
 
 
-datap = pd.read_csv('../Data/Phenos.csv').iloc[:, :-1]
-datap = datap.dropna()
-datap = datap.reset_index(drop=True)
-datag = pd.read_csv('../Data/fs100.csv')
+# datap = pd.read_csv('../Data/Phenos.csv').iloc[:, :-1]
+# datap = datap.dropna()
+# datap = datap.reset_index(drop=True)
+# datag = pd.read_csv('../Data/fs100.csv')
 # data = pandas.merge(datap, datag, on=['Cases'], how='inner')
-data = pd.read_csv('../Data/Combined.csv')
+data = pd.read_csv('../Data/ReducedPheno.csv')
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 header = data.columns[1:-1]
 datav = data.values

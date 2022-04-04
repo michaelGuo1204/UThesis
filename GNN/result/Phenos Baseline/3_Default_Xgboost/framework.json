@@ -1,11 +1,36 @@
 {
-  "uid": "6efd8760-15ac-4a5c-b123-85fa159c8af7",
+  "uid": "e289c2f2-916f-482a-a024-992a240abd7c",
   "name": "3_Default_Xgboost",
   "preprocessing": [
     {
+      "missing_values": [
+        {
+          "fill_method": "na_fill_median",
+          "fill_params": {
+            "feature_2": 91.0,
+            "feature_3": 103.0,
+            "feature_6": 27.3314,
+            "feature_7": 78.1
+          },
+          "datetime_columns": []
+        }
+      ],
       "ml_task": "binary_classification",
       "params": {
-        "columns_preprocessing": {},
+        "columns_preprocessing": {
+          "feature_2": [
+            "na_fill_median"
+          ],
+          "feature_3": [
+            "na_fill_median"
+          ],
+          "feature_6": [
+            "na_fill_median"
+          ],
+          "feature_7": [
+            "na_fill_median"
+          ]
+        },
         "target_preprocessing": [
           "na_exclude"
         ],
@@ -18,7 +43,7 @@
       "library_version": "1.5.2",
       "algorithm_name": "Extreme Gradient Boosting",
       "algorithm_short_name": "Xgboost",
-      "uid": "98b0af7a-042e-4a3c-b5b6-16709c74b5f0",
+      "uid": "86c04aa5-f3fc-48cd-9711-b5fd41c44af9",
       "params": {
         "model_type": "Xgboost",
         "ml_task": "binary_classification",
@@ -34,7 +59,7 @@
         "explain_level": 2
       },
       "name": "learner_fold_0",
-      "best_ntree_limit": 26
+      "best_ntree_limit": 34
     }
   ],
   "params": {
@@ -45,7 +70,20 @@
       "max_cols_limit": null
     },
     "preprocessing": {
-      "columns_preprocessing": {},
+      "columns_preprocessing": {
+        "feature_2": [
+          "na_fill_median"
+        ],
+        "feature_3": [
+          "na_fill_median"
+        ],
+        "feature_6": [
+          "na_fill_median"
+        ],
+        "feature_7": [
+          "na_fill_median"
+        ]
+      },
       "target_preprocessing": [
         "na_exclude"
       ],
@@ -89,8 +127,8 @@
   ],
   "predictions_fname": "3_Default_Xgboost/predictions_validation.csv",
   "metric_name": "auc",
-  "final_loss": -0.6785945204237004,
-  "train_time": 7.7994420528411865,
+  "final_loss": -0.687464498552699,
+  "train_time": 4.700348377227783,
   "is_stacked": false,
-  "threshold": 0.4611281454563141
+  "threshold": 0.5096385478973389
 }

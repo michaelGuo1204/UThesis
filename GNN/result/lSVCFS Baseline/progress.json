@@ -9,54 +9,76 @@
       "ensemble"
     ],
     "algorithms": [
-      "Baseline",
-      "Decision Tree",
       "Random Forest",
       "Xgboost",
-      "Neural Network"
+      "Decision Tree",
+      "Baseline",
+      "LightGBM",
+      "Extra Trees",
+      "CatBoost",
+      "Neural Network",
+      "Nearest Neighbors"
     ],
     "spend": [
       {
         "model_name": "prepare_data",
         "model_type": "prepare_data",
         "fit_level": "prepare_data",
-        "train_time": 0.7112741470336914
+        "train_time": 0.3119776248931885
       },
       {
         "model_name": "1_Baseline",
         "model_type": "Baseline",
         "fit_level": "simple_algorithms",
-        "train_time": 0.38931798934936523
+        "train_time": 0.27564430236816406
       },
       {
         "model_name": "2_DecisionTree",
         "model_type": "Decision Tree",
         "fit_level": "simple_algorithms",
-        "train_time": 8.34356951713562
+        "train_time": 6.991789102554321
       },
       {
-        "model_name": "3_Default_Xgboost",
+        "model_name": "3_Default_LightGBM",
+        "model_type": "LightGBM",
+        "fit_level": "default_algorithms",
+        "train_time": 2.3255367279052734
+      },
+      {
+        "model_name": "4_Default_Xgboost",
         "model_type": "Xgboost",
         "fit_level": "default_algorithms",
-        "train_time": 117.60658836364746
+        "train_time": 60.994227170944214
       },
       {
-        "model_name": "4_Default_NeuralNetwork",
+        "model_name": "5_Default_CatBoost",
+        "model_type": "CatBoost",
+        "fit_level": "default_algorithms",
+        "train_time": 7.7034525871276855
+      },
+      {
+        "model_name": "6_Default_NeuralNetwork",
         "model_type": "Neural Network",
         "fit_level": "default_algorithms",
-        "train_time": 8.424128770828247
+        "train_time": 8.46318769454956
       },
       {
-        "model_name": "5_Default_RandomForest",
+        "model_name": "7_Default_RandomForest",
         "model_type": "Random Forest",
         "fit_level": "default_algorithms",
-        "train_time": 28.545169830322266
+        "train_time": 13.764965534210205
+      },
+      {
+        "model_name": "8_Default_ExtraTrees",
+        "model_type": "Extra Trees",
+        "fit_level": "default_algorithms",
+        "train_time": 9.745546102523804
       },
       {
         "model_name": "Ensemble",
         "model_type": "Ensemble",
         "fit_level": "ensemble",
-        "train_time": 0.6711478233337402
+        "train_time": 0.7525241374969482
       }
     ],
     "is_hill_climbing": false,
@@ -99,7 +121,7 @@
         "name": "1_Baseline",
         "status": "trained",
         "final_loss": -0.5,
-        "train_time": 1.0638573169708252,
+        "train_time": 0.9525039196014404,
         "data_type": "original",
         "max_time_for_learner": 360.0
       },
@@ -141,13 +163,61 @@
         "explain_level": 2,
         "name": "2_DecisionTree",
         "status": "trained",
-        "final_loss": -0.6440744083092117,
-        "train_time": 9.281750202178955,
+        "final_loss": -0.5161597139451728,
+        "train_time": 7.936304807662964,
         "data_type": "original",
         "max_time_for_learner": 360.0
       }
     ],
     "default_algorithms": [
+      {
+        "additional": {
+          "max_rounds": 10000,
+          "early_stopping_rounds": 50,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {},
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_1/X.data",
+          "y_path": "AutoML_1/y.data",
+          "results_path": "AutoML_1"
+        },
+        "learner": {
+          "model_type": "LightGBM",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "objective": "binary",
+          "num_leaves": 63,
+          "learning_rate": 0.05,
+          "feature_fraction": 0.9,
+          "bagging_fraction": 0.9,
+          "min_data_in_leaf": 10,
+          "seed": 3,
+          "metric": "auc",
+          "custom_eval_metric_name": null,
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "3_Default_LightGBM",
+        "status": "trained",
+        "final_loss": -0.5368995402690278,
+        "train_time": 3.2896461486816406,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      },
       {
         "additional": {
           "max_rounds": 10000,
@@ -181,17 +251,62 @@
           "min_child_weight": 1,
           "subsample": 1.0,
           "colsample_bytree": 1.0,
-          "seed": 3,
+          "seed": 4,
           "eval_metric": "auc",
           "explain_level": 2
         },
         "automl_random_state": 1234,
         "ml_task": "binary_classification",
         "explain_level": 2,
-        "name": "3_Default_Xgboost",
+        "name": "4_Default_Xgboost",
         "status": "trained",
-        "final_loss": -0.7147333560360974,
-        "train_time": 118.62185716629028,
+        "final_loss": -0.5605475906691639,
+        "train_time": 61.94946002960205,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      },
+      {
+        "additional": {
+          "max_rounds": 10000,
+          "early_stopping_rounds": 50,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {},
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_1/X.data",
+          "y_path": "AutoML_1/y.data",
+          "results_path": "AutoML_1"
+        },
+        "learner": {
+          "model_type": "CatBoost",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "learning_rate": 0.1,
+          "depth": 6,
+          "rsm": 1,
+          "loss_function": "Logloss",
+          "seed": 5,
+          "eval_metric": "AUC",
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "5_Default_CatBoost",
+        "status": "trained",
+        "final_loss": -0.556869742891197,
+        "train_time": 8.540818214416504,
         "data_type": "original",
         "max_time_for_learner": 360.0
       },
@@ -203,6 +318,15 @@
         "preprocessing": {
           "columns_preprocessing": {
             "feature_1": [
+              "scale_normal"
+            ],
+            "feature_2": [
+              "scale_normal"
+            ],
+            "feature_3": [
+              "scale_normal"
+            ],
+            "feature_5": [
               "scale_normal"
             ],
             "feature_6": [
@@ -217,22 +341,13 @@
             "feature_9": [
               "scale_normal"
             ],
-            "feature_10": [
-              "scale_normal"
-            ],
             "feature_11": [
-              "scale_normal"
-            ],
-            "feature_12": [
               "scale_normal"
             ],
             "feature_13": [
               "scale_normal"
             ],
             "feature_14": [
-              "scale_normal"
-            ],
-            "feature_15": [
               "scale_normal"
             ],
             "feature_16": [
@@ -265,6 +380,12 @@
             "feature_25": [
               "scale_normal"
             ],
+            "feature_26": [
+              "scale_normal"
+            ],
+            "feature_27": [
+              "scale_normal"
+            ],
             "feature_28": [
               "scale_normal"
             ],
@@ -295,6 +416,9 @@
             "feature_37": [
               "scale_normal"
             ],
+            "feature_38": [
+              "scale_normal"
+            ],
             "feature_39": [
               "scale_normal"
             ],
@@ -304,19 +428,19 @@
             "feature_41": [
               "scale_normal"
             ],
-            "feature_44": [
+            "feature_42": [
+              "scale_normal"
+            ],
+            "feature_43": [
               "scale_normal"
             ],
             "feature_45": [
               "scale_normal"
             ],
+            "feature_46": [
+              "scale_normal"
+            ],
             "feature_47": [
-              "scale_normal"
-            ],
-            "feature_48": [
-              "scale_normal"
-            ],
-            "feature_49": [
               "scale_normal"
             ],
             "feature_51": [
@@ -337,9 +461,6 @@
             "feature_56": [
               "scale_normal"
             ],
-            "feature_57": [
-              "scale_normal"
-            ],
             "feature_58": [
               "scale_normal"
             ],
@@ -349,16 +470,16 @@
             "feature_60": [
               "scale_normal"
             ],
-            "feature_62": [
+            "feature_61": [
               "scale_normal"
             ],
-            "feature_63": [
+            "feature_62": [
               "scale_normal"
             ],
             "feature_64": [
               "scale_normal"
             ],
-            "feature_65": [
+            "feature_66": [
               "scale_normal"
             ],
             "feature_67": [
@@ -391,7 +512,10 @@
             "feature_76": [
               "scale_normal"
             ],
-            "feature_79": [
+            "feature_77": [
+              "scale_normal"
+            ],
+            "feature_78": [
               "scale_normal"
             ],
             "feature_80": [
@@ -415,19 +539,13 @@
             "feature_86": [
               "scale_normal"
             ],
-            "feature_88": [
+            "feature_87": [
               "scale_normal"
             ],
             "feature_89": [
               "scale_normal"
             ],
             "feature_90": [
-              "scale_normal"
-            ],
-            "feature_91": [
-              "scale_normal"
-            ],
-            "feature_92": [
               "scale_normal"
             ],
             "feature_93": [
@@ -439,7 +557,7 @@
             "feature_95": [
               "scale_normal"
             ],
-            "feature_96": [
+            "feature_97": [
               "scale_normal"
             ],
             "feature_98": [
@@ -463,19 +581,16 @@
             "feature_104": [
               "scale_normal"
             ],
+            "feature_105": [
+              "scale_normal"
+            ],
             "feature_106": [
               "scale_normal"
             ],
             "feature_107": [
               "scale_normal"
             ],
-            "feature_108": [
-              "scale_normal"
-            ],
             "feature_109": [
-              "scale_normal"
-            ],
-            "feature_110": [
               "scale_normal"
             ],
             "feature_111": [
@@ -505,7 +620,7 @@
             "feature_120": [
               "scale_normal"
             ],
-            "feature_122": [
+            "feature_121": [
               "scale_normal"
             ],
             "feature_123": [
@@ -517,10 +632,10 @@
             "feature_125": [
               "scale_normal"
             ],
-            "feature_127": [
+            "feature_126": [
               "scale_normal"
             ],
-            "feature_129": [
+            "feature_127": [
               "scale_normal"
             ],
             "feature_130": [
@@ -532,16 +647,22 @@
             "feature_132": [
               "scale_normal"
             ],
+            "feature_133": [
+              "scale_normal"
+            ],
             "feature_134": [
               "scale_normal"
             ],
             "feature_135": [
               "scale_normal"
             ],
-            "feature_137": [
+            "feature_136": [
               "scale_normal"
             ],
             "feature_138": [
+              "scale_normal"
+            ],
+            "feature_139": [
               "scale_normal"
             ],
             "feature_140": [
@@ -551,6 +672,9 @@
               "scale_normal"
             ],
             "feature_142": [
+              "scale_normal"
+            ],
+            "feature_143": [
               "scale_normal"
             ],
             "feature_144": [
@@ -574,25 +698,19 @@
             "feature_150": [
               "scale_normal"
             ],
-            "feature_151": [
-              "scale_normal"
-            ],
             "feature_152": [
               "scale_normal"
             ],
             "feature_153": [
               "scale_normal"
             ],
-            "feature_154": [
+            "feature_155": [
               "scale_normal"
             ],
             "feature_156": [
               "scale_normal"
             ],
             "feature_157": [
-              "scale_normal"
-            ],
-            "feature_158": [
               "scale_normal"
             ],
             "feature_159": [
@@ -604,10 +722,10 @@
             "feature_161": [
               "scale_normal"
             ],
-            "feature_163": [
+            "feature_162": [
               "scale_normal"
             ],
-            "feature_164": [
+            "feature_163": [
               "scale_normal"
             ],
             "feature_165": [
@@ -625,9 +743,6 @@
             "feature_169": [
               "scale_normal"
             ],
-            "feature_170": [
-              "scale_normal"
-            ],
             "feature_171": [
               "scale_normal"
             ],
@@ -637,7 +752,10 @@
             "feature_173": [
               "scale_normal"
             ],
-            "feature_176": [
+            "feature_174": [
+              "scale_normal"
+            ],
+            "feature_175": [
               "scale_normal"
             ],
             "feature_177": [
@@ -656,9 +774,6 @@
               "scale_normal"
             ],
             "feature_182": [
-              "scale_normal"
-            ],
-            "feature_183": [
               "scale_normal"
             ],
             "feature_184": [
@@ -709,643 +824,7 @@
             "feature_199": [
               "scale_normal"
             ],
-            "feature_201": [
-              "scale_normal"
-            ],
-            "feature_202": [
-              "scale_normal"
-            ],
-            "feature_203": [
-              "scale_normal"
-            ],
-            "feature_204": [
-              "scale_normal"
-            ],
-            "feature_205": [
-              "scale_normal"
-            ],
-            "feature_206": [
-              "scale_normal"
-            ],
-            "feature_207": [
-              "scale_normal"
-            ],
-            "feature_208": [
-              "scale_normal"
-            ],
-            "feature_209": [
-              "scale_normal"
-            ],
-            "feature_210": [
-              "scale_normal"
-            ],
-            "feature_211": [
-              "scale_normal"
-            ],
-            "feature_212": [
-              "scale_normal"
-            ],
-            "feature_213": [
-              "scale_normal"
-            ],
-            "feature_214": [
-              "scale_normal"
-            ],
-            "feature_216": [
-              "scale_normal"
-            ],
-            "feature_217": [
-              "scale_normal"
-            ],
-            "feature_218": [
-              "scale_normal"
-            ],
-            "feature_219": [
-              "scale_normal"
-            ],
-            "feature_220": [
-              "scale_normal"
-            ],
-            "feature_221": [
-              "scale_normal"
-            ],
-            "feature_222": [
-              "scale_normal"
-            ],
-            "feature_224": [
-              "scale_normal"
-            ],
-            "feature_225": [
-              "scale_normal"
-            ],
-            "feature_227": [
-              "scale_normal"
-            ],
-            "feature_228": [
-              "scale_normal"
-            ],
-            "feature_229": [
-              "scale_normal"
-            ],
-            "feature_231": [
-              "scale_normal"
-            ],
-            "feature_232": [
-              "scale_normal"
-            ],
-            "feature_233": [
-              "scale_normal"
-            ],
-            "feature_234": [
-              "scale_normal"
-            ],
-            "feature_235": [
-              "scale_normal"
-            ],
-            "feature_236": [
-              "scale_normal"
-            ],
-            "feature_237": [
-              "scale_normal"
-            ],
-            "feature_238": [
-              "scale_normal"
-            ],
-            "feature_239": [
-              "scale_normal"
-            ],
-            "feature_241": [
-              "scale_normal"
-            ],
-            "feature_242": [
-              "scale_normal"
-            ],
-            "feature_244": [
-              "scale_normal"
-            ],
-            "feature_245": [
-              "scale_normal"
-            ],
-            "feature_246": [
-              "scale_normal"
-            ],
-            "feature_247": [
-              "scale_normal"
-            ],
-            "feature_248": [
-              "scale_normal"
-            ],
-            "feature_249": [
-              "scale_normal"
-            ],
-            "feature_251": [
-              "scale_normal"
-            ],
-            "feature_252": [
-              "scale_normal"
-            ],
-            "feature_253": [
-              "scale_normal"
-            ],
-            "feature_255": [
-              "scale_normal"
-            ],
-            "feature_256": [
-              "scale_normal"
-            ],
-            "feature_258": [
-              "scale_normal"
-            ],
-            "feature_259": [
-              "scale_normal"
-            ],
-            "feature_260": [
-              "scale_normal"
-            ],
-            "feature_261": [
-              "scale_normal"
-            ],
-            "feature_262": [
-              "scale_normal"
-            ],
-            "feature_263": [
-              "scale_normal"
-            ],
-            "feature_266": [
-              "scale_normal"
-            ],
-            "feature_267": [
-              "scale_normal"
-            ],
-            "feature_268": [
-              "scale_normal"
-            ],
-            "feature_269": [
-              "scale_normal"
-            ],
-            "feature_270": [
-              "scale_normal"
-            ],
-            "feature_271": [
-              "scale_normal"
-            ],
-            "feature_272": [
-              "scale_normal"
-            ],
-            "feature_273": [
-              "scale_normal"
-            ],
-            "feature_275": [
-              "scale_normal"
-            ],
-            "feature_276": [
-              "scale_normal"
-            ],
-            "feature_277": [
-              "scale_normal"
-            ],
-            "feature_278": [
-              "scale_normal"
-            ],
-            "feature_279": [
-              "scale_normal"
-            ],
-            "feature_280": [
-              "scale_normal"
-            ],
-            "feature_281": [
-              "scale_normal"
-            ],
-            "feature_282": [
-              "scale_normal"
-            ],
-            "feature_283": [
-              "scale_normal"
-            ],
-            "feature_284": [
-              "scale_normal"
-            ],
-            "feature_285": [
-              "scale_normal"
-            ],
-            "feature_286": [
-              "scale_normal"
-            ],
-            "feature_287": [
-              "scale_normal"
-            ],
-            "feature_288": [
-              "scale_normal"
-            ],
-            "feature_290": [
-              "scale_normal"
-            ],
-            "feature_291": [
-              "scale_normal"
-            ],
-            "feature_292": [
-              "scale_normal"
-            ],
-            "feature_293": [
-              "scale_normal"
-            ],
-            "feature_294": [
-              "scale_normal"
-            ],
-            "feature_295": [
-              "scale_normal"
-            ],
-            "feature_296": [
-              "scale_normal"
-            ],
-            "feature_297": [
-              "scale_normal"
-            ],
-            "feature_299": [
-              "scale_normal"
-            ],
-            "feature_300": [
-              "scale_normal"
-            ],
-            "feature_301": [
-              "scale_normal"
-            ],
-            "feature_302": [
-              "scale_normal"
-            ],
-            "feature_303": [
-              "scale_normal"
-            ],
-            "feature_304": [
-              "scale_normal"
-            ],
-            "feature_305": [
-              "scale_normal"
-            ],
-            "feature_306": [
-              "scale_normal"
-            ],
-            "feature_308": [
-              "scale_normal"
-            ],
-            "feature_309": [
-              "scale_normal"
-            ],
-            "feature_310": [
-              "scale_normal"
-            ],
-            "feature_311": [
-              "scale_normal"
-            ],
-            "feature_312": [
-              "scale_normal"
-            ],
-            "feature_313": [
-              "scale_normal"
-            ],
-            "feature_314": [
-              "scale_normal"
-            ],
-            "feature_315": [
-              "scale_normal"
-            ],
-            "feature_316": [
-              "scale_normal"
-            ],
-            "feature_317": [
-              "scale_normal"
-            ],
-            "feature_318": [
-              "scale_normal"
-            ],
-            "feature_319": [
-              "scale_normal"
-            ],
-            "feature_321": [
-              "scale_normal"
-            ],
-            "feature_322": [
-              "scale_normal"
-            ],
-            "feature_323": [
-              "scale_normal"
-            ],
-            "feature_324": [
-              "scale_normal"
-            ],
-            "feature_327": [
-              "scale_normal"
-            ],
-            "feature_328": [
-              "scale_normal"
-            ],
-            "feature_329": [
-              "scale_normal"
-            ],
-            "feature_330": [
-              "scale_normal"
-            ],
-            "feature_331": [
-              "scale_normal"
-            ],
-            "feature_332": [
-              "scale_normal"
-            ],
-            "feature_333": [
-              "scale_normal"
-            ],
-            "feature_334": [
-              "scale_normal"
-            ],
-            "feature_335": [
-              "scale_normal"
-            ],
-            "feature_336": [
-              "scale_normal"
-            ],
-            "feature_337": [
-              "scale_normal"
-            ],
-            "feature_338": [
-              "scale_normal"
-            ],
-            "feature_339": [
-              "scale_normal"
-            ],
-            "feature_340": [
-              "scale_normal"
-            ],
-            "feature_341": [
-              "scale_normal"
-            ],
-            "feature_342": [
-              "scale_normal"
-            ],
-            "feature_343": [
-              "scale_normal"
-            ],
-            "feature_344": [
-              "scale_normal"
-            ],
-            "feature_345": [
-              "scale_normal"
-            ],
-            "feature_346": [
-              "scale_normal"
-            ],
-            "feature_347": [
-              "scale_normal"
-            ],
-            "feature_348": [
-              "scale_normal"
-            ],
-            "feature_349": [
-              "scale_normal"
-            ],
-            "feature_351": [
-              "scale_normal"
-            ],
-            "feature_352": [
-              "scale_normal"
-            ],
-            "feature_353": [
-              "scale_normal"
-            ],
-            "feature_355": [
-              "scale_normal"
-            ],
-            "feature_356": [
-              "scale_normal"
-            ],
-            "feature_357": [
-              "scale_normal"
-            ],
-            "feature_358": [
-              "scale_normal"
-            ],
-            "feature_359": [
-              "scale_normal"
-            ],
-            "feature_360": [
-              "scale_normal"
-            ],
-            "feature_361": [
-              "scale_normal"
-            ],
-            "feature_363": [
-              "scale_normal"
-            ],
-            "feature_365": [
-              "scale_normal"
-            ],
-            "feature_366": [
-              "scale_normal"
-            ],
-            "feature_368": [
-              "scale_normal"
-            ],
-            "feature_369": [
-              "scale_normal"
-            ],
-            "feature_370": [
-              "scale_normal"
-            ],
-            "feature_371": [
-              "scale_normal"
-            ],
-            "feature_372": [
-              "scale_normal"
-            ],
-            "feature_373": [
-              "scale_normal"
-            ],
-            "feature_374": [
-              "scale_normal"
-            ],
-            "feature_375": [
-              "scale_normal"
-            ],
-            "feature_376": [
-              "scale_normal"
-            ],
-            "feature_377": [
-              "scale_normal"
-            ],
-            "feature_380": [
-              "scale_normal"
-            ],
-            "feature_381": [
-              "scale_normal"
-            ],
-            "feature_382": [
-              "scale_normal"
-            ],
-            "feature_383": [
-              "scale_normal"
-            ],
-            "feature_384": [
-              "scale_normal"
-            ],
-            "feature_385": [
-              "scale_normal"
-            ],
-            "feature_387": [
-              "scale_normal"
-            ],
-            "feature_388": [
-              "scale_normal"
-            ],
-            "feature_389": [
-              "scale_normal"
-            ],
-            "feature_390": [
-              "scale_normal"
-            ],
-            "feature_391": [
-              "scale_normal"
-            ],
-            "feature_392": [
-              "scale_normal"
-            ],
-            "feature_393": [
-              "scale_normal"
-            ],
-            "feature_395": [
-              "scale_normal"
-            ],
-            "feature_396": [
-              "scale_normal"
-            ],
-            "feature_397": [
-              "scale_normal"
-            ],
-            "feature_398": [
-              "scale_normal"
-            ],
-            "feature_399": [
-              "scale_normal"
-            ],
-            "feature_402": [
-              "scale_normal"
-            ],
-            "feature_405": [
-              "scale_normal"
-            ],
-            "feature_406": [
-              "scale_normal"
-            ],
-            "feature_407": [
-              "scale_normal"
-            ],
-            "feature_408": [
-              "scale_normal"
-            ],
-            "feature_409": [
-              "scale_normal"
-            ],
-            "feature_410": [
-              "scale_normal"
-            ],
-            "feature_411": [
-              "scale_normal"
-            ],
-            "feature_412": [
-              "scale_normal"
-            ],
-            "feature_413": [
-              "scale_normal"
-            ],
-            "feature_414": [
-              "scale_normal"
-            ],
-            "feature_415": [
-              "scale_normal"
-            ],
-            "feature_416": [
-              "scale_normal"
-            ],
-            "feature_417": [
-              "scale_normal"
-            ],
-            "feature_419": [
-              "scale_normal"
-            ],
-            "feature_420": [
-              "scale_normal"
-            ],
-            "feature_421": [
-              "scale_normal"
-            ],
-            "feature_423": [
-              "scale_normal"
-            ],
-            "feature_424": [
-              "scale_normal"
-            ],
-            "feature_426": [
-              "scale_normal"
-            ],
-            "feature_427": [
-              "scale_normal"
-            ],
-            "feature_428": [
-              "scale_normal"
-            ],
-            "feature_429": [
-              "scale_normal"
-            ],
-            "feature_430": [
-              "scale_normal"
-            ],
-            "feature_431": [
-              "scale_normal"
-            ],
-            "feature_432": [
-              "scale_normal"
-            ],
-            "feature_433": [
-              "scale_normal"
-            ],
-            "feature_434": [
-              "scale_normal"
-            ],
-            "feature_435": [
-              "scale_normal"
-            ],
-            "feature_436": [
-              "scale_normal"
-            ],
-            "feature_437": [
-              "scale_normal"
-            ],
-            "feature_438": [
-              "scale_normal"
-            ],
-            "feature_440": [
-              "scale_normal"
-            ],
-            "feature_441": [
-              "scale_normal"
-            ],
-            "feature_443": [
-              "scale_normal"
-            ],
-            "feature_444": [
-              "scale_normal"
-            ],
-            "feature_445": [
-              "scale_normal"
-            ],
-            "feature_446": [
-              "scale_normal"
-            ],
-            "feature_447": [
-              "scale_normal"
-            ],
-            "feature_448": [
-              "scale_normal"
-            ],
-            "feature_449": [
+            "feature_200": [
               "scale_normal"
             ]
           },
@@ -1370,16 +849,16 @@
           "dense_1_size": 32,
           "dense_2_size": 16,
           "learning_rate": 0.05,
-          "seed": 4,
+          "seed": 6,
           "explain_level": 2
         },
         "automl_random_state": 1234,
         "ml_task": "binary_classification",
         "explain_level": 2,
-        "name": "4_Default_NeuralNetwork",
+        "name": "6_Default_NeuralNetwork",
         "status": "trained",
-        "final_loss": -0.6496121232760089,
-        "train_time": 9.256874322891235,
+        "final_loss": -0.5153713604631364,
+        "train_time": 9.29464864730835,
         "data_type": "original",
         "max_time_for_learner": 360.0
       },
@@ -1417,17 +896,63 @@
           "max_features": 0.9,
           "min_samples_split": 30,
           "max_depth": 4,
-          "seed": 5,
+          "seed": 7,
           "eval_metric_name": "auc",
           "explain_level": 2
         },
         "automl_random_state": 1234,
         "ml_task": "binary_classification",
         "explain_level": 2,
-        "name": "5_Default_RandomForest",
+        "name": "7_Default_RandomForest",
         "status": "trained",
-        "final_loss": -0.6819432998467563,
-        "train_time": 29.53974485397339,
+        "final_loss": -0.5338865996935127,
+        "train_time": 14.740054368972778,
+        "data_type": "original",
+        "max_time_for_learner": 360.0
+      },
+      {
+        "additional": {
+          "trees_in_step": 100,
+          "max_steps": 50,
+          "early_stopping_rounds": 50,
+          "max_rows_limit": null,
+          "max_cols_limit": null
+        },
+        "preprocessing": {
+          "columns_preprocessing": {},
+          "target_preprocessing": [
+            "na_exclude"
+          ],
+          "ml_task": "binary_classification"
+        },
+        "validation_strategy": {
+          "validation_type": "split",
+          "train_ratio": 0.75,
+          "shuffle": true,
+          "stratify": true,
+          "X_path": "AutoML_1/X.data",
+          "y_path": "AutoML_1/y.data",
+          "results_path": "AutoML_1"
+        },
+        "learner": {
+          "model_type": "Extra Trees",
+          "ml_task": "binary_classification",
+          "n_jobs": -1,
+          "criterion": "gini",
+          "max_features": 0.9,
+          "min_samples_split": 30,
+          "max_depth": 4,
+          "seed": 8,
+          "eval_metric_name": "auc",
+          "explain_level": 2
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 2,
+        "name": "8_Default_ExtraTrees",
+        "status": "trained",
+        "final_loss": -0.5319589647539588,
+        "train_time": 10.726503133773804,
         "data_type": "original",
         "max_time_for_learner": 360.0
       }
@@ -1438,8 +963,8 @@
         "is_stacked": false,
         "name": "Ensemble",
         "status": "trained",
-        "final_loss": -0.7147333560360974,
-        "train_time": 0.6711478233337402
+        "final_loss": -0.5663044440660651,
+        "train_time": 0.7525241374969482
       }
     ]
   },

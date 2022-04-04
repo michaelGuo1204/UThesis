@@ -6,7 +6,7 @@ import scipy.sparse as sp
 from spektral.data import Dataset, Graph
 
 
-class WkDataset(Dataset):
+class TDataset(Dataset):
 
     def __init__(self, n_traits, load=False, p=1e-2, **kwargs):
         self.n_traits = n_traits

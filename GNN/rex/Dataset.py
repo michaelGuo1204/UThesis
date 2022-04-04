@@ -221,6 +221,6 @@ def supplemtPhenoExtract():
 # featureSelection()
 # csvToNP()
 # makeManual()
-corrCalculation()
+# corrCalculation()
 # safsd()
-# supplemtPhenoExtract()
+supplemtPhenoExtract()

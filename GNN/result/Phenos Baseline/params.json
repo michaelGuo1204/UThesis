@@ -49,7 +49,6 @@
   "load_on_predict": [
     "3_Default_Xgboost",
     "4_Default_NeuralNetwork",
-    "5_Default_RandomForest",
     "Ensemble"
   ]
 }

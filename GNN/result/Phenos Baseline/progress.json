@@ -20,43 +20,43 @@
         "model_name": "prepare_data",
         "model_type": "prepare_data",
         "fit_level": "prepare_data",
-        "train_time": 0.0186765193939209
+        "train_time": 0.01587510108947754
       },
       {
         "model_name": "1_Baseline",
         "model_type": "Baseline",
         "fit_level": "simple_algorithms",
-        "train_time": 0.22959589958190918
+        "train_time": 0.21802091598510742
       },
       {
         "model_name": "2_DecisionTree",
         "model_type": "Decision Tree",
         "fit_level": "simple_algorithms",
-        "train_time": 5.584587812423706
+        "train_time": 4.243372917175293
       },
       {
         "model_name": "3_Default_Xgboost",
         "model_type": "Xgboost",
         "fit_level": "default_algorithms",
-        "train_time": 7.7994420528411865
+        "train_time": 4.700348377227783
       },
       {
         "model_name": "4_Default_NeuralNetwork",
         "model_type": "Neural Network",
         "fit_level": "default_algorithms",
-        "train_time": 4.084704399108887
+        "train_time": 2.341405153274536
       },
       {
         "model_name": "5_Default_RandomForest",
         "model_type": "Random Forest",
         "fit_level": "default_algorithms",
-        "train_time": 5.169875144958496
+        "train_time": 4.696255683898926
       },
       {
         "model_name": "Ensemble",
         "model_type": "Ensemble",
         "fit_level": "ensemble",
-        "train_time": 0.7745482921600342
+        "train_time": 0.7415552139282227
       }
     ],
     "is_hill_climbing": false,
@@ -99,7 +99,7 @@
         "name": "1_Baseline",
         "status": "trained",
         "final_loss": -0.5,
-        "train_time": 0.9327743053436279,
+        "train_time": 0.8927433490753174,
         "data_type": "original",
         "max_time_for_learner": 360.0
       },
@@ -112,7 +112,20 @@
           "max_cols_limit": null
         },
         "preprocessing": {
-          "columns_preprocessing": {},
+          "columns_preprocessing": {
+            "feature_2": [
+              "na_fill_median"
+            ],
+            "feature_3": [
+              "na_fill_median"
+            ],
+            "feature_6": [
+              "na_fill_median"
+            ],
+            "feature_7": [
+              "na_fill_median"
+            ]
+          },
           "target_preprocessing": [
             "na_exclude"
           ],
@@ -141,8 +154,8 @@
         "explain_level": 2,
         "name": "2_DecisionTree",
         "status": "trained",
-        "final_loss": -0.6575068985988424,
-        "train_time": 6.476987838745117,
+        "final_loss": -0.6697044100119189,
+        "train_time": 5.107146263122559,
         "data_type": "original",
         "max_time_for_learner": 360.0
       }
@@ -156,7 +169,20 @@
           "max_cols_limit": null
         },
         "preprocessing": {
-          "columns_preprocessing": {},
+          "columns_preprocessing": {
+            "feature_2": [
+              "na_fill_median"
+            ],
+            "feature_3": [
+              "na_fill_median"
+            ],
+            "feature_6": [
+              "na_fill_median"
+            ],
+            "feature_7": [
+              "na_fill_median"
+            ]
+          },
           "target_preprocessing": [
             "na_exclude"
           ],
@@ -190,8 +216,8 @@
         "explain_level": 2,
         "name": "3_Default_Xgboost",
         "status": "trained",
-        "final_loss": -0.6785945204237004,
-        "train_time": 8.735915899276733,
+        "final_loss": -0.687464498552699,
+        "train_time": 5.591188192367554,
         "data_type": "original",
         "max_time_for_learner": 360.0
       },
@@ -203,15 +229,19 @@
         "preprocessing": {
           "columns_preprocessing": {
             "feature_2": [
+              "na_fill_median",
               "scale_normal"
             ],
             "feature_3": [
+              "na_fill_median",
               "scale_normal"
             ],
             "feature_6": [
+              "na_fill_median",
               "scale_normal"
             ],
             "feature_7": [
+              "na_fill_median",
               "scale_normal"
             ],
             "feature_8": [
@@ -247,8 +277,8 @@
         "explain_level": 2,
         "name": "4_Default_NeuralNetwork",
         "status": "trained",
-        "final_loss": -0.6796689909356259,
-        "train_time": 4.905787467956543,
+        "final_loss": -0.6935465690447813,
+        "train_time": 3.1285650730133057,
         "data_type": "original",
         "max_time_for_learner": 360.0
       },
@@ -263,7 +293,20 @@
           "max_cols_limit": null
         },
         "preprocessing": {
-          "columns_preprocessing": {},
+          "columns_preprocessing": {
+            "feature_2": [
+              "na_fill_median"
+            ],
+            "feature_3": [
+              "na_fill_median"
+            ],
+            "feature_6": [
+              "na_fill_median"
+            ],
+            "feature_7": [
+              "na_fill_median"
+            ]
+          },
           "target_preprocessing": [
             "na_exclude"
           ],
@@ -295,8 +338,8 @@
         "explain_level": 2,
         "name": "5_Default_RandomForest",
         "status": "trained",
-        "final_loss": -0.6794918879623574,
-        "train_time": 6.103967905044556,
+        "final_loss": -0.6845378852375277,
+        "train_time": 5.587700366973877,
         "data_type": "original",
         "max_time_for_learner": 360.0
       }
@@ -307,8 +350,8 @@
         "is_stacked": false,
         "name": "Ensemble",
         "status": "trained",
-        "final_loss": -0.684195852870202,
-        "train_time": 0.7745482921600342
+        "final_loss": -0.6941947897156479,
+        "train_time": 0.7415552139282227
       }
     ]
   },

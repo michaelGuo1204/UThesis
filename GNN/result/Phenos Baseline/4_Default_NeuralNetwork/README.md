@@ -2,8 +2,8 @@
 
 [<< Go back](../README.md)
 
-## Neural Network
 
+## Neural Network
 - **n_jobs**: -1
 - **dense_1_size**: 32
 - **dense_2_size**: 16
@@ -23,47 +23,44 @@ auc
 
 ## Training time
 
-4.1 seconds
+2.3 seconds
 
 ## Metric details
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.643156 | nan         |
-| auc       | 0.679669 | nan         |
-| f1        | 0.680099 |   0.3149    |
-| accuracy  | 0.632874 |   0.489397  |
-| precision | 0.762887 |   0.678126  |
-| recall    | 1        |   0.0028682 |
-| mcc       | 0.26888  |   0.489397  |
+| logloss   | 0.63519  | nan         |
+| auc       | 0.693547 | nan         |
+| f1        | 0.686734 |   0.314252  |
+| accuracy  | 0.643232 |   0.528596  |
+| precision | 0.791367 |   0.805116  |
+| recall    | 1        |   0.0398851 |
+| mcc       | 0.286213 |   0.528596  |
 
 ## Metric details with threshold from accuracy metric
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.643156 |  nan        |
-| auc       | 0.679669 |  nan        |
-| f1        | 0.644942 |    0.489397 |
-| accuracy  | 0.632874 |    0.489397 |
-| precision | 0.611828 |    0.489397 |
-| recall    | 0.681845 |    0.489397 |
-| mcc       | 0.26888  |    0.489397 |
+| logloss   | 0.63519  |  nan        |
+| auc       | 0.693547 |  nan        |
+| f1        | 0.636337 |    0.528596 |
+| accuracy  | 0.643232 |    0.528596 |
+| precision | 0.635015 |    0.528596 |
+| recall    | 0.637664 |    0.528596 |
+| mcc       | 0.286213 |    0.528596 |
 
-## Confusion matrix (at threshold=0.489397)
+## Confusion matrix (at threshold=0.528596)
 
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
-| Labeled as 0 |             1022 |              722 |
-| Labeled as 1 |              531 |             1138 |
+| Labeled as 0 |             1135 |              615 |
+| Labeled as 1 |              608 |             1070 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
 
 ## Permutation-based Importance
-
 ![Permutation-based Importance](permutation_importance.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)

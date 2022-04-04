@@ -3,7 +3,7 @@ from spektral.data import DisjointLoader
 from spektral.transforms import LayerPreprocess
 
 from Net import Net, ChebConv
-from Utils import WkDataset
+from Utils import TDataset
 
 ################################################################################
 # Hyper Params
@@ -15,7 +15,7 @@ batch_size = 128
 ################################################################################
 file = pandas.read_csv('../Data/fs100.csv')
 header = file.columns[1:-1]
-data = WkDataset(load=True, n_traits=100, transforms=[LayerPreprocess(ChebConv)])
+data = TDataset(load=True, n_traits=200, transforms=[LayerPreprocess(ChebConv)])
 # Data loaders
 loader = DisjointLoader(data, batch_size=batch_size, shuffle=False)
 
@@ -25,7 +25,7 @@ loader = DisjointLoader(data, batch_size=batch_size, shuffle=False)
 
 model = Net(0)
 model.built = True
-model.load_weights('./logs/Cheb/Cheb/variables/variables')
+model.load_weights('./logs/New/variables/variables')
 
 data = pandas.DataFrame()
 step = 0

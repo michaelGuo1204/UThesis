@@ -7,44 +7,41 @@
 | Model                   |   Weight |
 |:------------------------|---------:|
 | 3_Default_Xgboost       |        1 |
-| 4_Default_NeuralNetwork |        2 |
-| 5_Default_RandomForest  |        1 |
+| 4_Default_NeuralNetwork |        3 |
 
 ## Metric details
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.640116 |  nan        |
-| auc       | 0.684196 |  nan        |
-| f1        | 0.680813 |    0.343899 |
-| accuracy  | 0.636683 |    0.463869 |
-| precision | 0.763975 |    0.707291 |
-| recall    | 1        |    0.108317 |
-| mcc       | 0.281881 |    0.449139 |
+| logloss   | 0.633114 | nan         |
+| auc       | 0.694195 | nan         |
+| f1        | 0.687339 |   0.368143  |
+| accuracy  | 0.642649 |   0.524282  |
+| precision | 0.811024 |   0.751737  |
+| recall    | 1        |   0.0732669 |
+| mcc       | 0.284847 |   0.524282  |
 
 ## Metric details with threshold from accuracy metric
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.640116 |  nan        |
-| auc       | 0.684196 |  nan        |
-| f1        | 0.661941 |    0.463869 |
-| accuracy  | 0.636683 |    0.463869 |
-| precision | 0.607304 |    0.463869 |
-| recall    | 0.727382 |    0.463869 |
-| mcc       | 0.281364 |    0.463869 |
+| logloss   | 0.633114 |  nan        |
+| auc       | 0.694195 |  nan        |
+| f1        | 0.633124 |    0.524282 |
+| accuracy  | 0.642649 |    0.524282 |
+| precision | 0.636364 |    0.524282 |
+| recall    | 0.629917 |    0.524282 |
+| mcc       | 0.284847 |    0.524282 |
 
-## Confusion matrix (at threshold=0.463869)
+## Confusion matrix (at threshold=0.524282)
 
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
-| Labeled as 0 |              959 |              785 |
-| Labeled as 1 |              455 |             1214 |
+| Labeled as 0 |             1146 |              604 |
+| Labeled as 1 |              621 |             1057 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)

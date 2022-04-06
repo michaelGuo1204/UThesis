@@ -1,0 +1,16 @@
+if (feature_8 > 53.5) and (feature_30 <= 0.044) and (feature_6 <= 28.797) then class: 0 (proba: 60.7%) | based on 2,674 samples
+
+if (feature_8 > 53.5) and (feature_30 > 0.044) and (feature_6 > 24.846) then class: 1 (proba: 73.35%) | based on 2,345 samples
+
+if (feature_8 > 53.5) and (feature_30 <= 0.044) and (feature_6 > 28.797) then class: 1 (proba: 58.87%) | based on 1,595 samples
+
+if (feature_8 <= 53.5) and (feature_6 <= 27.815) and (feature_35 > 0.094) then class: 0 (proba: 71.67%) | based on 840 samples
+
+if (feature_8 <= 53.5) and (feature_6 <= 27.815) and (feature_35 <= 0.094) then class: 0 (proba: 86.76%) | based on 763 samples
+
+if (feature_8 > 53.5) and (feature_30 > 0.044) and (feature_6 <= 24.846) then class: 1 (proba: 55.99%) | based on 693 samples
+
+if (feature_8 <= 53.5) and (feature_6 > 27.815) and (feature_51 > 0.063) then class: 0 (proba: 69.17%) | based on 678 samples
+
+if (feature_8 <= 53.5) and (feature_6 > 27.815) and (feature_51 <= 0.063) then class: 1 (proba: 55.94%) | based on 438 samples
+

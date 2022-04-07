@@ -2,6 +2,8 @@ import numpy as np
 import scipy.sparse as sp
 from sklearn.metrics.pairwise import cosine_similarity as cos
 
+from Model import Net, print
+
 
 class EstimateAdj():
     def __init__(self, nodes):
@@ -16,7 +18,6 @@ class EstimateAdj():
         self.E = None
         self.nodes = nodes
         self.k = 2
-        self.output = None
         self.iterations = 0
 
     # Reset the observations
@@ -60,16 +61,12 @@ class EstimateAdj():
         # Convert triangle omega matrix to symmetric matrix
         O += O.T - np.diag(O.diagonal())
 
-        row = self.output.repeat(self.nodes)
-        col = np.tile(self.output, self.nodes)
-        tmp = O[row, col].reshape(self.nodes, -1)
-
-        p1 = tmp * np.power(alpha, self.E) * np.power(1 - alpha, self.N - self.E)
-        p2 = (1 - tmp) * np.power(beta, self.E) * np.power(1 - beta, self.N - self.E)
+        p1 = O * np.power(alpha, self.E) * np.power(1 - alpha, self.N - self.E)
+        p2 = (1 - O) * np.power(beta, self.E) * np.power(1 - beta, self.N - self.E)
         Q = p1 * 1. / (p1 + p2 * 1.)
         return Q
 
-    def EM(self, output, tolerance=.000001):
+    def EM(self, tolerance=.000001):
         """Run the complete EM algorithm.
         Parameters
         ----------
@@ -85,8 +82,6 @@ class EstimateAdj():
         # Record previous values to confirm convergence
         alpha_p = 0
         beta_p = 0
-
-        self.output = output
 
         # Do an initial E-step with random alpha, beta and O
         # Beta must be smaller than alpha
@@ -104,19 +99,40 @@ class EstimateAdj():
             alpha, beta, O = self.E_step(Q)
             Q = self.M_step(alpha, beta, O)
             self.iterations += 1
-        adj = self.prob_to_adj(Q, 0.001)
+        adj = self.prob_to_adj(Q, 0.000001)
         return adj
 
-    def knn(self, feature):
+    def knn(self, feature, k=3):
         adj = np.zeros((self.nodes, self.nodes), dtype=np.int64)
-        dist = cos(feature.numpy())
-        col = np.argpartition(dist, -(self.k), axis=1)[:, -(self.k + 1):].flatten()
-        adj[np.arange(self.nodes).repeat(self.k + 1), col] = 1
+        dist = cos(feature)
+        col = np.argpartition(dist, -(k), axis=1)[:, -(k + 1):].flatten()
+        adj[np.arange(self.nodes).repeat(k + 1), col] = 1
         return adj
 
-    def prob_to_adj(mx, threshold):
+    def prob_to_adj(self, mx, threshold):
         mx = np.triu(mx, 1)
         mx += mx.T
         (row, col) = np.where(mx > threshold)
         adj = sp.coo_matrix((np.ones(row.shape[0]), (row, col)), shape=(mx.shape[0], mx.shape[0]), dtype=np.int64)
         return adj
+
+    def EMlearning(self, batchsize, patience, epochs, optimizer, loss_fn, data):
+
+        self.iter = 0
+        # Train Model
+        for iter in range(10):
+            print("No.{} training in progress ".format(iter))
+            model = Net(batchsize, patience, epochs, optimizer, loss_fn)
+            model.fit(data)
+            print("GNN training complete")
+            self.reset_obs()
+            self.update_obs(self.knn(model.x))
+            self.update_obs(self.knn(model.hidden_out))
+            self.update_obs(self.knn(model.output_out))
+
+            self.iter += 1
+            adj = self.EM()
+            data.a = adj
+            print("ADJ produced")
+            # tf.keras.backend.clear_session()
+            # adj = prob_to_adj(Q, args.threshold).to(self.device)

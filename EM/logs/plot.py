@@ -10,18 +10,17 @@ from scipy.interpolate import make_interp_spline
 name = "tab10"
 cmap = get_cmap(name)
 colors = cycle(cmap.colors)
-file = open('./gnn5.log', 'r')
+file = open('./gcn1.log', 'r')
 data = []
-exclude = ['Early stopping', 'GNN training complete', 'ADJ produced']
+exclude = ['Early stopping', 'GNN training complete', 'ADJ produced', 'Preprocessing']
 exgroup = True
 Start = True
 group = []
 count = 0
 for line in file.readlines():
     line = line[:-1]
-    if 'No' in line and exgroup:
+    if 'No' in line:
         groupname = line.split(' ')[0]
-        exgroup = False
         if not Start:
             groupdata = pd.DataFrame(group)
             groupdata.columns = ['Train Loss', 'Train acc', 'Val loss', 'Val acc', 'Val auc', 'Test loss', 'Test acc',
@@ -31,13 +30,12 @@ for line in file.readlines():
         group = []
         continue
     if line in exclude:
-        exgroup = True
         continue
-    if not exgroup:
-        count += 1
-        dataline = re.split(':| \| |,', line)
-        group.append(dataline[1::2])
-        pass
+
+    count += 1
+    dataline = re.split(':| \| |,', line)
+    group.append(dataline[1::2])
+    pass
 groupdata = pd.DataFrame(group)
 groupdata.columns = ['Train Loss', 'Train acc', 'Val loss', 'Val acc', 'Val auc', 'Test loss', 'Test acc',
                      'Test auc']
@@ -66,6 +64,6 @@ for chart in groupdata.columns:
                fancybox=True, shadow=True)
     plt.xlabel('Iterations')
     plt.tight_layout()
-    plt.savefig('../plots/3/{}.svg'.format(chart), dpi=1200)
+    plt.savefig('../plots/GCN1/{}.svg'.format(chart), dpi=1200)
     pass
 pass

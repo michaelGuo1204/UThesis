@@ -1,5 +1,6 @@
 import numpy as np
 import scipy.sparse as sp
+import tensorflow as tf
 from sklearn.metrics.pairwise import cosine_similarity as cos
 
 from Model import Net, print
@@ -99,7 +100,7 @@ class EstimateAdj():
             alpha, beta, O = self.E_step(Q)
             Q = self.M_step(alpha, beta, O)
             self.iterations += 1
-        adj = self.prob_to_adj(Q, 0.000001)
+        adj = self.prob_to_adj(Q, 0.000000001)
         return adj
 
     def knn(self, feature, k=3):
@@ -119,6 +120,7 @@ class EstimateAdj():
     def EMlearning(self, batchsize, patience, epochs, optimizer, loss_fn, data):
 
         self.iter = 0
+        adj = data.a
         # Train Model
         for iter in range(10):
             print("No.{} training in progress ".format(iter))
@@ -126,13 +128,12 @@ class EstimateAdj():
             model.fit(data)
             print("GNN training complete")
             self.reset_obs()
-            self.update_obs(self.knn(model.x))
-            self.update_obs(self.knn(model.hidden_out))
-            self.update_obs(self.knn(model.output_out))
+            for item in model.result:
+                self.update_obs(self.knn(tf.squeeze(item)))
 
             self.iter += 1
             adj = self.EM()
             data.a = adj
             print("ADJ produced")
-            # tf.keras.backend.clear_session()
+            tf.keras.backend.clear_session()
             # adj = prob_to_adj(Q, args.threshold).to(self.device)

@@ -3,7 +3,7 @@ import tensorflow as tf
 from spektral.data import MixedLoader
 from spektral.layers import GCNConv
 from tensorflow.keras import Model
-from tensorflow.keras.layers import Dense, Flatten
+from tensorflow.keras.layers import Dense, Flatten, Dropout
 from tensorflow.keras.metrics import binary_accuracy
 from tensorflow.keras.regularizers import l2
 
@@ -13,7 +13,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger()
-logger.addHandler(logging.FileHandler('logs/gnn6.log', 'a'))
+logger.addHandler(logging.FileHandler('logs/gcn1.log', 'a'))
 print = logger.info
 
 
@@ -26,24 +26,26 @@ class Net(Model):
         self.epochs = epochs
         self.optimizer = optimizer
         self.loss_fn = loss_fn
-        self.mode = 'inter'
+        self.mode = 'outer'
         self.iter = 10
-        self.channel = 32
+        self.channel = 64
         self.hidden = 512
         self.conv1 = GCNConv(self.channel, activation="elu", kernel_regularizer=l2(l2_reg))
-        self.conv2 = GCNConv(self.channel, activation="elu", kernel_regularizer=l2(l2_reg))
+        # self.conv2 = GCNConv(self.channel, activation="elu", kernel_regularizer=l2(l2_reg))
         self.flatten = Flatten(input_dim=(200, self.channel))
-        self.fc1 = Dense(512, activation="relu")
-        self.fc2 = Dense(256, activation="relu")
+        self.dropout = Dropout(0.5)
+        self.fc1 = Dense(512, activation="relu", kernel_regularizer=l2(l2_reg))
+        self.fc2 = Dense(256, activation="relu", kernel_regularizer=l2(l2_reg))
         self.fc3 = Dense(1, activation='sigmoid')
 
     def call(self, inputs):
         x, a = inputs
         x = tf.cast(x, dtype='float64')
         x = self.conv1([x, a])
-        x = self.conv2([x, a])
+        #x = self.conv2([x, a])
         output = self.flatten(x)
         output = self.fc1(output)
+        output = self.dropout(output)
         output = self.fc2(output)
         output = self.fc3(output)
         return output
@@ -59,11 +61,25 @@ class Net(Model):
             self.hidden_out = self.hidden_out[0, :, :]
             self.output_out = self.output_out[0, :, :]
         else:
-            self.x = x
-            self.hidden_out = self.conv1([self.x, a])
-            self.output_out = self.conv2([self.hidden_out, a])
+            # self.hidden_out = self.conv1([self.x, a])
+            output_out = self.conv1([x, a])
+            return output_out
 
-    # @tf.function
+    def observeWhole(self, data):
+        loader = self.preProcess(data, all=True)
+        result = []
+        step = 0
+        for batch in loader:
+            step += 1
+            inputs, target = batch
+            output = self.observe(inputs)
+            output = tf.split(output, target.shape[0])
+            result = [*result, *output]
+            if step == loader.steps_per_epoch: break
+
+        self.result = result
+
+    @tf.function
     def train_on_batch(self, inputs, target):
         with tf.GradientTape() as tape:
             target = tf.cast(tf.reshape(target, [-1, 1]), tf.float32)
@@ -94,25 +110,28 @@ class Net(Model):
                 loss, acc = np.average(results[:, :-1], 0, weights=results[:, -1])
                 return loss, acc, m.result().numpy()
 
-    def preProcess(self, data):
-        print('Preprocessing')
+    def preProcess(self, data, all=False):
         # The adjacency matrix is stored as an attribute of the dataset.
         # Create filter for GCN and convert to sparse tensor.
-        data.a = GCNConv.preprocess(data.a)
 
-        # Train/valid/test split
-        idxs = np.random.permutation(len(data))
-        split_va, split_te = int(0.8 * len(data)), int(0.9 * len(data))
-        idx_tr, idx_va, idx_te = np.split(idxs, [split_va, split_te])
-        data_tr = data[idx_tr]
-        data_va = data[idx_va]
-        data_te = data[idx_te]
+        if all:
+            loader = loader_tr = MixedLoader(data, batch_size=self.batch_size, epochs=self.epochs)
+            return loader
+        else:
+            data.a = GCNConv.preprocess(data.a)
+            # Train/valid/test split
+            idxs = np.random.permutation(len(data))
+            split_va, split_te = int(0.8 * len(data)), int(0.9 * len(data))
+            idx_tr, idx_va, idx_te = np.split(idxs, [split_va, split_te])
+            data_tr = data[idx_tr]
+            data_va = data[idx_va]
+            data_te = data[idx_te]
 
-        # We use a MixedLoader since the dataset is in mixed mode
-        loader_tr = MixedLoader(data_tr, batch_size=self.batch_size, epochs=self.epochs)
-        loader_va = MixedLoader(data_va, batch_size=self.batch_size)
-        loader_te = MixedLoader(data_te, batch_size=self.batch_size)
-        return loader_tr, loader_va, loader_te
+            # We use a MixedLoader since the dataset is in mixed mode
+            loader_tr = MixedLoader(data_tr, batch_size=self.batch_size, epochs=self.epochs)
+            loader_va = MixedLoader(data_va, batch_size=self.batch_size)
+            loader_te = MixedLoader(data_te, batch_size=self.batch_size)
+            return loader_tr, loader_va, loader_te
 
     def fit(self, data):
         # Data
@@ -134,20 +153,18 @@ class Net(Model):
             if step == loader_tr.steps_per_epoch:
                 epoch += 1
                 if epoch == self.epochs:
-                    case, tar = loader_te.__next__()
-                    self.observe(case)
+                    self.observeWhole(data)
                     break
                 val_loss, val_acc, val_auc = self.evaluate(loader_va)
+                test_loss, test_acc, test_auc = self.evaluate(loader_te)
                 if val_loss < best_val_loss:
                     best_val_loss = val_loss
                     current_patience = self.patience
-                    test_loss, test_acc, test_auc = self.evaluate(loader_te)
                 else:
                     current_patience -= 1
                     if current_patience == 0:
                         print("Early stopping")
-                        case, tar = loader_te.__next__()
-                        self.observe(case)
+                        self.observeWhole(data)
                         break
                 # Print results
                 results_tr = np.array(results_tr)

@@ -52,8 +52,8 @@ class TDataset(Dataset):
             data = np.load(os.path.join(self.path, f'graph_{i}.npz'), allow_pickle=True)
             _x = data['x']
             if not a_read:
-                _a = data['a']
-                # _a = np.ones((self.n_traits,self.n_traits))
+                # _a = data['a']
+                _a = np.ones((self.n_traits, self.n_traits))
                 self.a = sp.csr_matrix(_a)
                 a_read = True
             _y = data['y']

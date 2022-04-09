@@ -1,7 +1,7 @@
 import numpy as np
 import tensorflow as tf
 from spektral.data import MixedLoader
-from spektral.layers import GCNConv
+from spektral.layers import ChebConv
 from tensorflow.keras import Model
 from tensorflow.keras.layers import Dense, Flatten, Dropout
 from tensorflow.keras.metrics import binary_accuracy
@@ -13,7 +13,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger()
-logger.addHandler(logging.FileHandler('logs/gcn1.log', 'a'))
+logger.addHandler(logging.FileHandler('logs/che.log', 'a'))
 print = logger.info
 
 
@@ -28,26 +28,28 @@ class Net(Model):
         self.loss_fn = loss_fn
         self.mode = 'outer'
         self.iter = 10
-        self.channel = 64
+        self.channel = 32
         self.hidden = 512
-        self.conv1 = GCNConv(self.channel, activation="elu", kernel_regularizer=l2(l2_reg))
+        self.conv1 = ChebConv(self.channel, K=2, activation="elu", kernel_regularizer=l2(l2_reg))
         # self.conv2 = GCNConv(self.channel, activation="elu", kernel_regularizer=l2(l2_reg))
         self.flatten = Flatten(input_dim=(200, self.channel))
         self.dropout = Dropout(0.5)
-        self.fc1 = Dense(512, activation="relu", kernel_regularizer=l2(l2_reg))
-        self.fc2 = Dense(256, activation="relu", kernel_regularizer=l2(l2_reg))
-        self.fc3 = Dense(1, activation='sigmoid')
+        self.dense1 = Dense(self.hidden, activation='relu', kernel_regularizer=l2(0.01))
+        self.dense2 = Dense(self.hidden / 2, activation='relu', kernel_regularizer=l2(5e-4))
+        self.dense3 = Dense(self.hidden / 4, activation='relu', kernel_regularizer=l2(5e-4))
+        self.dense4 = Dense(1, activation="sigmoid", kernel_regularizer=l2(5e-4))
 
     def call(self, inputs):
         x, a = inputs
         x = tf.cast(x, dtype='float64')
         x = self.conv1([x, a])
-        #x = self.conv2([x, a])
+        # x = self.conv2([x, a])
         output = self.flatten(x)
-        output = self.fc1(output)
+        output = self.dense1(output)
+        output = self.dense2(output)
         output = self.dropout(output)
-        output = self.fc2(output)
-        output = self.fc3(output)
+        output = self.dense3(output)
+        output = self.dense4(output)
         return output
 
     def observe(self, inputs):
@@ -79,7 +81,7 @@ class Net(Model):
 
         self.result = result
 
-    @tf.function
+    #@tf.function
     def train_on_batch(self, inputs, target):
         with tf.GradientTape() as tape:
             target = tf.cast(tf.reshape(target, [-1, 1]), tf.float32)
@@ -118,7 +120,7 @@ class Net(Model):
             loader = loader_tr = MixedLoader(data, batch_size=self.batch_size, epochs=self.epochs)
             return loader
         else:
-            data.a = GCNConv.preprocess(data.a)
+            data.a = ChebConv.preprocess(data.a)
             # Train/valid/test split
             idxs = np.random.permutation(len(data))
             split_va, split_te = int(0.8 * len(data)), int(0.9 * len(data))

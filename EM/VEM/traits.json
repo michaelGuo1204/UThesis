@@ -1,0 +1,1836 @@
+{
+  "1": {
+    "Activities": {
+      "count": {
+        "Automobile speeding propensity": 1,
+        "Facial ageing": 1,
+        "First PC of the four riskly behaviours": 2,
+        "General risk tolerance": 2,
+        "Life satisfaction (MA GWAMA)": 1,
+        "Medication for cholesterol, blood pressure or diabetes: Blood pressure medication": 1,
+        "Medication for cholesterol, blood pressure or diabetes: Cholesterol lowering medication": 1,
+        "Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication": 1,
+        "Number of treatments/medications taken": 1,
+        "Overall activity (conditioning sex and BMI)": 1,
+        "Overall health rating": 1,
+        "Positive affect (MA GWAMA)": 2,
+        "Self-rated health": 1,
+        "Strenuous sports or other exercises": 1,
+        "Time spent watching television (TV)": 2,
+        "Treatment/medication code: metformin": 1,
+        "Usual walking pace": 4
+      }
+    },
+    "Body Structures": {
+      "count": {
+        "Mouth/teeth dental problems: Dentures": 1
+      }
+    },
+    "Cardiovascular": {
+      "count": {
+        "Heart rate increase": 2,
+        "High blood pressure": 1,
+        "Non-cancer illness code, self-reported: hypertension": 1,
+        "Pulse rate (automated reading)": 1,
+        "Resting heart rate": 1,
+        "Systolic Blood Pressure (automated reading)": 1,
+        "Vascular/heart problems diagnosed by doctor: High blood pressure": 1
+      }
+    },
+    "Cell": {
+      "count": {
+        "Measles IgG levels": 1
+      }
+    },
+    "Cognitive": {
+      "count": {
+        "Ambidextrousness": 1,
+        "Cognitive performance": 2,
+        "Intelligence": 1,
+        "Numeric memory test - Maximum digits remembered correctly": 1,
+        "Verbal-numerical reasoning": 2
+      }
+    },
+    "Connective Tissue": {
+      "count": {
+        "Carpal tunnel syndrome": 1
+      }
+    },
+    "Dermatological": {
+      "count": {
+        "Ease of skin tanning": 2,
+        "Eczema": 1,
+        "Hair colour (natural, before greying): Black": 1,
+        "Hair colour (natural, before greying): Blonde": 2,
+        "Hair colour (natural, before greying): Dark brown": 1,
+        "Hair colour (natural, before greying): Red": 1,
+        "Male pattern baldness (BOLT LMM infinitesimal mixed model)": 1,
+        "Male pattern baldness (BOLT LMM non-infinitesimal mixed model)": 1,
+        "Skin colour": 1
+      }
+    },
+    "Endocrine": {
+      "count": {
+        "Diabetes (diagnosed by doctor)": 1,
+        "Diagnoses - secondary ICD10: E11 Type 2 diabetes mellitus": 1,
+        "Non-cancer illness code, self-reported: diabetes": 1,
+        "Type 2 Diabetes": 16,
+        "Type 2 Diabetes (adjusted for BMI)": 1
+      }
+    },
+    "Environment": {
+      "count": {
+        "Attendance/disability/mobility allowance: Blue badge": 1,
+        "Education - Qualifications": 3,
+        "Educational attainment": 10,
+        "Illnesses of mother: Diabetes": 1,
+        "Illnesses of siblings: Diabetes": 1,
+        "Illnesses of siblings: High blood pressure": 1,
+        "Job involves heavy manual or physical work": 1,
+        "Maternal smoking around birth": 1
+      }
+    },
+    "Environmental": {
+      "count": {
+        "Agents acting on the renin-angiotensin system": 6,
+        "Calcium channel blockers": 2,
+        "Diuretics": 8,
+        "Drugs used in diabetes": 1,
+        "HMG CoA reductase inhibitors": 1,
+        "Thyroid preparations": 6
+      }
+    },
+    "Gastrointestinal": {
+      "count": {
+        "Diagnoses - secondary ICD10: K44 Diaphragmatic hernia": 1,
+        "Inflammatory Bowel Disease": 1,
+        "Primary sclerosing cholangitis": 1
+      }
+    },
+    "Hematological": {
+      "count": {
+        "Hemoglobin A1c": 1
+      }
+    },
+    "Immunological": {
+      "count": {
+        "Basophil count (three-way meta)": 5,
+        "Basophil count (two-way meta)": 4,
+        "Eosinophil count (two-way meta)": 1,
+        "Eosinophil percentage of granulocytes (three-way meta)": 1,
+        "Eosinophil percentage of granulocytes (two-way meta)": 1,
+        "Eosinophil percentage of white cells (three-way meta)": 1,
+        "Granulocyte count (three-way meta)": 7,
+        "Granulocyte count (two-way meta)": 6,
+        "Granulocyte percentage of myeloid white cells (three-way meta)": 1,
+        "Granulocyte percentage of myeloid white cells (two-way meta)": 1,
+        "Hematocrit (three-way meta)": 2,
+        "Hematocrit (two-way meta)": 1,
+        "Hemoglobin concentration (three-way meta)": 1,
+        "Hemoglobin concentration (two-way meta)": 1,
+        "High light scatter percentage of red cells (three-way meta)": 4,
+        "High light scatter percentage of red cells (two-way meta)": 2,
+        "High light scatter reticulocyte count (three-way meta)": 3,
+        "High light scatter reticulocyte count (two-way meta)": 2,
+        "Immature fraction of reticulocytes (three-way meta)": 2,
+        "Immature fraction of reticulocytes (two-way meta)": 1,
+        "Lymphocyte percentage of white cells (two-way meta)": 1,
+        "Mean corpuscular hemoglobin (three-way meta)": 5,
+        "Mean corpuscular hemoglobin (two-way meta)": 4,
+        "Mean corpuscular volume (three-way meta)": 5,
+        "Mean corpuscular volume (two-way meta)": 3,
+        "Monocyte count (three-way meta)": 6,
+        "Monocyte count (two-way meta)": 1,
+        "Monocyte percentage of white cells (three-way meta)": 1,
+        "Monocyte percentage of white cells (two-way meta)": 1,
+        "Myeloid white cell count (three-way meta)": 8,
+        "Myeloid white cell count (two-way meta)": 7,
+        "Neutrophil count (three-way meta)": 7,
+        "Neutrophil count (two-way meta)": 8,
+        "Neutrophil percentage of white cells (three-way meta)": 1,
+        "Neutrophil percentage of white cells (two-way meta)": 1,
+        "Platelet count": 1,
+        "Platelet count (three-way meta)": 1,
+        "Platelet count (two-way meta)": 1,
+        "Platelet distribution width (three-way meta)": 9,
+        "Platelet distribution width (two-way meta)": 9,
+        "Plateletcrit (three-way meta)": 1,
+        "Plateletcrit (two-way meta)": 1,
+        "Red blood cell count (three-way meta)": 1,
+        "Red blood cell count (two-way meta)": 1,
+        "Red cell distribution width (three-way meta)": 13,
+        "Red cell distribution width (two-way meta)": 13,
+        "Reticulocyte count (three-way meta)": 2,
+        "Reticulocyte count (two-way meta)": 2,
+        "Reticulocyte fraction of red cells (three-way meta)": 2,
+        "Reticulocyte fraction of red cells (two-way meta)": 3,
+        "Sum basophil neutrophil count (three-way meta)": 7,
+        "Sum basophil neutrophil count (two-way meta)": 7,
+        "Sum neutrophil eosinophil count (three-way meta)": 7,
+        "Sum neutrophil eosinophil count (two-way meta)": 7,
+        "White blood cell count (three-way meta)": 7,
+        "White blood cell count (two-way meta)": 5
+      }
+    },
+    "Metabolic": {
+      "count": {
+        "Arms-arm fat ratio (female)": 13,
+        "Arms-arm fat ratio (male)": 3,
+        "Blood urea nitrogen": 3,
+        "Body Mass Index": 31,
+        "Body Mass Index (female <= 50 yrs)": 1,
+        "Body Mass Index (female > 50 yrs)": 1,
+        "Body Mass Index (female)": 15,
+        "Body Mass Index (male <= 50 yrs)": 1,
+        "Body Mass Index (male > 50 yrs)": 1,
+        "Body Mass Index (male)": 14,
+        "Body Mass Index - Child": 1,
+        "Body fat percentage": 1,
+        "Childhood obesity": 1,
+        "Comparative body size at age 10": 1,
+        "Diagnoses - secondary ICD10: E66 Overweight and obesity": 1,
+        "Estimated glomerular filtration rate": 12,
+        "Extreme Body Mass Index": 1,
+        "Extreme obesity (childhood)": 2,
+        "HbA1c": 1,
+        "High-density lipoprotein cholesterol": 1,
+        "Hip circumference": 8,
+        "Hip circumference (female)": 3,
+        "Hip circumference (male)": 3,
+        "Impedance measures - Arm fat mass (left)": 3,
+        "Impedance measures - Arm fat mass (right)": 3,
+        "Impedance measures - Arm fat percentage (left)": 4,
+        "Impedance measures - Arm fat percentage (right)": 4,
+        "Impedance measures - Arm fat-free mass (left)": 6,
+        "Impedance measures - Arm fat-free mass (right)": 6,
+        "Impedance measures - Arm predicted mass (left)": 6,
+        "Impedance measures - Arm predicted mass (right)": 7,
+        "Impedance measures - Basal metabolic rate": 6,
+        "Impedance measures - Body Mass Index (BMI)": 2,
+        "Impedance measures - Body fat percentage": 4,
+        "Impedance measures - Impedance of arm (left)": 10,
+        "Impedance measures - Impedance of arm (right)": 10,
+        "Impedance measures - Impedance of leg (left)": 7,
+        "Impedance measures - Impedance of leg (right)": 7,
+        "Impedance measures - Impedance of whole body": 10,
+        "Impedance measures - Leg fat mass (left)": 3,
+        "Impedance measures - Leg fat mass (right)": 3,
+        "Impedance measures - Leg fat percentage (left)": 5,
+        "Impedance measures - Leg fat percentage (right)": 5,
+        "Impedance measures - Leg fat-free mass (left)": 5,
+        "Impedance measures - Leg fat-free mass (right)": 5,
+        "Impedance measures - Leg predicted mass (left)": 5,
+        "Impedance measures - Leg predicted mass (right)": 5,
+        "Impedance measures - Trunk fat mass": 4,
+        "Impedance measures - Trunk fat percentage": 3,
+        "Impedance measures - Trunk fat-free mass": 6,
+        "Impedance measures - Trunk predicted mass": 6,
+        "Impedance measures - Weight": 5,
+        "Impedance measures - Whole body fat mass": 4,
+        "Impedance measures - Whole body fat-free mass": 6,
+        "Impedance measures - Whole body water mass": 6,
+        "Lactate dehydrogenase": 1,
+        "Legs-leg fat ratio (female)": 5,
+        "Legs-leg fat ratio (male)": 1,
+        "Low-density lipoprotein cholesterol": 1,
+        "Low-density-lipoprotein cholesterol": 1,
+        "Non-cancer illness code, self-reported: high cholesterol": 1,
+        "Obesity class 1": 1,
+        "Obesity class 2": 1,
+        "Obesity class 3": 1,
+        "Overweight": 1,
+        "Subcutaneous adipose tissue volume": 1,
+        "Thin vs extreme obese": 2,
+        "Total cholesterol": 1,
+        "Triglycerides cholesterol": 1,
+        "Trunk-trunk fat ratio (female)": 6,
+        "Trunk-trunk fat ratio (male)": 2,
+        "Variability of Body Mass Index": 1,
+        "Waist circumference": 5,
+        "Waist circumference (adjusted for BMI)": 2,
+        "Waist circumference (female)": 3,
+        "Waist circumference (female, adjusted for BMI)": 2,
+        "Waist circumference (male)": 3,
+        "Waist-hip ratio": 5,
+        "Waist-hip ratio (adjusted for BMI)": 9,
+        "Waist-hip ratio (adjusted for BMI, female)": 2,
+        "Waist-hip ratio (adjusted for BMI, male)": 9,
+        "Waist-hip ratio (female)": 3,
+        "Waist-hip ratio (male)": 5,
+        "Weight": 5,
+        "Weight (female)": 1,
+        "Weight (male)": 1
+      }
+    },
+    "Mortality": {
+      "count": {
+        "Father's age at death": 1
+      }
+    },
+    "Neurological": {
+      "count": {
+        "Anterior corona radiata fractional anisotropy": 1,
+        "Anterior corona radiata radial diusivities": 1,
+        "Anterior limb of internal capsule fractional anisotropy": 1,
+        "Brain stem": 1,
+        "Cingulum (hippocampus) axial diusivities": 1,
+        "Cingulum (hippocampus) mean diusivities": 1,
+        "Fornix (cres) / Stria terminalis mean diusivities": 1,
+        "Fornix (cres) / Stria terminalis radial diusivities": 1,
+        "Gray matter": 1,
+        "Inferior fronto-occipital fasciculus fractional anisotropy": 1,
+        "Left cerebellum exterior": 1,
+        "Left cerebellum white matter": 2,
+        "Left entorhinal": 1,
+        "Left pallidum": 3,
+        "Pain type(s) experienced in last month: Back pain": 1,
+        "Pain type(s) experienced in last month: Hip pain": 1,
+        "Pain type(s) experienced in last month: Knee pain": 1,
+        "Right cerebellum exterior": 1,
+        "Right cerebellum white matter": 1,
+        "Superior corona radiata mode of anisotropy": 1
+      }
+    },
+    "Nutritional": {
+      "count": {
+        "Beef intake": 2,
+        "Bread type: White": 2,
+        "Bread type: Wholemeal or wholegrain": 1,
+        "Cereal type: Muesli": 1,
+        "Cereal type: Oat cereal (e.g. Ready Brek, porridge)": 1,
+        "Cheese intake": 1,
+        "Coffee intake": 1,
+        "Coffee type: Ground coffee (include espresso, filter etc)": 1,
+        "Major dietary changes in the last 5 years": 1,
+        "Milk type used: Full cream": 1,
+        "Milk type used: Skimmed": 1,
+        "Milk type used: Soya": 1,
+        "Non-oily fish intake": 4,
+        "Oily fish intake": 3,
+        "Pork intake": 1,
+        "Poultry intake": 3,
+        "Salt added to food": 2,
+        "Tea intake": 1,
+        "Variation in diet": 1,
+        "Water intake": 2
+      }
+    },
+    "Ophthalmological": {
+      "count": {
+        "Diagnoses - main ICD10: H26 Other cataract": 1
+      }
+    },
+    "Psychiatric": {
+      "count": {
+        "Age started smoking in former smokers": 1,
+        "Alcohol intake frequency": 1,
+        "Average weekly beer plus cider intake": 2,
+        "Chronotype": 4,
+        "Chronotype (continuous)": 1,
+        "Cigarettes per day": 1,
+        "Depression": 1,
+        "Depressive affect subcluster": 1,
+        "Depressive symptoms (MA GWAMA)": 1,
+        "Depressive symptoms (univariate)": 1,
+        "Ease of getting up in the morning": 1,
+        "Ever smoked regulary": 1,
+        "Ever smoker": 1,
+        "Extreme chronotype": 1,
+        "Fed-up feelings": 1,
+        "Fed-up feelings (FED_UP)": 1,
+        "Frequency of tiredness / lethargy in last 2 weeks": 1,
+        "Getting up in morning": 1,
+        "Loneliness": 1,
+        "Loneliness (MTAG)": 1,
+        "Long sleep": 1,
+        "Miserableness": 1,
+        "Miserableness (MIS)": 1,
+        "Morning person (binary)": 1,
+        "Morning/evening person (chronotype)": 1,
+        "Morningness": 1,
+        "Nervous feelings": 1,
+        "Nervous feelings (NERV-FEEL)": 1,
+        "Neuroticism": 13,
+        "Neuroticism (MA GWAMA)": 9,
+        "Neuroticism (univariate)": 7,
+        "Neuroticism general factor": 5,
+        "Neuroticism score": 1,
+        "PGC cross disorder": 1,
+        "Schizophrenia": 4,
+        "Schizophrenia vs Bipolar disorder": 2,
+        "Schizophrenia/Bipolar disorder": 3,
+        "Seen doctor (GP) for nerves, anxiety, tension or depression": 1,
+        "Sleep duration": 6,
+        "Sleep duration (mean)": 1,
+        "Sleep efficiency": 1,
+        "Sleep sedentary (conditioning sex and BMI)": 1,
+        "Snoring": 2,
+        "Well-being spectrum": 6,
+        "Worrier / anxious feelings": 2,
+        "Worrier / anxious feelings (WORRY)": 1,
+        "Worry subcluster": 1
+      }
+    },
+    "Reproduction": {
+      "count": {
+        "Age at first live birth (female)": 1,
+        "Age at menarche": 6,
+        "Age first had sexual intercourse": 1,
+        "Age when periods started (menarche) (female)": 2,
+        "Number of sexual partners": 3,
+        "Relative age of first facial hair (male)": 2,
+        "Relative age voice broke (male)": 1
+      }
+    },
+    "Respiratory": {
+      "count": {
+        "Chest pain or discomfort": 1,
+        "FEV1": 11,
+        "FEV1/FVC ratio": 4,
+        "FVC": 8,
+        "PEF": 6
+      }
+    },
+    "Skeletal": {
+      "count": {
+        "Comparative height size at age 10": 4,
+        "Diagnoses - main ICD10: M16 Osteoarthritis of hip": 1,
+        "Diagnoses - main ICD10: M17 Osteoarthritis of knee": 1,
+        "Diagnoses - main ICD10: M23 Internal derangement of knee": 1,
+        "Estimated BMD": 13,
+        "Estimated bone mineral density from heel ultrasounds": 11,
+        "Heel bone mineral density": 19,
+        "Height": 10,
+        "Osteoarthritis (hospital diagnosed)": 2,
+        "Osteoarthritis (self reported)": 2,
+        "Osteoarthritis of hip": 1,
+        "Osteoarthritis of hip and/or knee": 1,
+        "Sitting height": 6,
+        "Standing height": 5,
+        "Systemic Lupus Erythematosus": 4,
+        "Total body BMD": 1,
+        "Total body BMD (60 or older)": 1
+      }
+    },
+    "Social Interactions": {
+      "count": {
+        "Social support - Leisure/social activities: Adult education class": 2,
+        "Social support - Leisure/social activities: Sports club or gym": 1
+      }
+    }
+  },
+  "2": {
+    "Activities": {
+      "count": {
+        "Age started wearing glasses or contact lenses": 1,
+        "Automobile speeding propensity": 1,
+        "Health satisfaction": 1,
+        "Medication for cholesterol, blood pressure or diabetes: Blood pressure medication": 1,
+        "Medication for cholesterol, blood pressure or diabetes: Cholesterol lowering medication": 1,
+        "Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication": 1,
+        "Medication for pain relief, constipation, heartburn: Ibuprofen (e.g. Nurofen)": 1,
+        "Moderate intesity (conditioning sex and BMI)": 1,
+        "Number of treatments/medications taken": 1,
+        "Overall activity (conditioning sex and BMI)": 2,
+        "Overall health rating": 1,
+        "Positive affect (MA GWAMA)": 1,
+        "Reason for glasses/contact lenses: For short-sightedness, i.e. only or mainly for distance viewing such as driving, cinema etc (called 'myopia')": 1,
+        "Time spent watching television (TV)": 1,
+        "Treatment/medication code: metformin": 1,
+        "Treatment/medication code: simvastatin": 1,
+        "Use of sun/uv protection": 1,
+        "Usual walking pace": 1
+      }
+    },
+    "Body Structures": {
+      "count": {
+        "Mouth/teeth dental problems: Dentures": 1
+      }
+    },
+    "Cardiovascular": {
+      "count": {
+        "Atrial Fibrillation": 1,
+        "Coronary artery disease": 2,
+        "Coronary artery disease (SOFT definition including angina)": 1,
+        "Diastolic Blood Pressure (automated reading)": 1,
+        "High blood pressure": 1,
+        "Non-cancer illness code, self-reported: hypertension": 1,
+        "Vascular/heart problems diagnosed by doctor: High blood pressure": 1
+      }
+    },
+    "Cognitive": {
+      "count": {
+        "Ambidextrousness": 1,
+        "Cognitive performance": 1,
+        "Intelligence": 1,
+        "Verbal-numerical reasoning": 1
+      }
+    },
+    "Connective Tissue": {
+      "count": {
+        "Carpal tunnel syndrome": 3
+      }
+    },
+    "Dermatological": {
+      "count": {
+        "Ease of skin tanning": 2,
+        "Hair colour (natural, before greying): Dark brown": 2,
+        "Hair colour (natural, before greying): Red": 1,
+        "Male pattern baldness (BOLT LMM infinitesimal mixed model)": 2,
+        "Male pattern baldness (BOLT LMM non-infinitesimal mixed model)": 2,
+        "Male-specific factors - Hair/balding pattern: Pattern 1": 1,
+        "Male-specific factors - Hair/balding pattern: Pattern 4": 2,
+        "Skin colour": 2
+      }
+    },
+    "Endocrine": {
+      "count": {
+        "Diabetes (diagnosed by doctor)": 1,
+        "Diagnoses - secondary ICD10: E11 Type 2 diabetes mellitus": 1,
+        "Non-cancer illness code, self-reported: diabetes": 1,
+        "Type 2 Diabetes": 8,
+        "Type 2 Diabetes (adjusted for BMI)": 1
+      }
+    },
+    "Environment": {
+      "count": {
+        "Illnesses of father: Diabetes": 1,
+        "Illnesses of mother: Diabetes": 1,
+        "Illnesses of siblings: Breast cancer": 1,
+        "Illnesses of siblings: Diabetes": 1,
+        "Illnesses of siblings: High blood pressure": 1
+      }
+    },
+    "Environmental": {
+      "count": {
+        "Agents acting on the renin-angiotensin system": 2,
+        "Beta blocking agents": 1,
+        "Calcium channel blockers": 2,
+        "Diuretics": 5,
+        "Drugs used in diabetes": 1,
+        "HMG CoA reductase inhibitors": 1,
+        "Thyroid preparations": 3
+      }
+    },
+    "Gastrointestinal": {
+      "count": {
+        "Diverticular disease": 2
+      }
+    },
+    "Hematological": {
+      "count": {
+        "Hemoglobin A1c": 1
+      }
+    },
+    "Immunological": {
+      "count": {
+        "Granulocyte count (three-way meta)": 2,
+        "Granulocyte count (two-way meta)": 3,
+        "Immature fraction of reticulocytes (three-way meta)": 1,
+        "Immature fraction of reticulocytes (two-way meta)": 1,
+        "Mean corpuscular hemoglobin (three-way meta)": 1,
+        "Mean corpuscular hemoglobin (two-way meta)": 1,
+        "Mean corpuscular hemoglobin concentration (three-way meta)": 1,
+        "Mean corpuscular hemoglobin concentration (two-way meta)": 1,
+        "Mean corpuscular volume (three-way meta)": 1,
+        "Mean corpuscular volume (two-way meta)": 1,
+        "Monocyte count (three-way meta)": 1,
+        "Myeloid white cell count (three-way meta)": 3,
+        "Myeloid white cell count (two-way meta)": 3,
+        "Neutrophil count (three-way meta)": 3,
+        "Neutrophil count (two-way meta)": 3,
+        "Platelet count (three-way meta)": 1,
+        "Platelet count (two-way meta)": 1,
+        "Platelet distribution width (three-way meta)": 4,
+        "Platelet distribution width (two-way meta)": 5,
+        "Plateletcrit (three-way meta)": 1,
+        "Plateletcrit (two-way meta)": 1,
+        "Red cell distribution width (three-way meta)": 6,
+        "Red cell distribution width (two-way meta)": 5,
+        "Sum basophil neutrophil count (three-way meta)": 3,
+        "Sum basophil neutrophil count (two-way meta)": 3,
+        "Sum neutrophil eosinophil count (three-way meta)": 1,
+        "Sum neutrophil eosinophil count (two-way meta)": 2,
+        "White blood cell count (three-way meta)": 3,
+        "White blood cell count (two-way meta)": 2
+      }
+    },
+    "Metabolic": {
+      "count": {
+        "Albuminuria": 1,
+        "Arms-arm fat ratio (female)": 5,
+        "Arms-arm fat ratio (male)": 1,
+        "Blood urea nitrogen": 3,
+        "Body Mass Index": 18,
+        "Body Mass Index (Dominance deviation model)": 1,
+        "Body Mass Index (female <= 50 yrs)": 1,
+        "Body Mass Index (female > 50 yrs)": 1,
+        "Body Mass Index (female)": 7,
+        "Body Mass Index (male <= 50 yrs)": 1,
+        "Body Mass Index (male > 50 yrs)": 1,
+        "Body Mass Index (male)": 7,
+        "Body Mass Index - Child": 1,
+        "Body fat percentage": 1,
+        "Childhood obesity": 1,
+        "Comparative body size at age 10": 2,
+        "Diagnoses - secondary ICD10: E66 Overweight and obesity": 1,
+        "Estimated glomerular filtration rate": 2,
+        "Extreme Body Mass Index": 1,
+        "Extreme obesity (childhood)": 1,
+        "HbA1c": 2,
+        "High-density lipoprotein cholesterol": 2,
+        "Hip circumference": 7,
+        "Hip circumference (adjusted for BMI)": 2,
+        "Hip circumference (female)": 3,
+        "Hip circumference (male)": 3,
+        "Hip circumference (male, adjusted for BMI)": 2,
+        "Impedance measures - Arm fat mass (left)": 2,
+        "Impedance measures - Arm fat mass (right)": 2,
+        "Impedance measures - Arm fat percentage (left)": 4,
+        "Impedance measures - Arm fat percentage (right)": 4,
+        "Impedance measures - Arm fat-free mass (left)": 7,
+        "Impedance measures - Arm fat-free mass (right)": 7,
+        "Impedance measures - Arm predicted mass (left)": 7,
+        "Impedance measures - Arm predicted mass (right)": 7,
+        "Impedance measures - Basal metabolic rate": 7,
+        "Impedance measures - Body Mass Index (BMI)": 3,
+        "Impedance measures - Body fat percentage": 4,
+        "Impedance measures - Impedance of arm (left)": 5,
+        "Impedance measures - Impedance of arm (right)": 5,
+        "Impedance measures - Impedance of leg (left)": 7,
+        "Impedance measures - Impedance of leg (right)": 8,
+        "Impedance measures - Impedance of whole body": 6,
+        "Impedance measures - Leg fat mass (left)": 3,
+        "Impedance measures - Leg fat mass (right)": 3,
+        "Impedance measures - Leg fat percentage (left)": 4,
+        "Impedance measures - Leg fat percentage (right)": 5,
+        "Impedance measures - Leg fat-free mass (left)": 7,
+        "Impedance measures - Leg fat-free mass (right)": 7,
+        "Impedance measures - Leg predicted mass (left)": 7,
+        "Impedance measures - Leg predicted mass (right)": 7,
+        "Impedance measures - Trunk fat mass": 4,
+        "Impedance measures - Trunk fat percentage": 4,
+        "Impedance measures - Trunk fat-free mass": 7,
+        "Impedance measures - Trunk predicted mass": 7,
+        "Impedance measures - Weight": 6,
+        "Impedance measures - Whole body fat mass": 4,
+        "Impedance measures - Whole body fat-free mass": 7,
+        "Impedance measures - Whole body water mass": 7,
+        "Legs-leg fat ratio (female)": 4,
+        "Leptin": 1,
+        "Obesity class 1": 1,
+        "Obesity class 2": 1,
+        "Obesity class 3": 1,
+        "Overweight": 1,
+        "Subcutaneous adipose tissue volume": 1,
+        "Thin vs extreme obese": 1,
+        "Triglycerides cholesterol": 1,
+        "Trunk-trunk fat ratio (female)": 5,
+        "Trunk-trunk fat ratio (male)": 1,
+        "Waist circumference": 4,
+        "Waist circumference (female)": 3,
+        "Waist circumference (male)": 3,
+        "Waist-hip ratio": 6,
+        "Waist-hip ratio (adjusted for BMI)": 7,
+        "Waist-hip ratio (adjusted for BMI, female)": 2,
+        "Waist-hip ratio (adjusted for BMI, male)": 7,
+        "Waist-hip ratio (female)": 5,
+        "Waist-hip ratio (male)": 6,
+        "Weight": 6,
+        "Weight (female)": 1,
+        "Weight (male)": 1
+      }
+    },
+    "Mortality": {
+      "count": {
+        "Life span": 1
+      }
+    },
+    "Neurological": {
+      "count": {
+        "Anterior corona radiata fractional anisotropy": 1,
+        "Anterior limb of internal capsule fractional anisotropy": 1,
+        "Anterior limb of internal capsule radial diusivities": 1,
+        "Average across all tracts fractional anisotropy": 1,
+        "External capsule fractional anisotropy": 1,
+        "External capsule mean diusivities": 1,
+        "External capsule radial diusivities": 1,
+        "Genu of corpus callosum fractional anisotropy": 1,
+        "Inferior fronto-occipital fasciculus fractional anisotropy": 1,
+        "Inferior fronto-occipital fasciculus radial diusivities": 1,
+        "Left insula": 2,
+        "Left thalamus proper": 2,
+        "Pain type(s) experienced in last month: Back pain": 1,
+        "Pain type(s) experienced in last month: Hip pain": 1,
+        "Pain type(s) experienced in last month: Knee pain": 3,
+        "Right pars orbitalis": 1,
+        "Superior fronto-occipital fasciculus radial diusivities": 1
+      }
+    },
+    "Nutritional": {
+      "count": {
+        "Beef intake": 1,
+        "Bread intake": 1,
+        "Bread type: White": 1,
+        "Bread type: Wholemeal or wholegrain": 1,
+        "Cereal type: Oat cereal (e.g. Ready Brek, porridge)": 1,
+        "Coffee intake": 1,
+        "Coffee type: Ground coffee (include espresso, filter etc)": 2,
+        "Coffee type: Instant coffee": 2,
+        "Cooked vegetable intake": 1,
+        "Fresh fruit intake": 1,
+        "Major dietary changes in the last 5 years": 1,
+        "Milk type used: Full cream": 1,
+        "Milk type used: Skimmed": 1,
+        "Never eat eggs, dairy, wheat, sugar: Sugar or foods/drinks containing sugar": 2,
+        "Non-butter spread type details: Other low or reduced fat spread": 1,
+        "Non-oily fish intake": 3,
+        "Oily fish intake": 1,
+        "Tea intake": 1,
+        "Variation in diet": 1,
+        "Water intake": 2
+      }
+    },
+    "Psychiatric": {
+      "count": {
+        "Alcohol intake frequency": 1,
+        "Alcohol usually taken with meals": 1,
+        "Average weekly beer plus cider intake": 1,
+        "Chronotype": 4,
+        "Chronotype (continuous)": 1,
+        "Depression - Recent poor appetite or overeting": 1,
+        "Depressive symptoms (MA GWAMA)": 1,
+        "Drinks per day": 1,
+        "Drinks per week": 1,
+        "Ease of getting up in the morning": 1,
+        "Extreme chronotype": 1,
+        "Getting up in morning": 1,
+        "Long sleep": 1,
+        "Morning person (binary)": 3,
+        "Morning/evening person (chronotype)": 3,
+        "Morningness": 3,
+        "Neuroticism": 7,
+        "Neuroticism (MA GWAMA)": 4,
+        "Neuroticism (univariate)": 5,
+        "Neuroticism general factor": 3,
+        "Sensitivity / hurt feelings": 1,
+        "Sensitivity / hurt feelings (HURT)": 1,
+        "Sleep duration": 3,
+        "Snoring": 4,
+        "Traumatic events - Felt very upset when reminded of stressful expresince in past month": 1,
+        "Well-being spectrum": 4
+      }
+    },
+    "Reproduction": {
+      "count": {
+        "Age at menarche": 4,
+        "Age when periods started (menarche) (female)": 1,
+        "Number of pregnancy terminations (female)": 1,
+        "Number of sexual partners": 4,
+        "Relative age of first facial hair (male)": 2,
+        "Relative age voice broke (male)": 1
+      }
+    },
+    "Respiratory": {
+      "count": {
+        "FEV1": 3,
+        "FEV1/FVC ratio": 5,
+        "FVC": 3,
+        "PEF": 8
+      }
+    },
+    "Skeletal": {
+      "count": {
+        "Comparative height size at age 10": 8,
+        "Diagnoses - main ICD10: M16 Osteoarthritis of hip": 2,
+        "Diagnoses - main ICD10: M17 Osteoarthritis of knee": 1,
+        "Estimated BMD": 8,
+        "Estimated bone mineral density from heel ultrasounds": 7,
+        "Extreme Height": 1,
+        "Heel bone mineral density": 11,
+        "Height": 18,
+        "Height (female)": 1,
+        "Height (male)": 2,
+        "Osteoarthritis of hip (hospital diagnosed)": 1,
+        "Sitting height": 9,
+        "Standing height": 9,
+        "Systemic Lupus Erythematosus": 3
+      }
+    },
+    "Social Interactions": {
+      "count": {
+        "Social support - Leisure/social activities: Pub or social club": 2
+      }
+    }
+  },
+  "3": {
+    "Activities": {
+      "count": {
+        "Age started wearing glasses or contact lenses": 1,
+        "First PC of the four riskly behaviours": 1,
+        "General risk tolerance": 2,
+        "Hands-free device/speakerphone use with mobile phone in last 3 month": 1,
+        "Positive affect (MA GWAMA)": 1,
+        "Positive affect (univariate)": 1,
+        "Types of transport used (excluding work): Cycle": 1,
+        "Usual walking pace": 1
+      }
+    },
+    "Cardiovascular": {
+      "count": {
+        "Coronary artery disease": 1,
+        "Diastolic Blood Pressure (automated reading)": 2,
+        "Heart rate increase": 1,
+        "Heart rate recovery at 40 secnds": 1,
+        "Non-cancer illness code, self-reported: hypertension": 1,
+        "Systolic Blood Pressure (automated reading)": 3,
+        "Vascular/heart problems diagnosed by doctor: High blood pressure": 2
+      }
+    },
+    "Cognitive": {
+      "count": {
+        "Cognitive performance": 1,
+        "Intelligence": 1
+      }
+    },
+    "Dermatological": {
+      "count": {
+        "Ease of skin tanning": 1,
+        "Hair colour (natural, before greying): Black": 1,
+        "Skin colour": 1
+      }
+    },
+    "Endocrine": {
+      "count": {
+        "Type 2 Diabetes": 3
+      }
+    },
+    "Environment": {
+      "count": {
+        "Educational attainment": 4
+      }
+    },
+    "Environmental": {
+      "count": {
+        "Agents acting on the renin-angiotensin system": 5,
+        "Calcium channel blockers": 2,
+        "Diuretics": 4,
+        "Thyroid preparations": 3
+      }
+    },
+    "Gastrointestinal": {
+      "count": {
+        "Diverticular disease": 2
+      }
+    },
+    "Immunological": {
+      "count": {
+        "Basophil count (three-way meta)": 2,
+        "Basophil count (two-way meta)": 2,
+        "Eosinophil percentage of granulocytes (three-way meta)": 1,
+        "Eosinophil percentage of white cells (three-way meta)": 1,
+        "Granulocyte count (three-way meta)": 3,
+        "Granulocyte count (two-way meta)": 4,
+        "Monocyte count (three-way meta)": 1,
+        "Myeloid white cell count (three-way meta)": 4,
+        "Myeloid white cell count (two-way meta)": 4,
+        "Neutrophil count (three-way meta)": 3,
+        "Neutrophil count (two-way meta)": 4,
+        "Platelet count (three-way meta)": 1,
+        "Platelet distribution width (three-way meta)": 3,
+        "Platelet distribution width (two-way meta)": 4,
+        "Plateletcrit (three-way meta)": 1,
+        "Red blood cell count (three-way meta)": 1,
+        "Red blood cell count (two-way meta)": 1,
+        "Red cell distribution width (three-way meta)": 3,
+        "Red cell distribution width (two-way meta)": 3,
+        "Sum basophil neutrophil count (three-way meta)": 3,
+        "Sum basophil neutrophil count (two-way meta)": 4,
+        "Sum neutrophil eosinophil count (three-way meta)": 3,
+        "Sum neutrophil eosinophil count (two-way meta)": 3,
+        "White blood cell count (three-way meta)": 3,
+        "White blood cell count (two-way meta)": 3
+      }
+    },
+    "Metabolic": {
+      "count": {
+        "Arms-arm fat ratio (female)": 4,
+        "Birth weight of first child (female)": 1,
+        "Blood urea nitrogen": 1,
+        "Body Mass Index": 11,
+        "Body Mass Index (female)": 6,
+        "Body Mass Index (male)": 5,
+        "Estimated glomerular filtration rate": 4,
+        "Hip circumference": 2,
+        "Impedance measures - Arm fat mass (left)": 2,
+        "Impedance measures - Arm fat mass (right)": 2,
+        "Impedance measures - Arm fat percentage (left)": 2,
+        "Impedance measures - Arm fat percentage (right)": 2,
+        "Impedance measures - Arm fat-free mass (left)": 2,
+        "Impedance measures - Arm fat-free mass (right)": 1,
+        "Impedance measures - Arm predicted mass (left)": 1,
+        "Impedance measures - Arm predicted mass (right)": 1,
+        "Impedance measures - Basal metabolic rate": 2,
+        "Impedance measures - Body Mass Index (BMI)": 2,
+        "Impedance measures - Body fat percentage": 2,
+        "Impedance measures - Impedance of arm (left)": 2,
+        "Impedance measures - Impedance of arm (right)": 2,
+        "Impedance measures - Impedance of whole body": 2,
+        "Impedance measures - Leg fat mass (left)": 2,
+        "Impedance measures - Leg fat mass (right)": 2,
+        "Impedance measures - Leg fat percentage (left)": 2,
+        "Impedance measures - Leg fat percentage (right)": 2,
+        "Impedance measures - Leg fat-free mass (left)": 1,
+        "Impedance measures - Leg fat-free mass (right)": 1,
+        "Impedance measures - Leg predicted mass (left)": 1,
+        "Impedance measures - Leg predicted mass (right)": 1,
+        "Impedance measures - Trunk fat mass": 4,
+        "Impedance measures - Trunk fat percentage": 2,
+        "Impedance measures - Trunk fat-free mass": 1,
+        "Impedance measures - Trunk predicted mass": 1,
+        "Impedance measures - Weight": 3,
+        "Impedance measures - Whole body fat mass": 2,
+        "Impedance measures - Whole body fat-free mass": 1,
+        "Impedance measures - Whole body water mass": 1,
+        "Trunk-trunk fat ratio (female)": 1,
+        "Waist circumference": 2,
+        "Waist-hip ratio": 2,
+        "Waist-hip ratio (adjusted for BMI)": 4,
+        "Waist-hip ratio (adjusted for BMI, female)": 1,
+        "Waist-hip ratio (adjusted for BMI, male)": 4,
+        "Waist-hip ratio (female)": 1,
+        "Waist-hip ratio (male)": 1,
+        "Weight": 3
+      }
+    },
+    "Neurological": {
+      "count": {
+        "Anterior corona radiata fractional anisotropy": 1,
+        "Genu of corpus callosum fractional anisotropy": 1,
+        "Left caudate": 1,
+        "Left pallidum": 2,
+        "Pain type(s) experienced in last month: Knee pain": 1
+      }
+    },
+    "Nutritional": {
+      "count": {
+        "Cereal intake": 1,
+        "Non-oily fish intake": 3,
+        "Poultry intake": 1,
+        "Salad / raw vegetable intake": 1,
+        "Salt added to food": 1
+      }
+    },
+    "Psychiatric": {
+      "count": {
+        "Anxiety/tension factors": 1,
+        "Chronotype": 2,
+        "Daytime dozing / sleeping (narcolepsy)": 1,
+        "Ever smoked regulary": 2,
+        "Ever smoker": 1,
+        "Fed-up feelings": 1,
+        "Guilty feelings": 1,
+        "Guilty feelings (GUILT)": 1,
+        "Irritability": 2,
+        "Irritability (IRR)": 1,
+        "Mood swings": 1,
+        "Mood swings (MOOD)": 1,
+        "Morning person (binary)": 2,
+        "Nap during day": 1,
+        "Neuroticism": 11,
+        "Neuroticism (MA GWAMA)": 6,
+        "Neuroticism (univariate)": 6,
+        "Neuroticism general factor": 6,
+        "Neuroticism score": 3,
+        "Neuroticism sum score": 2,
+        "Sensitivity / hurt feelings": 1,
+        "Sensitivity / hurt feelings (HURT)": 1,
+        "Short sleep": 1,
+        "Sleep duration": 2,
+        "Sleep sedentary (conditioning sex and BMI)": 1,
+        "Smoking status: Never": 1,
+        "Well-being spectrum": 4,
+        "Worry too long after embarrassment": 1,
+        "Worry too long after embarrassment (WORR-EMB)": 1,
+        "Worry/vulnerability factors": 1
+      }
+    },
+    "Reproduction": {
+      "count": {
+        "Age at first live birth (female)": 1,
+        "Age at menarche": 2,
+        "Age when periods started (menarche) (female)": 2,
+        "Number of sexual partners": 2,
+        "Relative age of first facial hair (male)": 1
+      }
+    },
+    "Respiratory": {
+      "count": {
+        "FEV1": 1,
+        "FEV1/FVC ratio": 4,
+        "FVC": 2
+      }
+    },
+    "Skeletal": {
+      "count": {
+        "Comparative height size at age 10": 1,
+        "Diagnoses - main ICD10: M17 Osteoarthritis of knee": 1,
+        "Estimated BMD": 4,
+        "Estimated bone mineral density from heel ultrasounds": 4,
+        "Heel bone mineral density": 5,
+        "Height": 2,
+        "Non-cancer illness code, self-reported: osteoarthritis": 1,
+        "Sitting height": 2,
+        "Standing height": 2,
+        "Systemic Lupus Erythematosus": 5
+      }
+    },
+    "Social Interactions": {
+      "count": {
+        "Social support - Leisure/social activities: Pub or social club": 1
+      }
+    }
+  },
+  "4": {
+    "Activities": {
+      "count": {
+        "Number of treatments/medications taken": 1,
+        "Taking other prescription medications": 1,
+        "Time spend outdoors in summer": 1,
+        "Time spent watching television (TV)": 1,
+        "Usual walking pace": 1
+      }
+    },
+    "Body Structures": {
+      "count": {
+        "Mouth/teeth dental problems: Dentures": 1
+      }
+    },
+    "Cardiovascular": {
+      "count": {
+        "Diastolic Blood Pressure (automated reading)": 1
+      }
+    },
+    "Cognitive": {
+      "count": {
+        "Cognitive performance": 2,
+        "Fluid intelligence score": 1,
+        "Fluid intelligence test - FI5 : family relationship calculation": 1,
+        "Intelligence": 1,
+        "Trail making test - Duration to complete alphanumeric path (trail #2)": 1,
+        "Verbal-numerical reasoning": 2
+      }
+    },
+    "Connective Tissue": {
+      "count": {
+        "Carpal tunnel syndrome": 1,
+        "Rheumatoid Arthritis": 1
+      }
+    },
+    "Dermatological": {
+      "count": {
+        "Hair colour (natural, before greying): Blonde": 1,
+        "Vitiligo": 1
+      }
+    },
+    "Endocrine": {
+      "count": {
+        "Type 2 Diabetes": 4
+      }
+    },
+    "Environment": {
+      "count": {
+        "Age completed full time education": 1,
+        "Education - Qualifications": 1,
+        "Educational attainment": 6,
+        "Job involves heavy manual or physical work": 1,
+        "Job involves mainly walking or standing": 1
+      }
+    },
+    "Environmental": {
+      "count": {
+        "Agents acting on the renin-angiotensin system": 2,
+        "Calcium channel blockers": 1,
+        "Diuretics": 3,
+        "Opioids": 1,
+        "Thyroid preparations": 3
+      }
+    },
+    "Gastrointestinal": {
+      "count": {
+        "Diverticular disease": 1,
+        "Primary sclerosing cholangitis": 1,
+        "Ulcerative colitis": 2
+      }
+    },
+    "Immunological": {
+      "count": {
+        "Basophil count (three-way meta)": 1,
+        "Basophil count (two-way meta)": 1,
+        "Eosinophil percentage of granulocytes (three-way meta)": 2,
+        "Eosinophil percentage of granulocytes (two-way meta)": 1,
+        "Eosinophil percentage of white cells (three-way meta)": 2,
+        "Eosinophil percentage of white cells (two-way meta)": 1,
+        "Granulocyte count (three-way meta)": 4,
+        "Granulocyte count (two-way meta)": 4,
+        "Hematocrit (three-way meta)": 1,
+        "Hemoglobin concentration (three-way meta)": 1,
+        "Hemoglobin concentration (two-way meta)": 1,
+        "High light scatter percentage of red cells (three-way meta)": 1,
+        "Lymphocyte count (three-way meta)": 1,
+        "Lymphocyte count (two-way meta)": 1,
+        "Lymphocyte percentage of white cells (three-way meta)": 1,
+        "Lymphocyte percentage of white cells (two-way meta)": 2,
+        "Macrophage inflammatory protein-1 (CCL4)": 1,
+        "Mean corpuscular hemoglobin (three-way meta)": 5,
+        "Mean corpuscular hemoglobin (two-way meta)": 1,
+        "Mean corpuscular hemoglobin concentration (three-way meta)": 1,
+        "Mean corpuscular hemoglobin concentration (two-way meta)": 1,
+        "Mean corpuscular volume (three-way meta)": 3,
+        "Mean corpuscular volume (two-way meta)": 2,
+        "Monocyte count (three-way meta)": 1,
+        "Monocyte count (two-way meta)": 1,
+        "Myeloid white cell count (three-way meta)": 4,
+        "Myeloid white cell count (two-way meta)": 4,
+        "Neutrophil count (three-way meta)": 4,
+        "Neutrophil count (two-way meta)": 4,
+        "Neutrophil percentage of white cells (three-way meta)": 1,
+        "Neutrophil percentage of white cells (two-way meta)": 1,
+        "Platelet count (three-way meta)": 1,
+        "Platelet distribution width (three-way meta)": 5,
+        "Platelet distribution width (two-way meta)": 5,
+        "Plateletcrit (three-way meta)": 1,
+        "Plateletcrit (two-way meta)": 1,
+        "Red cell distribution width (three-way meta)": 6,
+        "Red cell distribution width (two-way meta)": 6,
+        "Reticulocyte count (three-way meta)": 1,
+        "Reticulocyte fraction of red cells (three-way meta)": 1,
+        "Reticulocyte fraction of red cells (two-way meta)": 1,
+        "Sum basophil neutrophil count (three-way meta)": 4,
+        "Sum basophil neutrophil count (two-way meta)": 4,
+        "Sum neutrophil eosinophil count (three-way meta)": 4,
+        "Sum neutrophil eosinophil count (two-way meta)": 4,
+        "White blood cell count (three-way meta)": 4,
+        "White blood cell count (two-way meta)": 4
+      }
+    },
+    "Metabolic": {
+      "count": {
+        "Albuminuria": 1,
+        "Arms-arm fat ratio (female)": 5,
+        "Birth weight of first child (female)": 1,
+        "Body Mass Index": 14,
+        "Body Mass Index (female)": 6,
+        "Body Mass Index (male)": 5,
+        "Creatine kinase": 1,
+        "Diagnoses - secondary ICD10: E66 Overweight and obesity": 1,
+        "Estimated glomerular filtration rate": 8,
+        "Hip circumference": 1,
+        "Impedance measures - Arm fat mass (left)": 1,
+        "Impedance measures - Arm fat mass (right)": 1,
+        "Impedance measures - Arm fat percentage (left)": 1,
+        "Impedance measures - Arm fat percentage (right)": 1,
+        "Impedance measures - Arm fat-free mass (left)": 2,
+        "Impedance measures - Arm fat-free mass (right)": 2,
+        "Impedance measures - Arm predicted mass (left)": 2,
+        "Impedance measures - Arm predicted mass (right)": 2,
+        "Impedance measures - Basal metabolic rate": 2,
+        "Impedance measures - Body Mass Index (BMI)": 1,
+        "Impedance measures - Body fat percentage": 1,
+        "Impedance measures - Impedance of arm (left)": 5,
+        "Impedance measures - Impedance of arm (right)": 4,
+        "Impedance measures - Impedance of leg (left)": 2,
+        "Impedance measures - Impedance of leg (right)": 2,
+        "Impedance measures - Impedance of whole body": 5,
+        "Impedance measures - Leg fat mass (left)": 1,
+        "Impedance measures - Leg fat mass (right)": 1,
+        "Impedance measures - Leg fat percentage (left)": 1,
+        "Impedance measures - Leg fat percentage (right)": 1,
+        "Impedance measures - Leg fat-free mass (left)": 1,
+        "Impedance measures - Leg fat-free mass (right)": 1,
+        "Impedance measures - Leg predicted mass (left)": 1,
+        "Impedance measures - Leg predicted mass (right)": 1,
+        "Impedance measures - Trunk fat mass": 1,
+        "Impedance measures - Trunk fat percentage": 1,
+        "Impedance measures - Trunk fat-free mass": 2,
+        "Impedance measures - Trunk predicted mass": 2,
+        "Impedance measures - Weight": 1,
+        "Impedance measures - Whole body fat mass": 1,
+        "Impedance measures - Whole body fat-free mass": 2,
+        "Impedance measures - Whole body water mass": 2,
+        "Triglycerides cholesterol": 1,
+        "Trunk-trunk fat ratio (female)": 3,
+        "Trunk-trunk fat ratio (male)": 1,
+        "Uric acid": 1,
+        "Waist circumference": 1,
+        "Waist-hip ratio": 1,
+        "Waist-hip ratio (adjusted for BMI)": 4,
+        "Waist-hip ratio (adjusted for BMI, male)": 4,
+        "Waist-hip ratio (male)": 1,
+        "Weight": 1
+      }
+    },
+    "Muscular": {
+      "count": {
+        "Leg pain on walking": 1
+      }
+    },
+    "Neurological": {
+      "count": {
+        "Corticospinal tract axial diusivities": 1,
+        "Corticospinal tract mean diusivities": 1,
+        "Corticospinal tract radial diusivities": 1,
+        "Frequent insomnia symptoms": 2,
+        "Inferior fronto-occipital fasciculus fractional anisotropy": 1,
+        "Left pallidum": 2,
+        "Pain type(s) experienced in last month: Knee pain": 1
+      }
+    },
+    "Nutritional": {
+      "count": {
+        "Non-oily fish intake": 2,
+        "Oily fish intake": 2,
+        "Poultry intake": 1,
+        "Tea intake": 1,
+        "Variation in diet": 1
+      }
+    },
+    "Ophthalmological": {
+      "count": {
+        "Central corneal thickness": 1
+      }
+    },
+    "Psychiatric": {
+      "count": {
+        "Autism spectrum disorder": 1,
+        "Bipolar disorder": 1,
+        "Chronotype": 2,
+        "Ever smoked regulary": 1,
+        "Morning person (binary)": 1,
+        "Neuroticism": 8,
+        "Neuroticism (MA GWAMA)": 4,
+        "Neuroticism (univariate)": 4,
+        "Neuroticism general factor": 4,
+        "Sleep duration": 3,
+        "Well-being spectrum": 3,
+        "Why stopped smoking: Health precaution": 1
+      }
+    },
+    "Reproduction": {
+      "count": {
+        "Age at first birth": 1,
+        "Age at first birth (female)": 1,
+        "Age at first live birth (female)": 1,
+        "Age at last live birth (female)": 1,
+        "Age first had sexual intercourse": 1,
+        "Age last used hormone-replacement therapy (HRT) (female)": 1,
+        "Age started hormone-replacement therapy (HRT) (female)": 1,
+        "Age when periods started (menarche) (female)": 1,
+        "Number of live births (female)": 1,
+        "Number of sexual partners": 2
+      }
+    },
+    "Respiratory": {
+      "count": {
+        "Asthma (child-onset)": 1,
+        "FEV1": 4,
+        "FEV1/FVC ratio": 6,
+        "PEF": 1
+      }
+    },
+    "Skeletal": {
+      "count": {
+        "Comparative height size at age 10": 1,
+        "Diagnoses - main ICD10: M17 Osteoarthritis of knee": 1,
+        "Estimated BMD": 6,
+        "Estimated bone mineral density from heel ultrasounds": 4,
+        "Heel bone mineral density": 9,
+        "Height": 5,
+        "Sitting height": 1,
+        "Standing height": 2,
+        "Systemic Lupus Erythematosus": 2
+      }
+    }
+  },
+  "5": {
+    "Activities": {
+      "count": {
+        "Age started wearing glasses or contact lenses": 1,
+        "Automobile speeding propensity": 1,
+        "Childhood sunburn occasions": 1,
+        "First PC of the four riskly behaviours": 1,
+        "Frequency of other exercises in last 4 weeks": 1,
+        "General risk tolerance": 3,
+        "Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication": 1,
+        "Number of days/week of vigorous physical activity 10+ minutes": 1,
+        "Number of treatments/medications taken": 1,
+        "Taking other prescription medications": 2,
+        "Time spent watching television (TV)": 3,
+        "Treatment/medication code: levothyroxine sodium": 1,
+        "Use of sun/uv protection": 2,
+        "Usual walking pace": 1
+      }
+    },
+    "Body Structures": {
+      "count": {
+        "Mouth/teeth dental problems: Mouth ulcers": 1
+      }
+    },
+    "Cardiovascular": {
+      "count": {
+        "Atrial Fibrillation": 1,
+        "Diagnoses - secondary ICD10: I10 Essential (primary) hypertension": 1,
+        "Diastolic Blood Pressure (automated reading)": 3,
+        "Non-cancer illness code, self-reported: hypertension": 2,
+        "QRS interval": 1,
+        "Resting heart rate": 1,
+        "Systolic Blood Pressure (automated reading)": 1,
+        "Vascular/heart problems diagnosed by doctor: High blood pressure": 2
+      }
+    },
+    "Cell": {
+      "count": {
+        "CD84 - SLAM family member 5": 1,
+        "Rubella IgG levels": 1
+      }
+    },
+    "Cognitive": {
+      "count": {
+        "Cognitive performance": 3,
+        "Fluid intelligence score": 1,
+        "Intelligence": 2,
+        "Verbal-numerical reasoning": 1
+      }
+    },
+    "Connective Tissue": {
+      "count": {
+        "Rheumatoid Arthritis": 6
+      }
+    },
+    "Dermatological": {
+      "count": {
+        "Ease of skin tanning": 2,
+        "Hair colour (natural, before greying): Black": 2,
+        "Hair colour (natural, before greying): Blonde": 1,
+        "Hair colour (natural, before greying): Dark brown": 3,
+        "Hair colour (natural, before greying): Light brown": 2,
+        "Male pattern baldness (BOLT LMM infinitesimal mixed model)": 5,
+        "Male pattern baldness (BOLT LMM non-infinitesimal mixed model)": 5,
+        "Male-specific factors - Hair/balding pattern: Pattern 1": 1,
+        "Male-specific factors - Hair/balding pattern: Pattern 2": 1,
+        "Male-specific factors - Hair/balding pattern: Pattern 3": 1,
+        "Male-specific factors - Hair/balding pattern: Pattern 4": 1,
+        "Skin colour": 2,
+        "Vitiligo": 4
+      }
+    },
+    "Endocrine": {
+      "count": {
+        "Diabetes (diagnosed by doctor)": 2,
+        "Diagnoses - secondary ICD10: E03 Other hypothyroidism": 1,
+        "Diagnoses - secondary ICD10: E11 Type 2 diabetes mellitus": 2,
+        "Free thyroxine (FT4)": 1,
+        "Non-cancer illness code, self-reported: diabetes": 2,
+        "Non-cancer illness code, self-reported: hypothyroidism/myxoedema": 1,
+        "Thyroid-stimulating hormone": 1,
+        "Thyroid-stimulating hormone (female)": 1,
+        "Thyroid-stimulating hormone (male)": 1,
+        "Type 1 Diabetes": 1,
+        "Type 2 Diabetes": 25,
+        "Type 2 Diabetes (adjusted for BMI)": 1
+      }
+    },
+    "Environment": {
+      "count": {
+        "Education - Qualifications": 1,
+        "Educational attainment": 3,
+        "Illnesses of siblings: High blood pressure": 1
+      }
+    },
+    "Environmental": {
+      "count": {
+        "Agents acting on the renin-angiotensin system": 9,
+        "Antihistamines for systemic use": 1,
+        "Beta blocking agents": 1,
+        "Calcium channel blockers": 5,
+        "Diuretics": 9,
+        "Drugs used in diabetes": 1,
+        "HMG CoA reductase inhibitors": 2,
+        "Thyroid preparations": 9
+      }
+    },
+    "Gastrointestinal": {
+      "count": {
+        "Ulcerative colitis": 1
+      }
+    },
+    "Hematological": {
+      "count": {
+        "Hemoglobin A1c": 1
+      }
+    },
+    "Immunological": {
+      "count": {
+        "Basophil count (three-way meta)": 5,
+        "Basophil count (two-way meta)": 5,
+        "Eosinophil count (three-way meta)": 1,
+        "Eosinophil count (two-way meta)": 1,
+        "Eosinophil percentage of granulocytes (three-way meta)": 2,
+        "Eosinophil percentage of granulocytes (two-way meta)": 1,
+        "Eosinophil percentage of white cells (three-way meta)": 2,
+        "Eosinophil percentage of white cells (two-way meta)": 1,
+        "Granulocyte count (three-way meta)": 13,
+        "Granulocyte count (two-way meta)": 10,
+        "Granulocyte percentage of myeloid white cells (three-way meta)": 1,
+        "Granulocyte percentage of myeloid white cells (two-way meta)": 1,
+        "Hematocrit (three-way meta)": 2,
+        "Hematocrit (two-way meta)": 2,
+        "Hemoglobin concentration (three-way meta)": 1,
+        "Hemoglobin concentration (two-way meta)": 1,
+        "High light scatter percentage of red cells (three-way meta)": 3,
+        "High light scatter percentage of red cells (two-way meta)": 4,
+        "High light scatter reticulocyte count (three-way meta)": 3,
+        "High light scatter reticulocyte count (two-way meta)": 2,
+        "Immature fraction of reticulocytes (three-way meta)": 2,
+        "Immature fraction of reticulocytes (two-way meta)": 2,
+        "Lymphocyte count (three-way meta)": 2,
+        "Lymphocyte count (two-way meta)": 1,
+        "Lymphocyte percentage of white cells (three-way meta)": 1,
+        "Mean corpuscular hemoglobin (three-way meta)": 4,
+        "Mean corpuscular hemoglobin (two-way meta)": 1,
+        "Mean corpuscular volume (three-way meta)": 6,
+        "Mean corpuscular volume (two-way meta)": 4,
+        "Monocyte count (three-way meta)": 7,
+        "Monocyte count (two-way meta)": 5,
+        "Monocyte percentage of white cells (three-way meta)": 1,
+        "Monocyte percentage of white cells (two-way meta)": 1,
+        "Myeloid white cell count (three-way meta)": 14,
+        "Myeloid white cell count (two-way meta)": 11,
+        "Neutrophil count (three-way meta)": 12,
+        "Neutrophil count (two-way meta)": 9,
+        "Neutrophil percentage of granulocytes (three-way meta)": 1,
+        "Neutrophil percentage of granulocytes (two-way meta)": 1,
+        "Neutrophil percentage of white cells (three-way meta)": 1,
+        "Platelet count (three-way meta)": 5,
+        "Platelet count (two-way meta)": 5,
+        "Platelet distribution width (three-way meta)": 12,
+        "Platelet distribution width (two-way meta)": 13,
+        "Plateletcrit (three-way meta)": 6,
+        "Plateletcrit (two-way meta)": 5,
+        "Red blood cell count (three-way meta)": 2,
+        "Red blood cell count (two-way meta)": 2,
+        "Red cell distribution width (three-way meta)": 11,
+        "Red cell distribution width (two-way meta)": 11,
+        "Reticulocyte count (three-way meta)": 2,
+        "Reticulocyte count (two-way meta)": 2,
+        "Reticulocyte fraction of red cells (three-way meta)": 2,
+        "Reticulocyte fraction of red cells (two-way meta)": 4,
+        "Sum basophil neutrophil count (three-way meta)": 12,
+        "Sum basophil neutrophil count (two-way meta)": 9,
+        "Sum eosinophil basophil count (three-way meta)": 1,
+        "Sum eosinophil basophil count (two-way meta)": 1,
+        "Sum neutrophil eosinophil count (three-way meta)": 13,
+        "Sum neutrophil eosinophil count (two-way meta)": 9,
+        "White blood cell count (three-way meta)": 14,
+        "White blood cell count (two-way meta)": 11,
+        "White blood cells": 1
+      }
+    },
+    "Metabolic": {
+      "count": {
+        "Arms-arm fat ratio (female)": 15,
+        "Arms-arm fat ratio (male)": 1,
+        "Birth weight of first child (female)": 1,
+        "Blood sugar": 1,
+        "Body Mass Index": 49,
+        "Body Mass Index (female)": 17,
+        "Body Mass Index (male > 50 yrs)": 1,
+        "Body Mass Index (male)": 19,
+        "Chloride": 1,
+        "Comparative body size at age 10": 2,
+        "Diagnoses - secondary ICD10: E66 Overweight and obesity": 1,
+        "Estimated glomerular filtration rate": 13,
+        "Extreme obesity (childhood)": 1,
+        "Fasting glucose main effect": 1,
+        "Free cholesterol in IDL ": 1,
+        "Free cholesterol in large LDL ": 1,
+        "HOMA-B": 1,
+        "High-density lipoprotein cholesterol": 2,
+        "Hip circumference": 5,
+        "Impedance measures - Arm fat mass (left)": 4,
+        "Impedance measures - Arm fat mass (right)": 4,
+        "Impedance measures - Arm fat percentage (left)": 6,
+        "Impedance measures - Arm fat percentage (right)": 6,
+        "Impedance measures - Arm fat-free mass (left)": 6,
+        "Impedance measures - Arm fat-free mass (right)": 6,
+        "Impedance measures - Arm predicted mass (left)": 6,
+        "Impedance measures - Arm predicted mass (right)": 6,
+        "Impedance measures - Basal metabolic rate": 6,
+        "Impedance measures - Body Mass Index (BMI)": 7,
+        "Impedance measures - Body fat percentage": 5,
+        "Impedance measures - Impedance of arm (left)": 14,
+        "Impedance measures - Impedance of arm (right)": 11,
+        "Impedance measures - Impedance of leg (left)": 11,
+        "Impedance measures - Impedance of leg (right)": 9,
+        "Impedance measures - Impedance of whole body": 15,
+        "Impedance measures - Leg fat mass (left)": 5,
+        "Impedance measures - Leg fat mass (right)": 5,
+        "Impedance measures - Leg fat percentage (left)": 6,
+        "Impedance measures - Leg fat percentage (right)": 6,
+        "Impedance measures - Leg fat-free mass (left)": 6,
+        "Impedance measures - Leg fat-free mass (right)": 6,
+        "Impedance measures - Leg predicted mass (left)": 6,
+        "Impedance measures - Leg predicted mass (right)": 7,
+        "Impedance measures - Trunk fat mass": 5,
+        "Impedance measures - Trunk fat percentage": 5,
+        "Impedance measures - Trunk fat-free mass": 7,
+        "Impedance measures - Trunk predicted mass": 7,
+        "Impedance measures - Weight": 5,
+        "Impedance measures - Whole body fat mass": 5,
+        "Impedance measures - Whole body fat-free mass": 6,
+        "Impedance measures - Whole body water mass": 6,
+        "Legs-leg fat ratio (female)": 3,
+        "Legs-leg fat ratio (male)": 1,
+        "Non-albumin protein": 1,
+        "Non-cancer illness code, self-reported: high cholesterol": 1,
+        "Phospholipids in IDL ": 1,
+        "Phospholipids in large LDL ": 1,
+        "Serum creatinine": 1,
+        "Thin vs extreme obese": 1,
+        "Total cholesterol in LDL ": 1,
+        "Total cholesterol in large LDL ": 1,
+        "Total cholesterol in medium LDL ": 1,
+        "Total cholesterol in small LDL ": 1,
+        "Triglycerides cholesterol": 1,
+        "Trunk-trunk fat ratio (female)": 5,
+        "Trunk-trunk fat ratio (male)": 2,
+        "Waist circumference": 5,
+        "Waist-hip ratio": 4,
+        "Waist-hip ratio (adjusted for BMI)": 13,
+        "Waist-hip ratio (adjusted for BMI, female)": 2,
+        "Waist-hip ratio (adjusted for BMI, male)": 10,
+        "Waist-hip ratio (female)": 3,
+        "Waist-hip ratio (male)": 2,
+        "Weight": 5
+      }
+    },
+    "Mortality": {
+      "count": {
+        "Long-standing illness, disability or infirmity": 1,
+        "Number of self-reported non-cancer illnesses": 1
+      }
+    },
+    "Neoplasms": {
+      "count": {
+        "BRCA1/2-negative breast cancer": 1
+      }
+    },
+    "Neurological": {
+      "count": {
+        "3rd ventricle": 1,
+        "Anterior corona radiata fractional anisotropy": 1,
+        "Frequent insomnia symptoms": 2,
+        "Inferior fronto-occipital fasciculus fractional anisotropy": 3,
+        "Inferior fronto-occipital fasciculus radial diusivities": 1,
+        "Insomnia": 1,
+        "Left caudate": 2,
+        "Left middle temporal": 1,
+        "Pain type(s) experienced in last month: Knee pain": 2,
+        "Pain type(s) experienced in last month: Neck or shoulder pain": 1,
+        "Sleeplessness / insomnia": 2
+      }
+    },
+    "Nutritional": {
+      "count": {
+        "Bread type: White": 1,
+        "Bread type: Wholemeal or wholegrain": 1,
+        "Cereal type: Oat cereal (e.g. Ready Brek, porridge)": 1,
+        "Cheese intake": 2,
+        "Coffee type: Ground coffee (include espresso, filter etc)": 1,
+        "Major dietary changes in the last 5 years": 1,
+        "Milk type used: Skimmed": 1,
+        "Never eat eggs, dairy, wheat, sugar: I eat all of the above": 1,
+        "Never eat eggs, dairy, wheat, sugar: Sugar or foods/drinks containing sugar": 1,
+        "Non-oily fish intake": 4,
+        "Oily fish intake": 7,
+        "Pork intake": 1,
+        "Poultry intake": 4
+      }
+    },
+    "Ophthalmological": {
+      "count": {
+        "Age-related Macular Degeneration": 1
+      }
+    },
+    "Psychiatric": {
+      "count": {
+        "Anxiety/tension factors": 1,
+        "Autism spectrum disorder": 1,
+        "Average weekly beer plus cider intake": 1,
+        "Bipolar disorder": 1,
+        "Chronotype": 9,
+        "Chronotype (continuous)": 1,
+        "Cigarettes per day": 2,
+        "Drinks per week": 2,
+        "Happiness and subjective well-being - General happiness with own health": 1,
+        "Long sleep": 1,
+        "Morning person (binary)": 5,
+        "Morning/evening person (chronotype)": 2,
+        "Morningness": 2,
+        "Neuroticism": 19,
+        "Neuroticism (MA GWAMA)": 9,
+        "Neuroticism (univariate)": 10,
+        "Neuroticism general factor": 9,
+        "Neuroticism score": 1,
+        "Schizophrenia": 5,
+        "Schizophrenia vs Bipolar disorder": 2,
+        "Schizophrenia/Bipolar disorder": 2,
+        "Sensitivity / hurt feelings": 1,
+        "Sensitivity / hurt feelings (HURT)": 1,
+        "Short sleep": 1,
+        "Sleep duration": 8,
+        "Sleep duration (mean)": 1,
+        "Sleep sedentary (conditioning sex and BMI)": 2,
+        "Well-being spectrum": 9,
+        "Why stopped smoking: Health precaution": 2,
+        "Worrier / anxious feelings": 1,
+        "Worry/vulnerability factors": 1
+      }
+    },
+    "Reproduction": {
+      "count": {
+        "Age at first birth": 1,
+        "Age at first birth (female)": 1,
+        "Age at first live birth (female)": 1,
+        "Age at last live birth (female)": 2,
+        "Age at menarche": 1,
+        "Age first had sexual intercourse": 1,
+        "Age started oral contraceptive pill (female)": 1,
+        "Age when periods started (menarche) (female)": 2,
+        "Number of live births (female)": 1,
+        "Number of pregnancy terminations (female)": 1,
+        "Number of sexual partners": 5
+      }
+    },
+    "Respiratory": {
+      "count": {
+        "Asthma, hay fever or eczema": 1,
+        "Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Hayfever, allergic rhinitis or eczema": 2,
+        "Diagnoses - secondary ICD10: J45 Asthma": 1,
+        "Doctor diagnosed hayfever or allergic rhinitis": 2,
+        "FEV1": 7,
+        "FEV1/FVC ratio": 10,
+        "FVC": 5,
+        "Non-cancer illness code, self-reported: hayfever/allergic rhinitis": 2,
+        "PEF": 3
+      }
+    },
+    "Skeletal": {
+      "count": {
+        "Comparative height size at age 10": 1,
+        "Diagnoses - main ICD10: M16 Osteoarthritis of hip": 1,
+        "Diagnoses - main ICD10: M17 Osteoarthritis of knee": 2,
+        "Estimated BMD": 14,
+        "Estimated bone mineral density from heel ultrasounds": 18,
+        "Heel bone mineral density": 20,
+        "Height": 16,
+        "Non-cancer illness code, self-reported: osteoarthritis": 1,
+        "Sitting height": 7,
+        "Standing height": 8,
+        "Systemic Lupus Erythematosus": 2,
+        "Total body BMD": 1,
+        "Total body BMD (60 or older)": 1
+      }
+    },
+    "Social Interactions": {
+      "count": {
+        "Social support - Leisure/social activities: Religious group": 2
+      }
+    }
+  },
+  "6": {
+    "Activities": {
+      "count": {
+        "Automobile speeding propensity": 1,
+        "First PC of the four riskly behaviours": 1,
+        "General risk tolerance": 3,
+        "Positive affect (MA GWAMA)": 1
+      }
+    },
+    "Cardiovascular": {
+      "count": {
+        "Diagnoses - secondary ICD10: I10 Essential (primary) hypertension": 1,
+        "Systolic Blood Pressure (automated reading)": 1
+      }
+    },
+    "Cell": {
+      "count": {
+        "Rubella IgG levels": 1
+      }
+    },
+    "Connective Tissue": {
+      "count": {
+        "Carpal tunnel syndrome": 2
+      }
+    },
+    "Dermatological": {
+      "count": {
+        "Hair colour (natural, before greying): Dark brown": 1
+      }
+    },
+    "Endocrine": {
+      "count": {
+        "Type 2 Diabetes": 4
+      }
+    },
+    "Environmental": {
+      "count": {
+        "Agents acting on the renin-angiotensin system": 2,
+        "Anti-inflammatory and antirheumatic products, non-steroids": 1,
+        "Calcium channel blockers": 1,
+        "Diuretics": 3,
+        "Thyroid preparations": 4
+      }
+    },
+    "Immunological": {
+      "count": {
+        "Basophil count (three-way meta)": 1,
+        "Basophil count (two-way meta)": 1,
+        "Eosinophil percentage of granulocytes (three-way meta)": 1,
+        "Eosinophil percentage of granulocytes (two-way meta)": 1,
+        "Eosinophil percentage of white cells (three-way meta)": 1,
+        "Granulocyte count (three-way meta)": 3,
+        "Granulocyte count (two-way meta)": 3,
+        "High light scatter percentage of red cells (three-way meta)": 1,
+        "High light scatter percentage of red cells (two-way meta)": 1,
+        "High light scatter reticulocyte count (three-way meta)": 1,
+        "High light scatter reticulocyte count (two-way meta)": 1,
+        "Immature fraction of reticulocytes (three-way meta)": 1,
+        "Immature fraction of reticulocytes (two-way meta)": 1,
+        "Immunoglobulin A deficiency": 1,
+        "Monocyte count (three-way meta)": 3,
+        "Monocyte count (two-way meta)": 1,
+        "Myeloid white cell count (three-way meta)": 6,
+        "Myeloid white cell count (two-way meta)": 3,
+        "Neutrophil count (three-way meta)": 4,
+        "Neutrophil count (two-way meta)": 3,
+        "Platelet distribution width (three-way meta)": 5,
+        "Platelet distribution width (two-way meta)": 5,
+        "Red cell distribution width (three-way meta)": 6,
+        "Red cell distribution width (two-way meta)": 6,
+        "Reticulocyte count (three-way meta)": 2,
+        "Reticulocyte count (two-way meta)": 2,
+        "Reticulocyte fraction of red cells (three-way meta)": 2,
+        "Reticulocyte fraction of red cells (two-way meta)": 1,
+        "Sum basophil neutrophil count (three-way meta)": 4,
+        "Sum basophil neutrophil count (two-way meta)": 3,
+        "Sum neutrophil eosinophil count (three-way meta)": 3,
+        "Sum neutrophil eosinophil count (two-way meta)": 3,
+        "White blood cell count (three-way meta)": 5,
+        "White blood cell count (two-way meta)": 4
+      }
+    },
+    "Metabolic": {
+      "count": {
+        "Arms-arm fat ratio (female)": 4,
+        "Arms-arm fat ratio (male)": 1,
+        "Body Mass Index": 11,
+        "Body Mass Index (female)": 5,
+        "Body Mass Index (male)": 5,
+        "Estimated glomerular filtration rate": 8,
+        "Hip circumference": 1,
+        "Impedance measures - Arm fat-free mass (left)": 3,
+        "Impedance measures - Arm fat-free mass (right)": 3,
+        "Impedance measures - Arm predicted mass (left)": 3,
+        "Impedance measures - Arm predicted mass (right)": 3,
+        "Impedance measures - Basal metabolic rate": 2,
+        "Impedance measures - Body Mass Index (BMI)": 1,
+        "Impedance measures - Impedance of arm (left)": 2,
+        "Impedance measures - Impedance of arm (right)": 2,
+        "Impedance measures - Impedance of leg (left)": 3,
+        "Impedance measures - Impedance of leg (right)": 3,
+        "Impedance measures - Impedance of whole body": 4,
+        "Impedance measures - Leg fat-free mass (left)": 2,
+        "Impedance measures - Leg fat-free mass (right)": 2,
+        "Impedance measures - Leg predicted mass (left)": 2,
+        "Impedance measures - Leg predicted mass (right)": 2,
+        "Impedance measures - Trunk fat-free mass": 2,
+        "Impedance measures - Trunk predicted mass": 1,
+        "Impedance measures - Weight": 1,
+        "Impedance measures - Whole body fat-free mass": 2,
+        "Impedance measures - Whole body water mass": 2,
+        "Low-density-lipoprotein cholesterol": 1,
+        "Total cholesterol": 1,
+        "Triglycerides cholesterol": 3,
+        "Trunk-trunk fat ratio (female)": 2,
+        "Waist-hip ratio": 1,
+        "Waist-hip ratio (adjusted for BMI)": 5,
+        "Waist-hip ratio (adjusted for BMI, female)": 2,
+        "Waist-hip ratio (adjusted for BMI, male)": 4,
+        "Waist-hip ratio (female)": 1,
+        "Weight": 1
+      }
+    },
+    "Neurological": {
+      "count": {
+        "Inferior fronto-occipital fasciculus fractional anisotropy": 2,
+        "Inferior fronto-occipital fasciculus radial diusivities": 2,
+        "Left pallidum": 1,
+        "Pain type(s) experienced in last month: Knee pain": 1
+      }
+    },
+    "Nutritional": {
+      "count": {
+        "Cheese intake": 1,
+        "Non-oily fish intake": 2,
+        "Oily fish intake": 2,
+        "Poultry intake": 1,
+        "Salt added to food": 1
+      }
+    },
+    "Psychiatric": {
+      "count": {
+        "Alcohol intake frequency": 1,
+        "Autism spectrum disorder": 1,
+        "Chronotype": 2,
+        "Ever smoker": 1,
+        "Irritability": 1,
+        "Morning person (binary)": 1,
+        "Neuroticism": 8,
+        "Neuroticism (MA GWAMA)": 3,
+        "Neuroticism (univariate)": 5,
+        "Neuroticism general factor": 4,
+        "Neuroticism score": 1,
+        "Sleep duration": 2,
+        "Well-being spectrum": 3,
+        "Worrier / anxious feelings": 1
+      }
+    },
+    "Reproduction": {
+      "count": {
+        "Number of sexual partners": 1
+      }
+    },
+    "Respiratory": {
+      "count": {
+        "Asthma, hay fever or eczema": 1,
+        "FEV1": 2,
+        "FEV1/FVC ratio": 7
+      }
+    },
+    "Skeletal": {
+      "count": {
+        "Diagnoses - main ICD10: M16 Osteoarthritis of hip": 1,
+        "Diagnoses - main ICD10: M23 Internal derangement of knee": 1,
+        "Estimated BMD": 5,
+        "Estimated bone mineral density from heel ultrasounds": 7,
+        "Heel bone mineral density": 8,
+        "Height": 6,
+        "Non-cancer illness code, self-reported: osteoarthritis": 2,
+        "Osteoarthritis (self reported)": 1,
+        "Standing height": 2,
+        "Systemic Lupus Erythematosus": 3
+      }
+    }
+  }
+}

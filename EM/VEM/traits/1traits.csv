@@ -1,0 +1,326 @@
+Activities,Automobile speeding propensity,1
+Activities,Facial ageing,1
+Activities,First PC of the four riskly behaviours,2
+Activities,General risk tolerance,2
+Activities,Life satisfaction (MA GWAMA),1
+Activities,"Medication for cholesterol, blood pressure or diabetes: Blood pressure medication",1
+Activities,"Medication for cholesterol, blood pressure or diabetes: Cholesterol lowering medication",1
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication",1
+Activities,Number of treatments/medications taken,1
+Activities,Overall activity (conditioning sex and BMI),1
+Activities,Overall health rating,1
+Activities,Positive affect (MA GWAMA),2
+Activities,Self-rated health,1
+Activities,Strenuous sports or other exercises,1
+Activities,Time spent watching television (TV),2
+Activities,Treatment/medication code: metformin,1
+Activities,Usual walking pace,4
+Body Structures,Mouth/teeth dental problems: Dentures,1
+Cardiovascular,Heart rate increase,2
+Cardiovascular,High blood pressure,1
+Cardiovascular,"Non-cancer illness code, self-reported: hypertension",1
+Cardiovascular,Pulse rate (automated reading),1
+Cardiovascular,Resting heart rate,1
+Cardiovascular,Systolic Blood Pressure (automated reading),1
+Cardiovascular,Vascular/heart problems diagnosed by doctor: High blood pressure,1
+Cell,Measles IgG levels,1
+Cognitive,Ambidextrousness,1
+Cognitive,Cognitive performance,2
+Cognitive,Intelligence,1
+Cognitive,Numeric memory test - Maximum digits remembered correctly,1
+Cognitive,Verbal-numerical reasoning,2
+Connective Tissue,Carpal tunnel syndrome,1
+Dermatological,Ease of skin tanning,2
+Dermatological,Eczema,1
+Dermatological,"Hair colour (natural, before greying): Black",1
+Dermatological,"Hair colour (natural, before greying): Blonde",2
+Dermatological,"Hair colour (natural, before greying): Dark brown",1
+Dermatological,"Hair colour (natural, before greying): Red",1
+Dermatological,Male pattern baldness (BOLT LMM infinitesimal mixed model),1
+Dermatological,Male pattern baldness (BOLT LMM non-infinitesimal mixed model),1
+Dermatological,Skin colour,1
+Endocrine,Diabetes (diagnosed by doctor),1
+Endocrine,Diagnoses - secondary ICD10: E11 Type 2 diabetes mellitus,1
+Endocrine,"Non-cancer illness code, self-reported: diabetes",1
+Endocrine,Type 2 Diabetes,16
+Endocrine,Type 2 Diabetes (adjusted for BMI),1
+Environment,Attendance/disability/mobility allowance: Blue badge,1
+Environment,Education - Qualifications,3
+Environment,Educational attainment,10
+Environment,Illnesses of mother: Diabetes,1
+Environment,Illnesses of siblings: Diabetes,1
+Environment,Illnesses of siblings: High blood pressure,1
+Environment,Job involves heavy manual or physical work,1
+Environment,Maternal smoking around birth,1
+Environmental,Agents acting on the renin-angiotensin system,6
+Environmental,Calcium channel blockers,2
+Environmental,Diuretics,8
+Environmental,Drugs used in diabetes,1
+Environmental,HMG CoA reductase inhibitors,1
+Environmental,Thyroid preparations,6
+Gastrointestinal,Diagnoses - secondary ICD10: K44 Diaphragmatic hernia,1
+Gastrointestinal,Inflammatory Bowel Disease,1
+Gastrointestinal,Primary sclerosing cholangitis,1
+Hematological,Hemoglobin A1c,1
+Immunological,Basophil count (three-way meta),5
+Immunological,Basophil count (two-way meta),4
+Immunological,Eosinophil count (two-way meta),1
+Immunological,Eosinophil percentage of granulocytes (three-way meta),1
+Immunological,Eosinophil percentage of granulocytes (two-way meta),1
+Immunological,Eosinophil percentage of white cells (three-way meta),1
+Immunological,Granulocyte count (three-way meta),7
+Immunological,Granulocyte count (two-way meta),6
+Immunological,Granulocyte percentage of myeloid white cells (three-way meta),1
+Immunological,Granulocyte percentage of myeloid white cells (two-way meta),1
+Immunological,Hematocrit (three-way meta),2
+Immunological,Hematocrit (two-way meta),1
+Immunological,Hemoglobin concentration (three-way meta),1
+Immunological,Hemoglobin concentration (two-way meta),1
+Immunological,High light scatter percentage of red cells (three-way meta),4
+Immunological,High light scatter percentage of red cells (two-way meta),2
+Immunological,High light scatter reticulocyte count (three-way meta),3
+Immunological,High light scatter reticulocyte count (two-way meta),2
+Immunological,Immature fraction of reticulocytes (three-way meta),2
+Immunological,Immature fraction of reticulocytes (two-way meta),1
+Immunological,Lymphocyte percentage of white cells (two-way meta),1
+Immunological,Mean corpuscular hemoglobin (three-way meta),5
+Immunological,Mean corpuscular hemoglobin (two-way meta),4
+Immunological,Mean corpuscular volume (three-way meta),5
+Immunological,Mean corpuscular volume (two-way meta),3
+Immunological,Monocyte count (three-way meta),6
+Immunological,Monocyte count (two-way meta),1
+Immunological,Monocyte percentage of white cells (three-way meta),1
+Immunological,Monocyte percentage of white cells (two-way meta),1
+Immunological,Myeloid white cell count (three-way meta),8
+Immunological,Myeloid white cell count (two-way meta),7
+Immunological,Neutrophil count (three-way meta),7
+Immunological,Neutrophil count (two-way meta),8
+Immunological,Neutrophil percentage of white cells (three-way meta),1
+Immunological,Neutrophil percentage of white cells (two-way meta),1
+Immunological,Platelet count,1
+Immunological,Platelet count (three-way meta),1
+Immunological,Platelet count (two-way meta),1
+Immunological,Platelet distribution width (three-way meta),9
+Immunological,Platelet distribution width (two-way meta),9
+Immunological,Plateletcrit (three-way meta),1
+Immunological,Plateletcrit (two-way meta),1
+Immunological,Red blood cell count (three-way meta),1
+Immunological,Red blood cell count (two-way meta),1
+Immunological,Red cell distribution width (three-way meta),13
+Immunological,Red cell distribution width (two-way meta),13
+Immunological,Reticulocyte count (three-way meta),2
+Immunological,Reticulocyte count (two-way meta),2
+Immunological,Reticulocyte fraction of red cells (three-way meta),2
+Immunological,Reticulocyte fraction of red cells (two-way meta),3
+Immunological,Sum basophil neutrophil count (three-way meta),7
+Immunological,Sum basophil neutrophil count (two-way meta),7
+Immunological,Sum neutrophil eosinophil count (three-way meta),7
+Immunological,Sum neutrophil eosinophil count (two-way meta),7
+Immunological,White blood cell count (three-way meta),7
+Immunological,White blood cell count (two-way meta),5
+Metabolic,Arms-arm fat ratio (female),13
+Metabolic,Arms-arm fat ratio (male),3
+Metabolic,Blood urea nitrogen,3
+Metabolic,Body Mass Index,31
+Metabolic,Body Mass Index (female <= 50 yrs),1
+Metabolic,Body Mass Index (female > 50 yrs),1
+Metabolic,Body Mass Index (female),15
+Metabolic,Body Mass Index (male <= 50 yrs),1
+Metabolic,Body Mass Index (male > 50 yrs),1
+Metabolic,Body Mass Index (male),14
+Metabolic,Body Mass Index - Child,1
+Metabolic,Body fat percentage,1
+Metabolic,Childhood obesity,1
+Metabolic,Comparative body size at age 10,1
+Metabolic,Diagnoses - secondary ICD10: E66 Overweight and obesity,1
+Metabolic,Estimated glomerular filtration rate,12
+Metabolic,Extreme Body Mass Index,1
+Metabolic,Extreme obesity (childhood),2
+Metabolic,HbA1c,1
+Metabolic,High-density lipoprotein cholesterol,1
+Metabolic,Hip circumference,8
+Metabolic,Hip circumference (female),3
+Metabolic,Hip circumference (male),3
+Metabolic,Impedance measures - Arm fat mass (left),3
+Metabolic,Impedance measures - Arm fat mass (right),3
+Metabolic,Impedance measures - Arm fat percentage (left),4
+Metabolic,Impedance measures - Arm fat percentage (right),4
+Metabolic,Impedance measures - Arm fat-free mass (left),6
+Metabolic,Impedance measures - Arm fat-free mass (right),6
+Metabolic,Impedance measures - Arm predicted mass (left),6
+Metabolic,Impedance measures - Arm predicted mass (right),7
+Metabolic,Impedance measures - Basal metabolic rate,6
+Metabolic,Impedance measures - Body Mass Index (BMI),2
+Metabolic,Impedance measures - Body fat percentage,4
+Metabolic,Impedance measures - Impedance of arm (left),10
+Metabolic,Impedance measures - Impedance of arm (right),10
+Metabolic,Impedance measures - Impedance of leg (left),7
+Metabolic,Impedance measures - Impedance of leg (right),7
+Metabolic,Impedance measures - Impedance of whole body,10
+Metabolic,Impedance measures - Leg fat mass (left),3
+Metabolic,Impedance measures - Leg fat mass (right),3
+Metabolic,Impedance measures - Leg fat percentage (left),5
+Metabolic,Impedance measures - Leg fat percentage (right),5
+Metabolic,Impedance measures - Leg fat-free mass (left),5
+Metabolic,Impedance measures - Leg fat-free mass (right),5
+Metabolic,Impedance measures - Leg predicted mass (left),5
+Metabolic,Impedance measures - Leg predicted mass (right),5
+Metabolic,Impedance measures - Trunk fat mass,4
+Metabolic,Impedance measures - Trunk fat percentage,3
+Metabolic,Impedance measures - Trunk fat-free mass,6
+Metabolic,Impedance measures - Trunk predicted mass,6
+Metabolic,Impedance measures - Weight,5
+Metabolic,Impedance measures - Whole body fat mass,4
+Metabolic,Impedance measures - Whole body fat-free mass,6
+Metabolic,Impedance measures - Whole body water mass,6
+Metabolic,Lactate dehydrogenase,1
+Metabolic,Legs-leg fat ratio (female),5
+Metabolic,Legs-leg fat ratio (male),1
+Metabolic,Low-density lipoprotein cholesterol,1
+Metabolic,Low-density-lipoprotein cholesterol,1
+Metabolic,"Non-cancer illness code, self-reported: high cholesterol",1
+Metabolic,Obesity class 1,1
+Metabolic,Obesity class 2,1
+Metabolic,Obesity class 3,1
+Metabolic,Overweight,1
+Metabolic,Subcutaneous adipose tissue volume,1
+Metabolic,Thin vs extreme obese,2
+Metabolic,Total cholesterol,1
+Metabolic,Triglycerides cholesterol,1
+Metabolic,Trunk-trunk fat ratio (female),6
+Metabolic,Trunk-trunk fat ratio (male),2
+Metabolic,Variability of Body Mass Index,1
+Metabolic,Waist circumference,5
+Metabolic,Waist circumference (adjusted for BMI),2
+Metabolic,Waist circumference (female),3
+Metabolic,"Waist circumference (female, adjusted for BMI)",2
+Metabolic,Waist circumference (male),3
+Metabolic,Waist-hip ratio,5
+Metabolic,Waist-hip ratio (adjusted for BMI),9
+Metabolic,"Waist-hip ratio (adjusted for BMI, female)",2
+Metabolic,"Waist-hip ratio (adjusted for BMI, male)",9
+Metabolic,Waist-hip ratio (female),3
+Metabolic,Waist-hip ratio (male),5
+Metabolic,Weight,5
+Metabolic,Weight (female),1
+Metabolic,Weight (male),1
+Mortality,Father's age at death,1
+Neurological,Anterior corona radiata fractional anisotropy,1
+Neurological,Anterior corona radiata radial diusivities,1
+Neurological,Anterior limb of internal capsule fractional anisotropy,1
+Neurological,Brain stem,1
+Neurological,Cingulum (hippocampus) axial diusivities,1
+Neurological,Cingulum (hippocampus) mean diusivities,1
+Neurological,Fornix (cres) / Stria terminalis mean diusivities,1
+Neurological,Fornix (cres) / Stria terminalis radial diusivities,1
+Neurological,Gray matter,1
+Neurological,Inferior fronto-occipital fasciculus fractional anisotropy,1
+Neurological,Left cerebellum exterior,1
+Neurological,Left cerebellum white matter,2
+Neurological,Left entorhinal,1
+Neurological,Left pallidum,3
+Neurological,Pain type(s) experienced in last month: Back pain,1
+Neurological,Pain type(s) experienced in last month: Hip pain,1
+Neurological,Pain type(s) experienced in last month: Knee pain,1
+Neurological,Right cerebellum exterior,1
+Neurological,Right cerebellum white matter,1
+Neurological,Superior corona radiata mode of anisotropy,1
+Nutritional,Beef intake,2
+Nutritional,Bread type: White,2
+Nutritional,Bread type: Wholemeal or wholegrain,1
+Nutritional,Cereal type: Muesli,1
+Nutritional,"Cereal type: Oat cereal (e.g. Ready Brek, porridge)",1
+Nutritional,Cheese intake,1
+Nutritional,Coffee intake,1
+Nutritional,"Coffee type: Ground coffee (include espresso, filter etc)",1
+Nutritional,Major dietary changes in the last 5 years,1
+Nutritional,Milk type used: Full cream,1
+Nutritional,Milk type used: Skimmed,1
+Nutritional,Milk type used: Soya,1
+Nutritional,Non-oily fish intake,4
+Nutritional,Oily fish intake,3
+Nutritional,Pork intake,1
+Nutritional,Poultry intake,3
+Nutritional,Salt added to food,2
+Nutritional,Tea intake,1
+Nutritional,Variation in diet,1
+Nutritional,Water intake,2
+Ophthalmological,Diagnoses - main ICD10: H26 Other cataract,1
+Psychiatric,Age started smoking in former smokers,1
+Psychiatric,Alcohol intake frequency,1
+Psychiatric,Average weekly beer plus cider intake,2
+Psychiatric,Chronotype,4
+Psychiatric,Chronotype (continuous),1
+Psychiatric,Cigarettes per day,1
+Psychiatric,Depression,1
+Psychiatric,Depressive affect subcluster,1
+Psychiatric,Depressive symptoms (MA GWAMA),1
+Psychiatric,Depressive symptoms (univariate),1
+Psychiatric,Ease of getting up in the morning,1
+Psychiatric,Ever smoked regulary,1
+Psychiatric,Ever smoker,1
+Psychiatric,Extreme chronotype,1
+Psychiatric,Fed-up feelings,1
+Psychiatric,Fed-up feelings (FED_UP),1
+Psychiatric,Frequency of tiredness / lethargy in last 2 weeks,1
+Psychiatric,Getting up in morning,1
+Psychiatric,Loneliness,1
+Psychiatric,Loneliness (MTAG),1
+Psychiatric,Long sleep,1
+Psychiatric,Miserableness,1
+Psychiatric,Miserableness (MIS),1
+Psychiatric,Morning person (binary),1
+Psychiatric,Morning/evening person (chronotype),1
+Psychiatric,Morningness,1
+Psychiatric,Nervous feelings,1
+Psychiatric,Nervous feelings (NERV-FEEL),1
+Psychiatric,Neuroticism,13
+Psychiatric,Neuroticism (MA GWAMA),9
+Psychiatric,Neuroticism (univariate),7
+Psychiatric,Neuroticism general factor,5
+Psychiatric,Neuroticism score,1
+Psychiatric,PGC cross disorder,1
+Psychiatric,Schizophrenia,4
+Psychiatric,Schizophrenia vs Bipolar disorder,2
+Psychiatric,Schizophrenia/Bipolar disorder,3
+Psychiatric,"Seen doctor (GP) for nerves, anxiety, tension or depression",1
+Psychiatric,Sleep duration,6
+Psychiatric,Sleep duration (mean),1
+Psychiatric,Sleep efficiency,1
+Psychiatric,Sleep sedentary (conditioning sex and BMI),1
+Psychiatric,Snoring,2
+Psychiatric,Well-being spectrum,6
+Psychiatric,Worrier / anxious feelings,2
+Psychiatric,Worrier / anxious feelings (WORRY),1
+Psychiatric,Worry subcluster,1
+Reproduction,Age at first live birth (female),1
+Reproduction,Age at menarche,6
+Reproduction,Age first had sexual intercourse,1
+Reproduction,Age when periods started (menarche) (female),2
+Reproduction,Number of sexual partners,3
+Reproduction,Relative age of first facial hair (male),2
+Reproduction,Relative age voice broke (male),1
+Respiratory,Chest pain or discomfort,1
+Respiratory,FEV1,11
+Respiratory,FEV1/FVC ratio,4
+Respiratory,FVC,8
+Respiratory,PEF,6
+Skeletal,Comparative height size at age 10,4
+Skeletal,Diagnoses - main ICD10: M16 Osteoarthritis of hip,1
+Skeletal,Diagnoses - main ICD10: M17 Osteoarthritis of knee,1
+Skeletal,Diagnoses - main ICD10: M23 Internal derangement of knee,1
+Skeletal,Estimated BMD,13
+Skeletal,Estimated bone mineral density from heel ultrasounds,11
+Skeletal,Heel bone mineral density,19
+Skeletal,Height,10
+Skeletal,Osteoarthritis (hospital diagnosed),2
+Skeletal,Osteoarthritis (self reported),2
+Skeletal,Osteoarthritis of hip,1
+Skeletal,Osteoarthritis of hip and/or knee,1
+Skeletal,Sitting height,6
+Skeletal,Standing height,5
+Skeletal,Systemic Lupus Erythematosus,4
+Skeletal,Total body BMD,1
+Skeletal,Total body BMD (60 or older),1
+Social Interactions,Social support - Leisure/social activities: Adult education class,2
+Social Interactions,Social support - Leisure/social activities: Sports club or gym,1

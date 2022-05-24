@@ -1,0 +1,158 @@
+Activities,Age started wearing glasses or contact lenses,1
+Activities,First PC of the four riskly behaviours,1
+Activities,General risk tolerance,2
+Activities,Hands-free device/speakerphone use with mobile phone in last 3 month,1
+Activities,Positive affect (MA GWAMA),1
+Activities,Positive affect (univariate),1
+Activities,Types of transport used (excluding work): Cycle,1
+Activities,Usual walking pace,1
+Cardiovascular,Coronary artery disease,1
+Cardiovascular,Diastolic Blood Pressure (automated reading),2
+Cardiovascular,Heart rate increase,1
+Cardiovascular,Heart rate recovery at 40 secnds,1
+Cardiovascular,"Non-cancer illness code, self-reported: hypertension",1
+Cardiovascular,Systolic Blood Pressure (automated reading),3
+Cardiovascular,Vascular/heart problems diagnosed by doctor: High blood pressure,2
+Cognitive,Cognitive performance,1
+Cognitive,Intelligence,1
+Dermatological,Ease of skin tanning,1
+Dermatological,"Hair colour (natural, before greying): Black",1
+Dermatological,Skin colour,1
+Endocrine,Type 2 Diabetes,3
+Environment,Educational attainment,4
+Environmental,Agents acting on the renin-angiotensin system,5
+Environmental,Calcium channel blockers,2
+Environmental,Diuretics,4
+Environmental,Thyroid preparations,3
+Gastrointestinal,Diverticular disease,2
+Immunological,Basophil count (three-way meta),2
+Immunological,Basophil count (two-way meta),2
+Immunological,Eosinophil percentage of granulocytes (three-way meta),1
+Immunological,Eosinophil percentage of white cells (three-way meta),1
+Immunological,Granulocyte count (three-way meta),3
+Immunological,Granulocyte count (two-way meta),4
+Immunological,Monocyte count (three-way meta),1
+Immunological,Myeloid white cell count (three-way meta),4
+Immunological,Myeloid white cell count (two-way meta),4
+Immunological,Neutrophil count (three-way meta),3
+Immunological,Neutrophil count (two-way meta),4
+Immunological,Platelet count (three-way meta),1
+Immunological,Platelet distribution width (three-way meta),3
+Immunological,Platelet distribution width (two-way meta),4
+Immunological,Plateletcrit (three-way meta),1
+Immunological,Red blood cell count (three-way meta),1
+Immunological,Red blood cell count (two-way meta),1
+Immunological,Red cell distribution width (three-way meta),3
+Immunological,Red cell distribution width (two-way meta),3
+Immunological,Sum basophil neutrophil count (three-way meta),3
+Immunological,Sum basophil neutrophil count (two-way meta),4
+Immunological,Sum neutrophil eosinophil count (three-way meta),3
+Immunological,Sum neutrophil eosinophil count (two-way meta),3
+Immunological,White blood cell count (three-way meta),3
+Immunological,White blood cell count (two-way meta),3
+Metabolic,Arms-arm fat ratio (female),4
+Metabolic,Birth weight of first child (female),1
+Metabolic,Blood urea nitrogen,1
+Metabolic,Body Mass Index,11
+Metabolic,Body Mass Index (female),6
+Metabolic,Body Mass Index (male),5
+Metabolic,Estimated glomerular filtration rate,4
+Metabolic,Hip circumference,2
+Metabolic,Impedance measures - Arm fat mass (left),2
+Metabolic,Impedance measures - Arm fat mass (right),2
+Metabolic,Impedance measures - Arm fat percentage (left),2
+Metabolic,Impedance measures - Arm fat percentage (right),2
+Metabolic,Impedance measures - Arm fat-free mass (left),2
+Metabolic,Impedance measures - Arm fat-free mass (right),1
+Metabolic,Impedance measures - Arm predicted mass (left),1
+Metabolic,Impedance measures - Arm predicted mass (right),1
+Metabolic,Impedance measures - Basal metabolic rate,2
+Metabolic,Impedance measures - Body Mass Index (BMI),2
+Metabolic,Impedance measures - Body fat percentage,2
+Metabolic,Impedance measures - Impedance of arm (left),2
+Metabolic,Impedance measures - Impedance of arm (right),2
+Metabolic,Impedance measures - Impedance of whole body,2
+Metabolic,Impedance measures - Leg fat mass (left),2
+Metabolic,Impedance measures - Leg fat mass (right),2
+Metabolic,Impedance measures - Leg fat percentage (left),2
+Metabolic,Impedance measures - Leg fat percentage (right),2
+Metabolic,Impedance measures - Leg fat-free mass (left),1
+Metabolic,Impedance measures - Leg fat-free mass (right),1
+Metabolic,Impedance measures - Leg predicted mass (left),1
+Metabolic,Impedance measures - Leg predicted mass (right),1
+Metabolic,Impedance measures - Trunk fat mass,4
+Metabolic,Impedance measures - Trunk fat percentage,2
+Metabolic,Impedance measures - Trunk fat-free mass,1
+Metabolic,Impedance measures - Trunk predicted mass,1
+Metabolic,Impedance measures - Weight,3
+Metabolic,Impedance measures - Whole body fat mass,2
+Metabolic,Impedance measures - Whole body fat-free mass,1
+Metabolic,Impedance measures - Whole body water mass,1
+Metabolic,Trunk-trunk fat ratio (female),1
+Metabolic,Waist circumference,2
+Metabolic,Waist-hip ratio,2
+Metabolic,Waist-hip ratio (adjusted for BMI),4
+Metabolic,"Waist-hip ratio (adjusted for BMI, female)",1
+Metabolic,"Waist-hip ratio (adjusted for BMI, male)",4
+Metabolic,Waist-hip ratio (female),1
+Metabolic,Waist-hip ratio (male),1
+Metabolic,Weight,3
+Neurological,Anterior corona radiata fractional anisotropy,1
+Neurological,Genu of corpus callosum fractional anisotropy,1
+Neurological,Left caudate,1
+Neurological,Left pallidum,2
+Neurological,Pain type(s) experienced in last month: Knee pain,1
+Nutritional,Cereal intake,1
+Nutritional,Non-oily fish intake,3
+Nutritional,Poultry intake,1
+Nutritional,Salad / raw vegetable intake,1
+Nutritional,Salt added to food,1
+Psychiatric,Anxiety/tension factors,1
+Psychiatric,Chronotype,2
+Psychiatric,Daytime dozing / sleeping (narcolepsy),1
+Psychiatric,Ever smoked regulary,2
+Psychiatric,Ever smoker,1
+Psychiatric,Fed-up feelings,1
+Psychiatric,Guilty feelings,1
+Psychiatric,Guilty feelings (GUILT),1
+Psychiatric,Irritability,2
+Psychiatric,Irritability (IRR),1
+Psychiatric,Mood swings,1
+Psychiatric,Mood swings (MOOD),1
+Psychiatric,Morning person (binary),2
+Psychiatric,Nap during day,1
+Psychiatric,Neuroticism,11
+Psychiatric,Neuroticism (MA GWAMA),6
+Psychiatric,Neuroticism (univariate),6
+Psychiatric,Neuroticism general factor,6
+Psychiatric,Neuroticism score,3
+Psychiatric,Neuroticism sum score,2
+Psychiatric,Sensitivity / hurt feelings,1
+Psychiatric,Sensitivity / hurt feelings (HURT),1
+Psychiatric,Short sleep,1
+Psychiatric,Sleep duration,2
+Psychiatric,Sleep sedentary (conditioning sex and BMI),1
+Psychiatric,Smoking status: Never,1
+Psychiatric,Well-being spectrum,4
+Psychiatric,Worry too long after embarrassment,1
+Psychiatric,Worry too long after embarrassment (WORR-EMB),1
+Psychiatric,Worry/vulnerability factors,1
+Reproduction,Age at first live birth (female),1
+Reproduction,Age at menarche,2
+Reproduction,Age when periods started (menarche) (female),2
+Reproduction,Number of sexual partners,2
+Reproduction,Relative age of first facial hair (male),1
+Respiratory,FEV1,1
+Respiratory,FEV1/FVC ratio,4
+Respiratory,FVC,2
+Skeletal,Comparative height size at age 10,1
+Skeletal,Diagnoses - main ICD10: M17 Osteoarthritis of knee,1
+Skeletal,Estimated BMD,4
+Skeletal,Estimated bone mineral density from heel ultrasounds,4
+Skeletal,Heel bone mineral density,5
+Skeletal,Height,2
+Skeletal,"Non-cancer illness code, self-reported: osteoarthritis",1
+Skeletal,Sitting height,2
+Skeletal,Standing height,2
+Skeletal,Systemic Lupus Erythematosus,5
+Social Interactions,Social support - Leisure/social activities: Pub or social club,1

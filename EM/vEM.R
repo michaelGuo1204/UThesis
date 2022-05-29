@@ -7,6 +7,7 @@ library(sbm)
 library(missSBM)
 library(reticulate)
 library(Matrix)
+library(pheatmap)
 # Use conda environment 
 use_condaenv("r")
 np <- import('numpy')
@@ -49,6 +50,8 @@ plot.igraph(g_all, vertex.color = factor(membership), edge.width = E(g_all)$weig
 
 # Plot cluster nets
 diag(cluster_net) <- 0
-g_cluster <- graph_from_adjacency_matrix(cluster_net, mode = 'max', weighted = TRUE)
-plot.igraph(g_cluster, edge.width = E(g_cluster)$weight * 2)
+cluster_net <- apply(array, margin, ...)
+g_cluster <- graph_from_adjacency_matrix(cluster_net, weighted = TRUE)
+plot.igraph(g_cluster, edge.width = E(g_cluster)$weight * 4, edge.arrow.size = 0.7)
 
+pheatmap(cluster_net, cluster_rows = FALSE, cluster_cols = FALSE)

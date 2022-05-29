@@ -1,0 +1,713 @@
+{
+  "uid": "78b08b26-b433-4c6f-9d6e-1a3b235fbe52",
+  "name": "3_Linear",
+  "preprocessing": [
+    {
+      "scale": [
+        {
+          "scale": [
+            0.6332799511299431,
+            0.7123135113081376,
+            0.6958726249057662,
+            0.6703261295931761,
+            0.6993680047493712,
+            0.720662987396636,
+            0.7071509023824208,
+            0.7032055253074615,
+            0.7030770167153777,
+            0.645592702165562,
+            0.6784842963532665,
+            0.6969405783021483,
+            0.6988569961001514,
+            0.636932214115448,
+            0.6182958455130737,
+            0.619508130538777,
+            0.6263127861356287,
+            0.6337641973062508,
+            0.6273965403952769,
+            0.6364657669971057,
+            0.6244577013439879,
+            0.6369720199723817,
+            0.6359950036380803,
+            0.6685866782056169,
+            0.6684570678395947,
+            0.6698291664261468,
+            0.6676767478967153,
+            0.6676767478967153,
+            0.6676767478967153,
+            0.6676767478967153,
+            0.6676767478967153,
+            0.6676767478967153,
+            0.6676767478967153,
+            0.6676767478967153,
+            0.6454801339426497,
+            0.6676767478967153,
+            0.6677265500794912,
+            0.6671741412445388,
+            0.6675836397904555,
+            0.6675836397904555,
+            0.7117326742869546,
+            0.669239900619217,
+            0.6782141597836722,
+            0.6838349355379781,
+            0.6835539718178425,
+            0.6835539718178424,
+            0.6841351803171404,
+            0.6841351803171404,
+            0.6839750276763686,
+            0.6831444498665206,
+            0.6835539718178424,
+            0.6820436617677686,
+            0.6707992930140957,
+            0.726416567138771,
+            0.6095331246461264,
+            0.6416765156692448,
+            0.7165574576725284,
+            0.7000625719690435,
+            0.7111473644255427,
+            0.66349668557168,
+            0.6343505573507348
+          ],
+          "mean": [
+            0.5397456279809221,
+            0.8918918918918919,
+            0.8581081081081081,
+            0.6697138314785374,
+            0.7905405405405406,
+            0.9360095389507154,
+            0.8207472178060413,
+            0.8207472178060413,
+            0.8247217806041336,
+            0.5576311605723371,
+            0.746422893481717,
+            0.8469793322734499,
+            0.9395866454689984,
+            0.5639904610492846,
+            0.5214626391096979,
+            0.5234499205087441,
+            0.5401430842607313,
+            0.5643879173290938,
+            0.5429252782193958,
+            0.5624006359300477,
+            0.5274244833068362,
+            0.5635930047694754,
+            0.5608108108108109,
+            0.6573926868044515,
+            0.6554054054054054,
+            0.654610492845787,
+            0.6562003179650239,
+            0.6562003179650239,
+            0.6562003179650239,
+            0.6562003179650239,
+            0.6562003179650239,
+            0.6562003179650239,
+            0.6562003179650239,
+            0.6562003179650239,
+            0.5433227344992051,
+            0.6562003179650239,
+            0.6534181240063593,
+            0.6558028616852146,
+            0.6565977742448331,
+            0.6565977742448331,
+            0.9324324324324325,
+            0.6693163751987281,
+            0.7305246422893482,
+            0.7412559618441972,
+            0.7420508744038156,
+            0.7420508744038156,
+            0.7420508744038156,
+            0.7420508744038156,
+            0.7408585055643879,
+            0.7448330683624801,
+            0.7420508744038156,
+            0.7038950715421304,
+            0.6605723370429253,
+            0.8831478537360891,
+            0.5095389507154213,
+            0.5997615262321144,
+            0.9646263910969793,
+            0.965818759936407,
+            0.8624801271860095,
+            0.6562003179650239,
+            0.564785373608903
+          ],
+          "var": [
+            0.401043496503143,
+            0.5073905383921282,
+            0.4842387100932411,
+            0.4493371200153675,
+            0.48911560606711646,
+            0.519355141403444,
+            0.500062398740272,
+            0.4944980108229429,
+            0.4943172914333954,
+            0.41678993708943207,
+            0.46034094039798706,
+            0.4857261696841329,
+            0.48840110099812695,
+            0.4056826453780069,
+            0.3822897525787267,
+            0.38379032380365025,
+            0.39226770607697375,
+            0.4016570577872363,
+            0.39362641889996236,
+            0.405088672559214,
+            0.3899474207678172,
+            0.4057333542276963,
+            0.4044896446526017,
+            0.4470081462740212,
+            0.4468348515447084,
+            0.4486711121951466,
+            0.4457922396819338,
+            0.4457922396819338,
+            0.4457922396819338,
+            0.4457922396819338,
+            0.4457922396819338,
+            0.4457922396819338,
+            0.4457922396819338,
+            0.4457922396819338,
+            0.41664460331462105,
+            0.4457922396819338,
+            0.4458587456810593,
+            0.44512133474538784,
+            0.44566791611587275,
+            0.44566791611587275,
+            0.5065633996476603,
+            0.4478820445808195,
+            0.45997444653107233,
+            0.4676302190622307,
+            0.4672460323879478,
+            0.4672460323879477,
+            0.46804094494756615,
+            0.46804094494756615,
+            0.4678218384848892,
+            0.466686339383431,
+            0.4672460323879477,
+            0.46518355655758636,
+            0.44997169150821065,
+            0.5276810290136765,
+            0.37153063004087034,
+            0.4117487507614226,
+            0.5134545901461174,
+            0.49008760467191226,
+            0.5057305739293957,
+            0.4402278517646047,
+            0.4024006296111879
+          ],
+          "n_samples_seen": 2516,
+          "n_features_in": 61,
+          "columns": [
+            "feature_4",
+            "feature_6",
+            "feature_9",
+            "feature_10",
+            "feature_21",
+            "feature_22",
+            "feature_23",
+            "feature_25",
+            "feature_26",
+            "feature_28",
+            "feature_29",
+            "feature_30",
+            "feature_31",
+            "feature_33",
+            "feature_39",
+            "feature_40",
+            "feature_41",
+            "feature_42",
+            "feature_43",
+            "feature_44",
+            "feature_45",
+            "feature_46",
+            "feature_47",
+            "feature_49",
+            "feature_50",
+            "feature_52",
+            "feature_53",
+            "feature_54",
+            "feature_55",
+            "feature_56",
+            "feature_57",
+            "feature_58",
+            "feature_59",
+            "feature_60",
+            "feature_61",
+            "feature_62",
+            "feature_63",
+            "feature_64",
+            "feature_65",
+            "feature_66",
+            "feature_81",
+            "feature_85",
+            "feature_86",
+            "feature_87",
+            "feature_88",
+            "feature_89",
+            "feature_90",
+            "feature_91",
+            "feature_92",
+            "feature_93",
+            "feature_95",
+            "feature_96",
+            "feature_97",
+            "feature_100",
+            "feature_101",
+            "feature_102",
+            "feature_104",
+            "feature_105",
+            "feature_110",
+            "feature_111",
+            "feature_252"
+          ],
+          "scale_method": "scale_normal"
+        }
+      ],
+      "categorical_y": {
+        "C": 0,
+        "N": 1
+      },
+      "ml_task": "binary_classification",
+      "params": {
+        "columns_preprocessing": {
+          "feature_4": [
+            "scale_normal"
+          ],
+          "feature_6": [
+            "scale_normal"
+          ],
+          "feature_9": [
+            "scale_normal"
+          ],
+          "feature_10": [
+            "scale_normal"
+          ],
+          "feature_21": [
+            "scale_normal"
+          ],
+          "feature_22": [
+            "scale_normal"
+          ],
+          "feature_23": [
+            "scale_normal"
+          ],
+          "feature_25": [
+            "scale_normal"
+          ],
+          "feature_26": [
+            "scale_normal"
+          ],
+          "feature_28": [
+            "scale_normal"
+          ],
+          "feature_29": [
+            "scale_normal"
+          ],
+          "feature_30": [
+            "scale_normal"
+          ],
+          "feature_31": [
+            "scale_normal"
+          ],
+          "feature_33": [
+            "scale_normal"
+          ],
+          "feature_39": [
+            "scale_normal"
+          ],
+          "feature_40": [
+            "scale_normal"
+          ],
+          "feature_41": [
+            "scale_normal"
+          ],
+          "feature_42": [
+            "scale_normal"
+          ],
+          "feature_43": [
+            "scale_normal"
+          ],
+          "feature_44": [
+            "scale_normal"
+          ],
+          "feature_45": [
+            "scale_normal"
+          ],
+          "feature_46": [
+            "scale_normal"
+          ],
+          "feature_47": [
+            "scale_normal"
+          ],
+          "feature_49": [
+            "scale_normal"
+          ],
+          "feature_50": [
+            "scale_normal"
+          ],
+          "feature_52": [
+            "scale_normal"
+          ],
+          "feature_53": [
+            "scale_normal"
+          ],
+          "feature_54": [
+            "scale_normal"
+          ],
+          "feature_55": [
+            "scale_normal"
+          ],
+          "feature_56": [
+            "scale_normal"
+          ],
+          "feature_57": [
+            "scale_normal"
+          ],
+          "feature_58": [
+            "scale_normal"
+          ],
+          "feature_59": [
+            "scale_normal"
+          ],
+          "feature_60": [
+            "scale_normal"
+          ],
+          "feature_61": [
+            "scale_normal"
+          ],
+          "feature_62": [
+            "scale_normal"
+          ],
+          "feature_63": [
+            "scale_normal"
+          ],
+          "feature_64": [
+            "scale_normal"
+          ],
+          "feature_65": [
+            "scale_normal"
+          ],
+          "feature_66": [
+            "scale_normal"
+          ],
+          "feature_81": [
+            "scale_normal"
+          ],
+          "feature_85": [
+            "scale_normal"
+          ],
+          "feature_86": [
+            "scale_normal"
+          ],
+          "feature_87": [
+            "scale_normal"
+          ],
+          "feature_88": [
+            "scale_normal"
+          ],
+          "feature_89": [
+            "scale_normal"
+          ],
+          "feature_90": [
+            "scale_normal"
+          ],
+          "feature_91": [
+            "scale_normal"
+          ],
+          "feature_92": [
+            "scale_normal"
+          ],
+          "feature_93": [
+            "scale_normal"
+          ],
+          "feature_95": [
+            "scale_normal"
+          ],
+          "feature_96": [
+            "scale_normal"
+          ],
+          "feature_97": [
+            "scale_normal"
+          ],
+          "feature_100": [
+            "scale_normal"
+          ],
+          "feature_101": [
+            "scale_normal"
+          ],
+          "feature_102": [
+            "scale_normal"
+          ],
+          "feature_104": [
+            "scale_normal"
+          ],
+          "feature_105": [
+            "scale_normal"
+          ],
+          "feature_110": [
+            "scale_normal"
+          ],
+          "feature_111": [
+            "scale_normal"
+          ],
+          "feature_252": [
+            "scale_normal"
+          ]
+        },
+        "target_preprocessing": [
+          "na_exclude",
+          "categorical_to_int"
+        ],
+        "ml_task": "binary_classification"
+      }
+    }
+  ],
+  "learners": [
+    {
+      "library_version": "1.0.2",
+      "algorithm_name": "Logistic Regression",
+      "algorithm_short_name": "Linear",
+      "uid": "51e80089-4a2c-44e7-a999-4a5d1788b124",
+      "params": {
+        "model_type": "Linear",
+        "ml_task": "binary_classification",
+        "n_jobs": -1,
+        "seed": 1235,
+        "explain_level": 2
+      },
+      "name": "learner_fold_0"
+    }
+  ],
+  "params": {
+    "additional": {
+      "max_steps": 1,
+      "max_rows_limit": null,
+      "max_cols_limit": null
+    },
+    "preprocessing": {
+      "columns_preprocessing": {
+        "feature_4": [
+          "scale_normal"
+        ],
+        "feature_6": [
+          "scale_normal"
+        ],
+        "feature_9": [
+          "scale_normal"
+        ],
+        "feature_10": [
+          "scale_normal"
+        ],
+        "feature_21": [
+          "scale_normal"
+        ],
+        "feature_22": [
+          "scale_normal"
+        ],
+        "feature_23": [
+          "scale_normal"
+        ],
+        "feature_25": [
+          "scale_normal"
+        ],
+        "feature_26": [
+          "scale_normal"
+        ],
+        "feature_28": [
+          "scale_normal"
+        ],
+        "feature_29": [
+          "scale_normal"
+        ],
+        "feature_30": [
+          "scale_normal"
+        ],
+        "feature_31": [
+          "scale_normal"
+        ],
+        "feature_33": [
+          "scale_normal"
+        ],
+        "feature_39": [
+          "scale_normal"
+        ],
+        "feature_40": [
+          "scale_normal"
+        ],
+        "feature_41": [
+          "scale_normal"
+        ],
+        "feature_42": [
+          "scale_normal"
+        ],
+        "feature_43": [
+          "scale_normal"
+        ],
+        "feature_44": [
+          "scale_normal"
+        ],
+        "feature_45": [
+          "scale_normal"
+        ],
+        "feature_46": [
+          "scale_normal"
+        ],
+        "feature_47": [
+          "scale_normal"
+        ],
+        "feature_49": [
+          "scale_normal"
+        ],
+        "feature_50": [
+          "scale_normal"
+        ],
+        "feature_52": [
+          "scale_normal"
+        ],
+        "feature_53": [
+          "scale_normal"
+        ],
+        "feature_54": [
+          "scale_normal"
+        ],
+        "feature_55": [
+          "scale_normal"
+        ],
+        "feature_56": [
+          "scale_normal"
+        ],
+        "feature_57": [
+          "scale_normal"
+        ],
+        "feature_58": [
+          "scale_normal"
+        ],
+        "feature_59": [
+          "scale_normal"
+        ],
+        "feature_60": [
+          "scale_normal"
+        ],
+        "feature_61": [
+          "scale_normal"
+        ],
+        "feature_62": [
+          "scale_normal"
+        ],
+        "feature_63": [
+          "scale_normal"
+        ],
+        "feature_64": [
+          "scale_normal"
+        ],
+        "feature_65": [
+          "scale_normal"
+        ],
+        "feature_66": [
+          "scale_normal"
+        ],
+        "feature_81": [
+          "scale_normal"
+        ],
+        "feature_85": [
+          "scale_normal"
+        ],
+        "feature_86": [
+          "scale_normal"
+        ],
+        "feature_87": [
+          "scale_normal"
+        ],
+        "feature_88": [
+          "scale_normal"
+        ],
+        "feature_89": [
+          "scale_normal"
+        ],
+        "feature_90": [
+          "scale_normal"
+        ],
+        "feature_91": [
+          "scale_normal"
+        ],
+        "feature_92": [
+          "scale_normal"
+        ],
+        "feature_93": [
+          "scale_normal"
+        ],
+        "feature_95": [
+          "scale_normal"
+        ],
+        "feature_96": [
+          "scale_normal"
+        ],
+        "feature_97": [
+          "scale_normal"
+        ],
+        "feature_100": [
+          "scale_normal"
+        ],
+        "feature_101": [
+          "scale_normal"
+        ],
+        "feature_102": [
+          "scale_normal"
+        ],
+        "feature_104": [
+          "scale_normal"
+        ],
+        "feature_105": [
+          "scale_normal"
+        ],
+        "feature_110": [
+          "scale_normal"
+        ],
+        "feature_111": [
+          "scale_normal"
+        ],
+        "feature_252": [
+          "scale_normal"
+        ]
+      },
+      "target_preprocessing": [
+        "na_exclude",
+        "categorical_to_int"
+      ],
+      "ml_task": "binary_classification"
+    },
+    "validation_strategy": {
+      "validation_type": "split",
+      "train_ratio": 0.75,
+      "shuffle": true,
+      "stratify": true,
+      "X_path": "AutoML_2/X.data",
+      "y_path": "AutoML_2/y.data",
+      "results_path": "AutoML_2"
+    },
+    "learner": {
+      "model_type": "Linear",
+      "ml_task": "binary_classification",
+      "n_jobs": -1,
+      "seed": 1235,
+      "explain_level": 2
+    },
+    "automl_random_state": 1234,
+    "ml_task": "binary_classification",
+    "explain_level": 2,
+    "name": "3_Linear",
+    "status": "initialized",
+    "final_loss": null,
+    "train_time": null,
+    "data_type": "original",
+    "max_time_for_learner": 360.0
+  },
+  "saved": [
+    "3_Linear/learner_fold_0.linear"
+  ],
+  "predictions_fname": "3_Linear/predictions_validation.csv",
+  "metric_name": "auc",
+  "final_loss": -0.5842243222735739,
+  "train_time": 4.805552244186401,
+  "is_stacked": false,
+  "threshold": 0.14372039210371151
+}

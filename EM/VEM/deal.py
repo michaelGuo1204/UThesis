@@ -1,14 +1,67 @@
 import json
+import re
 
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas
+import progressbar
+import requests
 import seaborn as sns
 
 Clusterfile = './Cluster.csv'
 SNPfile = './snp.json'
 threshold = 1e-5
 pmidexcept = ['30664745']
+
+
+def snpLookup():
+    data = pandas.read_csv("./Cluster.csv")
+    SNP = data['SNPs']
+    url = "https://atlas.ctglab.nl/PheWAS"
+    headers_re = {
+        'accept': 'text/html,application/xhtml+xml,application/xml',
+        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36'
+    }
+    request_au = requests.get(url, headers=headers_re)
+    cookies = requests.utils.dict_from_cookiejar(request_au.cookies)
+    reg = r'<meta name="csrf-token" content="(.*)"/>'
+    pattern = re.compile(reg)
+    string = request_au.content.decode('UTF-8')
+    result = pattern.findall(string)
+    headers = {
+        'Accept': '* / *',
+        'Accept-Encoding': 'gzip,deflate,br',
+        'Accept-Language': 'zh-CN,zh;q=0.9',
+        'Connection': 'keep-alive',
+        'Content-Length': '30',
+        'Content-Type': 'application/x-www-form-urlencoded; charset = UTF-8',
+        'Cookie': 'XSRF-TOKEN={}; atlas_session={}'.format(cookies['XSRF-TOKEN'], cookies['atlas_session']),
+        'Host': 'atlas.ctglab.nl',
+        'Origin': 'https://atlas.ctglab.nl',
+        'Referer': 'https://atlas.ctglab.nl/PheWAS',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-origin',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36',
+        'X-CSRF-TOKEN': result[0],
+        'X-Requested-With': 'XMLHttpRequest'
+    }
+    datadic = {}
+    prb = progressbar.ProgressBar()
+    for snp in prb(SNP):
+        dataFormat = {
+            "text": snp,
+            "ids": "",
+            "maxP": "0.05"
+        }
+        response = requests.post(url + "/getData", headers=headers, data=dataFormat, allow_redirects=True)
+        finaldata = response.json()
+        datadic[snp] = finaldata
+
+    jsonfile = json.dumps(datadic)
+    with open("./snp.json", "w") as outfile:
+        outfile.write(jsonfile)
+    pass
 
 
 def readSNPlist():
@@ -34,7 +87,7 @@ def SNPanalysis(SNPcell):  # Select case by p-value, which is order[1]
 
 def clusterThreshold(dataframe, snpdic, id):
     snpcollection = pandas.DataFrame()
-    for SNP in dataframe['SNPS']:
+    for SNP in dataframe['SNPs']:
         snpcase = SNPanalysis(snpdic[SNP])
         snpcollection = pandas.concat([snpcollection, snpcase])
     clusterfieldsummary = clusterFieldDisplay(snpcollection, id)
@@ -111,6 +164,7 @@ def drawHeatMap(whole):
     pass
 
 
+# snpLookup()
 clusterlists = readSNPlist()
 snpdetail = readJSON()
 id = 1

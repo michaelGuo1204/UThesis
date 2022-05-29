@@ -6,16 +6,16 @@ import scipy.sparse as sp
 from spektral.data import Dataset, Graph
 
 
-class TDataset(Dataset):
+class JBODataset(Dataset):
 
     def __init__(self, n_traits, load=False, p=1e-2, **kwargs):
         self.n_traits = n_traits
         self.p = p
         if (load):
-            data = np.load("../Data/fs100.npz", allow_pickle=True)
+            data = np.load("../Data/fs1.npz", allow_pickle=True)
             self.samples = data['arr_0']
             self.labels = data['arr_1']
-            self.ad = np.load("../Data/fsaj.npz", allow_pickle=True)['arr_0']
+            self.ad = np.load("../Data/fsaj1.npz", allow_pickle=True)['arr_0']
         super().__init__(**kwargs)
 
     def download(self):
@@ -23,7 +23,7 @@ class TDataset(Dataset):
         os.mkdir(self.path)
         prb = progressbar.ProgressBar()
         prb.start()
-        for i in prb(range(13709)):
+        for i in prb(range(610)):
             sample = self.samples[i]
             label = self.labels[i]
             nodes = self.n_traits
@@ -45,7 +45,7 @@ class TDataset(Dataset):
         print('Reading')
         prb = progressbar.ProgressBar()
         prb.start()
-        for i in prb(range(13709)):
+        for i in prb(range(610)):
             data = np.load(os.path.join(self.path, f'graph_{i}.npz'), allow_pickle=True)
             _x = data['x']
             _a = data['a']

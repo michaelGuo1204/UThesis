@@ -1,123 +1,189 @@
-Activities,Automobile speeding propensity,1
-Activities,First PC of the four riskly behaviours,1
-Activities,General risk tolerance,3
-Activities,Positive affect (MA GWAMA),1
-Cardiovascular,Diagnoses - secondary ICD10: I10 Essential (primary) hypertension,1
-Cardiovascular,Systolic Blood Pressure (automated reading),1
-Cell,Rubella IgG levels,1
-Connective Tissue,Carpal tunnel syndrome,2
-Dermatological,"Hair colour (natural, before greying): Dark brown",1
-Endocrine,Type 2 Diabetes,4
-Environmental,Agents acting on the renin-angiotensin system,2
-Environmental,"Anti-inflammatory and antirheumatic products, non-steroids",1
-Environmental,Calcium channel blockers,1
-Environmental,Diuretics,3
-Environmental,Thyroid preparations,4
-Immunological,Basophil count (three-way meta),1
-Immunological,Basophil count (two-way meta),1
-Immunological,Eosinophil percentage of granulocytes (three-way meta),1
-Immunological,Eosinophil percentage of granulocytes (two-way meta),1
+Activities,Facial ageing,1
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Cholesterol lowering medication",1
+Activities,Number of treatments/medications taken,1
+Activities,Taking other prescription medications,1
+Activities,Treatment/medication code: levothyroxine sodium,1
+Activities,Treatment/medication code: simvastatin,1
+Activities,Use of sun/uv protection,42
+Cardiovascular,Atrial Fibrillation,1
+Cardiovascular,Heart rate,1
+Cardiovascular,Pulse rate (automated reading),1
+Cognitive,Cognitive performance,1
+Dermatological,Baldness,1
+Dermatological,Ease of skin tanning,42
+Dermatological,"Hair colour (natural, before greying): Blonde",1
+Dermatological,"Hair colour (natural, before greying): Red",42
+Dermatological,Male pattern baldness (BOLT LMM infinitesimal mixed model),1
+Dermatological,Male pattern baldness (BOLT LMM non-infinitesimal mixed model),1
+Dermatological,Male-specific factors - Hair/balding pattern: Pattern 1,1
+Dermatological,Male-specific factors - Hair/balding pattern: Pattern 4,1
+Dermatological,Skin colour,42
+Endocrine,Diagnoses - secondary ICD10: E03 Other hypothyroidism,1
+Endocrine,"Non-cancer illness code, self-reported: hypothyroidism/myxoedema",1
+Environmental,"Adrenergics, inhalants",1
+Environmental,HMG CoA reductase inhibitors,1
+Environmental,Thyroid preparations,1
+Gastrointestinal,Crohn's Disease,2
+Hematological,Hemoglobin A1c,1
+Immunological,Eosinophil count (three-way meta),1
+Immunological,Eosinophil count (two-way meta),1
 Immunological,Eosinophil percentage of white cells (three-way meta),1
-Immunological,Granulocyte count (three-way meta),3
-Immunological,Granulocyte count (two-way meta),3
-Immunological,High light scatter percentage of red cells (three-way meta),1
+Immunological,Eosinophil percentage of white cells (two-way meta),1
+Immunological,Granulocyte count (three-way meta),1
+Immunological,Granulocyte count (two-way meta),1
+Immunological,Granulocyte percentage of myeloid white cells (three-way meta),1
+Immunological,Granulocyte percentage of myeloid white cells (two-way meta),1
+Immunological,Hematocrit (three-way meta),1
+Immunological,Hematocrit (two-way meta),1
+Immunological,Hemoglobin concentration (three-way meta),1
+Immunological,Hemoglobin concentration (two-way meta),1
 Immunological,High light scatter percentage of red cells (two-way meta),1
-Immunological,High light scatter reticulocyte count (three-way meta),1
-Immunological,High light scatter reticulocyte count (two-way meta),1
-Immunological,Immature fraction of reticulocytes (three-way meta),1
-Immunological,Immature fraction of reticulocytes (two-way meta),1
-Immunological,Immunoglobulin A deficiency,1
-Immunological,Monocyte count (three-way meta),3
-Immunological,Monocyte count (two-way meta),1
-Immunological,Myeloid white cell count (three-way meta),6
-Immunological,Myeloid white cell count (two-way meta),3
-Immunological,Neutrophil count (three-way meta),4
-Immunological,Neutrophil count (two-way meta),3
-Immunological,Platelet distribution width (three-way meta),5
-Immunological,Platelet distribution width (two-way meta),5
-Immunological,Red cell distribution width (three-way meta),6
-Immunological,Red cell distribution width (two-way meta),6
-Immunological,Reticulocyte count (three-way meta),2
-Immunological,Reticulocyte count (two-way meta),2
-Immunological,Reticulocyte fraction of red cells (three-way meta),2
-Immunological,Reticulocyte fraction of red cells (two-way meta),1
-Immunological,Sum basophil neutrophil count (three-way meta),4
-Immunological,Sum basophil neutrophil count (two-way meta),3
-Immunological,Sum neutrophil eosinophil count (three-way meta),3
-Immunological,Sum neutrophil eosinophil count (two-way meta),3
-Immunological,White blood cell count (three-way meta),5
-Immunological,White blood cell count (two-way meta),4
-Metabolic,Arms-arm fat ratio (female),4
-Metabolic,Arms-arm fat ratio (male),1
-Metabolic,Body Mass Index,11
-Metabolic,Body Mass Index (female),5
-Metabolic,Body Mass Index (male),5
-Metabolic,Estimated glomerular filtration rate,8
-Metabolic,Hip circumference,1
-Metabolic,Impedance measures - Arm fat-free mass (left),3
-Metabolic,Impedance measures - Arm fat-free mass (right),3
-Metabolic,Impedance measures - Arm predicted mass (left),3
-Metabolic,Impedance measures - Arm predicted mass (right),3
-Metabolic,Impedance measures - Basal metabolic rate,2
-Metabolic,Impedance measures - Body Mass Index (BMI),1
-Metabolic,Impedance measures - Impedance of arm (left),2
-Metabolic,Impedance measures - Impedance of arm (right),2
-Metabolic,Impedance measures - Impedance of leg (left),3
-Metabolic,Impedance measures - Impedance of leg (right),3
-Metabolic,Impedance measures - Impedance of whole body,4
-Metabolic,Impedance measures - Leg fat-free mass (left),2
-Metabolic,Impedance measures - Leg fat-free mass (right),2
-Metabolic,Impedance measures - Leg predicted mass (left),2
-Metabolic,Impedance measures - Leg predicted mass (right),2
-Metabolic,Impedance measures - Trunk fat-free mass,2
-Metabolic,Impedance measures - Trunk predicted mass,1
-Metabolic,Impedance measures - Weight,1
-Metabolic,Impedance measures - Whole body fat-free mass,2
-Metabolic,Impedance measures - Whole body water mass,2
+Immunological,Mean corpuscular hemoglobin (three-way meta),1
+Immunological,Mean corpuscular hemoglobin (two-way meta),1
+Immunological,Mean corpuscular volume,1
+Immunological,Mean corpuscular volume (three-way meta),2
+Immunological,Mean corpuscular volume (two-way meta),2
+Immunological,Mean platelet volume (three-way meta),1
+Immunological,Mean platelet volume (two-way meta),1
+Immunological,Monocyte percentage of white cells (three-way meta),1
+Immunological,Monocyte percentage of white cells (two-way meta),1
+Immunological,Myeloid white cell count (three-way meta),1
+Immunological,Myeloid white cell count (two-way meta),1
+Immunological,Neutrophil count (three-way meta),1
+Immunological,Neutrophil count (two-way meta),1
+Immunological,Platelet count,1
+Immunological,Platelet count (three-way meta),1
+Immunological,Platelet count (two-way meta),1
+Immunological,Platelet distribution width (two-way meta),2
+Immunological,Plateletcrit (three-way meta),1
+Immunological,Plateletcrit (two-way meta),1
+Immunological,Red blood cell count,1
+Immunological,Red blood cell count (three-way meta),1
+Immunological,Red blood cell count (two-way meta),1
+Immunological,Red cell distribution width (three-way meta),2
+Immunological,Red cell distribution width (two-way meta),2
+Immunological,Reticulocyte count (three-way meta),1
+Immunological,Reticulocyte count (two-way meta),1
+Immunological,Sum basophil neutrophil count (three-way meta),1
+Immunological,Sum basophil neutrophil count (two-way meta),1
+Immunological,Sum eosinophil basophil count (three-way meta),1
+Immunological,Sum eosinophil basophil count (two-way meta),1
+Immunological,Sum neutrophil eosinophil count (three-way meta),1
+Immunological,Sum neutrophil eosinophil count (two-way meta),1
+Immunological,White blood cell count (three-way meta),1
+Immunological,White blood cell count (two-way meta),1
+Metabolic,"18:2, linoleic acid (LA) ",1
+Metabolic,"22:6, docosahexaenoic acid (DHA) ",1
+Metabolic,Alanine aminotransferase,1
+Metabolic,Albumin/globulin ratio,1
+Metabolic,ApoA1 ,1
+Metabolic,Blood sugar,1
+Metabolic,CH2 groups in fatty acids ,1
+Metabolic,CH2 groups to double bonds ratio ,1
+Metabolic,Cholesterol esters in large HDL ,1
+Metabolic,Cholesterol esters in very large HDL ,1
+Metabolic,Concentration of large HDL particles ,1
+Metabolic,Concentration of medium VLDL particles ,1
+Metabolic,Concentration of very large HDL particles ,1
+Metabolic,Double bonds in fatty acids ,1
+Metabolic,Esterified cholesterol ,1
+Metabolic,Estimated glomerular filtration rate,1
+Metabolic,Fasting glucose,1
+Metabolic,Fasting glucose main effect,1
+Metabolic,Fasting glucose main effect (adjusted for BMI),1
+Metabolic,Free cholesterol in IDL ,1
+Metabolic,Free cholesterol in large HDL ,1
+Metabolic,Free cholesterol in very large HDL ,1
+Metabolic,HDL diameter ,1
+Metabolic,High cholesterol lipoprotein,1
+Metabolic,High-density lipoprotein cholesterol,2
+Metabolic,Impedance measures - Arm fat percentage (left),42
+Metabolic,Impedance measures - Arm fat percentage (right),42
+Metabolic,Impedance measures - Arm fat-free mass (left),42
+Metabolic,Impedance measures - Arm fat-free mass (right),42
+Metabolic,Impedance measures - Arm predicted mass (left),42
+Metabolic,Impedance measures - Arm predicted mass (right),42
+Metabolic,Impedance measures - Basal metabolic rate,42
+Metabolic,Impedance measures - Body fat percentage,42
+Metabolic,Impedance measures - Leg fat percentage (left),42
+Metabolic,Impedance measures - Leg fat percentage (right),42
+Metabolic,Impedance measures - Leg fat-free mass (left),42
+Metabolic,Impedance measures - Leg fat-free mass (right),42
+Metabolic,Impedance measures - Leg predicted mass (left),42
+Metabolic,Impedance measures - Leg predicted mass (right),42
+Metabolic,Impedance measures - Trunk fat-free mass,42
+Metabolic,Impedance measures - Trunk predicted mass,42
+Metabolic,Impedance measures - Whole body fat-free mass,42
+Metabolic,Impedance measures - Whole body water mass,42
+Metabolic,LDL diameter ,1
+Metabolic,Lipid::Essential fatty acid::X-12990--docosapentaenoic acid (n6-DPA),1
+Metabolic,Lipid::Essential fatty acid::dihomo-linolenate (20:3n3 or n6),1
+Metabolic,Lipid::Essential fatty acid::docosapentaenoate (n3 DPA; 22:5n3),1
+Metabolic,Lipid::Essential fatty acid::eicosapentaenoate (EPA; 20:5n3),1
+Metabolic,Lipid::Long chain fatty acid::adrenate (22:4n6),1
+Metabolic,Lipid::Long chain fatty acid::arachidonate (20:4n6),1
+Metabolic,Lipid::Long chain fatty acid::stearidonate (18:4n3),1
+Metabolic,Lipid::Lysolipid::1-arachidonoylglycerophosphocholine*,1
+Metabolic,Lipid::Lysolipid::1-arachidonoylglycerophosphoethanolamine*,1
+Metabolic,Lipid::Lysolipid::1-arachidonoylglycerophosphoinositol*,1
+Metabolic,Lipid::Lysolipid::1-eicosadienoylglycerophosphocholine*,1
+Metabolic,Lipid::Lysolipid::1-eicosatrienoylglycerophosphocholine*,1
+Metabolic,Lipid::Lysolipid::1-linoleoylglycerophosphocholine,1
+Metabolic,Lipid::Lysolipid::1-linoleoylglycerophosphoethanolamine*,1
+Metabolic,Lipid::Lysolipid::2-linoleoylglycerophosphocholine*,1
+Metabolic,Low cholesterol lipoprotein,1
+Metabolic,Low-density lipoprotein cholesterol,2
 Metabolic,Low-density-lipoprotein cholesterol,1
-Metabolic,Total cholesterol,1
-Metabolic,Triglycerides cholesterol,3
-Metabolic,Trunk-trunk fat ratio (female),2
+Metabolic,Non-albumin protein,1
+Metabolic,"Non-cancer illness code, self-reported: high cholesterol",1
+Metabolic,OmegaL3 fatty acids ,1
+Metabolic,Other polyunsaturated fatty acids than 18:2 ,1
+Metabolic,Phospholipids in large HDL ,1
+Metabolic,Phospholipids in very large HDL ,1
+Metabolic,Prothrombin time,42
+Metabolic,Ratio of bisLallylic bonds to double bonds in lipids ,1
+Metabolic,Ratio of bisLallylic bonds to total fatty acids in lipids ,1
+Metabolic,Total cholesterol,4
+Metabolic,Total cholesterol in HDL ,1
+Metabolic,Total cholesterol in IDL ,1
+Metabolic,Total cholesterol in large HDL ,1
+Metabolic,Total cholesterol in very large HDL ,1
+Metabolic,Total lipids in large HDL ,1
+Metabolic,Total lipids in medium VLDL ,1
+Metabolic,Total lipids in very large HDL ,1
+Metabolic,Total protein,1
+Metabolic,Triglyceride,2
+Metabolic,Triglycerides cholesterol,2
+Metabolic,Triglycerides in medium VLDL ,1
+Metabolic,Triglycerides in very large HDL ,1
+Metabolic,VLDL diameter ,1
 Metabolic,Waist-hip ratio,1
-Metabolic,Waist-hip ratio (adjusted for BMI),5
-Metabolic,"Waist-hip ratio (adjusted for BMI, female)",2
-Metabolic,"Waist-hip ratio (adjusted for BMI, male)",4
+Metabolic,Waist-hip ratio (adjusted for BMI),1
+Metabolic,"Waist-hip ratio (adjusted for BMI, female)",1
 Metabolic,Waist-hip ratio (female),1
-Metabolic,Weight,1
-Neurological,Inferior fronto-occipital fasciculus fractional anisotropy,2
-Neurological,Inferior fronto-occipital fasciculus radial diusivities,2
-Neurological,Left pallidum,1
-Neurological,Pain type(s) experienced in last month: Knee pain,1
-Nutritional,Cheese intake,1
-Nutritional,Non-oily fish intake,2
-Nutritional,Oily fish intake,2
-Nutritional,Poultry intake,1
+Mortality,Number of self-reported non-cancer illnesses,1
+Neoplasms,Colorectal cancer,1
+Neurological,Left cerebellum exterior,2
+Neurological,Right cerebellum exterior,2
 Nutritional,Salt added to food,1
-Psychiatric,Alcohol intake frequency,1
-Psychiatric,Autism spectrum disorder,1
-Psychiatric,Chronotype,2
-Psychiatric,Ever smoker,1
+Psychiatric,Amount of alcohol drunk on a typical drinking day,1
+Psychiatric,Average weekly champagne plus white wine intake,1
+Psychiatric,Depressive symptoms (univariate),1
+Psychiatric,Drinks per day,1
 Psychiatric,Irritability,1
-Psychiatric,Morning person (binary),1
-Psychiatric,Neuroticism,8
-Psychiatric,Neuroticism (MA GWAMA),3
-Psychiatric,Neuroticism (univariate),5
-Psychiatric,Neuroticism general factor,4
-Psychiatric,Neuroticism score,1
-Psychiatric,Sleep duration,2
-Psychiatric,Well-being spectrum,3
-Psychiatric,Worrier / anxious feelings,1
-Reproduction,Number of sexual partners,1
-Respiratory,"Asthma, hay fever or eczema",1
-Respiratory,FEV1,2
-Respiratory,FEV1/FVC ratio,7
-Skeletal,Diagnoses - main ICD10: M16 Osteoarthritis of hip,1
-Skeletal,Diagnoses - main ICD10: M23 Internal derangement of knee,1
-Skeletal,Estimated BMD,5
-Skeletal,Estimated bone mineral density from heel ultrasounds,7
-Skeletal,Heel bone mineral density,8
-Skeletal,Height,6
-Skeletal,"Non-cancer illness code, self-reported: osteoarthritis",2
-Skeletal,Osteoarthritis (self reported),1
-Skeletal,Standing height,2
-Skeletal,Systemic Lupus Erythematosus,3
+Psychiatric,Irritability (IRR),1
+Psychiatric,Nap during day,1
+Psychiatric,Sleep duration,3
+Reproduction,Number of live births (female),1
+Respiratory,Asthma (adult-onset),1
+Respiratory,"Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Asthma",1
+Respiratory,Diagnoses - secondary ICD10: J45 Asthma,1
+Respiratory,"Non-cancer illness code, self-reported: asthma",1
+Respiratory,Wheeze or whistling in the chest in last year,1
+Skeletal,Comparative height size at age 10,1
+Skeletal,Estimated BMD,1
+Skeletal,Estimated bone mineral density from heel ultrasounds,1
+Skeletal,Heel bone mineral density,1
+Skeletal,Height,21
+Skeletal,Sitting height,43
+Skeletal,Standing height,44

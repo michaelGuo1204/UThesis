@@ -1,0 +1,14 @@
+if (feature_61 <= 0.5) and (feature_2 <= 1.5) and (feature_78 <= 0.5) then class: N (proba: 92.26%) | based on 1,034 samples
+
+if (feature_61 > 0.5) and (feature_5 <= 0.5) and (feature_61 <= 1.5) then class: N (proba: 90.37%) | based on 893 samples
+
+if (feature_61 <= 0.5) and (feature_2 <= 1.5) and (feature_78 > 0.5) then class: N (proba: 97.24%) | based on 326 samples
+
+if (feature_61 > 0.5) and (feature_5 <= 0.5) and (feature_61 > 1.5) then class: N (proba: 82.32%) | based on 198 samples
+
+if (feature_61 > 0.5) and (feature_5 > 0.5) and (feature_19 <= 0.5) then class: N (proba: 88.57%) | based on 35 samples
+
+if (feature_61 > 0.5) and (feature_5 > 0.5) and (feature_19 > 0.5) then class: N (proba: 51.72%) | based on 29 samples
+
+if (feature_61 <= 0.5) and (feature_2 > 1.5) then class: C (proba: 100.0%) | based on 1 samples
+

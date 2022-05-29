@@ -1,0 +1,128 @@
+Activities,"Medication for cholesterol, blood pressure or diabetes: Cholesterol lowering medication",2
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication",2
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Cholesterol lowering medication",2
+Activities,Treatment/medication code: atorvastatin,2
+Activities,Treatment/medication code: metformin,2
+Activities,Treatment/medication code: simvastatin,2
+Activities,Use of sun/uv protection,12
+Cardiovascular,Coronary artery disease,2
+Cardiovascular,Coronary artery disease (SOFT definition including angina),1
+Cardiovascular,Diastolic Blood Pressure (automated reading),2
+Cardiovascular,Heart failure,1
+Cardiovascular,High blood pressure,1
+Cardiovascular,"Non-cancer illness code, self-reported: hypertension",2
+Cardiovascular,Vascular/heart problems diagnosed by doctor: High blood pressure,2
+Dermatological,Ease of skin tanning,12
+Dermatological,"Hair colour (natural, before greying): Black",6
+Dermatological,"Hair colour (natural, before greying): Dark brown",12
+Dermatological,"Hair colour (natural, before greying): Red",12
+Dermatological,Skin colour,12
+Endocrine,Thyroid-stimulating hormone,2
+Endocrine,Thyroid-stimulating hormone (female),2
+Endocrine,Thyroid-stimulating hormone (male),2
+Endocrine,Type 2 Diabetes,3
+Endocrine,Type 2 Diabetes (adjusted for BMI),2
+Environment,Illnesses of father: Heart disease,2
+Environment,Illnesses of mother: Diabetes,2
+Environmental,Antithrombotic agents,1
+Environmental,HMG CoA reductase inhibitors,1
+Environmental,Salicylic acid and derivatives,1
+Gastrointestinal,Diagnoses - main ICD10: K57 Diverticular disease of intestine,2
+Gastrointestinal,Diagnoses - secondary ICD10: K57 Diverticular disease of intestine,2
+Gastrointestinal,Diverticular disease,4
+Immunological,Basophil count (three-way meta),2
+Immunological,Granulocyte count (three-way meta),2
+Immunological,Granulocyte count (two-way meta),2
+Immunological,Granulocyte percentage of myeloid white cells (three-way meta),1
+Immunological,Granulocyte percentage of myeloid white cells (two-way meta),2
+Immunological,Hematocrit,2
+Immunological,Hematocrit (three-way meta),2
+Immunological,Hematocrit (two-way meta),2
+Immunological,Hemoglobin concentration (three-way meta),2
+Immunological,Hemoglobin concentration (two-way meta),2
+Immunological,Mean corpuscular volume,2
+Immunological,Monocyte count,2
+Immunological,Monocyte count (three-way meta),2
+Immunological,Monocyte count (two-way meta),2
+Immunological,Monocyte percentage of white cells (three-way meta),2
+Immunological,Monocyte percentage of white cells (two-way meta),2
+Immunological,Myeloid white cell count (three-way meta),2
+Immunological,Myeloid white cell count (two-way meta),2
+Immunological,Neutrophil count (three-way meta),2
+Immunological,Neutrophil count (two-way meta),1
+Immunological,Red blood cell count (three-way meta),2
+Immunological,Red blood cell count (two-way meta),2
+Immunological,Sum basophil neutrophil count (three-way meta),2
+Immunological,Sum basophil neutrophil count (two-way meta),2
+Immunological,Sum eosinophil basophil count (three-way meta),2
+Immunological,Sum neutrophil eosinophil count (three-way meta),2
+Immunological,Sum neutrophil eosinophil count (two-way meta),2
+Immunological,White blood cell count,2
+Immunological,White blood cell count (three-way meta),2
+Immunological,White blood cell count (two-way meta),2
+Metabolic,::::X-11491,1
+Metabolic,Activated partial thromboplastin time,2
+Metabolic,Alanine aminotransferase,2
+Metabolic,Albumin/globulin ratio,2
+Metabolic,Amino acid::Phenylalanine & tyrosine metabolism::X-11423--O-sulfo-L-tyrosine,1
+Metabolic,Blood urea nitrogen,2
+Metabolic,Concentration of very small VLDL particles ,2
+Metabolic,Creatine kinase,2
+Metabolic,Glycine ,2
+Metabolic,Glycine level,4
+Metabolic,Glycine level (male),2
+Metabolic,Impedance measures - Arm fat percentage (left),14
+Metabolic,Impedance measures - Arm fat percentage (right),14
+Metabolic,Impedance measures - Arm fat-free mass (left),12
+Metabolic,Impedance measures - Arm fat-free mass (right),14
+Metabolic,Impedance measures - Arm predicted mass (left),9
+Metabolic,Impedance measures - Arm predicted mass (right),14
+Metabolic,Impedance measures - Basal metabolic rate,12
+Metabolic,Impedance measures - Body fat percentage,12
+Metabolic,Impedance measures - Impedance of arm (left),2
+Metabolic,Impedance measures - Impedance of arm (right),2
+Metabolic,Impedance measures - Leg fat percentage (left),12
+Metabolic,Impedance measures - Leg fat percentage (right),12
+Metabolic,Impedance measures - Leg fat-free mass (left),12
+Metabolic,Impedance measures - Leg fat-free mass (right),12
+Metabolic,Impedance measures - Leg predicted mass (left),12
+Metabolic,Impedance measures - Leg predicted mass (right),12
+Metabolic,Impedance measures - Trunk fat percentage,8
+Metabolic,Impedance measures - Trunk fat-free mass,14
+Metabolic,Impedance measures - Trunk predicted mass,14
+Metabolic,Impedance measures - Whole body fat-free mass,12
+Metabolic,Impedance measures - Whole body water mass,12
+Metabolic,Lactate dehydrogenase,2
+Metabolic,Legs-leg fat ratio (female),1
+Metabolic,Legs-leg fat ratio (male),2
+Metabolic,Low-density lipoprotein cholesterol,1
+Metabolic,Low-density-lipoprotein cholesterol,2
+Metabolic,Non-albumin protein,2
+Metabolic,"Non-cancer illness code, self-reported: high cholesterol",2
+Metabolic,Peptide::Fibrinogen cleavage peptide::ADSGEGDFXAEGGGVR*,1
+Metabolic,Peptide::Fibrinogen cleavage peptide::ADpSGEGDFXAEGGGVR*,1
+Metabolic,Phospholipids in very small VLDL ,2
+Metabolic,Prothrombin time,12
+Metabolic,Total cholesterol,3
+Metabolic,Total cholesterol in IDL ,2
+Metabolic,Total lipids in IDL ,2
+Metabolic,Total lipids in very small VLDL ,2
+Metabolic,Trunk-trunk fat ratio (male),2
+Metabolic,"Waist-hip ratio (adjusted for BMI, male)",2
+Metabolic,Waist-hip ratio (male),1
+Mortality,Diagnoses - secondary ICD10: Z86 Personal history of certain other diseases,2
+Mortality,Diagnoses - secondary ICD10: Z92 Personal history of medical treatment,2
+Mortality,Father's age at death,2
+Mortality,Number of self-reported non-cancer illnesses,1
+Neurological,Left accumbens area,1
+Ophthalmological,Cup area,1
+Respiratory,"Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Hayfever, allergic rhinitis or eczema",2
+Respiratory,FEV1,4
+Respiratory,PEF,4
+Skeletal,Estimated BMD,2
+Skeletal,Estimated bone mineral density from heel ultrasounds,1
+Skeletal,Heel bone mineral density,2
+Skeletal,Height,7
+Skeletal,Sitting height,12
+Skeletal,Standing height,12
+Social Interactions,Social support - Leisure/social activities: Religious group,2

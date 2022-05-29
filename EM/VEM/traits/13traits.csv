@@ -1,0 +1,162 @@
+Activities,"Medication for cholesterol, blood pressure or diabetes: Cholesterol lowering medication",1
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Cholesterol lowering medication",1
+Activities,"Medication for pain relief, constipation, heartburn: Aspirin",1
+Activities,Treatment/medication code: atorvastatin,1
+Activities,Treatment/medication code: simvastatin,1
+Activities,Use of sun/uv protection,5
+Cardiovascular,Coronary artery disease,1
+Cardiovascular,Coronary artery disease (SOFT definition including angina),1
+Cardiovascular,Diastolic Blood Pressure (automated reading),1
+Cardiovascular,High blood pressure,1
+Cardiovascular,"Non-cancer illness code, self-reported: hypertension",1
+Cardiovascular,Pulse rate (automated reading),1
+Cardiovascular,Resting heart rate,1
+Cardiovascular,Vascular/heart problems diagnosed by doctor: High blood pressure,1
+Cell,EDAR - Tumor necrosis factor receptor superfamily member EDAR,1
+Cell,F11 - Coagulation Factor XI,1
+Cell,ITGA1 ITGB1 - Integrin alpha-I: beta-1 complex,1
+Dermatological,Ease of skin tanning,6
+Dermatological,"Hair colour (natural, before greying): Black",2
+Dermatological,"Hair colour (natural, before greying): Dark brown",5
+Dermatological,"Hair colour (natural, before greying): Red",5
+Dermatological,Skin colour,5
+Endocrine,Thyroid-stimulating hormone,1
+Endocrine,Thyroid-stimulating hormone (female),1
+Endocrine,Type 2 Diabetes,2
+Endocrine,Type 2 Diabetes (adjusted for BMI),1
+Environment,Illnesses of father: Heart disease,1
+Environmental,Antithrombotic agents,1
+Environmental,HMG CoA reductase inhibitors,1
+Environmental,Salicylic acid and derivatives,1
+Gastrointestinal,Diverticular disease,2
+Hematological,Hemoglobin,1
+Hematological,Hemoglobin A1c,1
+Immunological,Basophil count (three-way meta),2
+Immunological,Eosinophil count (three-way meta),1
+Immunological,Eosinophil count (two-way meta),1
+Immunological,Granulocyte count (three-way meta),1
+Immunological,Granulocyte count (two-way meta),1
+Immunological,Hematocrit,1
+Immunological,Hematocrit (three-way meta),1
+Immunological,Hematocrit (two-way meta),1
+Immunological,Hemoglobin concentration (three-way meta),1
+Immunological,Hemoglobin concentration (two-way meta),1
+Immunological,Lymphocyte percentage of white cells (three-way meta),1
+Immunological,Lymphocyte percentage of white cells (two-way meta),1
+Immunological,Mean corpuscular volume,1
+Immunological,Mean platelet volume (three-way meta),1
+Immunological,Mean platelet volume (two-way meta),1
+Immunological,Monocyte count (three-way meta),1
+Immunological,Monocyte count (two-way meta),1
+Immunological,Myeloid white cell count (three-way meta),2
+Immunological,Myeloid white cell count (two-way meta),1
+Immunological,Neutrophil count (three-way meta),1
+Immunological,Neutrophil count (two-way meta),1
+Immunological,Platelet count,1
+Immunological,Platelet count (three-way meta),1
+Immunological,Platelet count (two-way meta),1
+Immunological,Platelet distribution width (three-way meta),2
+Immunological,Platelet distribution width (two-way meta),2
+Immunological,Plateletcrit (three-way meta),1
+Immunological,Plateletcrit (two-way meta),2
+Immunological,Platelets,1
+Immunological,Red blood cell count,1
+Immunological,Red blood cell count (three-way meta),1
+Immunological,Red blood cell count (two-way meta),1
+Immunological,Red cell distribution width (three-way meta),1
+Immunological,Red cell distribution width (two-way meta),1
+Immunological,Reticulocyte count (three-way meta),1
+Immunological,Reticulocyte count (two-way meta),1
+Immunological,Stem cell factor,1
+Immunological,Sum basophil neutrophil count (three-way meta),1
+Immunological,Sum basophil neutrophil count (two-way meta),1
+Immunological,Sum eosinophil basophil count (three-way meta),1
+Immunological,Sum eosinophil basophil count (two-way meta),1
+Immunological,Sum neutrophil eosinophil count (three-way meta),1
+Immunological,Sum neutrophil eosinophil count (two-way meta),1
+Immunological,White blood cell count,1
+Immunological,White blood cell count (three-way meta),2
+Immunological,White blood cell count (two-way meta),1
+Metabolic,Activated partial thromboplastin time,2
+Metabolic,Albumin,1
+Metabolic,Albumin/globulin ratio,1
+Metabolic,ApoB ,1
+Metabolic,Arms-arm fat ratio (female),1
+Metabolic,Birth weight,2
+Metabolic,Blood urea nitrogen,3
+Metabolic,Cholesterol esters in large LDL ,1
+Metabolic,Cholesterol esters in medium LDL ,1
+Metabolic,Concentration of IDL particles ,1
+Metabolic,Concentration of large LDL particles ,1
+Metabolic,Concentration of medium LDL particles ,1
+Metabolic,Concentration of small LDL particles ,1
+Metabolic,Concentration of very small VLDL particles ,1
+Metabolic,Diagnoses - secondary ICD10: E78 Disorders of lipoprotein metabolism and other lipidemias,1
+Metabolic,Estimated glomerular filtration rate,4
+Metabolic,Free cholesterol in IDL ,1
+Metabolic,Free cholesterol in large LDL ,1
+Metabolic,Glycine level,1
+Metabolic,Impedance measures - Arm fat percentage (left),5
+Metabolic,Impedance measures - Arm fat percentage (right),6
+Metabolic,Impedance measures - Arm fat-free mass (left),5
+Metabolic,Impedance measures - Arm fat-free mass (right),6
+Metabolic,Impedance measures - Arm predicted mass (left),5
+Metabolic,Impedance measures - Arm predicted mass (right),6
+Metabolic,Impedance measures - Basal metabolic rate,5
+Metabolic,Impedance measures - Body fat percentage,5
+Metabolic,Impedance measures - Impedance of arm (left),1
+Metabolic,Impedance measures - Impedance of arm (right),1
+Metabolic,Impedance measures - Impedance of leg (left),1
+Metabolic,Impedance measures - Impedance of leg (right),1
+Metabolic,Impedance measures - Leg fat percentage (left),5
+Metabolic,Impedance measures - Leg fat percentage (right),5
+Metabolic,Impedance measures - Leg fat-free mass (left),5
+Metabolic,Impedance measures - Leg fat-free mass (right),5
+Metabolic,Impedance measures - Leg predicted mass (left),5
+Metabolic,Impedance measures - Leg predicted mass (right),5
+Metabolic,Impedance measures - Trunk fat percentage,4
+Metabolic,Impedance measures - Trunk fat-free mass,5
+Metabolic,Impedance measures - Trunk predicted mass,5
+Metabolic,Impedance measures - Whole body fat-free mass,5
+Metabolic,Impedance measures - Whole body water mass,5
+Metabolic,Legs-leg fat ratio (male),1
+Metabolic,Low cholesterol lipoprotein,1
+Metabolic,Low-density lipoprotein cholesterol,1
+Metabolic,Low-density-lipoprotein cholesterol,1
+Metabolic,"Non-cancer illness code, self-reported: high cholesterol",1
+Metabolic,"Peptide::Polypeptide::bradykinin, des-arg(9)",1
+Metabolic,Phospholipids in IDL ,1
+Metabolic,Phospholipids in large LDL ,1
+Metabolic,Phospholipids in medium LDL ,1
+Metabolic,Phospholipids in very small VLDL ,1
+Metabolic,Prothrombin time,5
+Metabolic,Serum creatinine,1
+Metabolic,Serum total cholesterol ,1
+Metabolic,Total cholesterol,3
+Metabolic,Total cholesterol in IDL ,1
+Metabolic,Total cholesterol in LDL ,1
+Metabolic,Total cholesterol in large LDL ,1
+Metabolic,Total cholesterol in medium LDL ,1
+Metabolic,Total cholesterol in small LDL ,1
+Metabolic,Total cholesterol in small VLDL ,1
+Metabolic,Total lipids in IDL ,1
+Metabolic,Total lipids in large LDL ,1
+Metabolic,Total lipids in medium LDL ,1
+Metabolic,Total lipids in small LDL ,1
+Metabolic,Total lipids in very small VLDL ,1
+Metabolic,Triglyceride,1
+Metabolic,Triglycerides in IDL ,1
+Metabolic,Trunk-trunk fat ratio (male),1
+Mortality,Diagnoses - secondary ICD10: Z86 Personal history of certain other diseases,1
+Mortality,Diagnoses - secondary ICD10: Z92 Personal history of medical treatment,1
+Mortality,Number of self-reported non-cancer illnesses,1
+Respiratory,"Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Hayfever, allergic rhinitis or eczema",1
+Respiratory,FEV1,2
+Respiratory,FVC,2
+Respiratory,PEF,2
+Skeletal,Estimated BMD,1
+Skeletal,Estimated bone mineral density from heel ultrasounds,1
+Skeletal,Heel bone mineral density,1
+Skeletal,Sitting height,6
+Skeletal,Standing height,5
+Social Interactions,Social support - Leisure/social activities: Religious group,1

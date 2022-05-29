@@ -10,7 +10,7 @@ from scipy.interpolate import make_interp_spline
 name = "tab10"
 cmap = get_cmap(name)
 colors = cycle(cmap.colors)
-file = open('./che.log', 'r')
+file = open('./jbl.log', 'r')
 data = []
 exclude = ['Early stopping', 'GNN training complete', 'ADJ produced', 'Preprocessing']
 exgroup = True
@@ -64,6 +64,6 @@ for chart in groupdata.columns:
                fancybox=True, shadow=True)
     plt.xlabel('Iterations')
     plt.tight_layout()
-    plt.savefig('../plots/che/{}.svg'.format(chart), dpi=1200)
+    plt.savefig('../plots/jbl/{}.svg'.format(chart), dpi=1200)
     pass
 pass

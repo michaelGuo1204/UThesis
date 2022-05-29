@@ -83,12 +83,15 @@ def prsAnalysis(X, Y, header):
 # datap = datap.reset_index(drop=True)
 # datag = pd.read_csv('../Data/fs100.csv')
 # data = pandas.merge(datap, datag, on=['Cases'], how='inner')
-data = pd.read_csv('../Data/Enlarged combined.csv')
-data = data.dropna()
+data = pd.read_csv('../Data/DVT_UKB_R1.geno.csv')
+data = data.fillna(0)
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 header = data.columns[1:-1]
+data['Pheno'].replace({'C': 1, 'N': 0}, inplace=True)
+data.to_csv('../Data/fs1.csv', index=False)
 datav = data.values
 X = datav[:, 1:-1]
 Y = datav[:, -1]
+
 mlClassification(X, Y, data, header, False)
 # prsAnalysis(X, Y, header)

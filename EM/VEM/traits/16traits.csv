@@ -1,0 +1,130 @@
+Activities,Use of sun/uv protection,7
+Cardiovascular,Coronary artery disease (SOFT definition including angina),1
+Cardiovascular,Pulse rate (automated reading),1
+Cardiovascular,Resting heart rate,1
+Cell,BCAM - Basal Cell Adhesion Molecule,1
+Cell,CD109 - CD109 antigen,1
+Cell,CD209 - CD209 antigen,1
+Cell,CDH5 - Cadherin-5,1
+Cell,ENG - Endoglin,1
+Cell,FLT4 - Vascular endothelial growth factor receptor 3,1
+Cell,IL1R1 - Interleukin-1 receptor type 1,1
+Cell,IL27RA - Interleukin-27 receptor subunit alpha,1
+Cell,INSR - Insulin receptor,1
+Cell,JAG1 - Protein jagged-1,1
+Cell,NOTCH1 - Neurogenic locus notch homolog protein 1,1
+Cell,SEMA6A - Semaphorin-6A,1
+Cell,"TEK - Angiopoietin-1 receptor, soluble",1
+Cell,"TIE1 - Tyrosine-protein kinase receptor Tie-1, soluble",1
+Cell,VWF - von Willebrand factor,1
+Dermatological,Ease of skin tanning,8
+Dermatological,"Hair colour (natural, before greying): Black",2
+Dermatological,"Hair colour (natural, before greying): Blonde",1
+Dermatological,"Hair colour (natural, before greying): Dark brown",8
+Dermatological,"Hair colour (natural, before greying): Light brown",1
+Dermatological,"Hair colour (natural, before greying): Red",8
+Dermatological,Male pattern baldness (BOLT LMM infinitesimal mixed model),1
+Dermatological,Male pattern baldness (BOLT LMM non-infinitesimal mixed model),1
+Dermatological,Male-specific factors - Hair/balding pattern: Pattern 1,1
+Dermatological,Skin colour,8
+Hematological,Hemoglobin,1
+Immunological,Basophil count (three-way meta),1
+Immunological,Granulocyte count (three-way meta),1
+Immunological,Granulocyte percentage of myeloid white cells (three-way meta),1
+Immunological,Granulocyte percentage of myeloid white cells (two-way meta),1
+Immunological,Hematocrit,1
+Immunological,Hematocrit (three-way meta),1
+Immunological,Hematocrit (two-way meta),1
+Immunological,Hemoglobin concentration (three-way meta),1
+Immunological,Hemoglobin concentration (two-way meta),1
+Immunological,Mean corpuscular hemoglobin,1
+Immunological,Mean corpuscular hemoglobin (three-way meta),1
+Immunological,Mean corpuscular hemoglobin (two-way meta),1
+Immunological,Mean corpuscular hemoglobin concentration,1
+Immunological,Mean corpuscular hemoglobin concentration (three-way meta),1
+Immunological,Mean corpuscular hemoglobin concentration (two-way meta),1
+Immunological,Mean corpuscular volume,1
+Immunological,Mean corpuscular volume (three-way meta),1
+Immunological,Mean corpuscular volume (two-way meta),1
+Immunological,Mean platelet volume (three-way meta),1
+Immunological,Mean platelet volume (two-way meta),1
+Immunological,Monocyte count (three-way meta),1
+Immunological,Monocyte count (two-way meta),1
+Immunological,Monocyte percentage of white cells (three-way meta),1
+Immunological,Monocyte percentage of white cells (two-way meta),1
+Immunological,Myeloid white cell count (three-way meta),1
+Immunological,Neutrophil percentage of white cells (three-way meta),1
+Immunological,Neutrophil percentage of white cells (two-way meta),1
+Immunological,Platelet count,1
+Immunological,Platelet count (three-way meta),2
+Immunological,Platelet count (two-way meta),2
+Immunological,Platelet distribution width (three-way meta),1
+Immunological,Platelet distribution width (two-way meta),1
+Immunological,Plateletcrit (three-way meta),2
+Immunological,Plateletcrit (two-way meta),2
+Immunological,Platelets,1
+Immunological,Red blood cell count,2
+Immunological,Red blood cell count (three-way meta),1
+Immunological,Red blood cell count (two-way meta),1
+Immunological,Red cell distribution width (three-way meta),1
+Immunological,Red cell distribution width (two-way meta),1
+Immunological,Reticulocyte count (three-way meta),1
+Immunological,Reticulocyte count (two-way meta),1
+Immunological,White blood cell count (three-way meta),1
+Metabolic,Activated partial thromboplastin time,2
+Metabolic,Albumin,1
+Metabolic,Alkaline phosphatase,1
+Metabolic,Blood urea nitrogen,2
+Metabolic,Body Mass Index,1
+Metabolic,Estimated glomerular filtration rate,3
+Metabolic,Estimated glomerular filtration rate based on serum creatinine,1
+Metabolic,Estimated glomerular filtration rate based on serum creatinine (non-diabetic),1
+Metabolic,Impedance measures - Arm fat percentage (left),7
+Metabolic,Impedance measures - Arm fat percentage (right),7
+Metabolic,Impedance measures - Arm fat-free mass (left),5
+Metabolic,Impedance measures - Arm fat-free mass (right),8
+Metabolic,Impedance measures - Arm predicted mass (left),4
+Metabolic,Impedance measures - Arm predicted mass (right),8
+Metabolic,Impedance measures - Basal metabolic rate,8
+Metabolic,Impedance measures - Body fat percentage,7
+Metabolic,Impedance measures - Impedance of arm (left),2
+Metabolic,Impedance measures - Impedance of arm (right),1
+Metabolic,Impedance measures - Impedance of leg (left),1
+Metabolic,Impedance measures - Impedance of leg (right),1
+Metabolic,Impedance measures - Impedance of whole body,1
+Metabolic,Impedance measures - Leg fat percentage (left),7
+Metabolic,Impedance measures - Leg fat percentage (right),7
+Metabolic,Impedance measures - Leg fat-free mass (left),8
+Metabolic,Impedance measures - Leg fat-free mass (right),8
+Metabolic,Impedance measures - Leg predicted mass (left),8
+Metabolic,Impedance measures - Leg predicted mass (right),8
+Metabolic,Impedance measures - Trunk fat percentage,6
+Metabolic,Impedance measures - Trunk fat-free mass,9
+Metabolic,Impedance measures - Trunk predicted mass,9
+Metabolic,Impedance measures - Weight,1
+Metabolic,Impedance measures - Whole body fat-free mass,8
+Metabolic,Impedance measures - Whole body water mass,8
+Metabolic,Lactate dehydrogenase,1
+Metabolic,Low-density-lipoprotein cholesterol,1
+Metabolic,Peptide::Dipeptide::X-12244--N-acetylcarnosine,1
+Metabolic,Prothrombin time,8
+Metabolic,Total cholesterol,1
+Metabolic,Total protein,1
+Metabolic,Waist-hip ratio,1
+Metabolic,Waist-hip ratio (adjusted for BMI),1
+Metabolic,"Waist-hip ratio (adjusted for BMI, male)",1
+Metabolic,"Waist-hip ratio (male > 50 yrs, adjusted for BMI)",1
+Metabolic,Weight,1
+Ophthalmological,Cup area,1
+Ophthalmological,Intraocular pressure,2
+Psychiatric,Schizophrenia/Bipolar disorder,1
+Psychiatric,Snoring,2
+Respiratory,FEV1,2
+Respiratory,FVC,2
+Skeletal,Comparative height size at age 10,2
+Skeletal,Estimated BMD,1
+Skeletal,Estimated bone mineral density from heel ultrasounds,1
+Skeletal,Heel bone mineral density,1
+Skeletal,Height,9
+Skeletal,Sitting height,8
+Skeletal,Standing height,8

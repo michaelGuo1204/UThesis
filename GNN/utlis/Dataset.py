@@ -145,13 +145,13 @@ def featureSelection():
 
 
 def csvToNP():
-    file = pandas.read_csv('../Data/fs100.csv')
+    file = pandas.read_csv('../Data/fs1.csv')
     file = file.to_numpy()
     X = file[:, 1:-1]
     # X_onehot=seq_to_one_hot(X)
     # X[X == 2] = 1
     Y = file[:, -1]
-    np.savez("../Data/fs100.npz", X, Y)
+    np.savez("../Data/fs1.npz", X, Y)
 
 def makeManual():
     alldata = pandas.read_csv('../Data/GWAS/MAF-selected_8000.csv')
@@ -169,8 +169,8 @@ def makeManual():
 
 
 def corrCalculation():
-    data = pandas.read_csv('../Data/fs100.csv')
-    data = data.drop(['Cases', 'Label'], axis=1)
+    data = pandas.read_csv('../Data/fs1.csv')
+    data = data.drop(['ID', 'Pheno'], axis=1)
     corr = data.corr()
     sns.heatmap(corr)
     plt.show()
@@ -186,7 +186,7 @@ def corrCalculation():
     nx.draw(G, with_labels=True, node_color='orange', node_size=40, edge_color='black', linewidths=1, font_size=15)
     plt.show()
     am = nx.adjacency_matrix(G).A
-    np.savez("../Data/fsaj.npz", am)
+    np.savez("../Data/fsaj1.npz", am)
     pass
 
 
@@ -273,9 +273,9 @@ def snpLookup():
 # convertToBE()
 # GWASSelction()
 # featureSelection()
-# csvToNP()
+csvToNP()
 # makeManual()
-# corrCalculation()
+corrCalculation()
 # safsd()
 # supplemtPhenoExtract()
-snpLookup()
+# snpLookup()

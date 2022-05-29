@@ -1,0 +1,55 @@
+Activities,Childhood sunburn occasions,1
+Activities,Use of sun/uv protection,9
+Dermatological,Ease of skin tanning,9
+Dermatological,"Hair colour (natural, before greying): Black",1
+Dermatological,"Hair colour (natural, before greying): Blonde",1
+Dermatological,"Hair colour (natural, before greying): Dark brown",9
+Dermatological,"Hair colour (natural, before greying): Light brown",1
+Dermatological,"Hair colour (natural, before greying): Red",9
+Dermatological,Male pattern baldness (BOLT LMM infinitesimal mixed model),1
+Dermatological,Male pattern baldness (BOLT LMM non-infinitesimal mixed model),1
+Dermatological,Male-specific factors - Hair/balding pattern: Pattern 1,1
+Dermatological,Skin colour,9
+Metabolic,Estimated glomerular filtration rate,3
+Metabolic,Estimated glomerular filtration rate based on serum creatinine,1
+Metabolic,Impedance measures - Arm fat percentage (left),8
+Metabolic,Impedance measures - Arm fat percentage (right),8
+Metabolic,Impedance measures - Arm fat-free mass (left),2
+Metabolic,Impedance measures - Arm fat-free mass (right),9
+Metabolic,Impedance measures - Arm predicted mass (left),2
+Metabolic,Impedance measures - Arm predicted mass (right),9
+Metabolic,Impedance measures - Basal metabolic rate,9
+Metabolic,Impedance measures - Body fat percentage,8
+Metabolic,Impedance measures - Impedance of leg (left),1
+Metabolic,Impedance measures - Impedance of leg (right),1
+Metabolic,Impedance measures - Leg fat percentage (left),9
+Metabolic,Impedance measures - Leg fat percentage (right),9
+Metabolic,Impedance measures - Leg fat-free mass (left),9
+Metabolic,Impedance measures - Leg fat-free mass (right),9
+Metabolic,Impedance measures - Leg predicted mass (left),9
+Metabolic,Impedance measures - Leg predicted mass (right),9
+Metabolic,Impedance measures - Trunk fat percentage,7
+Metabolic,Impedance measures - Trunk fat-free mass,9
+Metabolic,Impedance measures - Trunk predicted mass,9
+Metabolic,Impedance measures - Weight,1
+Metabolic,Impedance measures - Whole body fat-free mass,9
+Metabolic,Impedance measures - Whole body water mass,9
+Metabolic,Legs-leg fat ratio (female),1
+Metabolic,Prothrombin time,9
+Metabolic,Trunk-trunk fat ratio (female),1
+Metabolic,Waist-hip ratio,1
+Metabolic,Waist-hip ratio (adjusted for BMI),1
+Metabolic,"Waist-hip ratio (adjusted for BMI, male)",1
+Metabolic,Waist-hip ratio (male),1
+Metabolic,Weight,1
+Neurological,Pain type(s) experienced in last month: Knee pain,1
+Nutritional,Oily fish intake,1
+Nutritional,Salad / raw vegetable intake,1
+Respiratory,FEV1,2
+Respiratory,FVC,2
+Skeletal,Comparative height size at age 10,1
+Skeletal,Estimated bone mineral density from heel ultrasounds,1
+Skeletal,Heel bone mineral density,1
+Skeletal,Height,3
+Skeletal,Sitting height,9
+Skeletal,Standing height,9

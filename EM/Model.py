@@ -13,7 +13,7 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 logger = logging.getLogger()
-logger.addHandler(logging.FileHandler('logs/che.log', 'a'))
+logger.addHandler(logging.FileHandler('logs/jbl.log', 'a'))
 print = logger.info
 
 
@@ -29,10 +29,10 @@ class Net(Model):
         self.mode = 'outer'
         self.iter = 10
         self.channel = 32
-        self.hidden = 512
+        self.hidden = 128
         self.conv1 = ChebConv(self.channel, K=2, activation="elu", kernel_regularizer=l2(l2_reg))
         # self.conv2 = GCNConv(self.channel, activation="elu", kernel_regularizer=l2(l2_reg))
-        self.flatten = Flatten(input_dim=(200, self.channel))
+        self.flatten = Flatten(input_dim=(257, self.channel))
         self.dropout = Dropout(0.5)
         self.dense1 = Dense(self.hidden, activation='relu', kernel_regularizer=l2(0.01))
         self.dense2 = Dense(self.hidden / 2, activation='relu', kernel_regularizer=l2(5e-4))

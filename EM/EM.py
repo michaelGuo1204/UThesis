@@ -134,6 +134,7 @@ class EstimateAdj():
             self.iter += 1
             adj = self.EM()
             data.a = adj
+            np.savez("../Data/ADJ No.{}.npz".format(self.iter), adj)
             print("ADJ produced")
             tf.keras.backend.clear_session()
             # adj = prob_to_adj(Q, args.threshold).to(self.device)

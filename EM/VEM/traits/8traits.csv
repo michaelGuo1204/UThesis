@@ -1,0 +1,158 @@
+Activities,"Medication for cholesterol, blood pressure or diabetes: Cholesterol lowering medication",4
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication",4
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Cholesterol lowering medication",4
+Activities,Treatment/medication code: atorvastatin,4
+Activities,Treatment/medication code: metformin,3
+Activities,Treatment/medication code: simvastatin,4
+Activities,Use of sun/uv protection,3
+Activities,Years since last cervical smear test (female),1
+Cardiovascular,Coronary artery disease,3
+Cardiovascular,Diastolic Blood Pressure (automated reading),5
+Cardiovascular,High blood pressure,5
+Cardiovascular,"Non-cancer illness code, self-reported: hypertension",4
+Cardiovascular,Vascular/heart problems diagnosed by doctor: High blood pressure,4
+Dermatological,Ease of skin tanning,3
+Dermatological,"Hair colour (natural, before greying): Dark brown",3
+Dermatological,"Hair colour (natural, before greying): Red",3
+Dermatological,Skin colour,3
+Endocrine,Thyroid-stimulating hormone,4
+Endocrine,Thyroid-stimulating hormone (female),4
+Endocrine,Thyroid-stimulating hormone (male),4
+Endocrine,Type 2 Diabetes,8
+Endocrine,Type 2 Diabetes (adjusted for BMI),4
+Environment,Educational attainment,1
+Environment,Illnesses of father: Heart disease,4
+Environment,Illnesses of mother: Diabetes,4
+Environmental,Antithrombotic agents,5
+Environmental,HMG CoA reductase inhibitors,4
+Environmental,Salicylic acid and derivatives,4
+Gastrointestinal,Diagnoses - main ICD10: K57 Diverticular disease of intestine,4
+Gastrointestinal,Diagnoses - secondary ICD10: K57 Diverticular disease of intestine,4
+Gastrointestinal,Diverticular disease,8
+Hematological,Hemoglobin,1
+Immunological,Basophil count (three-way meta),4
+Immunological,Granulocyte count (three-way meta),4
+Immunological,Granulocyte count (two-way meta),4
+Immunological,Granulocyte percentage of myeloid white cells (three-way meta),4
+Immunological,Granulocyte percentage of myeloid white cells (two-way meta),4
+Immunological,Hematocrit,4
+Immunological,Hematocrit (three-way meta),4
+Immunological,Hematocrit (two-way meta),4
+Immunological,Hemoglobin concentration (three-way meta),4
+Immunological,Hemoglobin concentration (two-way meta),4
+Immunological,Mean corpuscular volume,4
+Immunological,Monocyte count,4
+Immunological,Monocyte count (three-way meta),4
+Immunological,Monocyte count (two-way meta),4
+Immunological,Monocyte percentage of white cells (three-way meta),4
+Immunological,Monocyte percentage of white cells (two-way meta),4
+Immunological,Myeloid white cell count (three-way meta),4
+Immunological,Myeloid white cell count (two-way meta),4
+Immunological,Neutrophil count (three-way meta),4
+Immunological,Neutrophil count (two-way meta),1
+Immunological,Red blood cell count (three-way meta),4
+Immunological,Red blood cell count (two-way meta),4
+Immunological,Sum basophil neutrophil count (three-way meta),4
+Immunological,Sum basophil neutrophil count (two-way meta),2
+Immunological,Sum eosinophil basophil count (three-way meta),4
+Immunological,Sum eosinophil basophil count (two-way meta),1
+Immunological,Sum neutrophil eosinophil count (three-way meta),4
+Immunological,Sum neutrophil eosinophil count (two-way meta),4
+Immunological,White blood cell count,2
+Immunological,White blood cell count (three-way meta),4
+Immunological,White blood cell count (two-way meta),4
+Metabolic,::::X-11491,1
+Metabolic,Activated partial thromboplastin time,6
+Metabolic,Alanine aminotransferase,4
+Metabolic,Albumin/globulin ratio,3
+Metabolic,Amino acid::Phenylalanine & tyrosine metabolism::X-11423--O-sulfo-L-tyrosine,1
+Metabolic,Arms-arm fat ratio (female),1
+Metabolic,Birth weight,1
+Metabolic,Blood urea nitrogen,3
+Metabolic,Body Mass Index,6
+Metabolic,Body Mass Index (female),1
+Metabolic,Body Mass Index (male),2
+Metabolic,Concentration of very small VLDL particles ,4
+Metabolic,Creatine kinase,4
+Metabolic,Glycine ,4
+Metabolic,Glycine level,8
+Metabolic,Glycine level (male),4
+Metabolic,Hip circumference,1
+Metabolic,Impedance measures - Arm fat mass (left),1
+Metabolic,Impedance measures - Arm fat mass (right),1
+Metabolic,Impedance measures - Arm fat percentage (left),8
+Metabolic,Impedance measures - Arm fat percentage (right),8
+Metabolic,Impedance measures - Arm fat-free mass (left),7
+Metabolic,Impedance measures - Arm fat-free mass (right),8
+Metabolic,Impedance measures - Arm predicted mass (left),7
+Metabolic,Impedance measures - Arm predicted mass (right),8
+Metabolic,Impedance measures - Basal metabolic rate,4
+Metabolic,Impedance measures - Body Mass Index (BMI),1
+Metabolic,Impedance measures - Body fat percentage,4
+Metabolic,Impedance measures - Impedance of arm (left),5
+Metabolic,Impedance measures - Impedance of arm (right),5
+Metabolic,Impedance measures - Impedance of leg (left),1
+Metabolic,Impedance measures - Impedance of leg (right),1
+Metabolic,Impedance measures - Impedance of whole body,1
+Metabolic,Impedance measures - Leg fat mass (left),1
+Metabolic,Impedance measures - Leg fat mass (right),1
+Metabolic,Impedance measures - Leg fat percentage (left),4
+Metabolic,Impedance measures - Leg fat percentage (right),4
+Metabolic,Impedance measures - Leg fat-free mass (left),4
+Metabolic,Impedance measures - Leg fat-free mass (right),4
+Metabolic,Impedance measures - Leg predicted mass (left),4
+Metabolic,Impedance measures - Leg predicted mass (right),4
+Metabolic,Impedance measures - Trunk fat mass,1
+Metabolic,Impedance measures - Trunk fat percentage,4
+Metabolic,Impedance measures - Trunk fat-free mass,8
+Metabolic,Impedance measures - Trunk predicted mass,8
+Metabolic,Impedance measures - Weight,1
+Metabolic,Impedance measures - Whole body fat mass,1
+Metabolic,Impedance measures - Whole body fat-free mass,4
+Metabolic,Impedance measures - Whole body water mass,4
+Metabolic,Lactate dehydrogenase,4
+Metabolic,Legs-leg fat ratio (female),3
+Metabolic,Legs-leg fat ratio (male),4
+Metabolic,Low-density lipoprotein cholesterol,1
+Metabolic,Low-density-lipoprotein cholesterol,4
+Metabolic,Non-albumin protein,4
+Metabolic,"Non-cancer illness code, self-reported: high cholesterol",4
+Metabolic,Peptide::Fibrinogen cleavage peptide::ADSGEGDFXAEGGGVR*,1
+Metabolic,Peptide::Fibrinogen cleavage peptide::ADpSGEGDFXAEGGGVR*,1
+Metabolic,Phospholipids in very small VLDL ,3
+Metabolic,Prothrombin time,5
+Metabolic,Total cholesterol,5
+Metabolic,Total cholesterol in IDL ,3
+Metabolic,Total lipids in IDL ,3
+Metabolic,Total lipids in very small VLDL ,4
+Metabolic,Trunk-trunk fat ratio (male),4
+Metabolic,Waist circumference,1
+Metabolic,"Waist-hip ratio (adjusted for BMI, male)",4
+Metabolic,Waist-hip ratio (male),1
+Metabolic,Weight,1
+Mortality,Diagnoses - secondary ICD10: Z86 Personal history of certain other diseases,5
+Mortality,Diagnoses - secondary ICD10: Z92 Personal history of medical treatment,5
+Mortality,Father's age at death,2
+Mortality,Number of self-reported non-cancer illnesses,4
+Neurological,Frequent insomnia symptoms,1
+Neurological,Left accumbens area,4
+Neurological,Sleeplessness / insomnia,1
+Nutritional,Cheese intake,1
+Ophthalmological,Cup area,1
+Ophthalmological,Vertical cup-disc ratio,1
+Psychiatric,Daytime dozing / sleeping (narcolepsy),1
+Psychiatric,Depression - Recent feelings of inadequacy,1
+Psychiatric,Nap during day,1
+Psychiatric,Short sleep,1
+Psychiatric,Sleep duration,1
+Respiratory,"Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Hayfever, allergic rhinitis or eczema",4
+Respiratory,FEV1,8
+Respiratory,FEV1/FVC ratio,2
+Respiratory,PEF,8
+Skeletal,Estimated BMD,4
+Skeletal,Estimated bone mineral density from heel ultrasounds,4
+Skeletal,Heel bone mineral density,4
+Skeletal,Height,3
+Skeletal,Sitting height,3
+Skeletal,Standing height,3
+Social Interactions,Social support - Leisure/social activities: Religious group,4

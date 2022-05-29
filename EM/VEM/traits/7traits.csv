@@ -1,0 +1,134 @@
+Activities,"Medication for cholesterol, blood pressure or diabetes: Cholesterol lowering medication",1
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Blood pressure medication",1
+Activities,"Medication for cholesterol, blood pressure, diabetes, or take exogenous hormones: Cholesterol lowering medication",1
+Activities,Treatment/medication code: atorvastatin,1
+Activities,Treatment/medication code: metformin,1
+Activities,Treatment/medication code: simvastatin,1
+Cardiovascular,Coronary artery disease,1
+Cardiovascular,Diastolic Blood Pressure (automated reading),3
+Cardiovascular,High blood pressure,1
+Cardiovascular,"Non-cancer illness code, self-reported: hypertension",1
+Cardiovascular,Pulse rate (automated reading),1
+Cardiovascular,Resting heart rate,1
+Cardiovascular,Systolic Blood Pressure (automated reading),2
+Cardiovascular,Vascular/heart problems diagnosed by doctor: High blood pressure,1
+Cell,F11 - Coagulation Factor XI,3
+Connective Tissue,Ankylosing spondylitis,3
+Connective Tissue,Rheumatoid Arthritis,1
+Dermatological,Vitiligo,1
+Dermatological,Vitiligo (early onset),1
+Endocrine,Thyroid-stimulating hormone,1
+Endocrine,Thyroid-stimulating hormone (female),1
+Endocrine,Thyroid-stimulating hormone (male),1
+Endocrine,Type 2 Diabetes,3
+Endocrine,Type 2 Diabetes (adjusted for BMI),1
+Environment,Illnesses of father: Heart disease,1
+Environment,Illnesses of mother: Diabetes,1
+Environmental,Antithrombotic agents,1
+Environmental,HMG CoA reductase inhibitors,1
+Environmental,Salicylic acid and derivatives,1
+Gastrointestinal,Crohn's Disease,1
+Gastrointestinal,Diagnoses - main ICD10: K57 Diverticular disease of intestine,1
+Gastrointestinal,Diagnoses - secondary ICD10: K57 Diverticular disease of intestine,1
+Gastrointestinal,Diverticular disease,2
+Gastrointestinal,Primary sclerosing cholangitis,1
+Immunological,Basophil count (three-way meta),3
+Immunological,Basophil count (two-way meta),1
+Immunological,Eosinophil count (three-way meta),1
+Immunological,Eosinophil count (two-way meta),1
+Immunological,Epstein Barr Virus antigen EBNA seropositivity,1
+Immunological,Granulocyte count (three-way meta),3
+Immunological,Granulocyte count (two-way meta),3
+Immunological,Granulocyte percentage of myeloid white cells (three-way meta),1
+Immunological,Granulocyte percentage of myeloid white cells (two-way meta),1
+Immunological,Hematocrit,1
+Immunological,Hematocrit (three-way meta),1
+Immunological,Hematocrit (two-way meta),1
+Immunological,Hemoglobin concentration (three-way meta),1
+Immunological,Hemoglobin concentration (two-way meta),1
+Immunological,Immature fraction of reticulocytes (three-way meta),1
+Immunological,Lymphocyte count (three-way meta),1
+Immunological,Lymphocyte count (two-way meta),1
+Immunological,Mean corpuscular hemoglobin,1
+Immunological,Mean corpuscular volume,2
+Immunological,Mean platelet volume (three-way meta),3
+Immunological,Mean platelet volume (two-way meta),3
+Immunological,Monocyte count,2
+Immunological,Monocyte count (three-way meta),2
+Immunological,Monocyte count (two-way meta),2
+Immunological,Monocyte percentage of white cells (three-way meta),1
+Immunological,Monocyte percentage of white cells (two-way meta),1
+Immunological,Myeloid white cell count (three-way meta),3
+Immunological,Myeloid white cell count (two-way meta),3
+Immunological,Neutrophil count,1
+Immunological,Neutrophil count (three-way meta),3
+Immunological,Neutrophil count (two-way meta),1
+Immunological,Platelet count,2
+Immunological,Platelet count (three-way meta),2
+Immunological,Platelet count (two-way meta),2
+Immunological,Platelet distribution width (three-way meta),2
+Immunological,Platelet distribution width (two-way meta),2
+Immunological,Plateletcrit (three-way meta),2
+Immunological,Plateletcrit (two-way meta),2
+Immunological,Platelets,2
+Immunological,Red blood cell count (three-way meta),1
+Immunological,Red blood cell count (two-way meta),2
+Immunological,Sum basophil neutrophil count (three-way meta),3
+Immunological,Sum basophil neutrophil count (two-way meta),3
+Immunological,Sum eosinophil basophil count (three-way meta),2
+Immunological,Sum eosinophil basophil count (two-way meta),1
+Immunological,Sum neutrophil eosinophil count (three-way meta),3
+Immunological,Sum neutrophil eosinophil count (two-way meta),3
+Immunological,White blood cell count,1
+Immunological,White blood cell count (three-way meta),3
+Immunological,White blood cell count (two-way meta),3
+Metabolic,Activated partial thromboplastin time,8
+Metabolic,Alanine aminotransferase,1
+Metabolic,Albumin/globulin ratio,1
+Metabolic,Blood urea nitrogen,1
+Metabolic,Concentration of very small VLDL particles ,1
+Metabolic,Creatine kinase,1
+Metabolic,Estimated glomerular filtration rate,1
+Metabolic,Glycine ,1
+Metabolic,Glycine level,2
+Metabolic,Glycine level (male),1
+Metabolic,Impedance measures - Arm fat percentage (left),1
+Metabolic,Impedance measures - Arm fat percentage (right),1
+Metabolic,Impedance measures - Arm fat-free mass (left),1
+Metabolic,Impedance measures - Arm fat-free mass (right),1
+Metabolic,Impedance measures - Arm predicted mass (left),1
+Metabolic,Impedance measures - Arm predicted mass (right),1
+Metabolic,Impedance measures - Impedance of arm (left),1
+Metabolic,Impedance measures - Impedance of arm (right),1
+Metabolic,Impedance measures - Trunk fat-free mass,1
+Metabolic,Impedance measures - Trunk predicted mass,1
+Metabolic,Lactate dehydrogenase,1
+Metabolic,Legs-leg fat ratio (female),1
+Metabolic,Legs-leg fat ratio (male),1
+Metabolic,Low-density-lipoprotein cholesterol,1
+Metabolic,Non-albumin protein,1
+Metabolic,"Non-cancer illness code, self-reported: high cholesterol",1
+Metabolic,"Peptide::Polypeptide::bradykinin, des-arg(9)",1
+Metabolic,Phospholipids in very small VLDL ,1
+Metabolic,Prothrombin time,2
+Metabolic,Serum creatinine,1
+Metabolic,Total cholesterol,1
+Metabolic,Total cholesterol in IDL ,1
+Metabolic,Total lipids in IDL ,1
+Metabolic,Total lipids in very small VLDL ,1
+Metabolic,Trunk-trunk fat ratio (male),1
+Metabolic,"Waist-hip ratio (adjusted for BMI, male)",1
+Mortality,Diagnoses - secondary ICD10: Z86 Personal history of certain other diseases,1
+Mortality,Diagnoses - secondary ICD10: Z92 Personal history of medical treatment,1
+Mortality,Number of self-reported non-cancer illnesses,1
+Neurological,Left accumbens area,1
+Respiratory,Asthma (child-onset),1
+Respiratory,"Blood clot, DVT, bronchitis, emphysema, asthma, rhinitis, eczema, allergy diagnosed by doctor: Hayfever, allergic rhinitis or eczema",1
+Respiratory,FEV1,2
+Respiratory,PEF,2
+Skeletal,Estimated BMD,1
+Skeletal,Estimated bone mineral density from heel ultrasounds,1
+Skeletal,Heel bone mineral density,1
+Skeletal,Height,1
+Skeletal,Systemic Lupus Erythematosus,2
+Social Interactions,Social support - Leisure/social activities: Religious group,1

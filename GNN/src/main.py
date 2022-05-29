@@ -15,13 +15,13 @@ from Utils import *
 learning_rate = 1e-3  # Learning rate
 epochs = 30  # Number of training epochs
 es_patience = 10  # Patience for early stopping
-batch_size = 256  # Batch size
+batch_size = 128  # Batch size
 
 ################################################################################
 # Load data
 ################################################################################
 # CHANGE TRANSFORMS WHEN MODIFYING THE MODEL
-data = TDataset(load=True, n_traits=200, transforms=[LayerPreprocess(ChebConv)])
+data = JBODataset(load=True, n_traits=258, transforms=[LayerPreprocess(ChebConv)])
 # Train/valid/test split
 # data.a = sp.csr_matrix(np.load("../Data/fsaj.npz", allow_pickle=True)['arr_0'])
 # data.a = GCNConv.preprocess(data.a)

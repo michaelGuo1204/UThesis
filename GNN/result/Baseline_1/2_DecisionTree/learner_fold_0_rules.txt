@@ -1,0 +1,16 @@
+if (feature_5 <= 0.5) and (feature_17 <= 0.5) and (feature_48 <= 0.5) then class: N (proba: 62.14%) | based on 206 samples
+
+if (feature_5 <= 0.5) and (feature_17 > 0.5) and (feature_22 <= 1.5) then class: C (proba: 61.15%) | based on 139 samples
+
+if (feature_5 <= 0.5) and (feature_17 > 0.5) and (feature_22 > 1.5) then class: N (proba: 63.41%) | based on 41 samples
+
+if (feature_5 <= 0.5) and (feature_17 <= 0.5) and (feature_48 > 0.5) then class: C (proba: 61.76%) | based on 34 samples
+
+if (feature_5 > 0.5) and (feature_115 <= 0.5) and (feature_4 <= 0.5) then class: C (proba: 100.0%) | based on 20 samples
+
+if (feature_5 > 0.5) and (feature_115 > 0.5) and (feature_93 > 0.5) then class: C (proba: 71.43%) | based on 7 samples
+
+if (feature_5 > 0.5) and (feature_115 <= 0.5) and (feature_4 > 0.5) then class: C (proba: 71.43%) | based on 7 samples
+
+if (feature_5 > 0.5) and (feature_115 > 0.5) and (feature_93 <= 0.5) then class: N (proba: 100.0%) | based on 3 samples
+

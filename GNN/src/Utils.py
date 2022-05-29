@@ -45,7 +45,7 @@ class TDataset(Dataset):
         print('Reading')
         prb = progressbar.ProgressBar()
         prb.start()
-        for i in prb(range(13709)):
+        for i in prb(range(19, 21)):
             data = np.load(os.path.join(self.path, f'graph_{i}.npz'), allow_pickle=True)
             _x = data['x']
             _a = data['a']

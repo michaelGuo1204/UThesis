@@ -17,6 +17,7 @@ npz1$files
 arr <- npz1$f[["arr_0"]]
 # Convert array to matrix
 mat_from_file <- matrix(arr, nrow = 200, ncol = 200)
+
 # Make igraph by this adjacency matrix
 input_graph <- graph_from_adjacency_matrix(mat_from_file)
 # Try blocks 1 to 20 and estimate the SBM model
@@ -50,8 +51,22 @@ plot.igraph(g_all, vertex.color = factor(membership), edge.width = E(g_all)$weig
 
 # Plot cluster nets
 diag(cluster_net) <- 0
-cluster_net <- apply(array, margin, ...)
+
 g_cluster <- graph_from_adjacency_matrix(cluster_net, weighted = TRUE)
 plot.igraph(g_cluster, edge.width = E(g_cluster)$weight * 4, edge.arrow.size = 0.7)
 
 pheatmap(cluster_net, cluster_rows = FALSE, cluster_cols = FALSE)
+
+membermat <- matrix(membership, ncol = 1)
+npz2 <- np$load("./GNN/Data/Explain0.33.npz")
+npz2$files
+arr2 <- npz2$f[["arr_0"]]
+# Convert array to matrix
+explain_mat <- matrix(arr2, nrow = 200, ncol = 200)
+diag(explain_mat) <- 0
+g_exp <- graph_from_adjacency_matrix(explain_mat, mode = 'max', weighted = TRUE)
+list <- which(degree(g_exp) > 0)
+
+sub <- subgraph(g_exp, list)
+LOC = layout_nicely(sub)
+plot.igraph(sub, layout = LOC, vertex.color = factor(membership), vertex.size = degree(sub) * 6, vertex.label.cex = degree(sub) / 8)

@@ -5,7 +5,7 @@ import pandas as pd
 import scikitplot as skplt
 from sklearn.feature_selection import SelectFromModel, SelectKBest, chi2
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import roc_auc_score, r2_score
+from sklearn.metrics import roc_auc_score, r2_score, f1_score, accuracy_score, precision_score, recall_score
 from sklearn.model_selection import train_test_split
 from sklearn.svm import LinearSVC
 from supervised.automl import AutoML
@@ -70,6 +70,11 @@ def prsAnalysis(X, Y, header):
     lrc = LogisticRegression().fit(X_train, Y_train)
     Y_pre = lrc.predict(X_test)
     auc = roc_auc_score(Y_test, Y_pre)
+    recall = recall_score(Y_test, Y_pre)
+    precision = precision_score(Y_test, Y_pre)
+    acc = accuracy_score(Y_test, Y_pre)
+    f1 = f1_score(Y_test, Y_pre)
+
     score = lrc.score(X_test, Y_test)
     proba = lrc.predict_proba(X_test)
     skplt.metrics.plot_roc_curve(Y_test, proba)
@@ -83,12 +88,12 @@ def prsAnalysis(X, Y, header):
 # datap = datap.reset_index(drop=True)
 # datag = pd.read_csv('../Data/fs100.csv')
 # data = pandas.merge(datap, datag, on=['Cases'], how='inner')
-data = pd.read_csv('../Data/Enlarged combined.csv')
+data = pd.read_csv('../../../Data/beDataset_br.csv')
 data = data.dropna()
 data = data.iloc[np.random.permutation(len(data))].reset_index(drop=True)
 header = data.columns[1:-1]
 datav = data.values
 X = datav[:, 1:-1]
 Y = datav[:, -1]
-mlClassification(X, Y, data, header, False)
-# prsAnalysis(X, Y, header)
+# mlClassification(X, Y, data, header, False)
+prsAnalysis(X, Y, header)

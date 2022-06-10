@@ -8,7 +8,7 @@
                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
             <cc:Work>
                 <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-                <dc:date>2022-05-24T21:11:03.903905</dc:date>
+                <dc:date>2022-06-10T17:50:36.806178</dc:date>
                 <dc:format>image/svg+xml</dc:format>
                 <dc:creator>
                     <cc:Agent>
@@ -1561,7 +1561,7 @@ z
             <g id="matplotlib.axis_2"/>
             <g id="text_1">
                 <!-- Activities -->
-                <g transform="translate(612.488086 351.583586)scale(0.1 -0.1)">
+                <g transform="translate(612.488086 354.342961)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-41" d="M 2188 4044
 L 1331 1722 
@@ -1715,7 +1715,7 @@ z
             </g>
             <g id="text_2">
                 <!-- Cardiovascular -->
-                <g transform="translate(610.500675 331.976295)scale(0.1 -0.1)">
+                <g transform="translate(610.500675 334.73567)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-43" d="M 4122 4306
 L 4122 3641 
@@ -1883,7 +1883,7 @@ z
             </g>
             <g id="text_3">
                 <!-- Cell -->
-                <g transform="translate(609.347978 324.674584)scale(0.1 -0.1)">
+                <g transform="translate(609.347978 327.433959)scale(0.2 -0.2)">
                     <use xlink:href="#DejaVuSans-43"/>
                     <use xlink:href="#DejaVuSans-65" x="69.824219"/>
                     <use xlink:href="#DejaVuSans-6c" x="131.347656"/>
@@ -1892,7 +1892,7 @@ z
             </g>
             <g id="text_4">
                 <!-- Connective Tissue -->
-                <g transform="translate(607.974567 317.411153)scale(0.1 -0.1)">
+                <g transform="translate(607.974567 320.170528)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-6e" d="M 3513 2113
 L 3513 0 
@@ -1947,7 +1947,7 @@ z
             </g>
             <g id="text_5">
                 <!-- Dermatological -->
-                <g transform="translate(606.381704 310.192671)scale(0.1 -0.1)">
+                <g transform="translate(606.381704 312.952046)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-44" d="M 1259 4147
 L 1259 519 
@@ -2051,7 +2051,7 @@ z
             </g>
             <g id="text_6">
                 <!-- Endocrine -->
-                <g transform="translate(603.243325 298.279739)scale(0.1 -0.1)">
+                <g transform="translate(603.243325 301.039114)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-45" d="M 628 4666
 L 3578 4666 
@@ -2082,7 +2082,7 @@ z
             </g>
             <g id="text_7">
                 <!-- Environmental -->
-                <g transform="translate(590.283162 263.702012)scale(0.1 -0.1)">
+                <g transform="translate(590.283162 266.461387)scale(0.2 -0.2)">
                     <use xlink:href="#DejaVuSans-45"/>
                     <use xlink:href="#DejaVuSans-6e" x="63.183594"/>
                     <use xlink:href="#DejaVuSans-76" x="126.5625"/>
@@ -2100,7 +2100,7 @@ z
             </g>
             <g id="text_8">
                 <!-- Immunological -->
-                <g transform="translate(399.719958 124.365457)scale(0.1 -0.1)">
+                <g transform="translate(399.719958 127.124832)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-49" d="M 628 4666
 L 1259 4666 
@@ -2127,7 +2127,7 @@ z
             </g>
             <g id="text_9">
                 <!-- Metabolic -->
-                <g transform="translate(82.711482 420.125325)scale(0.1 -0.1)">
+                <g transform="translate(34.35992 422.8847)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-4d" d="M 628 4666
 L 1569 4666 
@@ -2185,7 +2185,7 @@ z
             </g>
             <g id="text_10">
                 <!-- Neurological -->
-                <g transform="translate(242.072689 601.607336)scale(0.1 -0.1)">
+                <g transform="translate(179.668001 604.366711)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-4e" d="M 628 4666
 L 1478 4666 
@@ -2217,7 +2217,7 @@ z
             </g>
             <g id="text_11">
                 <!-- Nutritional -->
-                <g transform="translate(283.14805 608.030629)scale(0.1 -0.1)">
+                <g transform="translate(230.458987 610.790004)scale(0.2 -0.2)">
                     <use xlink:href="#DejaVuSans-4e"/>
                     <use xlink:href="#DejaVuSans-75" x="74.804688"/>
                     <use xlink:href="#DejaVuSans-74" x="138.183594"/>
@@ -2233,7 +2233,7 @@ z
             </g>
             <g id="text_12">
                 <!-- Psychiatric -->
-                <g transform="translate(435.895651 600.943569)scale(0.1 -0.1)">
+                <g transform="translate(435.895651 603.702944)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-50" d="M 1259 4147
 L 1259 2394 
@@ -2308,7 +2308,7 @@ z
             </g>
             <g id="text_13">
                 <!-- Reproduction -->
-                <g transform="translate(512.979377 563.272328)scale(0.1 -0.1)">
+                <g transform="translate(512.979377 566.031703)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-52" d="M 2841 2188
 Q 3044 2119 3236 1894 
@@ -2381,7 +2381,7 @@ z
             </g>
             <g id="text_14">
                 <!-- Respiratory -->
-                <g transform="translate(533.92689 546.092213)scale(0.1 -0.1)">
+                <g transform="translate(533.92689 548.851588)scale(0.2 -0.2)">
                     <use xlink:href="#DejaVuSans-52"/>
                     <use xlink:href="#DejaVuSans-65" x="64.982422"/>
                     <use xlink:href="#DejaVuSans-73" x="126.505859"/>
@@ -2397,7 +2397,7 @@ z
             </g>
             <g id="text_15">
                 <!-- Skeletal -->
-                <g transform="translate(596.983141 453.126071)scale(0.1 -0.1)">
+                <g transform="translate(596.983141 455.885446)scale(0.2 -0.2)">
                     <defs>
                         <path id="DejaVuSans-53" d="M 3425 4513
 L 3425 3897 
@@ -2457,7 +2457,7 @@ z
             </g>
             <g id="text_16">
                 <!-- Cluster6 -->
-                <g transform="translate(343.887187 80.4)scale(0.12 -0.12)">
+                <g transform="translate(318.774375 80.4)scale(0.24 -0.24)">
                     <defs>
                         <path id="DejaVuSans-36" d="M 2113 2584
 Q 1688 2584 1439 2293 

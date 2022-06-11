@@ -41,6 +41,7 @@ loader = DisjointLoader(data, batch_size=batch_size, epochs=epochs)
 model = Net(0)
 model.built = True
 model.load_weights('./logs/New')
+
 while True:
     (x, a, i), y = next(loader)
     if y == 1: break

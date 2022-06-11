@@ -2,8 +2,8 @@
 
 [<< Go back](../README.md)
 
-## Decision Tree
 
+## Decision Tree
 - **n_jobs**: -1
 - **criterion**: gini
 - **max_depth**: 3
@@ -22,47 +22,44 @@ auc
 
 ## Training time
 
-8.3 seconds
+7.0 seconds
 
 ## Metric details
 
-|           |    score |   threshold |
-|:----------|---------:|------------:|
-| logloss   | 0.657378 |  nan        |
-| auc       | 0.644074 |  nan        |
-| f1        | 0.657266 |    0.196071 |
-| accuracy  | 0.489498 |    0.196071 |
-| precision | 0.489498 |    0.196071 |
-| recall    | 1        |    0.196071 |
-| mcc       | 0        |    0.196071 |
+|           |     score |   threshold |
+|:----------|----------:|------------:|
+| logloss   | 0.694754  |  nan        |
+| auc       | 0.51616   |  nan        |
+| f1        | 0.657266  |    0.31903  |
+| accuracy  | 0.517211  |    0.529372 |
+| precision | 0.621622  |    0.535765 |
+| recall    | 1         |    0.31903  |
+| mcc       | 0.0281982 |    0.465613 |
 
 ## Metric details with threshold from accuracy metric
 
-|           |    score |   threshold |
-|:----------|---------:|------------:|
-| logloss   | 0.657378 |  nan        |
-| auc       | 0.644074 |  nan        |
-| f1        | 0.657266 |    0.196071 |
-| accuracy  | 0.489498 |    0.196071 |
-| precision | 0.489498 |    0.196071 |
-| recall    | 1        |    0.196071 |
-| mcc       | 0        |    0.196071 |
+|           |     score |   threshold |
+|:----------|----------:|------------:|
+| logloss   | 0.694754  |  nan        |
+| auc       | 0.51616   |  nan        |
+| f1        | 0.378053  |    0.529372 |
+| accuracy  | 0.517211  |    0.529372 |
+| precision | 0.511699  |    0.529372 |
+| recall    | 0.299762  |    0.529372 |
+| mcc       | 0.0281597 |    0.529372 |
 
-## Confusion matrix (at threshold=0.196071)
+## Confusion matrix (at threshold=0.529372)
 
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
-| Labeled as 0 |                0 |             1750 |
-| Labeled as 1 |                0 |             1678 |
+| Labeled as 0 |             1270 |              480 |
+| Labeled as 1 |             1175 |              503 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
 
 ## Permutation-based Importance
-
 ![Permutation-based Importance](permutation_importance.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)
@@ -96,7 +93,6 @@ auc
 ![Lift Curve](lift_curve.png)
 
 ## SHAP Importance
-
 ![SHAP Importance](shap_importance.png)
 
 [<< Go back](../README.md)

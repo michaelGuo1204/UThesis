@@ -1,18 +1,28 @@
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import networkx as nx
 import pandas
 from spektral.data import DisjointLoader
+from spektral.models import GNNExplainer
 from spektral.transforms.normalize_adj import NormalizeAdj
 
 from Net import *
 from Utils import *
 
+
+def amExtract(G, a_threshold):
+    edgelist = G.edges()
+    blank = np.zeros((200, 200))
+    for edge in edgelist:
+        blank[edge[0], edge[1]] = 1
+        blank[edge[1], edge[0]] = 1
+    np.savez("../Data/Explain{}.npz".format(a_threshold), blank)
+
+
 ################################################################################
 # Hyper Params
 ################################################################################
-a_threshold_list = [0.35, 0.345, 0.34, 0.335, 0.33, 0.325, 0.32, 0.31]  # HIGHEST FIRST!!!
-layouts = [nx.layout.spring_layout, nx.layout.circular_layout]
+a_threshold_list = [0.33, 0.325, 0.32, 0.315, 0.31, 0.3]  # HIGHEST FIRST!!!
+layouts = [nx.layout.spring_layout]  # , nx.layout.circular_layout]
 batch_size = 1
 epochs = 300
 ################################################################################
@@ -20,7 +30,7 @@ epochs = 300
 ################################################################################
 file = pandas.read_csv('../Data/fs100.csv')
 header = file.columns[1:-1]
-data = WkDataset(load=True, n_traits=100, transforms=NormalizeAdj())[10000, 10001]
+data = TDataset(load=True, n_traits=200, transforms=NormalizeAdj())
 # Data loaders
 loader = DisjointLoader(data, batch_size=batch_size, epochs=epochs)
 
@@ -28,9 +38,10 @@ loader = DisjointLoader(data, batch_size=batch_size, epochs=epochs)
 # Load Model
 ################################################################################
 
-model = GeneralGNN(0)
+model = Net(0)
 model.built = True
-model.load_weights('./logs/64 GNN2 0.69 2/variables')
+model.load_weights('./logs/New')
+
 while True:
     (x, a, i), y = next(loader)
     if y == 1: break
@@ -55,15 +66,17 @@ for layout in layouts:
         plt.close()  # Close first cuz the plot_subgraph will draw on plt
         plt.figure(dpi=1200)
         giant = max(nx.algorithms.components.connected_components(G_r), key=len)  # Select biggest connected subgraph
+
         G = G_r.subgraph(giant)
         pos = layout(G)  # Choose the circular form
         G_unf = nx.Graph(G)  # Unfrozen the graph to remove the self looped
         G_unf.remove_edges_from(nx.selfloop_edges(G_unf))
         G = G_unf
-
+        amExtract(G, a_threshold)
         # Find the biggest smallest 0.9 biggest degrees
         d = dict(G.degree)
-        low, *_, high = sorted(d.values())
+
+        '''low, *_, high = sorted(d.values())
         norm = mpl.colors.Normalize(vmin=low, vmax=high, clip=True)
         mapper = mpl.cm.ScalarMappable(norm=norm, cmap=mpl.cm.coolwarm)  # Create color map
         if highest:
@@ -79,4 +92,6 @@ for layout in layouts:
         )
         name = str(layout).split(' ')[1].split('_')[0]
         plt.show()
+        pass
         # plt.savefig('../result/10k GNN explainer/{}Sub{}.png'.format(name, a_threshold))
+        '''

@@ -6,7 +6,7 @@ import scipy.sparse as sp
 from spektral.data import Dataset, Graph
 
 
-class WkDataset(Dataset):
+class TDataset(Dataset):
 
     def __init__(self, n_traits, load=False, p=1e-2, **kwargs):
         self.n_traits = n_traits
@@ -45,7 +45,7 @@ class WkDataset(Dataset):
         print('Reading')
         prb = progressbar.ProgressBar()
         prb.start()
-        for i in prb(range(13709)):
+        for i in prb(range(19, 21)):
             data = np.load(os.path.join(self.path, f'graph_{i}.npz'), allow_pickle=True)
             _x = data['x']
             _a = data['a']

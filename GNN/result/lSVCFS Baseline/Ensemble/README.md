@@ -2,47 +2,48 @@
 
 [<< Go back](../README.md)
 
+
 ## Ensemble structure
 
-| Model             |   Weight |
-|:------------------|---------:|
-| 3_Default_Xgboost |        1 |
+| Model              |   Weight |
+|:-------------------|---------:|
+| 3_Default_LightGBM |        1 |
+| 4_Default_Xgboost  |        1 |
+| 5_Default_CatBoost |        1 |
 
 ## Metric details
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.618321 | nan         |
-| auc       | 0.714733 | nan         |
-| f1        | 0.677241 |   0.357906  |
-| accuracy  | 0.671237 |   0.589947  |
-| precision | 0.825806 |   0.793823  |
-| recall    | 1        |   0.0822012 |
-| mcc       | 0.362819 |   0.589947  |
+| logloss   | 0.68698  |  nan        |
+| auc       | 0.566304 |  nan        |
+| f1        | 0.657266 |    0.244451 |
+| accuracy  | 0.551925 |    0.511812 |
+| precision | 0.646341 |    0.639755 |
+| recall    | 1        |    0.244451 |
+| mcc       | 0.104373 |    0.443417 |
 
 ## Metric details with threshold from accuracy metric
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.618321 |  nan        |
-| auc       | 0.714733 |  nan        |
-| f1        | 0.586725 |    0.589947 |
-| accuracy  | 0.671237 |    0.589947 |
-| precision | 0.762631 |    0.589947 |
-| recall    | 0.476758 |    0.589947 |
-| mcc       | 0.362819 |    0.589947 |
+| logloss   | 0.68698  |  nan        |
+| auc       | 0.566304 |  nan        |
+| f1        | 0.497711 |    0.511812 |
+| accuracy  | 0.551925 |    0.511812 |
+| precision | 0.551449 |    0.511812 |
+| recall    | 0.453516 |    0.511812 |
+| mcc       | 0.10173  |    0.511812 |
 
-## Confusion matrix (at threshold=0.589947)
+## Confusion matrix (at threshold=0.511812)
 
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
-| Labeled as 0 |             1501 |              249 |
-| Labeled as 1 |              878 |              800 |
+| Labeled as 0 |             1131 |              619 |
+| Labeled as 1 |              917 |              761 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)

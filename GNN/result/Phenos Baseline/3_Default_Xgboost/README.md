@@ -2,8 +2,8 @@
 
 [<< Go back](../README.md)
 
-## Extreme Gradient Boosting (Xgboost)
 
+## Extreme Gradient Boosting (Xgboost)
 - **n_jobs**: -1
 - **objective**: binary:logistic
 - **eta**: 0.075
@@ -27,47 +27,44 @@ auc
 
 ## Training time
 
-7.8 seconds
+4.7 seconds
 
 ## Metric details
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.64358  |  nan        |
-| auc       | 0.678595 |  nan        |
-| f1        | 0.678382 |    0.383305 |
-| accuracy  | 0.639027 |    0.461128 |
-| precision | 0.753049 |    0.700963 |
-| recall    | 1        |    0.111592 |
-| mcc       | 0.286038 |    0.461128 |
+| logloss   | 0.636667 | nan         |
+| auc       | 0.687464 | nan         |
+| f1        | 0.68561  |   0.351141  |
+| accuracy  | 0.639732 |   0.509639  |
+| precision | 0.776786 |   0.700126  |
+| recall    | 1        |   0.0870429 |
+| mcc       | 0.278844 |   0.509639  |
 
 ## Metric details with threshold from accuracy metric
 
 |           |    score |   threshold |
 |:----------|---------:|------------:|
-| logloss   | 0.64358  |  nan        |
-| auc       | 0.678595 |  nan        |
-| f1        | 0.663939 |    0.461128 |
-| accuracy  | 0.639027 |    0.461128 |
-| precision | 0.609414 |    0.461128 |
-| recall    | 0.729179 |    0.461128 |
-| mcc       | 0.286038 |    0.461128 |
+| logloss   | 0.636667 |  nan        |
+| auc       | 0.687464 |  nan        |
+| f1        | 0.627001 |    0.509639 |
+| accuracy  | 0.639732 |    0.509639 |
+| precision | 0.63564  |    0.509639 |
+| recall    | 0.618594 |    0.509639 |
+| mcc       | 0.278844 |    0.509639 |
 
-## Confusion matrix (at threshold=0.461128)
+## Confusion matrix (at threshold=0.509639)
 
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
-| Labeled as 0 |              964 |              780 |
-| Labeled as 1 |              452 |             1217 |
+| Labeled as 0 |             1155 |              595 |
+| Labeled as 1 |              640 |             1038 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
 
 ## Permutation-based Importance
-
 ![Permutation-based Importance](permutation_importance.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)
@@ -101,15 +98,6 @@ auc
 ![Lift Curve](lift_curve.png)
 
 ## SHAP Importance
-
 ![SHAP Importance](shap_importance.png)
-
-## SHAP Dependence plots
-
-### Dependence (Fold 1)
-
-![SHAP Dependence from Fold 1](learner_fold_0_shap_dependence.png)
-
-## SHAP Decision plots
 
 [<< Go back](../README.md)

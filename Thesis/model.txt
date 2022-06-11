@@ -1,0 +1,23 @@
+Model: "net"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ cheb_conv (ChebConv)        multiple                  160
+
+ dropout (Dropout)           multiple                  0
+
+ flatten (Flatten)           multiple                  0
+
+ dense (Dense)               multiple                  3277312
+
+ dense_1 (Dense)             multiple                  131328
+
+ dense_2 (Dense)             multiple                  32896
+
+ dense_3 (Dense)             multiple                  129
+
+=================================================================
+Total params: 3,441,825
+Trainable params: 3,441,825
+Non-trainable params: 0
+_________________________________________________________________

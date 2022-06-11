@@ -2,8 +2,8 @@
 
 [<< Go back](../README.md)
 
-## Baseline Classifier (Baseline)
 
+## Baseline Classifier (Baseline)
 - **n_jobs**: -1
 - **explain_level**: 2
 
@@ -15,15 +15,13 @@
 - **stratify**: True
 
 ## Optimized metric
-
 auc
 
 ## Training time
 
-0.4 seconds
+0.3 seconds
 
 ## Metric details
-
 |           |    score |   threshold |
 |:----------|---------:|------------:|
 | logloss   | 0.692927 |  nan        |
@@ -35,7 +33,6 @@ auc
 | mcc       | 0        |    0.440414 |
 
 ## Metric details with threshold from accuracy metric
-
 |           |    score |   threshold |
 |:----------|---------:|------------:|
 | logloss   | 0.692927 |  nan        |
@@ -47,16 +44,13 @@ auc
 | mcc       | 0        |    0.440414 |
 
 ## Confusion matrix (at threshold=0.440414)
-
 |              |   Predicted as 0 |   Predicted as 1 |
 |:-------------|-----------------:|-----------------:|
 | Labeled as 0 |                0 |             1750 |
 | Labeled as 1 |                0 |             1678 |
 
 ## Learning curves
-
 ![Learning curves](learning_curves.png)
-
 ## Confusion Matrix
 
 ![Confusion Matrix](confusion_matrix.png)

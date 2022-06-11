@@ -1,7 +1,10 @@
 name,model_type,metric_type,metric_value,train_time
-1_Baseline,Baseline,auc,0.5,1.06
-2_DecisionTree,Decision Tree,auc,0.6440744083092117,9.28
-3_Default_Xgboost,Xgboost,auc,0.7147333560360974,118.62
-4_Default_NeuralNetwork,Neural Network,auc,0.6496121232760089,9.26
-5_Default_RandomForest,Random Forest,auc,0.6819432998467563,29.54
-Ensemble,Ensemble,auc,0.7147333560360974,0.67
+1_Baseline,Baseline,auc,0.5,0.95
+2_DecisionTree,Decision Tree,auc,0.5161597139451728,7.94
+3_Default_LightGBM,LightGBM,auc,0.5368995402690278,3.29
+4_Default_Xgboost,Xgboost,auc,0.5605475906691639,61.95
+5_Default_CatBoost,CatBoost,auc,0.556869742891197,8.54
+6_Default_NeuralNetwork,Neural Network,auc,0.5153713604631364,9.29
+7_Default_RandomForest,Random Forest,auc,0.5338865996935127,14.74
+8_Default_ExtraTrees,Extra Trees,auc,0.5319589647539588,10.73
+Ensemble,Ensemble,auc,0.5663044440660651,0.75

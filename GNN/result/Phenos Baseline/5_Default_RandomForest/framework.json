@@ -1,11 +1,36 @@
 {
-  "uid": "36ec38be-7eb0-4887-995a-bd9cc1da103b",
+  "uid": "3ab9bb69-3e1c-45b1-89a6-c9240768ba13",
   "name": "5_Default_RandomForest",
   "preprocessing": [
     {
+      "missing_values": [
+        {
+          "fill_method": "na_fill_median",
+          "fill_params": {
+            "feature_2": 91.0,
+            "feature_3": 103.0,
+            "feature_6": 27.3314,
+            "feature_7": 78.1
+          },
+          "datetime_columns": []
+        }
+      ],
       "ml_task": "binary_classification",
       "params": {
-        "columns_preprocessing": {},
+        "columns_preprocessing": {
+          "feature_2": [
+            "na_fill_median"
+          ],
+          "feature_3": [
+            "na_fill_median"
+          ],
+          "feature_6": [
+            "na_fill_median"
+          ],
+          "feature_7": [
+            "na_fill_median"
+          ]
+        },
         "target_preprocessing": [
           "na_exclude"
         ],
@@ -18,7 +43,7 @@
       "library_version": "1.0.2",
       "algorithm_name": "Random Forest",
       "algorithm_short_name": "Random Forest",
-      "uid": "5d094227-5c65-447b-a689-b3cd7c6b9956",
+      "uid": "49d34231-f497-4f4e-897d-b3a65afea291",
       "params": {
         "model_type": "Random Forest",
         "ml_task": "binary_classification",
@@ -45,7 +70,20 @@
       "max_cols_limit": null
     },
     "preprocessing": {
-      "columns_preprocessing": {},
+      "columns_preprocessing": {
+        "feature_2": [
+          "na_fill_median"
+        ],
+        "feature_3": [
+          "na_fill_median"
+        ],
+        "feature_6": [
+          "na_fill_median"
+        ],
+        "feature_7": [
+          "na_fill_median"
+        ]
+      },
       "target_preprocessing": [
         "na_exclude"
       ],
@@ -87,8 +125,8 @@
   ],
   "predictions_fname": "5_Default_RandomForest/predictions_validation.csv",
   "metric_name": "auc",
-  "final_loss": -0.6794918879623574,
-  "train_time": 5.169875144958496,
+  "final_loss": -0.6845378852375277,
+  "train_time": 4.696255683898926,
   "is_stacked": false,
-  "threshold": 0.47558904273520347
+  "threshold": 0.5487989800978179
 }

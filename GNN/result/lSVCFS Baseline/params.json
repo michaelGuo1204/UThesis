@@ -5,11 +5,15 @@
   "total_time_limit": 3600,
   "model_time_limit": null,
   "algorithms": [
-    "Baseline",
-    "Decision Tree",
     "Random Forest",
     "Xgboost",
-    "Neural Network"
+    "Decision Tree",
+    "Baseline",
+    "LightGBM",
+    "Extra Trees",
+    "CatBoost",
+    "Neural Network",
+    "Nearest Neighbors"
   ],
   "train_ensemble": true,
   "stack_models": false,
@@ -39,14 +43,20 @@
   "saved": [
     "1_Baseline",
     "2_DecisionTree",
-    "3_Default_Xgboost",
-    "4_Default_NeuralNetwork",
-    "5_Default_RandomForest",
+    "3_Default_LightGBM",
+    "4_Default_Xgboost",
+    "5_Default_CatBoost",
+    "6_Default_NeuralNetwork",
+    "7_Default_RandomForest",
+    "8_Default_ExtraTrees",
     "Ensemble"
   ],
   "fit_level": "finished",
-  "best_model": "3_Default_Xgboost",
+  "best_model": "Ensemble",
   "load_on_predict": [
-    "3_Default_Xgboost"
+    "3_Default_LightGBM",
+    "4_Default_Xgboost",
+    "5_Default_CatBoost",
+    "Ensemble"
   ]
 }

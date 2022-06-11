@@ -1,0 +1,97 @@
+{
+  "uid": "fdb0fcd0-35db-435e-b846-86bfb24fdb35",
+  "name": "3_Default_LightGBM",
+  "preprocessing": [
+    {
+      "ml_task": "binary_classification",
+      "params": {
+        "columns_preprocessing": {},
+        "target_preprocessing": [
+          "na_exclude"
+        ],
+        "ml_task": "binary_classification"
+      }
+    }
+  ],
+  "learners": [
+    {
+      "library_version": "3.3.2",
+      "algorithm_name": "LightGBM",
+      "algorithm_short_name": "LightGBM",
+      "uid": "bec3579d-9e55-4d33-927a-ae4fb9dc4aec",
+      "params": {
+        "model_type": "LightGBM",
+        "ml_task": "binary_classification",
+        "n_jobs": -1,
+        "objective": "binary",
+        "num_leaves": 63,
+        "learning_rate": 0.05,
+        "feature_fraction": 0.9,
+        "bagging_fraction": 0.9,
+        "min_data_in_leaf": 10,
+        "seed": 3,
+        "metric": "auc",
+        "custom_eval_metric_name": null,
+        "explain_level": 2
+      },
+      "name": "learner_fold_0"
+    }
+  ],
+  "params": {
+    "additional": {
+      "max_rounds": 10000,
+      "early_stopping_rounds": 50,
+      "max_rows_limit": null,
+      "max_cols_limit": null
+    },
+    "preprocessing": {
+      "columns_preprocessing": {},
+      "target_preprocessing": [
+        "na_exclude"
+      ],
+      "ml_task": "binary_classification"
+    },
+    "validation_strategy": {
+      "validation_type": "split",
+      "train_ratio": 0.75,
+      "shuffle": true,
+      "stratify": true,
+      "X_path": "AutoML_1/X.data",
+      "y_path": "AutoML_1/y.data",
+      "results_path": "AutoML_1"
+    },
+    "learner": {
+      "model_type": "LightGBM",
+      "ml_task": "binary_classification",
+      "n_jobs": -1,
+      "objective": "binary",
+      "num_leaves": 63,
+      "learning_rate": 0.05,
+      "feature_fraction": 0.9,
+      "bagging_fraction": 0.9,
+      "min_data_in_leaf": 10,
+      "seed": 3,
+      "metric": "auc",
+      "custom_eval_metric_name": null,
+      "explain_level": 2
+    },
+    "automl_random_state": 1234,
+    "ml_task": "binary_classification",
+    "explain_level": 2,
+    "name": "3_Default_LightGBM",
+    "status": "initialized",
+    "final_loss": null,
+    "train_time": null,
+    "data_type": "original",
+    "max_time_for_learner": 360.0
+  },
+  "saved": [
+    "3_Default_LightGBM/learner_fold_0.lightgbm"
+  ],
+  "predictions_fname": "3_Default_LightGBM/predictions_validation.csv",
+  "metric_name": "auc",
+  "final_loss": -0.5368995402690278,
+  "train_time": 2.3255367279052734,
+  "is_stacked": false,
+  "threshold": 0.501621436232152
+}

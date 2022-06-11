@@ -1,11 +1,36 @@
 {
-  "uid": "784d8449-30af-4c57-ba22-798be7b0884e",
+  "uid": "2dfa81ca-0bfc-4b79-9813-7140fdd1704e",
   "name": "2_DecisionTree",
   "preprocessing": [
     {
+      "missing_values": [
+        {
+          "fill_method": "na_fill_median",
+          "fill_params": {
+            "feature_2": 91.0,
+            "feature_3": 103.0,
+            "feature_6": 27.3314,
+            "feature_7": 78.1
+          },
+          "datetime_columns": []
+        }
+      ],
       "ml_task": "binary_classification",
       "params": {
-        "columns_preprocessing": {},
+        "columns_preprocessing": {
+          "feature_2": [
+            "na_fill_median"
+          ],
+          "feature_3": [
+            "na_fill_median"
+          ],
+          "feature_6": [
+            "na_fill_median"
+          ],
+          "feature_7": [
+            "na_fill_median"
+          ]
+        },
         "target_preprocessing": [
           "na_exclude"
         ],
@@ -18,7 +43,7 @@
       "library_version": "1.0.2",
       "algorithm_name": "Decision Tree",
       "algorithm_short_name": "Decision Tree",
-      "uid": "aed33657-92b6-4d03-afb0-df93c63a1371",
+      "uid": "f6d775a2-09d3-48cd-8b57-6b072be281bb",
       "params": {
         "model_type": "Decision Tree",
         "ml_task": "binary_classification",
@@ -40,7 +65,20 @@
       "max_cols_limit": null
     },
     "preprocessing": {
-      "columns_preprocessing": {},
+      "columns_preprocessing": {
+        "feature_2": [
+          "na_fill_median"
+        ],
+        "feature_3": [
+          "na_fill_median"
+        ],
+        "feature_6": [
+          "na_fill_median"
+        ],
+        "feature_7": [
+          "na_fill_median"
+        ]
+      },
       "target_preprocessing": [
         "na_exclude"
       ],
@@ -79,8 +117,8 @@
   ],
   "predictions_fname": "2_DecisionTree/predictions_validation.csv",
   "metric_name": "auc",
-  "final_loss": -0.6575068985988424,
-  "train_time": 5.584587812423706,
+  "final_loss": -0.6697044100119189,
+  "train_time": 4.243372917175293,
   "is_stacked": false,
-  "threshold": 0.52381222400998
+  "threshold": 0.5042091120558274
 }

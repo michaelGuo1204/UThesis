@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import matplotlib.pyplot as plt
 import networkx as nx
 import pandas
 from spektral.data import DisjointLoader

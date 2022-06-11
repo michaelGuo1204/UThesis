@@ -5,9 +5,9 @@
 
 \section{样本标注}
 
-我们从UK Biobank数据库中获取骨关节炎患者（阳性样本）与非骨关节炎患者（阴性样本）。UK Biobank所提供的信息我们使用个体疾病伤害分类标准编码来对样本进行区分。国际疾病伤害及死因分类标准（The International Statistical Classification of Diseases and Related Health Problems，ICD）是由世界卫生组织所制定的根据特定规则对人群可能出现疾病进行归类的一套编码系统。\cite{who} UK Biobank已经对数据库内样本进行了ICD标注，因此我们可通过这一方法筛选研究对象。
+我们从UK Biobank数据库中获取骨关节炎患者（阳性样本）与非骨关节炎患者（阴性样本），并使用个体疾病伤害分类标准编码来对UK Biobank所提供的样本信息进行区分。国际疾病伤害及死因分类标准（The International Statistical Classification of Diseases and Related Health Problems，ICD）是由世界卫生组织所制定的根据特定规则对人群可能出现疾病进行归类的一套编码系统。\cite{who} UK Biobank已经对数据库内样本进行了ICD标注，因此我们可通过这一方法筛选研究对象。
 
-参考其他骨关节炎的相关研究，\cite{zengini_genome-wide_2018}我们确定如下筛选规则。我们认定包含如下ICD编码的个体为骨关节炎患者。
+参考其他骨关节炎的相关研究，\cite{zengini_genome-wide_2018}我们确定如下筛选规则。我们认定包含如表\ref{ICD_include}所含ICD编码的个体为骨关节炎患者。
 
 
 \begin{table}[!h]
@@ -28,11 +28,12 @@
 	\bottomrule[1.5pt]
 	\end{tabularx}
 \end{table}
-在筛选非骨关节患者时，为防止其他关节症状的干扰，我们也根据文献报道对包含另一些编码的个体予以排除。
+在筛选非骨关节患者时，为防止其他关节症状的干扰，我们也根据文献报道对表\ref{ICD_exclude}所含编码的个体予以排除。
+
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{患者评判依据} \label{ICD_exclude} \vspace{2mm}
+	\caption{非患者评判依据} \label{ICD_exclude} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X }
@@ -49,24 +50,28 @@
 	\bottomrule[1.5pt]
 	\end{tabularx}
 \end{table}
+
 依照以上规则，我们从UK Biobank数据库中筛选并获得6706名骨关节炎患者作为模型训练的阳性集。同时，为保证风险预测模型训练数据的均衡性，我们又挑选出了7000名正常个体作为阴性集。两部分数据共同构成本次研究所使用的数据集。
 
 \section{基因型位点质控}
 
 人类基因组具有复杂性与多样性，本研究中的每个样本个体基因型数据都由数十万乃至数百万个基因型位点组成。由于目前任何算法都无法短时间内对如此多的样本进行处理，因此需要从其中选取部分具有统计学意义的位点。本文根据目前已发表的骨关节炎的GWAS结果\cite{zengini_genome-wide_2018,arcogen_consortium_identification_2019}对样本的基因型位点进行关联显著值（P-Value）与等位基因频率（Allele Frequency，AF）质控。
 
-关联显著值是用来衡量GWAS研究中单核苷酸突变与给定性状关联显著性的一个统计量。在GWAS研究中，我们设定零假设为数据中没有SNP位点与特定性状相关联；而备择假设为至少有一个SNP位点同特定性状相关联。同时我们定义统计量$p$为当零假设为真时观察到该关联的概率。显然，$p$值越小，有越高把握在观察到关联时认为零假设为假。因此我们可以设定一个阈值，当统计量$p$低于该阈值时拒绝原假设，认为该位点同目标性状相关。\cite{chen_revisiting_2021}
+关联显著值是用来衡量GWAS研究中单核苷酸突变与给定性状关联显著性的一个统计量。在GWAS研究中，我们设定零假设为数据中没有SNP位点与特定性状相关联；而备择假设为至少有一个SNP位点同特定性状相关联。同时我们定义统计量$p$为当零假设为真时观察到该关联的概率。显然，$p$值越小，有越高把握在观察到关联时认为零假设为假。因此我们可以设定一个阈值，当统计量$p$低于该阈值时拒绝原假设，认为该位点同目标性状相关。\cite{chen_revisiting_2021}目前GWAS研究中对位点统计显著值的描述可通过Manhattan图
+进行，Manhattan图的横坐标为SNP位点在基因组中的坐标，纵坐标为对应SNP位点在GWAS研究中的统计显著值。本研究所选区的SNP位点Manhattan图如图\ref{fig:manhattan}所示。
+
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=\textwidth]{figures/Chapter2/Maha.png}
-\caption{GWAS研究的Manhattan图} \label{fig_ch2}
+\caption{GWAS研究的Manhattan图} \label{fig:manhattan}
 \end{figure}
-但是，由于遗传漂变的影响，随机的基因突变也有可能具有类似相关关系。因此我们并不能认为$p$值较小的位点同目标位点直接相关，在指定阈值时需要将可能由遗传漂变所产生的位点筛去。因此我们还需要通过QQ图来完成阈值界定。QQ图是一种根据分位数对两概率分布所作的图，该图来比较两分布差别的方式。\cite{wilk_probability_1968} GWAS中的QQ图横轴为遗传漂变所产生的分布，纵轴为实际分布，当图像偏离对角线时认为这类数据并非随机漂变。因此，根据QQ图\ref{ch2_qqplot}本文确定p阈值为$10^{-5}$。
+
+但是，由于遗传漂变的影响，随机的基因突变也有可能具有类似相关关系。因此我们并不能认为$p$值较小的位点同目标位点直接相关，在指定阈值时需要将可能由遗传漂变所产生的位点筛去。因此我们还需要通过QQ图来完成阈值界定。QQ图是一种根据分位数对两概率分布所作的图，该图来比较两分布差别的方式。\cite{wilk_probability_1968} GWAS中的QQ图横轴为遗传漂变所产生的分布，纵轴为实际分布，当图像偏离对角线时认为这类数据并非随机漂变。因此，根据QQ图\ref{qqplot}本文确定p阈值为$10^{-5}$。
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=7cm]{figures/Chapter2/qq.png}
-\caption{GWAS研究的Q-Q图} \label{ch2_qqplot}
+\caption{GWAS研究的Q-Q图} \label{fig:qqplot}
 \end{figure}
 
 
@@ -104,8 +109,7 @@
 \end{enumerate}
 \subsection{ 基于支持向量机的特征筛选}
 
-支持向量机（Support Vector
-Machine，SVM）是一种著名的机器学习算法。其通过构建数据空间内的分类平面来实现数据分类算法。其算法核心为以下优化过程
+支持向量机（Support Vector Machine，SVM）是一种著名的机器学习算法。其通过构建数据空间内的分类平面来实现数据分类算法。其算法核心为以下优化过程
 
 \begin{equation}
     \min_{W,b} [C\sum_{i}max(0,1-y_i(X_i^TW+b))+l(W)]
@@ -138,8 +142,7 @@ Machine，SVM）是一种著名的机器学习算法。其通过构建数据空�
 \end{equation}
 
 
-此时该拟合函数又称$w$的 $l_1$
-范数，又称Lasso惩罚\cite{tibshirani_regression_1996}，该范数可以用来评价特征在整体分类效果中的贡献\cite{fung_feature_2004}。因此本文可通过该范数对特征进行筛选。
+此时该拟合函数又称$w$的 $l_1$范数，又称Lasso惩罚\cite{tibshirani_regression_1996}，该范数可以用来评价特征在整体分类效果中的贡献\cite{fung_feature_2004}。因此本文可通过该范数对特征进行筛选。
 
 \section{数据集描述}
 经过以上步骤，我们制得包括13706位个体、每个体选取200个基因型位点的基因型数据集。数据集大小2.3GB。其中患病正样本6706例，正常负样本7000例。每个基因型位点我们通过8个字段描述，字段及其含义见表\ref{SNP_traits}。
@@ -166,7 +169,7 @@ Machine，SVM）是一种著名的机器学习算法。其通过构建数据空�
 	\end{tabularx}
 \end{table}
 
-同时为了计算与处理方便，我们对患者基因型位点数据根据效应等位位点$E$与非效应等位位点$N$进行编码，编码方式见表\ref{SNP_encoding}
+同时为了计算与处理方便，我们对患者基因型位点SNP数据根据效应等位位点$E$与非效应等位位点$N$进行编码，编码方式见表\ref{SNP_encoding}
 
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}

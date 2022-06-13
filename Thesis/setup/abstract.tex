@@ -9,12 +9,31 @@
 
 \defaultfont
 
-本文基于Overleaf上开源的西安交通大学博士学位毕业论文~\LaTeX~模板\footnote{链接为：\texttt{https://www.overleaf.com/latex/templates/latex-template-for-doctoral-thesis-of-xjtu/bmrqcdhbdrcw}, 作者为张明}，修改得到的西安交通大学学士学位毕业设计（论文）模板，本着造福校友的原则，将本项目开源。{\color{red}本文的编译环境为~XeLaTeX~，TeX Live Version为\texttt{2019}}。
+骨关节炎是一种尚无有效治疗方法的关节退行性病变。全球范围内骨关节患者群体庞大且规模逐渐扩大，
+使得骨关节炎成为导致残疾与疼痛的主要因素之一。研究显示通过风险预测模型的骨关节的早期预防与诊断能显著改善患者预后，
+然而现有的骨关节炎风险预测模型存在着性能差，可解释性弱的缺点，远不能达到临床使用需求。
+本文因此提出并设计了一种以图神经网络为核心的基于个体基因型与表型信息的骨关节炎风险预测模型。
 
-摘要是论文的高度概括，是全文的缩影，是长篇论文不可缺少的组成部分。要求用中、英文分别书写，一篇摘要不少于 400 字。英文摘要与中文摘要的内容和格式必须一致。
+本文主要完成以下三个方面工作：一、本文从 UKB 数据库获取了 13706名个体的基因型与表型数据，
+并根据GWAS研究与相关指标对该数据进行质控与预处理，用以模型的训练与测试。
+二、本文设计了以切比雪夫图神经网络为核心的结合基因型与表型信息的风险预测模型，该模型能够通过
+图估计器将输入无结构数据转化为图数据并进行图神经网络处理，并同时具备预测结果解释模块。
+三、本文对该风险预测模型的功能与性能加以测试评估。本文选择了一系列指标对模型的预测性能加以评估，
+并同包括PRS模型、常见机器学习算法在内的传统疾病风险预测模型相比较。证明本模型
+（AUC 0.74）较传统疾病风险预测模型（AUC 0.5）而言有着十分明显的性能改善。
+本文还通过对图估计器工作过程分析展现了本模型优秀的可解释性。
+
+在模型中，本文创新性使用了基于变分期望最大化的图估计器结合图神经网络来处理无结构的基因型数据。
+研究结果证实该方法不仅给出了较好的风险预测准确度；还能通过挖掘基因型数据中潜藏的信息对疾病病因、
+分型等因素加以推断。本文的研究成果一方面为无结构数据在图神经网络中的处理提供了新方法；
+另一方面也为疾病风险预测模型的构建提供了新思路，对图神经网络与疾病风险预测模型的广泛应用具有积极意义。
+
+
 
 \vspace{\baselineskip}
-\noindent{\textbf{ 关\hspace{0.5em}键\hspace{0.5em}词：}} 西安交通大学学士学位论文；毕业设计；\LaTeX
+\noindent{\textbf{ 关\hspace{0.5em}键\hspace{0.5em}词：}
+骨关节炎；风险预测模型；图神经网络} 
+
 
 
 %-----------------------------------------------------------------------------------------
@@ -26,10 +45,21 @@
 \titlespacing{\chapter}{0pt}{0mm}{5mm}
 \chapter*{ABSTRACT}
 
-\noindent You will never want to use Word again after you know how to write in \LaTeX.
+\textit{Osteoarthritis} is a degenerative joint disease for which there is no effective treatment. The large and expanding population of osteoarthritis patients worldwide makes osteoarthritis one of the leading causes of disability and pain. Studies have shown that the early prevention and diagnosis of osteoarthritis through risk prediction models can significantly improve the prognosis of patients. Nevertheless, the existing osteoarthritis risk prediction models are of poor performance and weak interpretability, which are far from meeting the needs of clinical use. Therefore, this paper proposes a graph neural network(GNN)-based osteoarthritis risk prediction model based on individual genotype and phenotype information.
+
+
+
+This paper mainly carries out three parts: First, this paper obtains the genotype and phenotype data of 13,706 individuals from the UKB database and conducts quality control and preprocessing on the data according to GWAS research and related indicators. 
+Second, this paper designs a Chebyshev-GNN-based osteoarthritis risk prediction model, which can integrate phenotype and genotype information. Equipped with a graph estimator, this model is 
+also capable of transforming plain data to a graph for GNN, the model interpreter qualifies the model to elaborate on the predicted result. 
+Third, this paper introduces a series of indicators to evaluate the model's predictive performance and compares it with traditional disease risk prediction models. It is demonstrated that this model (AUC 0.74) has a very significant performance improvement compared with the traditional disease risk prediction model (AUC 0.5). This paper also demonstrates the model's excellent interpretability by analysing the graph estimator's working process.
+
+
+
+This paper innovatively uses a graph estimator based on VEM combined with a graph neural network to process unstructured genotype data. The study's results confirmed that the model gives better risk prediction accuracy and can infer factors such as disease aetiology and classification by mining the hidden information in genotype data. The result of this study provides a new method for the processing of unstructured data in the graph neural network; it also provides a new idea for the construction of the disease risk prediction model.
 
 \vspace{\baselineskip}
-\noindent{\textbf{KEY WORDS:}} XJTU B.S. thesis; \LaTeX
+\noindent{\textbf{KEY WORDS:}} Osteoarthritis;Graph Neural Network;Risk Prediction Model
 
 
 \titlespacing{\chapter}{0pt}{-6mm}{5mm}

@@ -514,38 +514,95 @@ L=U^T\Lambda U
 \begin{equation}\begin{aligned}
 y=\sigma(g_\theta(L)x)
 \end{aligned}\end{equation}
-但是，此时$g_\theta$较难确定。Defferend[65]等人依靠切比雪夫多项式对$g_\theta$进行了近似，其认为
-\begin{equation}\begin{aligned}
+但是，此时$g_\theta$较难确定。Defferend[65]等人依靠切比雪夫多项式对$g_\theta$如式\ref{equ:chebyshev_approx}进行了近似。
+\begin{equation}\label{equ:chebyshev_approx}
+\begin{aligned}
 g_{\theta}(\Lambda)=\sum_{k=0}^{K}\theta_kT_k(\tilde{\Lambda}),\ \tilde{\Lambda}=2\Lambda_n/\lambda_{max}-I_n
 \end{aligned}\end{equation}
-其中$\theta$代表需要在训练中学习的参数，$T_k$代表$k$阶切比雪夫行列式，$\tilde{\Lambda}$代表特征矩阵。其中切比雪夫行列式计算方式如下。
-\begin{equation}\begin{aligned}
+其中$\theta$代表需要在训练中学习的参数，$T_k$代表$k$阶切比雪夫行列式，$\tilde{\Lambda}$代表特征矩阵。其中切比雪夫行列式计算方式如式\ref{equ:chebyshev_poly}。
+\begin{equation}\label{equ:chebyshev_poly}
+\begin{aligned}
 T^{(0)} &= X \\
 T^{(1)} &= \tilde L X \\
 T^{(k \ge 2)} &= 2 \cdot \tilde L T^{(k - 1)} - T^{(k - 2)},
 \end{aligned}\end{equation}
-因此切比雪夫网络中的一层表示为
-\begin{equation}\begin{aligned}
+因此切比雪夫网络中的一层表示为式\ref{equ:chebyshev_layer}所示形式。
+\begin{equation}\label{equ:chebyshev_layer}
+\begin{aligned}
 Y=\sigma \left(  \sum_{k=0}^{K-1}{\theta_k T_k (\tilde{L})}   x \right) 
 \end{aligned}\end{equation}
 
 \subsection{结构设计}
 
-基于切比雪夫层的特点，我们构建如下图神经网络。
+基于切比雪夫层的特点，我们构建如表\ref{tab:GNNstructure}的图神经网络。
 
-\begin{itemize}
-\item
-  切比雪夫层
-\item
-  切比雪夫层
-\item
-  读出层
-\item
-  全连接层
-\end{itemize}
+\begin{table}[!h]
+	\renewcommand{\arraystretch}{1.2}
+	\centering\wuhao
+	\caption{图神经网络结构} \label{tab:GNNstructure} \vspace{2mm}
+	\begin{tabularx}{\textwidth} { 
+   >{\centering\arraybackslash}X 
+   >{\centering\arraybackslash}X
+   >{\centering\arraybackslash}X 
+   >{\centering\arraybackslash}X }
+	\toprule[1.5pt]
+	层          & 功能         & 超参数                              & 输出形式       \\
+	\midrule[1pt]
+	切比雪夫层      & 图卷积        & k=1,Channel=64,activation='ReLu' & (,200,16)  \\
+切比雪夫层      & 图卷积        & k=1,Channel=64,activation='ReLu' & (,200,16)  \\
+读出层        & 将图卷积结果转为矩阵 & -                                & (,3200)    \\
+全连接层       & 学习图数据      & N=512,activation='ReLu'          & (,256)     \\
+Drop-Out 层 & 抑制网络过拟合    & Dropout rate = 0.5               &            \\
+全连接层       & 学习图数据      & N=256,activation='ReLu'          & (,64)      \\
+全连接层       & 学习图数据      & N=64，activation='Sigmoid'        & (,1)      \\
+	\bottomrule[1.5pt]
+	\end{tabularx}
+\end{table}
 
-其中切比雪夫层设置阶数$k=1$，原理上该型卷积核同CNN中最经典的$3\times3$卷积核作用结果相仿。每层切比雪夫层会使节点融合与其相邻节点的信息，增强模型对局部信息的处理能力。读出层将进过行卷积操作的图再次转化为无结构数据，再将该数据输入全连接层中用以后续的风险预测。
+对于切比雪夫层，我们首先选择参数$k=1$，这意味着该层只取图切比雪夫矩阵的前两项。由式\ref{equ:chebyshev_poly}与式\ref{equ:chebyshev_layer}我们可知，在该参数条件下，每个节点输出值至于该节点及其相邻节点相关。这与传统卷积神经网络中选取的$(3\times 3)$卷积核功能类似。同时为了充分学习图中潜藏的信息，我们设定该层的通道数为16，这意味着同时有16个卷积核在一图中学习，增强了模型对潜藏信息的挖掘能力。同时根据文献报道，我们选择如式\ref{equ:ReLu}所示$ReLu$函数作为该层的激活函数。\cite{defferrard_convolutional_2017}
+\begin{equation}\label{equ:ReLu}
+    ReLu(x)=\max \{0,x\}
+\end{equation}
+在对图信息充分学习与处理后，我们将图数据再次通过读出层转化为数据矩阵，准备后续通过全连接层对疾病风险进行预测。考虑到读出层共产生3200个特征，我们选择$512-256-64$的全连接层组合以求最大限度提高模型性能。同时为了防止该规模下模型对数据的过拟合，我们加入Dropout层以在训练中随机屏蔽某些神经元。输出层的最后，本模型通过如式\ref{equ:sigmoid}所示$Sigmoid$激活函数来给出根据患者基因型信息的骨关节炎患病风险。
+
+\begin{equation}\label{equ:sigmoid}
+    Sigmoid(x)=\frac{1}{1+e^{-x}}
+\end{equation}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\textwidth]{./figures/Chapter3/GNN.png}
+  \caption{图神经网络架构} \label{fig:GNN}
+\end{figure}
+
+在完成了工作过程如图\ref{fig:GNN}的图神经网络构建后，我们将其通过算法\ref{algo:VEMGNN}与已经搭建好的图估计器相融合。使其具备根据输入基因型信息给出风险预测的能力。
+
+\begin{algorithm}
+\label{algo:VEMGNN}
+\SetAlgoLined
+\caption{图估计切比雪夫图神经网络}
+\KwData{基因型数据$X$}
+\KwResult{患病风险预测值$y$，最优图结构$G$，神经网络参数$\Theta$}
+\KwIn {基因型数据$X$}
+
+依据全连接法构建初始图结构$G$
+
+\While{未到达设定迭代数}{
+    神经网络训练
+    
+    $\Theta=\mathop{\arg \min}_{\Theta} l(y,G)$
+             
+    图估计
+    
+    根据图神经网络输出估计可能图结构并更新$G$
+}
+\KwOut {输出最优图结构及图神经网络参数，根据该参数给出风险预测}
+\end{algorithm}
+
+
+
 \section{表型融合}
+
 考虑到骨关节炎作为一种复杂多基因疾病，单纯以基因型为输入可能导致风险预测效果不佳。因此有必要同时融合表型数据。根据Boer\cite{boer_deciphering_2021}等人的报道，我们选择同骨关节炎密切相关的表型做为协变量并从UKB数据库中获取相关表型数据。具体表型如下表。
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
@@ -570,6 +627,7 @@ Y=\sigma \left(  \sum_{k=0}^{K-1}{\theta_k T_k (\tilde{L})}   x \right)
 同时我们选择多模态数据融合中的中间融合法\cite{gaudillo_machine_2019}将基因型数据与表型数据相融合。我们将已构建的图神经网络的中间输出层与所获取的表型数据相融合，并输入新的分类器进行训练，最终给出融合表型后的预测结果。
 
 \section{图解释器}
+
 图是一种包含了节点信息与节点之间关系的数据结构，但是，本文目前为止建立的模型只能直接给出对患病风险的预测，与传统机器学习方法无异。如果能够充分利用图中的关联信息并对产生该预测结果的原因加以解释，不仅能够增强预测结果可信性，还能根据其解释内容发掘数据中潜藏的其他信息。目前对于图神经网络解释器的研究已有颇多进展，本文基于其中备受关注的GNNExplainer \cite{ying_gnnexplainer:_2019}来构建模型解释器。
 
 GNNExplainer通过输入的已训练图神经网络模型及其预测结果从输入数据中选择对预测结果影响最大的子图。其数学描述如下

@@ -1,11 +1,19 @@
 \chapter{结果讨论与分析}
 本章将对搭建的骨关节炎风险预测模型的图估计效果、患病风险预测能力进行分析与评估。同时将结合具体案例分析模型解释器所产生的解释结果。
 \section{评估指标}
-为了对模型的风险预测能力进行科学的评估，本文依照真实样本标签与预测结果构建如下混淆矩阵（Confusion Matrix）并根据该矩阵计算常用评价指标\cite{gaudillo_machine_2019}
+为了对模型的风险预测能力进行科学的评估，本文依照真实样本标签与预测结果构建如图\ref{fig:ConfusionMatrix}混淆矩阵（Confusion Matrix）
+并根据该矩阵计算如表\ref{tab:ConfusionMatrixFactor}所示常用评价指标\cite{gaudillo_machine_2019}。
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=10cm]{./figures/Chapter4/GNN/ConfusionMatrix.png}
+	\caption{混淆矩阵构成} \label{fig:ConfusionMatrix}
+\end{figure}
+
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{混淆矩阵相关指标} \label{ICD_exclude} \vspace{2mm}
+	\caption{混淆矩阵相关指标} \label{tab:ConfusionMatrixFactor} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X
@@ -25,21 +33,33 @@
 	\bottomrule[1.5pt]
 	\end{tabularx}
 \end{table}
-此外，在评估模型预测效果时还有另一种不依赖混淆矩阵的指标，本文使用了其中的两种——接收器操作特性曲线下面积（Area Under Receiver Operating Curve，AUROC）以及柯尔莫哥洛夫-斯米尔诺夫指标（Kolmogorov-Smirnov Statistic，K-S Statistic）。接收器操作特性曲线（ROC）是用来评价二元分类器分类能力的一种曲线，其以真阳性率为纵轴假阳性率为横轴绘制模型不同阈值下真假阳性率的坐标。其曲线与横轴所围成面积被称为曲线下面积（AUC）,对于一分类模型而言，AUC越高表示其做出正确判断的能力越强。\cite{fawcett_introduction_2006}并且同准确率相比，AUC评价时不受训练集正负样本比例所影响。\cite{zou_receiver-operating_2007}因此本文使用该指标衡量模型预测能力。具有相似功能的指标还有K-S\cite{naaman_tight_2021}，它是一种用来检验两经验分布之间是否相同的统计量，K-S量越大表明模型的区分能力越强。
+此外，在评估模型预测效果时还有另一种不依赖混淆矩阵的指标，本文使用了其中的两种——接收器操作特性曲线下面积（Area Under Receiver Operating Curve，AUROC）以及柯尔莫哥洛夫-斯米尔诺夫指标（Kolmogorov-Smirnov Statistic，K-S Statistic）。
+接收器操作特性曲线（ROC）是用来评价二元分类器分类能力的一种曲线，其以真阳性率为纵轴假阳性率为横轴绘制模型不同阈值下真假阳性率的坐标。
+其曲线与横轴所围成面积被称为曲线下面积（AUC）,对于一分类模型而言，AUC越高表示其做出正确判断的能力越强。\cite{fawcett_introduction_2006}
+并且同准确率相比，AUC评价时不受训练集正负样本比例所影响。\cite{zou_receiver-operating_2007}
+因此本文使用该指标衡量模型预测能力。具有相似功能的指标还有K-S\cite{naaman_tight_2021}，它是一种用来检验两经验分布之间是否相同的统计量，K-S量越大表明模型的区分能力越强。
 \section{模型预测效果评价}
 \subsection{基准计算}
-在对本模型效果进行分析前，我们首先需要计算使用传统PRS方法时骨关节炎的风险预测效果。PRS方法，又称多基因风险评分（Polygenetic Risk Score）方法\cite{dudbridge_power_2013}，是一种评估SNP位点对某一特定性状的累计影响的量化指标。它由已有GWAS研究结果中SNP对表型影响的效应值以及统计显著性构建。其计算公式为
-\begin{equation}
+
+在对本模型效果进行分析前，我们首先需要计算使用传统PRS方法时骨关节炎的风险预测效果。PRS方法，又称多基因风险评分（Polygenetic Risk Score）方法\cite{dudbridge_power_2013}，是一种评估SNP位点对某一特定性状的累计影响的量化指标。
+它由已有GWAS研究结果中SNP对表型影响的效应值以及统计显著性构建。其计算公式为如式\ref{equ:PRS}
+
+\begin{equation}\label{equ:PRS}
     S=\sum_i^N X_i \beta_i
 \end{equation}
 
-其中$S$为个体的风险评分，$N$为总潜在SNP的数量，$X_i$为第$i$个SNP中潜在效应等位基因的数量，$\beta_i$为第$i$个SNP对形状的效应值。我们根据该公式对现有基因型数据进行计算得到个体评分，再通过逻辑回归法构建基于PRS的风险预测模型并得到如下ROC曲线
+其中$S$为个体的风险评分，$N$为总潜在SNP的数量，$X_i$为第$i$个SNP中潜在效应等位基因的数量，$\beta_i$为第$i$个SNP对形状的效应值。
+我们根据该公式对现有基因型数据进行计算得到个体评分，再通过逻辑回归法构建基于PRS的风险预测模型并得到如图\ref{fig:baseline}-a所示ROC曲线。
+可以发现，传统PRS模型的风险预测效果较差，AUC仅为0.51，与随机预测相当。
 
-可以发现，传统PRS模型的风险预测效果较差，AUC仅为0.51，与随机预测相当。这意味着使用PRS模型对骨关节炎的预测几乎没有任何参考意义。这也与Boer[5]研究中构建的PRS模型结果相符。同时我们也使用了包括决策树算法在内额若干传统机器学习模型对基因型数据进行处理与预测，所得结果与基于PRS的模型无显著差异。本文因此以该PRS模型为基础讨论本文提出模型对预测效果的改善。
+同时我们也使用了包括决策树算法在内额若干传统机器学习模型对基因型数据进行处理与预测，所得结果如图\ref{fig:baseline}-b与基于PRS的模型无显著差异。
+我们还通过混淆矩阵相关指标对两种模型进行评估，得到表\ref{tab:baseline}。从表中我们可以看出两模型预测性能均较差，这意味着使用PRS模型与传统机器学习模型对骨关节炎的预测几乎没有任何实际意义。
+而这也与Boer[5]研究中构建的PRS模型结果相符。因此本文以该PRS模型为基础讨论本文提出模型对预测效果的改善。
+
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{混淆矩阵相关指标} \label{ICD_exclude} \vspace{2mm}
+	\caption{混淆矩阵相关指标} \label{tab:baseline} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X
@@ -62,20 +82,25 @@
 \includegraphics[width=7cm]{figures/Chapter4/GNN/PRSROC.png}
 }
 \subfigure[决策树模型的ROC曲线]{
-\includegraphics[width=7.5cm]{figures/Chapter4/GNN/DTROC.png}
+\includegraphics[width=8cm]{figures/Chapter4/GNN/DTROC.png}
 }
 \caption{基准模型ROC曲线}
+\label{fig:baseline}
 \end{figure}
 
 
 
 \subsection{特征筛选方法对比}
-之前的讨论中我们提到，特征筛选对于特征数与样本数之比较高的数据集有着很好的提高模型性能的效果。本文也因此提到了两种特征筛选方法——基于卡方的样本筛选与基于支持向量机的样本筛选。对于使用同样超参数的决策树模型，我们输入使用不同特征筛选方式处理后的数据集并比较两种特征筛选方法对模型效果的影响。结果如下表。
+
+之前的讨论中我们提到，特征筛选对于特征数与样本数之比较高的数据集有着很好的提高模型性能的效果。
+本文也因此提到了两种特征筛选方法——基于卡方的样本筛选与基于支持向量机的样本筛选。
+对于使用同样超参数的决策树模型，我们输入使用不同特征筛选方式处理后的数据集并比较两种特征筛选方法对模型效果的影响。
+我们首先通过混淆矩阵相关指标对该结果进行评估，结果如表\ref{tab:Featureselection}。
 
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{特征筛选方法对比} \label{ICD_exclude} \vspace{2mm}
+	\caption{特征筛选方法对比} \label{tab:Featureselection} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X
@@ -83,7 +108,6 @@
 	\toprule[1.5pt]
 	指标 & 经卡方法筛选特征 & 经支持向量机法筛选特征 \\
 	\midrule[1pt]
-	auc & 0.51 & 0.54 \\
 f1 & 0.38 & 0.43 \\
 accuracy & 0.52 & 0.54 \\
 precision & 0.51 & 0.55 \\
@@ -91,7 +115,12 @@ recall & 0.29 & 0.35 \\
 	\bottomrule[1.5pt]
 	\end{tabularx}
 \end{table}
-\begin{figure}[htbp]
+
+可以看出，使用两者特征筛选方法所得结果虽然均同PRS法没有明显提高，但是相比较而言支持向量机法筛选特征在决策树模型中的效果更好。
+我们又对两种方法所得数据在决策树模型中的性能通过非混淆矩阵指标进行评估，得到图\ref{fig:featureselection}。图中我们可以看到，
+支持向量机法筛选所得数据训练出的模型在AUC、KS指标方面均优于通过卡方法筛选所得数据，本文因此使用支持向量机法筛选特征。
+
+\begin{figure}[ht]
 \centering
 \subfigure[使用卡方法筛选后模型ROC曲线]{
 \includegraphics[width=7cm]{figures/Chapter4/GNN/CSROC.png}
@@ -102,25 +131,24 @@ recall & 0.29 & 0.35 \\
 }
 \quad
 \subfigure[使用支持向量机法筛选后模型ROC曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/SVCROC.png}
+\includegraphics[width=7cm]{figures/Chapter4/GNN/SVMROC.png}
 }
 \quad
 \subfigure[使用支持向量机法筛选后模型KS曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/SVCKS.png}
+\includegraphics[width=7cm]{figures/Chapter4/GNN/SVMKS.png}
 }
 \caption{不同方法特征筛选对模型性能的影响}
+\label{fig:featureselection}
 \end{figure}
 
-
-可以看出，相较于经卡方法所得特征，经支持向量机法所筛选特征在相同模型上的表现更好，本文因此使用支持向量机法筛选特征。
-
 \subsection{图神经网络处理}
-将经过支持向量机法筛选所得特征输入本文提出的风险预测模型中进行图估计与图神经网络处理，选择最优的图估计结构后，本文得出以下图神经网络预测结果。
+将经过支持向量机法筛选所得特征输入本文提出的风险预测模型中进行图估计与图神经网络处理，选择最优的图估计结构，并完成参数调优后，本文训练出
+根据个体基因型数据完成骨关节炎风险预测的图神经网络模型。我们首先通过混淆矩阵相关指标对该结果进行评估，结果如表\ref{tab:GNNperformance}。
 
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{图神经网络处理} \label{ICD_exclude} \vspace{2mm}
+	\caption{图神经网络处理} \label{tab:GNNperformance} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X
@@ -128,7 +156,6 @@ recall & 0.29 & 0.35 \\
 	\toprule[1.5pt]
 	指标 & 图神经网络预测结果 & PRS模型 \\
 	\midrule[1pt]
-auc & 0.63 & 0.51 \\
 f1 & 0.56 & 0.45 \\
 accuracy & 0.60 & 0.52 \\
 precision & 0.60 & 0.50 \\
@@ -137,14 +164,16 @@ recall & 0.53 & 0.41 \\
 	\end{tabularx}
 \end{table}
 
+根据该结果我们发现，训练所得图神经网络在预测准确性、f1分数、精准度、灵敏度上均优于传统PRS模型。我们还通过非混淆矩阵指标对图神经网络性能加以评估，得到图\ref{fig:GNNperformance}。
+
 \begin{figure}[htbp]
 \centering
 \subfigure[图神经网络模型ROC曲线]{
-\includegraphics[width=7.5cm]{figures/Chapter4/GNN/GNNROC.png}
+\includegraphics[width=7cm]{figures/Chapter4/GNN/GNNROC.png}
 }
 \quad
 \subfigure[PRS模型ROC曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/PRSROC.png}
+\includegraphics[width=6.2cm]{figures/Chapter4/GNN/PRSROC.png}
 }
 \quad
 \subfigure[图神经网络模型Lift曲线]{
@@ -157,15 +186,15 @@ recall & 0.53 & 0.41 \\
 \caption{图神经网络模型性能曲线}
 \end{figure}
 
-
-
-可以看出，本文建立的图神经网络较PRS模型及传统机器学习模型性能有了明显改善。证明了图神经网络在处理图数据时的优秀效果。
+可以看出，本文建立的图神经网络较PRS模型在AUC方面有了明显改善。同时模型在模型Precision-Recall曲线中我们也发现随着召回率的提升，模型准确率下降速度较慢
+这也预示着模型分类性能较好。在模型Lift曲线中，随着深度增加，模型lift值在深度较大时下降较快，意味着模型良好的分类性能。综上，本文使用的单纯依靠
+基因型数据的图神经网络模型相较于传统模型而言有了明显的性能进步，然而，该模型绝对性能依然不如人意。
 \subsection{表型融合}
-为进一步增强模型性能，本文引入同骨关节炎密切相关的表型参与风险预测，其给出如下结果。
+为进一步增强模型性能，本文引入同骨关节炎密切相关的表型参与风险预测，该模型其给出如表\ref{tab:phenoperformance}混淆矩阵相关指标结果。
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{融合表型信息对模型性能的影响} \label{ICD_exclude} \vspace{2mm}
+	\caption{融合表型信息对模型性能的影响} \label{tab:phenoperformance} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X
@@ -174,7 +203,6 @@ recall & 0.53 & 0.41 \\
 	\toprule[1.5pt]
 	指标 & 融合表型 & 单纯图神经网络 & PRS模型 \\
 	\midrule[1pt]
-auc & 0.74 & 0.60 & 0.51 \\
 f1 & 0.66 & 0.57 & 0.45 \\
 accuracy & 0.67 & 0.58 & 0.52 \\
 precision & 0.66 & 0.57 & 0.50 \\
@@ -186,7 +214,7 @@ recall & 0.69 & 0.58 & 0.41 \\
 \centering
 
 \subfigure[融合表型模型ROC曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/PhenoROC.png}
+\includegraphics[width=7.5cm]{figures/Chapter4/GNN/PheROC.png}
 }
 \quad
 \subfigure[单纯图神经网络模型ROC曲线]{
@@ -194,7 +222,7 @@ recall & 0.69 & 0.58 & 0.41 \\
 }
 \quad
 \subfigure[融合表型模型KS曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/PhenoKS.png}
+\includegraphics[width=7cm]{figures/Chapter4/GNN/PheKS.png}
 }
 \quad
 \subfigure[单纯图神经网络模型KS曲线]{
@@ -202,23 +230,29 @@ recall & 0.69 & 0.58 & 0.41 \\
 }
 \quad
 \subfigure[融合表型模型Lift曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/Phenolift.png}
+\includegraphics[width=7cm]{figures/Chapter4/GNN/PheLift.png}
 }
 \quad
 \subfigure[单纯图神经网络模型Lift曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/GNNlift.png}
+\includegraphics[width=7cm]{figures/Chapter4/GNN/GNNLift.png}
 }
 \quad
 \subfigure[融合表型模型Precision-Recall曲线]{
-\includegraphics[width=7cm]{figures/Chapter4/GNN/PhenoPR.png}
+\includegraphics[width=7cm]{figures/Chapter4/GNN/PhePR.png}
 }
 \quad
 \subfigure[单纯图神经网络模型Precision-Recall曲线]{
 \includegraphics[width=7cm]{figures/Chapter4/GNN/GNNPR.png}
 }
 \caption{融合表型信息对模型性能的影响}
+\label{fig:phenoperformance}
 \end{figure}
-可以看出融合表型之后模型性能有了进一步提升。此时预测AUC以及达到0.74，相较于单纯利用基因型数据的图神经网络预测准确能力显著增强。
+
+可以看出融合表型之后模型性能相较于单纯使用基因型数据的图神经网络模型有了进一步提升。
+我们还对该模型性能的非混淆矩阵指标进行了计算并同图神经网络模型加以比较。在融合表型模型中，预测AUC已经达到0.74，相较于单纯利用基因型数据的图神经网络预测准确能力显著增强。同时模型
+的KS值（0.356）相较于单纯利用基因型数据的图神经网络KS值（0.202）也有明显提高。Precision-Recall曲线方面，融合表型模型的PR曲线下降较单纯使用基因型的图神经网络模型更慢，意味着模型良好的分类性能。
+而在Lift曲线中，融合表型模型Lift曲线较图神经网络模型曲线更为陡峭，也提醒模型预测性能的增强。综上，通过表型信息的融合，本文提出的骨关节炎风险预测模型较传统模型相比取得了可观的性能提升，已经具有较好的
+风险预测能力，可以应用于实际的风险预测之中。
 
 
 \section{图估计效果}
@@ -227,137 +261,169 @@ recall & 0.69 & 0.58 & 0.41 \\
 
 \subsubsection{可行性验证}
 
-为了验证本文设计图估计器对无结构数据的处理能力，在使用该估计器估计本研究所使用骨关节炎患者基因型数据结构之前，本文先在MNIST数据集上进行测试。MNIST数据集\cite{lecun_gradient-based_1998}由若干已标注手写数字图片组成，也是一种无结构数据。我们因此在该数据集上应用我们的模型并将结果加以记录。可以看到，在每个迭代的图估计器工作之后，模型损失有着明显下降，同时分类准确率也有显著提升。这证明了本文提出图估计器对图神经网络在无结构数据上的性能有着明显改善，为后续对骨关节炎患者基因型数据的处理工作提供可行性基础。
-\begin{figure}[htbp]
+为了验证本文设计图估计器对无结构数据的处理能力，在使用该估计器估计本研究所使用骨关节炎患者基因型数据结构之前，本文先在MNIST数据集上进行测试。MNIST数据集\cite{lecun_gradient-based_1998}由若干已标注手写数字图片组成，也是一种无结构数据。我们因此在该数据集上应用我们的模型并将结果加以记录如图\ref{fig:mnist}。可以看到，在每个迭代的图估计器工作之后，模型损失有着明显下降，同时分类准确率也有显著提升。这证明了本文提出图估计器对图神经网络在无结构数据上的性能有着明显改善，为后续对骨关节炎患者基因型数据的处理工作提供可行性基础。
+
+\begin{figure}[ht]
 \centering
 \subfigure[MNIST数据集上训练损失曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/MNIST/TrainLoss.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/MNIST/TrainLoss.png}
 }
 \subfigure[MNIST数据集上训练准确率曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/MNIST/Trainacc.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/MNIST/Trainacc.png}
 }
 \caption{图估计器在MNIST数据集上的测试结果}
+\label{fig:mnist}
 \end{figure}
 
 
 \subsubsection{对照组}
 
-图估计器的工作过程涉及到图神经网络参数与图结构的循环更新。为了排除多次重启训练对模型性能的潜在影响，我们设计对照组，即使用全连接法构建图矩阵并且每次图神经网络训练之后不更新图结构。并对对照组的模型训练情况做以记录。可以看到，在不更新图结构时，每次迭代中模型损失与准确率的变化趋势基本一致，同时不同迭代末期模型AUC变化不大。因此我们认为模型效果与无图结构更新过程的迭代次数无关
+图估计器的工作过程涉及到图神经网络参数与图结构的循环更新。为了排除多次重启训练对模型性能的潜在影响，我们设计对照组，即使用全连接法构建图矩阵并且每次图神经网络训练之后不更新图结构。并对对照组的模型训练情况做以记录如图\ref{fig:baseline_train}。可以看到，在不更新图结构时，每次迭代中模型损失与准确率的变化趋势基本一致，同时不同迭代末期模型AUC变化不大。因此我们认为模型效果与无图结构更新过程的迭代次数无关。
 。
-\begin{figure}[htbp]
+\begin{figure}[ht]
 \centering
 \subfigure[训练损失曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/Baseline/TrainLoss.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/Baseline/TrainLoss.png}
 }
 \subfigure[训练准确率曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/Baseline/Trainacc.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/Baseline/Trainacc.png}
 }
 \subfigure[测试AUC曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/Baseline/Valauc.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/Baseline/Valauc.png}
 }
 \caption{对照组训练结果}
+\label{fig:baseline_train}
 \end{figure}
 
 \subsubsection{实际数据}
 
-该组试验中我们正式将图估计器与图神经网络运用于骨关节炎患者基因型数据的处理过程中。我们首先使用全连接法构建初始图，在每个迭代中我们训练神经网络并给出数据在该网络下的输出，再将输出作为图估计器的观察值并基于此更新图结构，再将该图结构作为数据的结构重新输入图神经网络中训练。如此迭代若干次，记录模型性能如下。
-\begin{figure}[htbp]
+该组试验中我们正式将图估计器与图神经网络运用于骨关节炎患者基因型数据的处理过程中。我们首先使用全连接法构建初始图，在每个迭代中我们训练神经网络并给出数据在该网络下的输出，再将输出作为图估计器的观察值并基于此更新图结构，再将该图结构作为数据的结构重新输入图神经网络中训练。如此迭代若干次，记录模型性能如图\ref{fig:exp_train}。
+\begin{figure}[ht]
 \centering
 \subfigure[训练损失曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/Exp/TrainLoss.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/Exp/TrainLoss.png}
 }
 \subfigure[训练准确率曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/Exp/Trainacc.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/Exp/Trainacc.png}
 }
 \subfigure[测试AUC曲线]{
-\includesvg[width=7cm]{figures/Chapter4/EM/Exp/Valauc.svg}
+\includegraphics[width=7cm]{figures/Chapter4/EM/Exp/Valauc.png}
 }
 \caption{实际数据训练结果}
+\label{fig:exp_train}
 \end{figure}
+
 可以看出，首次迭代中由于使用全连接网络，模型性能变化同对照组中模型相仿。但是在首次迭代结束生成新图结构后并以此进行第二次迭代的图神经网络训练时我们可以发现，训练末期模型损失明显下降，模型准确率明显上升。模型预测能力AUC也有明显提高。最终我们选择预测能力最好的迭代作为最优模型，参与到骨关节炎风险预测过程之中。
 
 \subsection{图估计器工作过程分析}
 
 \subsubsection{聚类参数选择}
 
-在讨论图估计器时我们提到，图估计器在输入观察值的同时还需要人工选择聚类参数$k$以初始化变分参数，且该聚类参数会对估计结果产生直接影响，该影响可通过整合分类似然评估。为了选择最优聚类参数，我们计算了使用一定范围内的聚类参数时的模型整合分类似然，结果如下。
+在讨论图估计器时我们提到，图估计器在输入观察值的同时还需要人工选择聚类参数$k$以初始化变分参数，且该聚类参数会对估计结果产生直接影响，该影响可通过整合分类似然评估。为了选择最优聚类参数，我们计算了使用一定范围内的聚类参数时的模型整合分类似然，结果如图\ref{fig:ICL}。
+
 \begin{figure}[!ht]
 \centering
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Model/ModelSelection.svg}
-\caption{整合分类似然变化曲线} \label{fig_ch2}
+\includegraphics[width=12cm]{figures/Chapter4/VEM/Model/ICL.png}
+\caption{整合分类似然变化曲线} \label{fig:ICL}
 \end{figure}
 
-可以发现，$k$取6时模型的整合分类似然最低，性能最好。同时我们考虑了在使用该范围内参数时变分期望最大化算法所给出的证据下界ELBO，我们发现虽然$k$取6的组证据下界并非最高，但是同其他组相比也处于高位。因此我们将$k$定为6并估计该参数下可能的图结构。
+可以发现，$k$取6时模型的整合分类似然最低，性能最好。同时我们考虑了在使用该范围内参数时变分期望最大化算法所给出的证据下界ELBO，训练中ELBO的变化如图\ref{fig:ELBO}。我们发现虽然$k$取6的组证据下界并非最高，但是同其他组相比也处于高位。因此我们将$k$定为6并估计该参数下可能的图结构。
 
 \begin{figure}[!ht]
 \centering
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Model/Iteration.svg}
-\caption{证据下界曲线} \label{fig_ch2}
+\includegraphics[width=14cm]{figures/Chapter4/VEM/Model/ELBO.png}
+\caption{证据下界曲线} \label{fig:ELBO}
 \end{figure}
 
 
 \subsubsection{生成图结构分析}
 
-根据前文对变分期望最大化算法的讨论我们可以发现，$k$取6意味着最终生成的图结构可以分为6簇。为了探究该网络结构以及其潜藏的信息，我们将估计图结构中的节点依照其所属的簇加以归类并表示如下图。
+根据前文对变分期望最大化算法的讨论我们可以发现，$k$取6意味着最终生成的图结构可以分为6簇。为了探究该网络结构以及其潜藏的信息，我们将估计图结构中的节点依照其所属的簇加以归类并表示如图\ref{fig:Cluster}。
 
 \begin{figure}[!ht]
 \centering
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Model/Cluster.svg}
-\caption{节点簇信息} \label{fig_ch2}
+\includegraphics[width=10cm]{figures/Chapter4/VEM/Model/Cluster.png}
+\caption{节点簇信息} \label{fig:Cluster}
 \end{figure}
 
-我们同时将计算所得的簇与簇之间的关系表示如下。可以发现，簇3与簇4、簇2与簇6之间存在着很强的相关信号。且簇6与除簇1，2之外的其它簇关联都不强。我们同时发现簇3、5之间也存在一相关信号。除此以外数学分析无法从该图中获取更多信息，我们因此需要结合图中节点的生物学意义对该图结构与簇关系加以分析。
+我们同时将计算所得的簇与簇之间的关系表示如图\ref{fig:relation_between_cluster}。可以发现，簇3与簇4、簇2与簇6之间存在着很强的相关信号。且簇6与除簇1，2之外的其它簇关联都不强。我们同时发现簇3、5之间也存在一相关信号。除此以外数学分析无法从该图中获取更多信息，我们因此需要结合图中节点的生物学意义对该图结构与簇关系加以分析。
 
-\begin{figure}[htbp]
+\begin{figure}[ht]
 \centering
 \subfigure[簇之间关联图]{
-\includesvg[width=7cm]{figures/Chapter4/VEM/Model/meso.svg}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Model/meso.png}
 }
 \subfigure[簇关系邻接矩阵]{
-\includesvg[width=7cm]{figures/Chapter4/VEM/Model/NetADJ.svg}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Model/ADJ.png}
 }
 \caption{簇之间关系}
+\label{fig:relation_between_cluster}
 \end{figure}
 
 \subsubsection{结合表型分析}
 
-为了进一步探究生成图结构的生物学意义，我们需要了解其中节点，也就是SNP位点对人的不同表型的贡献。同GWAS研究类似的，全表型关联研究（Phenome-wide Association Study，PheWAS）主要研究某一SNP位点与已知性状的关联\cite{pendergrass_use_2011}，因此我们对图中每个节点进行PheWAS研究。我们对节点的研究主要在GWASATLAS数据库内进行\cite{watanabe_global_2019}，该数据库包含了在UKB数据上进行的对3302个表型的约4756个GWAS研究，可以较为全面地展现SNP位点对表型的影响。对于每个SNP，我们编写爬虫由数据库获取与其相关的表型以及该相关的统计学显著性，经过统计学显著性筛选（$p<10^{-5}$）后将与每个SNP相关的表型按照领域分为25类。对于每个簇，我们统计簇内SNP位点对每类性状的关联并进行簇内标准化，得出如下热图。
+为了进一步探究生成图结构的生物学意义，我们需要了解其中节点，也就是SNP位点对人的不同表型的贡献。同GWAS研究类似的，全表型关联研究（Phenome-wide Association Study，PheWAS）主要研究某一SNP位点与已知性状的关联\cite{pendergrass_use_2011}，因此我们对图中每个节点进行PheWAS研究。
+我们对节点的研究主要在GWASATLAS数据库内进行\cite{watanabe_global_2019}，该数据库包含了在UKB数据上进行的对3302个表型的约4756个GWAS研究，可以较为全面地展现SNP位点对表型的影响。对于每个SNP，我们编写爬虫由数据库获取与其相关的表型以及该相关的统计学显著性，经过统计学显著性筛选（$p<10^{-5}$）后将与每个SNP相关的表型按照领域分为15类。
+对于每个簇，我们统计簇内SNP位点对每类性状的关联并依照式\ref{equ:normalize}进行簇内标准化，得出如图\ref{fig:heatmap_col}所示热图。
+
+\begin{equation}\label{equ:normalize}
+	x = \frac{x-\mu}{\sigma/\sqrt{n}}
+\end{equation}
 
 \begin{figure}[htbp]
 \centering
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Cluster/heatmap_col.svg}
-\caption{簇与性状关联簇内标准化热图} \label{fig_ch2}
+\includegraphics[width=7cm]{figures/Chapter4/VEM/Cluster/Heatmap_col.png}
+\caption{簇与性状关联簇内标准化热图} \label{fig:heatmap_col}
 \end{figure}
 
-可以看出，每个簇内与簇内SNP相关联程度最高的表型均集中在代谢与免疫领域，这也与骨关节炎本身炎症性质相关。为了能近一步分析簇间差异，我们还对每个领域内关联进行簇间标准化，得到如下热图。
+可以看出，每个簇内与簇内SNP相关联程度最高的表型均集中在代谢与免疫领域，这也与骨关节炎本身炎症性质相关。为了能近一步分析簇间差异，我们还依照式\ref{equ:normalize}对每个领域内关联进行簇间标准化，得到如图\ref{fig:heatmap_col}所示热图。
 
 \begin{figure}[htbp]
 \centering
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Cluster/heatmap_row.svg}
-\caption{簇与性状关联簇间标准化热} \label{fig_ch2}
+\includegraphics[width=7cm]{figures/Chapter4/VEM/Cluster/Heatmap_row.png}
+\caption{簇与性状关联簇间标准化热图} \label{fig:heatmap_row}
 \end{figure}
 
-相较于簇内标准化，我们可以从此图中发现簇间的明显差异，尤其是簇1、5在环境、内分泌、免疫等领域同其他簇存在明显差异。本文因此对该两簇进行深入分析
+相较于簇内标准化，我们可以从此图中发现簇间的明显差异，尤其是簇一、簇五在环境、内分泌、免疫等领域表型关联同其他簇存在明显差异。我们对六簇在这三个领域中所观察到的关联事件
+绘制提琴图，得到图\ref{fig:violine}。提琴图中的簇间差别也印证了在热图中观察到的簇一、簇五的明显差别，因此本文对该两簇进行深入研究。
+
+\begin{figure}[htbp]
+	\centering
+	\subfigure[内分泌领域表型关联分布提琴图]{
+	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_en.png}
+	}
+	\subfigure[环境领域表型关联分布提琴图]{
+	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_en.png}
+	}
+	\subfigure[免疫领域表型关联分布提琴图]{
+	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_en.png}
+	}
+	\caption{不同领域性状关联分布提琴图}
+	\label{fig:violine}
+	\end{figure}
+	
 
 \begin{figure}[htbp]
 \centering
 \subfigure[簇相关性状分布饼图]{
-\includesvg[width=7cm]{figures/Chapter4/VEM/Cluster/Cluster1.svg}
+\includegraphics[width=7cm]{figures/Chapter4/VEM/Cluster/1.png}
 }
 \subfigure[簇相关性状分布柱图]{
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Cluster/Cluster1bar.svg}
+\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/bar1.png}
 }
 \subfigure[簇相关性状p值图]{
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Cluster/Pvaluesofcluster1.svg}
+\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/box1.png}
 }
 \caption{簇一相关性状分领域图}
+\label{fig:cluster1}
 \end{figure}
 
-同其他簇相同，与簇一内SNP位点相关表型主要集中在代谢与免疫领域。但是我们从热图中发现簇一有着较强的环境相关信号。我们对该环境相关信号加以统计，结果如表所示。出乎我们意料的是，与簇一内SNP相关的环境相关表型出现了受教育程度、工作是否涉及重体力劳动等看起来与骨关节炎毫不相干的性状。但是，在查阅文献\cite{jensen_hip_2008}后我们了解到，骨关节炎作为一种退化性疾病有可能与关节过度磨损相关。因此我们做出猜测，受教育程度较低的个体趋向于从事体力型劳动，导致关节加速磨损，最终导致骨关节炎的发生。而该簇内的SNP可能在受到这种环境影响时更易导致骨关节炎的发生。我们猜测该簇内SNP可能与环境因素导致关节磨损继而导致的骨关节炎相关。
+我们首先对簇一内布关联性状分布、数量、统计显著性进行分析并得出图\ref{fig:cluster1}。
+通过该组图可以看到同其他簇相同，与簇一内SNP位点相关表型主要集中在代谢与免疫领域。但是我们从热图中发现簇一有着较强的环境相关信号。我们对该环境相关信号加以统计，结果如表\ref{tab:cluster1}所示。出乎我们意料的是，与簇一内SNP相关的环境相关表型出现了受教育程度、工作是否涉及重体力劳动等看起来与骨关节炎毫不相干的性状。但是，在查阅文献\cite{jensen_hip_2008}后我们了解到，骨关节炎作为一种退化性疾病有可能与关节过度磨损相关。因此我们做出猜测，受教育程度较低的个体趋向于从事体力型劳动，导致关节加速磨损，最终导致骨关节炎的发生。而该簇内的SNP可能在受到这种环境影响时更易导致骨关节炎的发生。我们猜测该簇内SNP可能与环境因素导致关节磨损继而导致的骨关节炎相关。
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{簇一相关表型} \label{ICD_exclude} \vspace{2mm}
+	\caption{簇一相关表型} \label{tab:cluster1} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X
@@ -376,25 +442,26 @@ Environment & Maternal smoking around birth & 1 \\
 \end{table}
 
 \begin{figure}[htbp]
-\centering
-\subfigure[簇相关性状分布饼图]{
-\includesvg[width=10cm]{figures/Chapter4/VEM/Cluster/Cluster5.svg}
-}
-\subfigure[簇相关性状分布柱图]{
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Cluster/Cluster5bar.svg}
-}
-\subfigure[簇相关性状p值图]{
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Cluster/Pvaluesofcluster5.svg}
-}
-\caption{簇五相关性状分领域图}
+	\centering
+	\subfigure[簇相关性状分布饼图]{
+	\includegraphics[width=7cm]{figures/Chapter4/VEM/Cluster/5.png}
+	}
+	\subfigure[簇相关性状分布柱图]{
+	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/bar5.png}
+	}
+	\subfigure[簇相关性状p值图]{
+	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/box5.png}
+	}
+	\caption{簇五相关性状分领域图}
+	\label{fig:cluster5}
 \end{figure}
 
-我们也对簇五进行了类似分析，相较于其他簇，簇五在免疫、内分泌、皮肤病领域有着很强相关。我们对这些领域内的典型性状加以统计得到表。可以看出，簇五内的SNP与二型糖尿病、巨噬细胞、白细胞与粒细胞计数相关表型都存在着相关。二型糖尿病是一种由于机体胰岛素抗性而生成的糖尿病，其主要由超重乃至肥胖而导致。\cite{maruthur_diabetes_2016}而肥胖导致的高血脂又会诱发体内免疫系统包括巨噬细胞与粒细胞的激活。\cite{barrett_diabetes-mediated_2017}这也与簇内的观察一致，因此我们猜测簇五内的SNP位点主要与个体自身肥胖导致的糖尿病与超重继而诱发的自身型骨关节炎相关。
+我们也对簇五进行了类似分析，得到图\ref{fig:cluster5}.相较于其他簇，簇五在免疫、内分泌、皮肤病领域有着很强相关。我们对这些领域内的典型性状加以统计得到表\ref{tab:cluster5}。可以看出，簇五内的SNP与二型糖尿病、巨噬细胞、白细胞与粒细胞计数相关表型都存在着相关。二型糖尿病是一种由于机体胰岛素抗性而生成的糖尿病，其主要由超重乃至肥胖而导致。\cite{maruthur_diabetes_2016}而肥胖导致的高血脂又会诱发体内免疫系统包括巨噬细胞与粒细胞的激活。\cite{barrett_diabetes-mediated_2017}这也与簇内的观察一致，因此我们猜测簇五内的SNP位点主要与个体自身肥胖导致的糖尿病与超重继而诱发的自身型骨关节炎相关。
 
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{簇五相关表型} \label{ICD_exclude} \vspace{2mm}
+	\caption{簇五相关表型} \label{tab:cluster5} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X
@@ -415,37 +482,38 @@ Dermatological & Male pattern baldness & 10 \\
 
 \section{图解释器结果案例分析}
 
-我们之前提到本风险预测模型中的图解释器能对产生预测结果的原因，即输入基因型图中同预测结果相关的最大子图，加以分析与计算。本节通过模型对UKB数据库中一个案的分析结果展示该能力。本文从UKB数据库中选取样本(UID=5125713)，并将其基因型数据根据图估计器给出的最佳图结构转为图数据。利用训练好的图神经网络模型对该图进行处理，预测结果为该样本有很高概率患骨关节炎。我们将该预测结果与模型输入图解释器中，最终图解释器给出如下相关子图。
+我们之前提到本风险预测模型中的图解释器能对产生预测结果的原因，即输入基因型图中同预测结果相关的最大子图，加以分析与计算。本节通过模型对UKB数据库中一个案的分析结果展示该能力。本文从UKB数据库中选取样本(UID=5125713)，并将其基因型数据根据图估计器给出的最佳图结构转为图数据。利用训练好的图神经网络模型对该图进行处理，预测结果为该样本有很高概率患骨关节炎。我们将该预测结果与模型输入图解释器中，最终图解释器给出如图\ref{fig:main_subgraph}相关子图。
 
 \begin{figure}[htbp]
 \centering
-\includesvg[width=\textwidth]{figures/Chapter4/VEM/Explain/Main.svg}
-\caption{图解释器生成与预测结果相关子图} \label{fig_ch2}
+\includegraphics[width=7cm]{figures/Chapter4/VEM/Explain/main.png}
+\caption{图解释器生成与预测结果相关子图} \label{fig:main_subgraph}
 \end{figure}
 
-在该子图中，边的权重为该关联对预测值的贡献，权重越高代表该边对预测值的生成越“重要”。我们将该图按照边的权重进行稀疏化，得到如下系列子图。可以看到，随着权重阈值的不断提升，子图的骨干逐渐显现，而该主干则主要由簇一、五中的节点构成。上一节的分析中我们提到簇五中所含位点可能与二型糖尿病相关，我们因此推测该个体可能由肥胖造成的关节过度磨损诱发骨关节炎，同时该患者可能合并二型糖尿病。我们从UKB数据库中提取患者其他表型。
+在该子图中，边的权重为该关联对预测值的贡献，权重越高代表该边对预测值的生成越“重要”。我们将该图按照边的权重进行稀疏化，得到如图\ref{fig:thre_subgraph}系列子图。可以看到，随着权重阈值的不断提升，子图的骨干逐渐显现，而该主干则主要由簇一、五中的节点构成。上一节的分析中我们提到簇五中所含位点可能与二型糖尿病相关，我们因此推测该个体可能由肥胖造成的关节过度磨损诱发骨关节炎，同时该患者可能合并二型糖尿病。我们从UKB数据库中提取患者其他表型得到表\ref{tab:case_phe}。
 
-\begin{figure}[htbp]
+\begin{figure}[ht]
 \centering
 \subfigure[阈值0.315]{
-\includesvg[width=8cm]{figures/Chapter4/VEM/Explain/0.315.svg}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.315.png}
 }
 \subfigure[阈值0.32]{
-\includesvg[width=8cm]{figures/Chapter4/VEM/Explain/0.32.svg}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.32.png}
 }
 \subfigure[阈值0.325]{
-\includesvg[width=8cm]{figures/Chapter4/VEM/Explain/0.325.svg}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.325.png}
 }
 \subfigure[阈值0.33]{
-\includesvg[width=8cm]{figures/Chapter4/VEM/Explain/0.33.svg}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.33.png}
 }
 \caption{子图阈值化结果}
+\label{fig:thre_subgraph}
 \end{figure}
 
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{该个体其他表型} \label{ICD_exclude} \vspace{2mm}
+	\caption{该个体其他表型} \label{tab:case_phe} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X

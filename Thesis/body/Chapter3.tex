@@ -603,11 +603,11 @@ Drop-Out 层 & 抑制网络过拟合    & Dropout rate = 0.5               &    
 
 \section{表型融合}
 
-考虑到骨关节炎作为一种复杂多基因疾病，单纯以基因型为输入可能导致风险预测效果不佳。因此有必要同时融合表型数据。根据Boer\cite{boer_deciphering_2021}等人的报道，我们选择同骨关节炎密切相关的表型做为协变量并从UKB数据库中获取相关表型数据。具体表型如下表。
+考虑到骨关节炎作为一种复杂多基因疾病，单纯以基因型为输入可能导致风险预测效果不佳。因此有必要同时融合表型数据。根据Boer\cite{boer_deciphering_2021}等人的报道，我们选择同骨关节炎密切相关的表型做为协变量并从UKB数据库中获取相关表型数据。具体表型如表\ref{tab:Covar_phe}。
 \begin{table}[!h]
 	\renewcommand{\arraystretch}{1.2}
 	\centering\wuhao
-	\caption{选取协变量表型} \label{ICD_exclude} \vspace{2mm}
+	\caption{选取协变量表型} \label{tab:Covar_phe} \vspace{2mm}
 	\begin{tabularx}{\textwidth} { 
    >{\centering\arraybackslash}X 
    >{\centering\arraybackslash}X }

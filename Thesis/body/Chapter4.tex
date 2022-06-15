@@ -177,13 +177,14 @@ recall & 0.53 & 0.41 \\
 }
 \quad
 \subfigure[图神经网络模型Lift曲线]{
-\includegraphics[width=9cm]{figures/Chapter4/GNN/GNNlift.png}
+\includegraphics[width=9cm]{figures/Chapter4/GNN/GNNLift.png}
 }
 \quad
 \subfigure[图神经网络模型Precision-Recall曲线]{
 \includegraphics[width=9cm]{figures/Chapter4/GNN/GNNPR.png}
 }
 \caption{图神经网络模型性能曲线}
+\label{fig:GNNperformance}
 \end{figure}
 
 可以看出，本文建立的图神经网络较PRS模型在AUC方面有了明显改善。同时模型在模型Precision-Recall曲线中我们也发现随着召回率的提升，模型准确率下降速度较慢
@@ -393,10 +394,10 @@ recall & 0.69 & 0.58 & 0.41 \\
 	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_en.png}
 	}
 	\subfigure[环境领域表型关联分布提琴图]{
-	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_en.png}
+	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_env.png}
 	}
 	\subfigure[免疫领域表型关联分布提琴图]{
-	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_en.png}
+	\includegraphics[width=\textwidth]{figures/Chapter4/VEM/Cluster/Violin_imu.png}
 	}
 	\caption{不同领域性状关联分布提琴图}
 	\label{fig:violine}
@@ -495,16 +496,16 @@ Dermatological & Male pattern baldness & 10 \\
 \begin{figure}[ht]
 \centering
 \subfigure[阈值0.315]{
-\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.315.png}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.315.eps}
 }
 \subfigure[阈值0.32]{
-\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.32.png}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.32.eps}
 }
 \subfigure[阈值0.325]{
-\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.325.png}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.325.eps}
 }
 \subfigure[阈值0.33]{
-\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.33.png}
+\includegraphics[width=6cm]{figures/Chapter4/VEM/Explain/0.33.eps}
 }
 \caption{子图阈值化结果}
 \label{fig:thre_subgraph}

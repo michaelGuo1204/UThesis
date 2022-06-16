@@ -1,3 +1,4 @@
 /GNN/Data/MAP/
 /GNN/Data/GWAS/
-
+/R script/
+*.aux

@@ -1,4 +1,4 @@
-# P(Z) is known in GEN,thus EM algorithm will not concern P(Z|A), splitting each node into a cluster is just a simplification, but if i want to cluster the nodes, P(Z|Y) is UNKNOWN, em not qualify for that.
+# Uthesis
 This blog records the progress of my thesis in XJTU
 # Ideas
 Prof. Guo advises that osteoarthritis might be a good research.

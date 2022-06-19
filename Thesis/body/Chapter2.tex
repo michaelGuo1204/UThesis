@@ -5,9 +5,9 @@
 
 \section{样本标注}
 
-我们从UK Biobank数据库中获取骨关节炎患者（阳性样本）与非骨关节炎患者（阴性样本），并使用个体疾病伤害分类标准编码来对UK Biobank所提供的样本信息进行区分。国际疾病伤害及死因分类标准（The International Statistical Classification of Diseases and Related Health Problems，ICD）是由世界卫生组织所制定的根据特定规则对人群可能出现疾病进行归类的一套编码系统。\cite{who} UK Biobank已经对数据库内样本进行了ICD标注，因此我们可通过这一方法筛选研究对象。
+我们从UK Biobank数据库中获取骨关节炎患者（阳性样本）与非骨关节炎患者（阴性样本），并使用个体疾病伤害分类标准编码来对UK Biobank所提供的样本信息进行区分。国际疾病伤害及死因分类标准（The International Statistical Classification of Diseases and Related Health Problems，ICD）是由世界卫生组织所制定的根据特定规则对人群可能出现疾病进行归类的一套编码系统\cite{who}。 UK Biobank已经对数据库内样本进行了ICD标注，因此我们可通过这一方法筛选研究对象。
 
-参考其他骨关节炎的相关研究，\cite{zengini_genome-wide_2018}我们确定如下筛选规则。我们认定包含如表\ref{ICD_include}所含ICD编码的个体为骨关节炎患者。
+参考其他骨关节炎的相关研究\cite{zengini_genome-wide_2018}，我们确定如下筛选规则。我们认定包含如表\ref{ICD_include}所含ICD编码的个体为骨关节炎患者。
 
 
 \begin{table}[!h]
@@ -58,8 +58,8 @@
 
 人类基因组具有复杂性与多样性，本研究中的每个样本个体基因型数据都由数十万乃至数百万个基因型位点组成。由于目前任何算法都无法短时间内对如此多的样本进行处理，因此需要从其中选取部分具有统计学意义的位点。本文根据目前已发表的骨关节炎的GWAS结果\cite{zengini_genome-wide_2018,arcogen_consortium_identification_2019}对样本的基因型位点进行关联显著值（P-Value）与等位基因频率（Allele Frequency，AF）质控。
 
-关联显著值是用来衡量GWAS研究中单核苷酸突变与给定性状关联显著性的一个统计量。在GWAS研究中，我们设定零假设为数据中没有SNP位点与特定性状相关联，而备择假设为至少有一个SNP位点同特定性状相关联。同时我们定义统计量$p$为当零假设为真时观察到该关联的概率。显然，$p$值越小，有越高把握在观察到关联时认为零假设为假。因此我们可以设定一个阈值，当统计量$p$低于该阈值时拒绝原假设，认为该位点同目标性状相关。\cite{chen_revisiting_2021}目前GWAS研究中对位点统计显著值的描述可通过Manhattan图
-进行，Manhattan图的横坐标为SNP位点在基因组中的坐标，纵坐标为对应SNP位点在GWAS研究中的统计显著值。本研究所选区的SNP位点Manhattan图如图\ref{fig:manhattan}所示。
+关联显著值是用来衡量GWAS研究中单核苷酸突变与给定性状关联显著性的一个统计量。在GWAS研究中，我们设定零假设为数据中没有SNP位点与特定性状相关联，而备择假设为至少有一个SNP位点同特定性状相关联。同时我们定义统计量$p$为当零假设为真时观察到该关联的概率。显然，$p$值越小，有越高把握在观察到关联时认为零假设为假。因此我们可以设定一个阈值，当统计量$p$低于该阈值时拒绝原假设，认为该位点同目标性状相关\cite{chen_revisiting_2021}。目前GWAS研究中对位点统计显著值的描述可通过Manhattan图
+展现，Manhattan图的横坐标为SNP位点在基因组中的坐标，纵坐标为对应SNP位点在GWAS研究中的统计显著值。本研究所选区的SNP位点Manhattan图如图\ref{fig:manhattan}所示。
 
 \begin{figure}[!ht]
 \centering
@@ -67,7 +67,7 @@
 \caption{GWAS研究的Manhattan图} \label{fig:manhattan}
 \end{figure}
 
-但是，由于遗传漂变的影响，随机的基因突变也有可能具有类似相关关系。因此我们并不能认为$p$值较小的位点同目标位点直接相关，在指定阈值时需要将可能由遗传漂变所产生的位点筛去。因此我们还需要通过QQ图来完成阈值界定。QQ图是一种根据分位数对两概率分布所作的图，该图来比较两分布差别的方式。\cite{wilk_probability_1968} GWAS中的QQ图横轴为遗传漂变所产生的分布，纵轴为实际分布，当图像偏离对角线时认为这类数据并非随机漂变。因此，根据QQ图\ref{fig:qqplot}本文确定p阈值为$10^{-5}$。
+但是，由于遗传漂变的影响，随机的基因突变也有可能具有类似相关关系。因此我们并不能认为$p$值较小的位点同目标位点直接相关，在指定阈值时需要将可能由遗传漂变所产生的位点筛去。因此我们还需要通过QQ图来完成阈值界定。QQ图是一种根据分位数对两概率分布所作的图，该图来比较两分布差别的方式\cite{wilk_probability_1968}。 GWAS中的QQ图横轴为遗传漂变所产生的分布，纵轴为实际分布，当图像偏离对角线时认为这类数据并非随机漂变。因此，根据QQ图\ref{fig:qqplot}本文确定p阈值为$10^{-5}$。
 
 \begin{figure}[!ht]
 \centering
@@ -108,7 +108,8 @@
 \item
   查卡方表，拒绝或接受假设：对于计算所得卡方值，查卡方表。对照计算所得卡方值与一定自由度与置信度下的标准卡方值。当计算卡方值大于标准卡方值时接受零假设，认为该特征与样本标注无关；当计算卡方值小于标准卡方值时拒绝零假设，认为该特征与样本标注相关。基于此选择该特征
 \end{enumerate}
-\subsection{ 基于支持向量机的特征筛选}
+
+\subsection{基于支持向量机的特征筛选}
 
 支持向量机（Support Vector Machine，SVM）是一种著名的机器学习算法。其通过构建数据空间内的分类平面来实现数据分类算法。其算法核心为以下优化过程：
 
